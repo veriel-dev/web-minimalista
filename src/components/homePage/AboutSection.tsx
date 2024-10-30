@@ -1,5 +1,5 @@
 import { User } from "lucide-react"
-import { Card, Section } from "./ui"
+import { Card, Section } from "../ui"
 
 
 const AboutSection = () => {

@@ -1,5 +1,5 @@
 import { Code, Cog } from "lucide-react";
-import { Section } from "./ui"
+import { Section } from "../ui"
 
 
 const SkillsSection = () => {

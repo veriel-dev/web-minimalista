@@ -15,12 +15,8 @@ export default defineConfig({
         manualChunks: {
           'vendor': ['react', 'react-dom'],
           'layout': ['./src/components/layouts/MainLayout'],
-          'hero': ['./src/components/HeroSection'],
-          'about': ['./src/components/AboutSection'],
-          'projects': ['./src/components/ProjectsSection'],
-          'skills': ['./src/components/SkillsSection'],
-          'education': ['./src/components/EducationSection'],
-          'contact': ['./src/components/ContactSection'],
+          'home': ['./src/screens/HomePage'],
+          'cv': ['./src/screens/CurriculumVitaePage'],
         }
       }
     },

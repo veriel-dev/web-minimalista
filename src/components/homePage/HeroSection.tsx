@@ -1,5 +1,5 @@
 import { Download, Mail } from "lucide-react"
-import { Button, Section } from "./ui"
+import { Button, Section } from "../ui"
 
 
 const HeroSection = () => {

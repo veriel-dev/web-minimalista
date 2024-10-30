@@ -1,5 +1,5 @@
 import { ExternalLink } from "lucide-react";
-import { Button, Card, Section } from "./ui"
+import { Button, Card, Section } from "../ui"
 
 const projects = [
     {
@@ -21,6 +21,11 @@ const projects = [
         title: "CRUD-REACT",
         description: "Proyecto Full Stack",
         tags: ["TS", "React", "Mongo", "Express", "Node.js"]
+    },
+    {
+        title: "Trello Clone",
+        description: "Clome del famoso software Trello Clone",
+        tags: ["React", "DndKit", "TS"]
     },
 ];
 

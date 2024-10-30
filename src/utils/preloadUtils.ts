@@ -1,22 +1,18 @@
-// Utilidades para precargar componentes
-export const preloadRoutes = {
-    preloadHero: () => import("../components/HeroSection"),
-    preloadAbout: () => import("../components/AboutSection"),
-    preloadProjects: () => import("../components/ProjectsSection"),
-    preloadSkills: () => import("../components/SkillsSection"),
-    preloadEducation: () => import("../components/EducationSection"),
-    preloadContact: () => import("../components/ContactSection"),
-};
 
-// Función para precargar la siguiente sección cuando sea necesario
+export const preloadRoutes = {
+    preloadHero: () => import("../components/homePage/HeroSection"),
+    preloadAbout: () => import("../components/homePage/AboutSection"),
+    preloadProjects: () => import("../components/homePage/ProjectsSection"),
+    preloadSkills: () => import("../components/homePage/SkillsSection"),
+    preloadEducation: () => import("../components/homePage/EducationSection"),
+    preloadContact: () => import("../components/homePage/ContactSection"),
+};
 export const preloadNextSection = (sectionName: keyof typeof preloadRoutes) => {
     const preloadFn = preloadRoutes[sectionName];
     if (preloadFn) {
         preloadFn();
     }
 };
-
-// Ejemplo de uso con Intersection Observer
 export const setupIntersectionObserver = (
     sectionName: keyof typeof preloadRoutes
     ) => {

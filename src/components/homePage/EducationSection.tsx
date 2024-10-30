@@ -1,5 +1,5 @@
 import { GraduationCap } from "lucide-react";
-import { Card, Section } from "./ui"
+import { Card, Section } from "../ui"
 
 
 const education = [
