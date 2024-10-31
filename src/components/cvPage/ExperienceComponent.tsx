@@ -38,7 +38,6 @@ const ExperienceComponent = () => {
                         </div>
                     ))
                 }
-
             </div>
         </section>
     )
