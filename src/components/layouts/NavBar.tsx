@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Moon } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "../ui"
 
 export const NavBar = () => {
