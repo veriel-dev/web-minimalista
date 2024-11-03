@@ -12,7 +12,6 @@ const App = () => {
         <Route path="/" component={HomePage} />
         <Route path="/curriculum-vitae" component={CurriculumVitae} />
       </Switch>
-
     </>
   )
 }

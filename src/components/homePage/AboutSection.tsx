@@ -10,7 +10,7 @@ const AboutSection = () => {
                 <div>
                     <h2 className="text-3xl font-bold mb-6 flex items-center gap-2 text-blue-500">
                         <User className="h-6 w-6" />
-                        {aboutSection.titlte}
+                        {aboutSection.title}
                     </h2>
                     <p className="text-primary leading-relaxed mb-6">
                         {aboutSection.description}
@@ -20,7 +20,7 @@ const AboutSection = () => {
                     {[
                         { label: aboutSection.titleExperience, value: aboutSection.experience },
                         { label: aboutSection.titleProjects, value: aboutSection.projects },
-                        { label: aboutSection.titleClients, value: aboutSection.clients },
+                        // { label: aboutSection.titleClients, value: aboutSection.clients },
                         { label: aboutSection.titleTec, value: aboutSection.tec }
                     ].map((stat, index) => (
                         <Card 

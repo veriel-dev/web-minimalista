@@ -3,9 +3,9 @@ import { Button, Section } from "../ui"
 import Logo from "../svg/Logo"
 import { homePage } from "../../const"
 
-
+import { Link } from "wouter"
 const HeroSection = () => {
-    const {heroSection} = homePage
+    const { heroSection } = homePage
     return (
         <Section>
             <div className="flex flex-col items-center text-center gap-6">
@@ -28,10 +28,12 @@ const HeroSection = () => {
                         <Mail className="mr-2 h-4 w-4" />
                         {heroSection.contact}
                     </Button>
-                    <Button variant="outline" className="border-zinc-700">
-                        <Download className="mr-2 h-4 w-4" />
-                        {heroSection.cv}
-                    </Button>
+                    <Link to={heroSection.cv.to} target="_blank">
+                        <Button variant="outline" className="border-zinc-700">
+                            <Download className="mr-2 h-4 w-4" />
+                            {heroSection.cv.text}
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </Section>

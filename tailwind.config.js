@@ -13,6 +13,9 @@ export default {
       },
       textColor: {
         "primary": "#e4e4e7"
+      },
+      borderColor: {
+        "main": "#27272a"
       }
     },
   },

@@ -4,18 +4,19 @@ export const homePage = {
         description:
         "Desarrollador que transforma desafíos de código en experiencias web modernas",
         contact: "Contactar",
-        cv: "Descargar CV",
+        cv: {
+            text: "Descargar CV",
+            to: "/curriculum-vitae"
+        }  
     },
     aboutSection: {
-        titlte: "Sobre Mí",
+        title: "Sobre Mí",
         description:
         "Desarrollador Full Stack con 3+ años de experiencia en aplicaciones web empresariales. Dominio de TypeScript, Node.js, Java y Spring Framework. Experiencia en bases de datos SQL y NoSQL",
         titleExperience: "Experiencia",
         experience: "3+ años",
         titleProjects: "Proyectos",
         projects: "30+",
-        titleClients: "Clientes",
-        clients: "1+",
         titleTec: "Tecnologías",
         tec: "20+",
     },
@@ -57,9 +58,9 @@ export const homePage = {
                     description: "Empaquetador moderno de proyectos JavaScript"
                 },
                 {
-                    name: "WebComponente",
-                    levele: 45, 
-                    description: "Forma nativa de crear elemento personalizables y encapsulados"
+                    name: "WebComponents", 
+                    level: 45, 
+                    description: "Forma nativa de crear elementos personalizables y encapsulados"
                 }
             ],
             backend: [
@@ -81,7 +82,7 @@ export const homePage = {
                 {
                     name: "OWCS",
                     level: 50,
-                    description: "Sistema de gestión de contenido de ámbitod empresarial basado en Java"
+                    description: "Sistema de gestión de contenido de ámbito empresarial basado en Java"
                 },
                 {
                     name: "Express",
@@ -108,7 +109,7 @@ export const homePage = {
                 {
                     name: "OracleSQL",
                     level: 55,
-                    descripition:"Sistema de gestión de bases de datos relacional del gigante Oracle",
+                    description: "Sistema de gestión de bases de datos relacional del gigante Oracle", 
                 },
             ],
             languages: [
@@ -146,12 +147,51 @@ export const homePage = {
             },
             {
                 degree: "Bachiller",
-                institution: "I.E.S.O Norba Ceserina",
-                period: "2012 - 2024",
-                description: "Instituo secundaria obligatoria",
+                institution: "I.E.S.O. Norba Caesarina", 
+                period: "2012 - 2014",
+                description: "Instituto de secundaria obligatoria", 
             },
-            
         ]
-        
+    },
+    projectsSections: {
+        title: "Proyectos Destacado",
+        projects: [
+            {
+                title: "Portfolio",
+                description: "Mi actual web hasta el día de hoy",
+                tags: ["React", "Node.js", "NextJS", "NodeMailer", "FramerMotion", "TailwindCss"]
+            },
+            {
+                title: "Clone Spring MVC",
+                description: "Clone de esta mítica tecnología",
+                tags: ["Node.js", "TypeScript", "ReflectMetaData"]
+            },
+            {
+                title: "Ts-Engine-Template",
+                description: "Clone de handlebars",
+                tags: ["NodeJS", "TypeScript"]
+            },
+            {
+                title: "CRUD-REACT",
+                description: "Proyecto Full Stack",
+                tags: ["TypeScript", "React", "Mongo", "Express", "Node.js"]
+            },
+            {
+                title: "Trello Clone",
+                description: "Clome del famoso software Trello Clone",
+                tags: ["React", "DndKit", "TypeScript"]
+            },
+            {
+                title: "Responsive Web",
+                description: "Web para visualizar tu web en diferentes resoluciones",
+                tags: ["ReactJS", "ViteJS", "React-Icons"]
+            },
+            {
+                title: "Old newspaper",
+                description: "Maquetación de un antinguo periódico",
+                tags:["AstroJS", "Css Vanilla"]
+            }
+        ]
+
     }
 };

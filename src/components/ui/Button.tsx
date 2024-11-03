@@ -8,15 +8,15 @@ interface Props {
 }
 
 const buttonVariants = {
-    default: "bg-zinc-900 hover:bg-zinc-800 text-white",
-    ghost: "hover:bg-zinc-800 text-zinc-400",
-    outline: "border border-zinc-800 hover:bg-zinc-800 text-zinc-400",
-    subtle: "bg-zinc-800/50 hover:bg-zinc-800 text-zinc-400",
+    default: "bg-zinc-900 hover:bg-secondary text-white",
+    ghost: "hover:bg-secondary text-zinc-400",
+    outline: "border border-main hover:bg-secondary text-zinc-400",
+    subtle: "bg-secondary/50 hover:bg-secondary text-zinc-400",
 }
 export const Button = ({ children, variant = "default", className }: Props) => {
     return (
         <button className={cn(
-            "p-2 rounded-md hover:bg-zinc-800 transition-colors duration-200 flex items-center justify-center",
+            "p-2 rounded-md hover:bg-secondary transition-colors duration-200 flex items-center justify-center",
             buttonVariants[variant],
             className
         )}>

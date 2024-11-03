@@ -29,7 +29,7 @@ const SkillsSection = () => {
 
 
     const renderSkillBar = (level: number) => (
-        <div className="w-full bg-zinc-800 h-2 rounded-full overflow-hidden ">
+        <div className="w-full bg-secondary h-2 rounded-full overflow-hidden ">
             <div
                 className="h-full bg-gradient-to-r from-blue-500 to-violet-500 transition-all duration-500"
                 style={{ width: `${level}%` }}
@@ -45,7 +45,7 @@ const SkillsSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {skills.map((skillCategory, categoryIndex) => (
                     <div key={categoryIndex} className="space-y-6">
-                        <h3 className="text-2xl font-bold text-blue-400 flex items-center gap-2">
+                        <h3 className="text-3xl font-bold text-blue-400 flex items-center gap-2">
                             <Code className="h-6 w-6" />
                             {skillCategory.category}
                         </h3>

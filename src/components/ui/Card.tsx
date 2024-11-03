@@ -4,7 +4,7 @@ import { cn } from "../../../libs/utils"
 
 
 const variants = {
-    default: "bg-main-light border-zinc-800",
+    default: "bg-main-light border-main",
     light: "bg-gray-400 border-gray-500 "    
 }
 
