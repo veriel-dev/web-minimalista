@@ -159,37 +159,93 @@ export const homePage = {
             {
                 title: "Portfolio",
                 description: "Mi actual web hasta el día de hoy",
-                tags: ["React", "Node.js", "NextJS", "NodeMailer", "FramerMotion", "TailwindCss"]
+                tags: ["React", "Node.js", "NextJS", "NodeMailer", "FramerMotion", "TailwindCss"],
+                github: {
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/01-portfolio"
+                },
+                demo: {
+                    ok: true,
+                    url: "https://01-portfolio-samuraidevord.vercel.app/"
+                }
             },
             {
                 title: "Clone Spring MVC",
                 description: "Clone de esta mítica tecnología",
-                tags: ["Node.js", "TypeScript", "ReflectMetaData"]
+                tags: ["Node.js", "TypeScript", "ReflectMetaData"],
+                github: {
+                    ok: true,
+                    url: "https://github.com/VerielDev/clone-spring-mvc"
+                },
+                demo: {
+                    ok: false,
+                    url: ""
+                }
             },
             {
                 title: "Ts-Engine-Template",
                 description: "Clone de handlebars",
-                tags: ["NodeJS", "TypeScript"]
+                tags: ["NodeJS", "TypeScript"],
+                github: {
+                    ok: true,
+                    url: "https://github.com/VerielDev/ts-engine-template"
+                },
+                demo: {
+                    ok: false,
+                    url: ""
+                }
             },
             {
                 title: "CRUD-REACT",
                 description: "Proyecto Full Stack",
-                tags: ["TypeScript", "React", "Mongo", "Express", "Node.js"]
+                tags: ["TypeScript", "React", "Mongo", "Express", "Node.js"],
+                github:{
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/CRUD-REACT"
+                },
+                demo: {
+                    ok: false,
+                    url: ""
+                }
             },
             {
                 title: "Trello Clone",
                 description: "Clome del famoso software Trello Clone",
-                tags: ["React", "DndKit", "TypeScript"]
+                tags: ["React", "DndKit", "TypeScript"],
+                github: {
+                    ok: true, 
+                    url: "https://github.com/samuraiOrDev/trello-clone"
+                },
+                demo: {
+                    ok: true,
+                    url: "https://trello-clone-five-dusky.vercel.app/"
+                }
             },
             {
                 title: "Responsive Web",
                 description: "Web para visualizar tu web en diferentes resoluciones",
-                tags: ["ReactJS", "ViteJS", "React-Icons"]
+                tags: ["ReactJS", "ViteJS", "React-Icons"],
+                github: {
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/responsive-web"
+                },
+                demo: {
+                    ok: true, 
+                    url: "https://responsive-web-pi.vercel.app/"
+                }
             },
             {
                 title: "Old newspaper",
                 description: "Maquetación de un antinguo periódico",
-                tags:["AstroJS", "Css Vanilla"]
+                tags:["AstroJS", "Css Vanilla"],
+                github: {
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/web-personal-paper"
+                },
+                demo: {
+                    ok: true,
+                    url: "https://web-personal-paper.vercel.app/"
+                }
             }
         ]
 

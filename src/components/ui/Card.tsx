@@ -1,4 +1,4 @@
-import React from "react"
+import React, { CSSProperties } from "react"
 import { cn } from "../../../libs/utils"
 
 
@@ -12,14 +12,16 @@ interface Props {
     className?: string
     variant?: "default" | "light"
     children: React.ReactNode
+    style?: CSSProperties | undefined
 }
 
-export const Card = ({className, variant = "default", children}:Props) => {
+export const Card = ({className, variant = "default", children, style}:Props) => {
     return (
         <div className={cn(
             variants[variant],
             className
-        )}>
+        )}
+        style={style}>
             {children}
         </div>
     )

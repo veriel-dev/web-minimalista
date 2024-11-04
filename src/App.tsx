@@ -1,18 +1,17 @@
-
-import { Switch, Route } from "wouter";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './screens/HomePage';
 import CurriculumVitae from './screens/CurriculumVitaePage';
 
 
 const App = () => {
   return (
-    <>
-
-      <Switch>
-        <Route path="/" component={HomePage} />
-        <Route path="/curriculum-vitae" component={CurriculumVitae} />
-      </Switch>
-    </>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/curriculum-vitae" element={<CurriculumVitae/>} />
+        </Routes>
+      </BrowserRouter>
+    
   )
 }
 
