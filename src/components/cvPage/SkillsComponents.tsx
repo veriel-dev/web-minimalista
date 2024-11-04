@@ -30,7 +30,7 @@ const SkillsComponents = () => {
                 <h2 className="text-2xl font-bold">{skills.title}</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 gap-6">
                 {
                     skills.tecs.map(({title, tec, icon:Icon}, index) => (
                         <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-6 shadow-sm print:bg-white print:border print:border-gray-200 flex flex-col gap-2 w-full" key={index}>

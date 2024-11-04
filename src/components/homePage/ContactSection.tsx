@@ -1,10 +1,10 @@
 import { Github, Linkedin, Mail } from "lucide-react"
-import { Button, Card, Section } from "../ui"
-
+import { Card, Section } from "../ui"
+import { FormSendEmail } from "./formSendEmail"
 
 const ContactSection = () => {
     return (
-        <Section   className="rounded-lg">
+        <Section className="rounded-lg">
             <h2 className="text-3xl font-bold mb-10 text-blue-500">Contacto</h2>
             <Card className="p-6 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -14,25 +14,22 @@ const ContactSection = () => {
                             Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales.
                         </p>
                         <div className="space-y-2">
-                            <p className="flex items-center gap-2">
+                            <a className="flex items-center gap-2" href="mailto:vmordiales@gmail.com">
                                 <Mail className="h-4 w-4" />
-                                tucorreo@ejemplo.com
-                            </p>
-                            <p className="flex items-center gap-2">
+                                vmordiales@gmail.com
+                            </a>
+                            <a className="flex items-center gap-2" href="https://github.com/samuraiOrDev" target="_blank">
                                 <Github className="h-4 w-4" />
-                                github.com/tuusuario
-                            </p>
-                            <p className="flex items-center gap-2">
+                                https://github.com/samuraiOrDev
+                            </a>
+                            <a className="flex items-center gap-2" href="https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/" target="_blank">
                                 <Linkedin className="h-4 w-4" />
-                                linkedin.com/in/tuusuario
-                            </p>
+                                https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/
+                            </a>
                         </div>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <Button className="bg-blue-600 hover:bg-blue-700">
-                            <Mail className="mr-2 h-4 w-4" />
-                            Enviar Mensaje
-                        </Button>
+                        <FormSendEmail />
                     </div>
                 </div>
             </Card>
