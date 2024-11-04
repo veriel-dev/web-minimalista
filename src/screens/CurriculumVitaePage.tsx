@@ -1,7 +1,4 @@
 
-import {
-    Award, 
-} from 'lucide-react';
 import ButtonDownload from '../components/cvPage/ButtonDownload';
 import HeaderSection from '../components/cvPage/HeaderSection';
 import AboutMeComponent from '../components/cvPage/AboutMeComponent';
