@@ -4,7 +4,7 @@ import { Button, Card, Section } from "../ui"
 
 const ContactSection = () => {
     return (
-        <Section variant="light"  className="rounded-lg">
+        <Section   className="rounded-lg">
             <h2 className="text-3xl font-bold mb-10 text-blue-500">Contacto</h2>
             <Card className="p-6 rounded-lg">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

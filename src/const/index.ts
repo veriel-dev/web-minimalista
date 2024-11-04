@@ -74,7 +74,7 @@ export const homePage = {
                     description: "Empaquetador moderno de proyectos JavaScript"
                 },
                 {
-                    name: "WebComponents", 
+                    name: "Web Components", 
                     level: 45, 
                     description: "Forma nativa de crear elementos personalizables y encapsulados"
                 }
@@ -135,12 +135,12 @@ export const homePage = {
                     description: "Lenguaje multiplataforma orientado a objetos, ideal para aplicaciones empresariales robustas y escalables"
                 },
                 {
-                    name: "JavaScript",
+                    name: "Java Script",
                     level: 85,
                     description: "Lenguaje versátil para desarrollo web, que permite crear aplicaciones interactivas tanto en frontend como backend"
                 },
                 {
-                    name: "TypeScript",
+                    name: "Type Script",
                     level: 80,
                     description: "Extensión de JavaScript que añade tipado estático y características de POO para desarrollo más seguro y mantenible"
                 },
@@ -159,14 +159,14 @@ export const homePage = {
                 degree: "Graduado en Física",
                 institution: "Universidad de Extremadura",
                 period: "2014 - 2021",
-                description: "Especialización en el entendimiento del mundo que nos rodea",
+                description: "Especialización en física teórica y experimental con énfasis en mecánica cuántica, física estadística y electromagnetismo. Desarrollo de habilidades en análisis matemático, programación científica y metodología de investigación. Participación en proyectos de laboratorio y análisis de datos experimentales",
             },
-            {
-                degree: "Bachiller",
-                institution: "I.E.S.O. Norba Caesarina", 
-                period: "2012 - 2014",
-                description: "Instituto de secundaria obligatoria", 
-            },
+            // {
+            //     degree: "Bachiller",
+            //     institution: "I.E.S.O. Norba Caesarina", 
+            //     period: "2012 - 2014",
+            //     description: "Modalidad de Ciencias y Tecnología con excelencia académica. Desarrollo de fundamentos sólidos en matemáticas, física y química. Participación activa en olimpiadas científicas y proyectos de investigación a nivel escolar", 
+            // },
         ]
     },
     projectsSections: {
