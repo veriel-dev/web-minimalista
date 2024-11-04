@@ -10,21 +10,19 @@ const ContactSection = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-4">
                         <h3 className="text-xl font-bold mb-4">¡Hablemos!</h3>
+                        <h4 className="text-xl text-blue-500 font-bold">Gracias por visitar mi sitio web !!</h4>
                         <p className="text-zinc-400">
-                            Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales.
+                            Espero que hayas disfrutado explorando mi trabajo y que hayas obtenido una idea clara de mis habilidades y experiencia.
                         </p>
-                        <div className="space-y-2">
-                            <a className="flex items-center gap-2" href="mailto:vmordiales@gmail.com">
-                                <Mail className="h-4 w-4" />
-                                vmordiales@gmail.com
+                        <div className="flex items-center justify-strart gap-4">
+                            <a  href="mailto:vmordiales@gmail.com">
+                                <Mail className="h-5 w-5" />
                             </a>
-                            <a className="flex items-center gap-2" href="https://github.com/samuraiOrDev" target="_blank">
-                                <Github className="h-4 w-4" />
-                                https://github.com/samuraiOrDev
+                            <a  href="https://github.com/samuraiOrDev" target="_blank">
+                                <Github className="h-5 w-5" />
                             </a>
-                            <a className="flex items-center gap-2" href="https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/" target="_blank">
-                                <Linkedin className="h-4 w-4" />
-                                https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/
+                            <a href="https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/" target="_blank">
+                                <Linkedin className="h-5 w-5" />
                             </a>
                         </div>
                     </div>
