@@ -1,3 +1,19 @@
+const enum Tags {
+    REACT = "React",
+    JS = "Java Script", 
+    TS = "Type Script",
+    NODE = "Node.js",
+    TAILWIND = "Tailwind Css",
+    NEXT = "Next.js",
+    MONGO = "Mongo DB",
+    EXPRESS = "Express.js",
+    VITE = "Vite.js",
+    CSS = "Css Vanilla",
+    ASTRO = "Astro JS",
+    WEB_COMPONENTS = "Web Component"
+
+}
+
 export const homePage = {
     heroSection: {
         title: "Veriel.Dev",
@@ -159,7 +175,7 @@ export const homePage = {
             {
                 title: "Portfolio",
                 description: "Mi actual web hasta el día de hoy",
-                tags: ["React", "Node.js", "NextJS", "NodeMailer", "FramerMotion", "TailwindCss"],
+                tags: [Tags.REACT, Tags.NODE, Tags.NEXT, "NodeMailer", "FramerMotion", Tags.TAILWIND],
                 github: {
                     ok: true,
                     url: "https://github.com/samuraiOrDev/01-portfolio"
@@ -172,7 +188,7 @@ export const homePage = {
             {
                 title: "Clone Spring MVC",
                 description: "Clone de esta mítica tecnología",
-                tags: ["Node.js", "TypeScript", "ReflectMetaData"],
+                tags: [Tags.NODE, Tags.TS, "Reflect MetaData"],
                 github: {
                     ok: true,
                     url: "https://github.com/VerielDev/clone-spring-mvc"
@@ -185,7 +201,7 @@ export const homePage = {
             {
                 title: "Ts-Engine-Template",
                 description: "Clone de handlebars",
-                tags: ["NodeJS", "TypeScript"],
+                tags: [Tags.NODE, Tags.TS],
                 github: {
                     ok: true,
                     url: "https://github.com/VerielDev/ts-engine-template"
@@ -198,7 +214,7 @@ export const homePage = {
             {
                 title: "CRUD-REACT",
                 description: "Proyecto Full Stack",
-                tags: ["TypeScript", "React", "Mongo", "Express", "Node.js"],
+                tags: [Tags.TS, Tags.REACT, Tags.MONGO, Tags.EXPRESS, Tags.NODE],
                 github:{
                     ok: true,
                     url: "https://github.com/samuraiOrDev/CRUD-REACT"
@@ -211,7 +227,7 @@ export const homePage = {
             {
                 title: "Trello Clone",
                 description: "Clome del famoso software Trello Clone",
-                tags: ["React", "DndKit", "TypeScript"],
+                tags: [Tags.REACT, "DndKit", Tags.TS],
                 github: {
                     ok: true, 
                     url: "https://github.com/samuraiOrDev/trello-clone"
@@ -224,7 +240,7 @@ export const homePage = {
             {
                 title: "Responsive Web",
                 description: "Web para visualizar tu web en diferentes resoluciones",
-                tags: ["ReactJS", "ViteJS", "React-Icons"],
+                tags: [Tags.REACT, Tags.VITE, "React-Icons"],
                 github: {
                     ok: true,
                     url: "https://github.com/samuraiOrDev/responsive-web"
@@ -237,7 +253,7 @@ export const homePage = {
             {
                 title: "Old newspaper",
                 description: "Maquetación de un antinguo periódico",
-                tags:["AstroJS", "Css Vanilla"],
+                tags:[Tags.ASTRO, Tags.CSS],
                 github: {
                     ok: true,
                     url: "https://github.com/samuraiOrDev/web-personal-paper"
@@ -246,7 +262,73 @@ export const homePage = {
                     ok: true,
                     url: "https://web-personal-paper.vercel.app/"
                 }
+            },
+            {
+                title: "Clone Cards Yu-Gi-oh",
+                description: "Diseño de cartas similares a la mítica serie YuGiOh",
+                tags: [Tags.REACT, Tags.CSS, "Atropos", Tags.VITE],
+                github: {
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/cards-yu-gi-oh/"
+                },
+                demo: {
+                    ok: true,
+                    url: "https://cards-yu-gi-oh.vercel.app/"
+                }
+            },
+            {
+                title: "Game  Boy Color",
+                description: "Maquetación de la mítica video consola",
+                tags: [Tags.CSS, Tags.VITE, Tags.JS],
+                github: {
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/gameboy-color"
+                },
+                demo: {
+                    ok: true,
+                    url: "https://gameboy-color.vercel.app/"
+                }
+            },
+            {
+                title: "SPA Web Component",
+                description: "Single Page Application realizada con Web Component",
+                tags: [Tags.WEB_COMPONENTS,Tags.JS, Tags.CSS ],
+                github: {
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/spa-vanilla-js/"
+                },
+                demo: {
+                    ok: true,
+                    url: "https://spa-vanilla-js-beryl.vercel.app/"
+                }
+            },
+            {
+                title: "Pokedex: Los primeros 151 pokemons",
+                description: "Pokdex basada en la PokeAPI",
+                tags: [Tags.NEXT, Tags.CSS, Tags.TS ],
+                github: {
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/pokedex/"
+                },
+                demo: {
+                    ok: true,
+                    url: "https://pokedex-roan-alpha.vercel.app/"
+                }
+            },
+            {
+                title: "To Do React",
+                description: "Lista de tareas realizada en React",
+                tags: [Tags.TS, Tags.REACT, Tags.CSS],
+                github: {
+                    ok: true,
+                    url: "https://github.com/samuraiOrDev/To-Do-React/"
+                },
+                demo: {
+                    ok: true,
+                    url: "https://tod-do-react.vercel.app/"
+                }
             }
+            
         ]
 
     }

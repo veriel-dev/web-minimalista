@@ -3,7 +3,6 @@ import { Button, Section } from "../ui"
 import Logo from "../svg/Logo"
 import { homePage } from "../../const"
 
-import { Link } from "react-router-dom"
 const HeroSection = () => {
     const { heroSection } = homePage
     return (
@@ -28,18 +27,16 @@ const HeroSection = () => {
                         <Mail className="mr-2 h-4 w-4" />
                         {heroSection.contact}
                     </Button>
-                    <Link
-                        to={heroSection.cv.to}
+                    <a
+                        href={heroSection.cv.to} 
                         rel="noopener noreferrer"
                         target="_blank"
-                    >
-
+                    >   
                         <Button variant="outline" className="border-zinc-700">
                             <Download className="mr-2 h-4 w-4" />
                             {heroSection.cv.text}
                         </Button>
-
-                    </Link>
+                    </a>
                 </div>
             </div>
         </Section>
