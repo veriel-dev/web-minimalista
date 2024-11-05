@@ -8,12 +8,12 @@ const SkillsComponents = () => {
         tecs: [
             {
                 title: "FRONTEND",
-                tec: ['HTML5/CSS3', 'JavaScript/TypeScript', 'React.js', 'Vite', 'AstroJS', 'Web Component'],
+                tec: ['HTML5/CSS3', 'Java Script/Type Script', 'React', 'Vite', 'Astro', 'Web Component'],
                 icon: ChromeIcon
             },
             {
                 title: "BACKEND",
-                tec: ['Node.js', 'Python', 'Java/JSP', 'Spring MVC', 'Expess', 'Nest'],
+                tec: ['Node', 'Python', 'Java/JSP', 'Spring MVC', 'Expess', 'Nest'],
                 icon: Server
             },
             {

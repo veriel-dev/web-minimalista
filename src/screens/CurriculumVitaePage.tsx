@@ -13,7 +13,6 @@ const CurriculumVitae = () => {
     return (
         <>
             <ButtonDownload />
-
             <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 py-8 px-4 print:bg-white print:p-0">
                 <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden print:shadow-none">
                     <HeaderSection />

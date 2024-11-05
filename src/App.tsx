@@ -7,7 +7,6 @@ import { Route, Switch } from 'wouter';
 const App = () => {
   return (
     <>
-
       <Switch>
         <Route path="/" component={HomePage} />
         <Route path="/curriculum-vitae" component={CurriculumVitae} />

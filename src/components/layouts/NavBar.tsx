@@ -1,34 +1,29 @@
 import { Github, Linkedin, Mail } from "lucide-react"
-import { Button } from "../ui"
+import { LinkNavBar } from "../ui/LinkNavBar"
 
 export const NavBar = () => {
     return (
-        <nav className=" sticky top-0 bg-zinc-950/80 backdrop-blur-sm z-70">
+        <nav className="sticky top-0 bg-zinc-950/80 backdrop-blur-sm z-10">
             <div className="max-w-6xl mx-auto px-4 py-4 flex justify-end items-center">
                 <div className="flex items-center gap-4">
-                    <a href="mailto:vmordiales@gmail.com">
-                        <Button variant="ghost">
-                            <Mail className="h-5 w-5" />
-                        </Button>
-                    </a>
-                    <a 
-                        href="https://github.com/samuraiOrDev" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                    <LinkNavBar
+                        to="mailto:vmordiales@gmail.com"
+                        isEmail
                     >
-                        <Button variant="ghost">
-                            <Github className="h-5 w-5" />
-                        </Button>
-                    </a>
-                    <a 
-                        href="https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
+                        <Mail className="h-5 w-5" />
+                    </LinkNavBar>
+                    <LinkNavBar
+                        to="https://github.com/samuraiOrDev"
+                        target="_blank"
                     >
-                        <Button variant="ghost">
-                            <Linkedin className="h-5 w-5" />
-                        </Button>
-                    </a>
+                        <Github className="h-5 w-5" />
+                    </LinkNavBar>
+                    <LinkNavBar
+                        to="https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/"
+                        target="_blank"
+                    >
+                        <Linkedin className="h-5 w-5" />
+                    </LinkNavBar>
                 </div>
             </div>
         </nav>

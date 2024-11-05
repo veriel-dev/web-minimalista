@@ -1,7 +1,7 @@
 
 export const preloadRoutes = {
     preloadHero: () => import("../components/homePage/HeroSection"),
-    preloadAbout: () => import("../components/homePage/AboutSection"),
+    preloadAbout: () => import("../components/homePage/aboutSection/AboutSection"),
     preloadProjects: () => import("../components/homePage/ProjectsSection"),
     preloadSkills: () => import("../components/homePage/SkillsSection"),
     preloadEducation: () => import("../components/homePage/EducationSection"),

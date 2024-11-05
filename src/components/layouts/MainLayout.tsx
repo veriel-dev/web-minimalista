@@ -9,7 +9,6 @@ interface Props {
 export const MainLayout = ({children}:Props) => {
     return (
         <div className=" min-h-screen bg-main text-primary">
-            {/* NavBar*/}
             <NavBar />
             {children}
             <Footer />

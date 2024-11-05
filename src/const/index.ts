@@ -2,21 +2,21 @@ const enum Tags {
     REACT = "React",
     JS = "Java Script", 
     TS = "Type Script",
-    NODE = "Node.js",
-    TAILWIND = "Tailwind Css",
+    NODE = "Node",
+    TAILWIND = "Tailwind",
     NEXT = "Next.js",
     MONGO = "Mongo DB",
-    EXPRESS = "Express.js",
-    VITE = "Vite.js",
-    CSS = "Css Vanilla",
-    ASTRO = "Astro JS",
+    EXPRESS = "Express",
+    VITE = "Vite",
+    CSS = "Css Vanilla",   
+    ASTRO = "Astro",
     WEB_COMPONENTS = "Web Component"
 
 }
 
 export const homePage = {
     heroSection: {
-        title: "Veriel.Dev",
+        title: "Veriel.dev",
         description:
         "Desarrollador que transforma desafíos de código en experiencias web modernas",
         contact: "Contactar",
@@ -29,12 +29,23 @@ export const homePage = {
         title: "Sobre Mí",
         description:
         "Desarrollador Full Stack con 3+ años de experiencia en aplicaciones web empresariales. Dominio de TypeScript, Node.js, Java y Spring Framework. Experiencia en bases de datos SQL y NoSQL",
-        titleExperience: "Experiencia",
-        experience: "3+ años",
-        titleProjects: "Proyectos",
-        projects: "30+",
-        titleTec: "Tecnologías",
-        tec: "20+",
+        stats : [
+            {
+                label: "Experiencia",
+                value: 3,
+                plus: "+ años"
+            },
+            {
+                label: "Proyectos/Evolutivos",
+                value: 30,
+                plus: "+"
+            },
+            {
+                label: "Tecnologías",
+                value: 20,
+                plus: "+"
+            }
+        ]
     },
     skillsSection: {
         title: "Habilidades Técnicas",
@@ -42,25 +53,21 @@ export const homePage = {
             frontend: [
                 {
                     name: "React",
-                    level: 90,
                     description:
-                        "Biblioteca JavaScript para construir interfaces de usuario",
+                        "Biblioteca Java Script para construir interfaces de usuario",
                 },
                 {
-                    name: "Astro.js",
-                    level: 50,
+                    name: "Astro",
                     description:
                         "Framework de JS para crear sitios estáticos de manera rápida",
                 },
                 {
-                    name: "Next.js",
-                    level: 50,
+                    name: "Next",
                     description:
-                        "MetaFramework de ReactJS",
+                        "MetaFramework de React ",
                 },
                 {
                     name: "HTML/CSS",
-                    level: 90,
                     description: "Tecnologías base para desarrollo web",
                 },
                 {
@@ -69,106 +76,75 @@ export const homePage = {
                     description: "Framework CSS utility-first",
                 },
                 {
-                    name: "Vite.js",
-                    level: 55, 
+                    name: "Vite",
                     description: "Empaquetador moderno de proyectos JavaScript"
                 },
                 {
                     name: "Web Components", 
-                    level: 45, 
                     description: "Forma nativa de crear elementos personalizables y encapsulados"
                 }
             ],
             backend: [
                 {
-                    name: "Node.js",
-                    level: 85,
-                    description: "Entorno de ejecución para JavaScript",
+                    name: "Node",
+                    description: "Entorno de ejecución para Java Script",
                 },
                 {
                     name: "Spring",
-                    level: 85,
                     description: "Framework Java para aplicaciones empresariales",
                 },
                 {
                     name: "JSP",
-                    level: 50,
                     description: "Java Server Pages"
                 },
                 {
                     name: "OWCS",
-                    level: 50,
                     description: "Sistema de gestión de contenido de ámbito empresarial basado en Java"
                 },
                 {
                     name: "Express",
-                    level: 85,
-                    description: "Framework web para Node.js",
+                    description: "Framework web para Node",
                 },
                 {
-                    name: "Nest.js",
-                    level: 55,
-                    description: "Framework web escalable basado en Node.js"
+                    name: "Nest",
+                    description: "Framework web escalable basado en Node"
                 }
             ],
             database: [
                 {
                     name: "PostgreSQL",
-                    level: 80,
                     description: "Sistema de gestión de bases de datos relacional",
                 },
                 {
                     name: "MongoDB",
-                    level: 75,
                     description: "Base de datos NoSQL orientada a documentos",
                 },
                 {
                     name: "OracleSQL",
-                    level: 55,
                     description: "Sistema de gestión de bases de datos relacional del gigante Oracle", 
                 },
             ],
             languages: [
                 {
                     name: "Java",
-                    level: 70,
                     description: "Lenguaje multiplataforma orientado a objetos, ideal para aplicaciones empresariales robustas y escalables"
                 },
                 {
                     name: "Java Script",
-                    level: 85,
                     description: "Lenguaje versátil para desarrollo web, que permite crear aplicaciones interactivas tanto en frontend como backend"
                 },
                 {
                     name: "Type Script",
-                    level: 80,
                     description: "Extensión de JavaScript que añade tipado estático y características de POO para desarrollo más seguro y mantenible"
                 },
                 {
                     name: "Python",
-                    level: 65,
                     description: "Lenguaje de alto nivel conocido por su simplicidad y potencia, ideal para desarrollo web, análisis de datos e IA"
                 }
             ]
         },
     },
-    educationSection: {
-        title: "Formación Académica",
-        titles: [
-            {
-                degree: "Graduado en Física",
-                institution: "Universidad de Extremadura",
-                period: "2014 - 2021",
-                description: "Especialización en física teórica y experimental con énfasis en mecánica cuántica, física estadística y electromagnetismo. Desarrollo de habilidades en análisis matemático, programación científica y metodología de investigación. Participación en proyectos de laboratorio y análisis de datos experimentales",
-            },
-            // {
-            //     degree: "Bachiller",
-            //     institution: "I.E.S.O. Norba Caesarina", 
-            //     period: "2012 - 2014",
-            //     description: "Modalidad de Ciencias y Tecnología con excelencia académica. Desarrollo de fundamentos sólidos en matemáticas, física y química. Participación activa en olimpiadas científicas y proyectos de investigación a nivel escolar", 
-            // },
-        ]
-    },
+
     projectsSections: {
         title: "Proyectos Destacado",
         projects: [
@@ -349,7 +325,8 @@ export const cvPage = {
                 company: "eCapture3D S.L · Badajoz · abr. 2021 - jun. 2021",
                 description: "Desarrollo de algoritmos predictivos para detectar la evolución de variables climáticas en España mediante técnicas de Machine Learning y Deep Learning."
             }
-        ]
+        ],
+        isEducation: false
     },
     education: {
         title: "FORMACIÓN ACADÉMICA",
@@ -364,6 +341,7 @@ export const cvPage = {
                 company: "I.E.S.O. Norba Caesarina - 2012 - 2014", 
                 description: "Modalidad de Ciencias y Tecnología con excelencia académica. Desarrollo de fundamentos sólidos en matemáticas, física y química. Participación activa en olimpiadas científicas y proyectos de investigación a nivel escolar", 
             }
-        ]
+        ],
+        isEducation: true
     }
 }

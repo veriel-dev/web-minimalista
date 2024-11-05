@@ -1,4 +1,4 @@
-import { Briefcase } from "lucide-react"
+import { Briefcase, GraduationCap } from "lucide-react"
 
 
 interface Props {
@@ -9,13 +9,21 @@ interface Props {
             company: string;
             description: string;
         }[];
-    }
+        isEducation: boolean
+    },
+    
 }
 const TimeLineComponent = ({elements}:Props) => {
     return (
         <section className="mb-12">
             <div className="flex items-center gap-2 mb-6 border-b-2 border-blue-400 text-blue-600">
-                <Briefcase className="w-5 h-5 text-blue-600" />
+                {
+                    !elements.isEducation && (<Briefcase className="w-5 h-5 text-blue-600" />)
+                }
+                {
+                    elements.isEducation && (<GraduationCap className="w-5 h-5 text-blue-600" />)
+                }
+                
                 <h2 className="text-2xl font-bold ">{elements.title}</h2>
             </div>
             <div className="space-y-8">
