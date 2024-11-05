@@ -36,7 +36,7 @@ export const homePage = {
                 plus: "+ años"
             },
             {
-                label: "Proyectos/Evolutivos",
+                label: "Proyectos/Evol",
                 value: 30,
                 plus: "+"
             },
