@@ -87,7 +87,7 @@ const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }:Props) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <Card  className="rounded-lg border-2 hover:border-blue-500 transition-colors cursor-pointer">
+            <Card  className="rounded-lg border-2 hover:border-blue-500 transition-colors cursor-pointer h-[250px]">
                 {cardContent}
             </Card>
         </div>

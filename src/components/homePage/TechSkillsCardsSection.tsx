@@ -3,7 +3,7 @@ import { Card, Section, TabsList } from "../ui";
 import { useState } from "react";
 import TabsTrigger from "../ui/TabsTrigger";
 import { homePage } from "../../const";
-import { AnimatePresence, motion } from "framer-motion";
+import {motion } from "framer-motion";
 export type TabType = 'frontend' | 'backend' | 'database' | "languages";
 
 
@@ -45,7 +45,7 @@ const TechSkillsCardsSection = () => {
             </TabsList>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {technologies[activeTab].map((tech, index) => (
-                    <AnimatePresence>
+                    
                         <motion.div
                             key={tech.name}
                             initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ const TechSkillsCardsSection = () => {
                                 </p>
                             </Card>
                         </motion.div>
-                    </AnimatePresence>
+                    
 
                 ))}
             </div>
