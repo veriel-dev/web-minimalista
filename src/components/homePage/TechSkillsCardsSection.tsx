@@ -3,6 +3,7 @@ import { Card, Section, TabsList } from "../ui";
 import { useState } from "react";
 import TabsTrigger from "../ui/TabsTrigger";
 import { homePage } from "../../const";
+import { AnimatePresence, motion } from "framer-motion";
 export type TabType = 'frontend' | 'backend' | 'database' | "languages";
 
 
@@ -12,7 +13,7 @@ interface TabIconsMap {
 
 const TechSkillsCardsSection = () => {
     const [activeTab, setActiveTab] = useState<TabType>('frontend');
-    const {skillsSection} = homePage
+    const { skillsSection } = homePage
 
     const technologies = skillsSection.technologies
 
@@ -42,32 +43,30 @@ const TechSkillsCardsSection = () => {
                     );
                 })}
             </TabsList>
-            {/* Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {technologies[activeTab].map((tech) => (
-                    <Card
-                        key={tech.name}
-                        className="rounded-lg p-4 border-2 hover:border-blue-500 transition-colors"
-                    >
-                        <div className="flex items-center gap-2 mb-4">
-                            <h3 className="text-lg font-bold">{tech.name}</h3>
-                        </div>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                            {tech.description}
-                        </p>
+                {technologies[activeTab].map((tech, index) => (
+                    <AnimatePresence>
+                        <motion.div
+                            key={tech.name}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ delay: index * 0.1 }}
+                        >
+                            <Card
+                                key={tech.name}
+                                className="rounded-lg p-4 border-2 hover:border-blue-500 transition-colors"
+                            >
+                                <div className="flex items-center gap-2 mb-4">
+                                    <h3 className="text-lg font-bold">{tech.name}</h3>
+                                </div>
+                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                    {tech.description}
+                                </p>
+                            </Card>
+                        </motion.div>
+                    </AnimatePresence>
 
-                        {/* <div className="mt-4">
-                            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mb-1">
-                                <div
-                                    className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
-                                    style={{ width: `${tech.level}%` }}
-                                ></div>
-                            </div>
-                            <p className="text-right text-sm text-gray-600 dark:text-gray-400">
-                                {tech.level}%
-                            </p>
-                        </div> */}
-                    </Card>
                 ))}
             </div>
 
