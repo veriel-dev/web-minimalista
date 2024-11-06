@@ -1,3 +1,5 @@
+import { TypeProject } from "../components/projectsPage/ProjectsSection";
+
 const enum Tags {
     REACT = "React",
     JS = "Java Script", 
@@ -345,3 +347,193 @@ export const cvPage = {
         isEducation: true
     }
 }
+
+export const projectsPage = {
+    heroSection: {
+        title: "Proyectos",
+        description:
+        "Explora mi portfolio de proyectos full-stack, desde aplicaciones web hasta clones de tecnologías populares. Cada proyecto representa un desafío único y una oportunidad de aprendizaje.",
+        projects: "Ver Proyectos",
+        contact: "Contactar"
+    },
+    statsSection: [
+        { label: 'Proyectos Completados', value: '15+' },
+        { label: 'Tecnologías Utilizadas', value: '20+' },
+        { label: 'Años de Experiencia', value: '3+' },
+        { label: 'Contribuciones Open Source', value: '50+' }
+    ]
+}
+
+export const configAnimate = {
+    animateHeroSecion: {
+        initial: {
+            opacity: 0, 
+            y: 20
+        },
+        animate: {
+            opacity: 1, y: 0
+        }
+    },
+    animateStatsSection: {
+        animate: {
+            opacity: 0, 
+            y: 20
+        },
+        whileInView: {
+            opacity: 1, 
+            y: 0
+        },
+        viewport: {
+            once: true
+        },
+    }
+}
+
+const projects: TypeProject[] = [
+    {
+        title: "Portfolio",
+        description: "Mi actual web hasta el día de hoy",
+        technologies: ["React", "Node", "Next.js", "NodeMailer", "FramerMotion", "Tailwind"],
+        featured: true,
+        stats: {
+            stars: 24,
+            forks: 8,
+            startDate: "2024-01",
+            lastUpdate: "2 días"
+        }
+    },
+    {
+        title: "Clone Spring MVC",
+        description: "Clone de esta mítica tecnología",
+        technologies: ["Node", "TypeScript", "Reflect MetaData"],
+        featured: false,
+        stats: {
+            stars: 15,
+            forks: 3,
+            startDate: "2023-12",
+            lastUpdate: "5 días"
+        }
+    },
+    {
+        title: "Ts-Engine-Template",
+        description: "Clone de handlebars",
+        technologies: ["Node", "TypeScript"],
+        featured: false,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "CRUD-REACT",
+        description: "Proyecto Full Stack",
+        technologies: ["TypeScript", "React", "MongoDB", "Express", "Node"],
+        featured: false,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "Trello Clone",
+        description: "Clome del famoso software Trello Clone",
+        technologies: ["React", "DndKit", "TypeScript"],
+        featured: true,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "Responsive Web",
+        description: "Web para visualizar tu web en diferentes resoluciones",
+        technologies: ["React", "Vite", "React-Icons"],
+        featured: false,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "Old newspaper",
+        description: "Maquetación de un antinguo periódico",
+        technologies: ["Astro", "CSS"],
+        featured: false,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "Clone Cards Yu-Gi-oh",
+        description: "Diseño de cartas similares a la mítica serie YuGiOh",
+        technologies: ["React", "CSS", "Atropos", "Vite"],
+        featured: true,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "Game Boy Color",
+        description: "Maquetación de la mítica video consola",
+        technologies: ["CSS", "Vite", "JavaScript"],
+        featured: false,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "SPA Web Component",
+        description: "Single Page Application realizada con Web Component",
+        technologies: ["Web Components", "JavaScript", "CSS"],
+        featured: false,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "Pokedex: Los primeros 151 pokemons",
+        description: "Pokdex basada en la PokeAPI",
+        technologies: ["Next.js", "CSS", "TypeScript"],
+        featured: true,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    },
+    {
+        title: "To Do React",
+        description: "Lista de tareas realizada en React",
+        technologies: ["TypeScript", "React", "CSS"],
+        featured: false,
+        stats: {
+            stars: 0,
+            forks: 0,
+            startDate: "2023-12",
+            lastUpdate: "N/A"
+        }
+    }
+];
+
+export default projects;
