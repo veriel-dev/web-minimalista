@@ -1,9 +1,14 @@
-import { lazy, memo } from "react"
+import {  memo } from "react"
 import { MainLayout } from "../components"
 
-const HeroSection = lazy(() => import('../components/projectsPage/HeroSection'));
-const  StatsSection = lazy(() => import('../components/projectsPage/StatsSection'));
-const ProjectsSection = lazy(() => import('../components/projectsPage/ProjectsSection'))
+import HeroSection from "../components/homePage/HeroSection"
+import ProjectsSection from "../components/projectsPage/ProjectsSection"
+import StatsSection from "../components/projectsPage/StatsSection"
+
+
+
+
+
 const ProjectsPage = memo(() => {
     return (
         <MainLayout>

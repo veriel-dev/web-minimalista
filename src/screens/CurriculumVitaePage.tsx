@@ -4,6 +4,7 @@ import HeaderSection from '../components/cvPage/HeaderSection';
 import AboutMeComponent from '../components/cvPage/AboutMeComponent';
 import TimeLineComponent from '../components/cvPage/TimeLineComponent';
 import SkillsComponents from '../components/cvPage/SkillsComponents';
+
 import { cvPage } from '../const';
 
 
