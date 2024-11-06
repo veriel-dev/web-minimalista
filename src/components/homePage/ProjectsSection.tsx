@@ -1,11 +1,13 @@
 import { useEffect, useState, useCallback } from 'react';
 import { ExternalLink, Github, } from "lucide-react";
 import { Button, Card, Section } from "../ui";
-import { homePage } from "../../const";
+import { homePage, transitions } from "../../const";
 import { motion, AnimatePresence } from "framer-motion";
 
 
 const AUTOPLAY_DELAY = 8000;
+
+
 
 const ProjectsSection = () => {
     const { projectsSections } = homePage;
@@ -40,31 +42,6 @@ const ProjectsSection = () => {
 
         return projects.slice(startIdx, startIdx + projectsPerPage);
     };
-
-    const pageVariants = {
-        enter: (direction: number) => ({
-            x: direction > 0 ? '50%' : '-50%',
-            opacity: 0,
-            scale: 0.8
-        }),
-        center: {
-            x: 0,
-            opacity: 1,
-            scale: 1
-        },
-        exit: (direction: number) => ({
-            x: direction < 0 ? '50%' : '-50%',
-            opacity: 0,
-            scale: 0.8
-        })
-    };
-
-    const pageTransition = {
-        type: "spring",
-        stiffness: 300,
-        damping: 30
-    };
-
     return (
         <Section className="relative">
             <div className="flex justify-between items-center mb-10">
@@ -81,15 +58,17 @@ const ProjectsSection = () => {
             </div>
 
             <div className="relative px-4">
-                <AnimatePresence initial={false} custom={direction} mode="wait">
+                <AnimatePresence 
+                    initial={false} 
+                    custom={direction} 
+                    mode="wait"
+                >
                     <motion.div
                         key={currentPage}
-                        custom={direction}
-                        variants={pageVariants}
                         initial="enter"
                         animate="center"
                         exit="exit"
-                        transition={pageTransition}
+                        transition={transitions.professionalTransition}
                         className="grid grid-cols-1 md:grid-cols-3 gap-6"
                     >
                         {getCurrentProjects().map((project, index) => (
