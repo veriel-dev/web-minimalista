@@ -4,8 +4,7 @@ import { Grid, List, Search, } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ModalProject";
-import projects from "../../const";
-
+import projects from "../../data/projects";
 
 export interface TypeProject {
     title: string;

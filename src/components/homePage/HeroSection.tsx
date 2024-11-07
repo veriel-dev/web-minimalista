@@ -1,10 +1,19 @@
 import { Download, Mail } from "lucide-react"
 import { Button, Section } from "../ui"
 import Logo from "../svg/Logo"
-import { configAnimate, homePage } from "../../const"
 import { motion } from 'framer-motion';
+import { memo } from "react";
+import { homePage } from "../../locales/home";
+import { configAnimate } from "../../config/animation";
 
-const HeroSection = () => {
+const HeroSection = memo(() => {
+
+    const scrollToContact = (e:React.MouseEvent<HTMLElement>) => {
+        e.preventDefault();
+        document.getElementById('contact')?.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
     const { heroSection } = homePage
     const {
         animateHeroSecion: {
@@ -17,7 +26,8 @@ const HeroSection = () => {
             <motion.div
                 initial={{ opacity: initial.opacity, y: initial.y }}
                 animate={{ opacity: animate.opacity, y: animate.y }}
-                className="flex flex-col items-center text-center gap-6">
+                className="flex flex-col items-center text-center gap-6"
+            >
                 <div className="flex items-center justify-center overflow-hidden">
                     <Logo />
                 </div>
@@ -30,10 +40,12 @@ const HeroSection = () => {
                     </p>
                 </div>
                 <div className="flex gap-4">
-                    <Button className="bg-blue-600 hover:bg-blue-700">
+
+                    <Button className="bg-blue-600 hover:bg-blue-700" onClick={scrollToContact}>
                         <Mail className="mr-2 h-4 w-4" />
                         {heroSection.contact}
                     </Button>
+
                     <a
                         href={heroSection.cv.to}
                         rel="noopener noreferrer"
@@ -48,5 +60,5 @@ const HeroSection = () => {
             </motion.div>
         </Section>
     )
-}
+})
 export default HeroSection

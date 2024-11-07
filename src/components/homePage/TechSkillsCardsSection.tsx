@@ -1,10 +1,10 @@
-import { Code, Cog, Computer, Database, LucideIcon, Server } from "lucide-react";
+import { Code, Cog, Computer, Container, Database, LucideIcon, Server } from "lucide-react";
 import { Card, Section, TabsList } from "../ui";
 import { useState } from "react";
 import TabsTrigger from "../ui/TabsTrigger";
-import { homePage } from "../../const";
-import {motion } from "framer-motion";
-export type TabType = 'frontend' | 'backend' | 'database' | "languages";
+import { motion } from "framer-motion";
+import { homePage } from "../../locales/home";
+export type TabType = 'frontend' | 'backend' | 'database' | "languages" | "devOps";
 
 
 interface TabIconsMap {
@@ -21,7 +21,8 @@ const TechSkillsCardsSection = () => {
         frontend: Code,
         backend: Server,
         database: Database,
-        languages: Computer
+        languages: Computer,
+        devOps: Container
     };
     return (
         <Section variant="light" className="rounded-lg">
@@ -29,7 +30,6 @@ const TechSkillsCardsSection = () => {
                 <Cog className="h-8 w-8" />
                 {skillsSection.title}
             </h2>
-            {/* Tabs */}
             <TabsList>
                 {Object.keys(technologies).map((tab) => {
                     return (
@@ -45,31 +45,33 @@ const TechSkillsCardsSection = () => {
             </TabsList>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {technologies[activeTab].map((tech, index) => (
-                    
-                        <motion.div
+                    <motion.div
+                        key={tech.name}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ delay: index * 0.1 }}
+                    >
+                        <Card
                             key={tech.name}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ delay: index * 0.1 }}
+                            className="rounded-lg p-4 border-2 hover:border-blue-500 transition-colors h-[160px]"
                         >
-                            <Card
-                                key={tech.name}
-                                className="rounded-lg p-4 border-2 hover:border-blue-500 transition-colors"
-                            >
-                                <div className="flex items-center gap-2 mb-4">
-                                    <h3 className="text-lg font-bold">{tech.name}</h3>
-                                </div>
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                                    {tech.description}
-                                </p>
-                            </Card>
-                        </motion.div>
-                    
-
+                            <div className="flex items-center gap-2 mb-4">
+                                <h3 className="text-lg font-bold">{tech.name}</h3>
+                            </div>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                                {tech.description}
+                            </p>
+                            <div className="w-full bg-secondary rounded-full h-2">
+                                <div
+                                    className="bg-blue-600 rounded-full h-2 transition-all group-hover:bg-blue-400"
+                                    style={{ width: `${tech.level}%` }}
+                                />
+                            </div>
+                        </Card>
+                    </motion.div>
                 ))}
             </div>
-
         </Section>
     )
 }

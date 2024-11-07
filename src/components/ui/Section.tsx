@@ -10,15 +10,18 @@ interface Props {
     variant?: "default" | "light"
     className?: string
     children: React.ReactNode
+    id?: string
 }
 
-export const Section = ({variant = "default", className, children}:Props) => {
+export const Section = ({variant = "default", className, children, id}:Props) => {
     return (
-        <section className={cn(
-            "max-w-6xl mx-auto px-4 py-20",
-            variants[variant],
-            className
-        )}
+        <section 
+            id={id}    
+            className={cn(
+                "max-w-6xl mx-auto px-4 py-20",
+                variants[variant],
+                className
+            )}
         >
             {children}
         </section>

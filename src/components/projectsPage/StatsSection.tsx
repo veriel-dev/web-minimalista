@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Section } from '../ui';
-import { configAnimate, projectsPage } from '../../const';
+import { projectsPage } from '../../locales/projects';
+import { configAnimate } from '../../config/animation';
+
 
 const StatsSection = () => {
     const {statsSection} = projectsPage

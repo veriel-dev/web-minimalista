@@ -1,11 +1,10 @@
 import { useEffect, useState, useCallback } from 'react';
 import { ExternalLink, Github, } from "lucide-react";
 import { Button, Card, Section } from "../ui";
-import { homePage, transitions } from "../../const";
 import { motion, AnimatePresence } from "framer-motion";
+import { homePage } from '../../locales/home';
+import { transitions } from '../../const/transitions';
 
-
-const AUTOPLAY_DELAY = 8000;
 
 
 
@@ -14,6 +13,7 @@ const ProjectsSection = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [direction, setDirection] = useState(0);
     const [isAutoplay] = useState(true);
+    const AUTOPLAY_DELAY = 8000;
 
     const projectsPerPage = 3;
 
@@ -48,13 +48,6 @@ const ProjectsSection = () => {
                 <h2 className="text-3xl font-bold text-blue-500">
                     {projectsSections.title}
                 </h2>
-                {/* <Button
-                    variant="ghost"
-                    onClick={() => setIsAutoplay(!isAutoplay)}
-                    className="text-blue-500"
-                >
-                    {isAutoplay ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-                </Button> */}
             </div>
 
             <div className="relative px-4">
@@ -89,7 +82,7 @@ const ProjectsSection = () => {
                                         <Card
                                             className="rounded-lg p-4 border-2 hover:border-blue-500 transition-all hover:scale-105 h-[300px]"
                                         >
-                                            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                            <h3 className="text-xl font-bold mb-2 text-blue-500">{project.title}</h3>
                                             <p className="text-zinc-400 mb-4">{project.description}</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {project.tags.map((tag, tagIndex) => (
@@ -147,8 +140,6 @@ const ProjectsSection = () => {
                     </motion.div>
                 </AnimatePresence>
             </div>
-
-            {/* Pagination Indicators */}
             <div className="flex justify-center items-center gap-2 mt-8">
                 {Array.from({ length: totalPages }).map((_, index) => (
                     <motion.div

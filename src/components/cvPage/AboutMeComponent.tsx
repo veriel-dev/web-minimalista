@@ -1,8 +1,5 @@
 import { User } from "lucide-react"
-
-
 const AboutMeComponent = () => {
-
     const about = {
         title: "SOBRE MI",
         text: "Desarrollador Full-Stack con experiencia en entornos empresariales, especializado en sistemas CMS (OWCS), Spring Framework y desarrollo JavaScript/TypeScript. Enfocado en la implementación de soluciones web eficientes y el desarrollo de aplicaciones escalables."

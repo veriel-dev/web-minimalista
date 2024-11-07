@@ -1,9 +1,7 @@
 
 import { memo} from "react"
+
 import { MainLayout } from "../components";
-
-
-
 import HeroSection from '../components/homePage/HeroSection';
 import AboutSection from '../components/homePage/aboutSection/AboutSection';
 import ProjectsSection from '../components/homePage/ProjectsSection'; 

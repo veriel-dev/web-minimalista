@@ -5,7 +5,7 @@ interface Props {
     children: React.ReactNode
     className?: string
     variant?: "ghost" | "default" | "outline" | "subtle",
-    onClick?: () => void
+    onClick?: (() => void) | ((e: React.MouseEvent<HTMLElement>) => void)
     disabled?: boolean
 }
 
