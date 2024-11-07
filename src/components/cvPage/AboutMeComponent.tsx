@@ -1,9 +1,8 @@
 import { User } from "lucide-react"
+import { cvPage } from "../../locales/cv"
+
 const AboutMeComponent = () => {
-    const about = {
-        title: "SOBRE MI",
-        text: "Desarrollador Full-Stack con experiencia en entornos empresariales, especializado en sistemas CMS (OWCS), Spring Framework y desarrollo JavaScript/TypeScript. Enfocado en la implementación de soluciones web eficientes y el desarrollo de aplicaciones escalables."
-    }
+    const { about } = cvPage
     return (
         <>
             <section className="mb-12">
@@ -15,6 +14,15 @@ const AboutMeComponent = () => {
                 <p className="text-gray-600 leading-relaxed w-[95%]">
                     {about.text}
                 </p>
+                <ul className="mt-4 space-y-2 list-disc list-inside text-gray-700 ">
+                    {
+                        about.expertise.map((item, index) => (
+                            <li key={index} className="pl-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                                {item}
+                            </li>
+                        ))
+                    }
+                </ul>
             </section>
 
         </>

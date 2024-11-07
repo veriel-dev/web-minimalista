@@ -32,7 +32,7 @@ const HeroSection = memo(() => {
                     <Logo />
                 </div>
                 <div className="space-y-4">
-                    <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+                    <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
                         {heroSection.title}
                     </h1>
                     <p className="text-xl text-zinc-400 max-w-2xl">

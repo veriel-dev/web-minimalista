@@ -5,10 +5,13 @@ import AboutMeComponent from '../components/cvPage/AboutMeComponent';
 import TimeLineComponent from '../components/cvPage/TimeLineComponent';
 import SkillsComponents from '../components/cvPage/SkillsComponents';
 import { cvPage } from '../locales/cv';
+import IdiomasComponent from '../components/cvPage/IdiomasComponent';
+import LogrosComponent from '../components/cvPage/LogrosComponent';
+import { memo } from 'react';
 
 
 
-const CurriculumVitae = () => {
+const CurriculumVitae = memo(() => {
     const {experience, education} = cvPage
 
     return (
@@ -21,8 +24,10 @@ const CurriculumVitae = () => {
                     <div className="p-8">
                         <AboutMeComponent />
                         <TimeLineComponent elements={experience}/>
-                        <TimeLineComponent elements={education}/>
+                        <TimeLineComponent elements={education}/> 
                         <SkillsComponents />
+                        <IdiomasComponent />
+                        <LogrosComponent />
                     </div>
                 </div>
             </div>
@@ -46,6 +51,6 @@ const CurriculumVitae = () => {
             `}</style>
         </>
     )
-}
+})
 
 export default CurriculumVitae

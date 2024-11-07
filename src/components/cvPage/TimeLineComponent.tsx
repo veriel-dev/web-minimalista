@@ -7,7 +7,7 @@ interface Props {
         jobs: {
             item: string;
             company: string;
-            description: string;
+            expertise: string[]
         }[];
         isEducation: boolean
     },
@@ -34,9 +34,16 @@ const TimeLineComponent = ({elements}:Props) => {
                             <div>
                                 <h3 className="text-xl font-semibold text-blue-800">{element.item}</h3>
                                 <p className="text-gray-600 mb-2">{element.company}</p>
-                                <p className="text-gray-600 text-sm w-[95%]">
-                                    {element.description}
-                                </p>
+                                {/* Item List */}
+                                <ul className="mt-4 space-y-2 list-disc list-inside text-gray-700 ">
+                                    {
+                                        element.expertise.map((item, index) => (
+                                            <li key={index} className="pl-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                                                {item}
+                                            </li>
+                                        ))
+                                    }
+                                </ul>
                             </div>
                         </div>
                     ))

@@ -1,28 +1,9 @@
-import { ChromeIcon, Code, Database,  Server } from "lucide-react"
+import { Code } from "lucide-react"
+import { cvPage } from "../../locales/cv"
 
 
 const SkillsComponents = () => {
-
-    const skills = {
-        title: "COMPETENCIAS TÉCNICAS",
-        tecs: [
-            {
-                title: "FRONTEND",
-                tec: ['HTML5/CSS3', 'Java Script/Type Script', 'React', 'Vite', 'Astro', 'Web Component'],
-                icon: ChromeIcon
-            },
-            {
-                title: "BACKEND",
-                tec: ['Node', 'Python', 'Java/JSP', 'Spring MVC', 'Expess', 'Nest'],
-                icon: Server
-            },
-            {
-                title: "DATA BASES",
-                tec: ['MongoDB', 'OracleSQL', 'PostgeSQL', 'MySQL'],
-                icon: Database
-            }
-        ]
-    };
+    const {skills} = cvPage
     return (
         <section className="mb-12">
             <div className="flex items-center gap-2 mb-6 border-b-2 border-blue-400 text-blue-600">
@@ -48,7 +29,6 @@ const SkillsComponents = () => {
                         </div>
                     ))
                 }
-
             </div>
         </section>
     )
