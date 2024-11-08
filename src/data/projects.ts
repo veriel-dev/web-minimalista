@@ -19,42 +19,30 @@ const projects: TypeProject[] = [
             startDate: "2024-01",
             lastUpdate: "2 días",
         },
+        github:"https://github.com/veriel-dev/01-portfolio",
+        demo: "https://01-portfolio-samuraidevord.vercel.app/",
+        img: "/img/portfolio_preview.png" 
     },
     {
         title: "Clone Spring MVC",
         description: "Clone de esta mítica tecnología",
         technologies: ["Node", "TypeScript", "Reflect MetaData"],
-        featured: false,
-        stats: {
-            stars: 15,
-            forks: 3,
-            startDate: "2023-12",
-            lastUpdate: "5 días",
-        },
+        featured: true,
+        github: "https://github.com/veriel-dev/clone-spring-mvc",
     },
     {
         title: "Ts-Engine-Template",
         description: "Clone de handlebars",
         technologies: ["Node", "TypeScript"],
         featured: false,
-        stats: {
-            stars: 0,
-            forks: 0,
-            startDate: "2023-12",
-            lastUpdate: "N/A",
-            },
+        github: "https://github.com/veriel-dev/ts-engine-template/"
     },
     {
         title: "CRUD-REACT",
         description: "Proyecto Full Stack",
         technologies: ["TypeScript", "React", "MongoDB", "Express", "Node"],
         featured: false,
-        stats: {
-            stars: 0,
-            forks: 0,
-            startDate: "2023-12",
-            lastUpdate: "N/A",
-        },
+        github: "https://github.com/veriel-dev/CRUD-REACT"
     },
     {
         title: "Trello Clone",
@@ -67,6 +55,9 @@ const projects: TypeProject[] = [
             startDate: "2023-12",
             lastUpdate: "N/A",
         },
+        github: "https://github.com/veriel-dev/trello-clone",
+        demo: "https://trello-clone-five-dusky.vercel.app/",
+        img: "/img/trello-clone_preview.png"
     },
     {
         title: "Responsive Web",
@@ -79,6 +70,9 @@ const projects: TypeProject[] = [
             startDate: "2023-12",
             lastUpdate: "N/A",
         },
+        github: "https://github.com/veriel-dev/responsive-web",
+        demo: "https://responsive-web-pi.vercel.app/",
+        img: "/img/response-web_preview.png"
     },
     {
         title: "Old newspaper",
@@ -91,6 +85,9 @@ const projects: TypeProject[] = [
             startDate: "2023-12",
             lastUpdate: "N/A",
         },
+        github: "https://github.com/veriel-dev/web-personal-paper",
+        demo: "https://web-personal-paper.vercel.app/",
+        img: "/img/new-paper_preview.png"
     },
     {
         title: "Clone Cards Yu-Gi-oh",
@@ -103,6 +100,9 @@ const projects: TypeProject[] = [
             startDate: "2023-12",
             lastUpdate: "N/A",
         },
+        github: "https://github.com/veriel-dev/cards-yu-gi-oh",
+        demo: "https://cards-yu-gi-oh.vercel.app/",
+        img: "/img/card-yu-gi-oh_preview.png"
     },
     {
         title: "Game Boy Color",
@@ -115,6 +115,9 @@ const projects: TypeProject[] = [
             startDate: "2023-12",
             lastUpdate: "N/A",
         },
+        github: "https://github.com/veriel-dev/gameboy-color",
+        demo: "https://gameboy-color.vercel.app/",
+        img: "/img/css-pikachu_preview.png"
     },
     {
         title: "SPA Web Component",
@@ -127,6 +130,9 @@ const projects: TypeProject[] = [
             startDate: "2023-12",
             lastUpdate: "N/A",
         },
+        github: "https://github.com/veriel-dev/spa-vanilla-js",
+        demo: "https://spa-vanilla-js-beryl.vercel.app/",
+        img: "/img/spa-vanilla_preview.png"
     },
     {
         title: "Pokedex: Los primeros 151 pokemons",
@@ -139,6 +145,9 @@ const projects: TypeProject[] = [
             startDate: "2023-12",
             lastUpdate: "N/A",
         },
+        github: "https://github.com/veriel-dev/pokedex",
+        demo: "https://pokedex-roan-alpha.vercel.app/",
+        img: "/img/pokedex_preview.png"
     },
     {
         title: "To Do React",
@@ -151,6 +160,9 @@ const projects: TypeProject[] = [
             startDate: "2023-12",
             lastUpdate: "N/A",
         },
+        github: "https://github.com/veriel-dev/To-Do-React",
+        demo: "https://tod-do-react.vercel.app/",
+        img: "/img/toDoReact_preview.png"
     },
 ];
 export default projects;

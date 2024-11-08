@@ -12,7 +12,7 @@ interface Props {
 
 
 
-const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }:Props) => {
+const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }: Props) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const cardContent = (
@@ -46,18 +46,36 @@ const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }:Props) => {
                 </div>
 
                 <div className={`flex gap-3 transition-opacity duration-200 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-                    <button className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors">
-                        <Github className="w-5 h-5" />
-                    </button>
-                    <button className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors">
-                        <ExternalLink className="w-5 h-5" />
-                    </button>
-                    <button
-                        className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
-                        onClick={() => onOpenModal(project)}
-                    >
-                        <Maximize2 className="w-5 h-5" />
-                    </button>
+
+                    {
+                        project.github && (
+                            <a href={project.github} target="_blank">
+                                <button className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors">
+                                    <Github className="w-5 h-5" />
+                                </button>
+                            </a>
+                        )
+                    }
+                    {
+                        project.demo && (
+                            <a href={project.demo} target="_blank">
+                                <button className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors">
+                                    <ExternalLink className="w-5 h-5" />
+                                </button>
+                            </a>
+                        )
+                    }
+                    {
+                        project.img && (
+                            <button
+                                className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
+                                onClick={() => onOpenModal(project)}
+                            >
+                                <Maximize2 className="w-5 h-5" />
+                            </button>
+                        )
+                    }
+
                 </div>
             </div>
         </>
@@ -70,7 +88,7 @@ const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }:Props) => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <Card  className="rounded-lg border-2 hover:border-blue-500 transition-colors">
+                <Card className="rounded-lg border-2 hover:border-blue-500 transition-colors">
                     <div className="flex items-start p-4">
                         <div className="flex-1">
                             {cardContent}
@@ -87,7 +105,7 @@ const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }:Props) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
-            <Card  className="rounded-lg border-2 hover:border-blue-500 transition-colors cursor-pointer h-[250px]">
+            <Card className="rounded-lg border-2 hover:border-blue-500 transition-colors cursor-pointer h-[250px]">
                 {cardContent}
             </Card>
         </div>

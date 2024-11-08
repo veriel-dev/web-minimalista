@@ -11,12 +11,15 @@ export interface TypeProject {
     description: string;
     technologies: string[];
     featured: boolean;
-    stats: {
+    stats?: {
         stars: number;
         forks: number;
         startDate: string;
         lastUpdate: string;
     },
+    github?: string,
+    demo?: string,
+    img?: string
 }
 const ProjectsSection = () => {
     const [viewMode, setViewMode] = useState('grid');
