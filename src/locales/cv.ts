@@ -95,7 +95,7 @@ export const cvPage = {
       title: "IDIOMAS",
       expertise: [
         "Español: Nativo",
-        "Inglés: Profesional"
+        "Inglés: Básico"
       ]
     },
     achievements: {
