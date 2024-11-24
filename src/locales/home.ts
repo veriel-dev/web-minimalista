@@ -232,8 +232,8 @@ export const homePage = {
           url: "https://github.com/veriel-dev/CRUD-REACT",
         },
         demo: {
-          ok: false,
-          url: "",
+          ok: true,
+          url: "https://crud-react-snowy.vercel.app/",
         },
       },
       {
