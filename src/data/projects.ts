@@ -44,7 +44,6 @@ const projects: TypeProject[] = [
         technologies: ["TypeScript", "React", "MongoDB", "Express", "Node"],
         featured: false,
         github: "https://github.com/veriel-dev/CRUD-REACT",
-        demo: "https://crud-react-ec8csd9az-vctor-manuel-ordiales-garcas-projects.vercel.app"
     },
     {
         title: "Trello Clone",

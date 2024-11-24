@@ -232,8 +232,8 @@ export const homePage = {
           url: "https://github.com/veriel-dev/CRUD-REACT",
         },
         demo: {
-          ok: true,
-          url: "https://crud-react-ec8csd9az-vctor-manuel-ordiales-garcas-projects.vercel.app",
+          ok: false,
+          url: "",
         },
       },
       {
