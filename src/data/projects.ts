@@ -29,6 +29,7 @@ const projects: TypeProject[] = [
         technologies: ["Node", "TypeScript", "Reflect MetaData"],
         featured: true,
         github: "https://github.com/veriel-dev/clone-spring-mvc",
+        demo: "https://clone-spring-mvc-production.up.railway.app/"
     },
     {
         title: "Ts-Engine-Template",
