@@ -166,5 +166,25 @@ const projects: TypeProject[] = [
         demo: "https://tod-do-react.vercel.app/",
         img: "/img/toDoReact_preview.png"
     },
+    {
+        title: "Fakemon",
+        description: "Galería de imágens de fakemon reaclizados con IA",
+        technologies: [
+            "Astro",
+            "Tailwind",
+            "Node",
+            "Express",
+            "Copilot",
+        ],
+        featured: true,
+        stats: {
+            stars: 24,
+            forks: 8,
+            startDate: "2024-01",
+            lastUpdate: "2 días",
+        },
+        github:"https://github.com/veriel-dev/Astro",
+        demo: "https://eclectic-snickerdoodle-cac957.netlify.app/",
+    },
 ];
 export default projects;
