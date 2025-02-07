@@ -1,4 +1,4 @@
-import { Tags } from "../const/enums/tags";
+import { Tags } from "../../const/enums/tags";
 
 export const homePage = {
   heroSection: {
@@ -223,19 +223,19 @@ export const homePage = {
           url: "",
         },
       },
-      {
-        title: "CRUD-REACT",
-        description: "Proyecto Full Stack",
-        tags: [Tags.TS, Tags.REACT, Tags.MONGO, Tags.EXPRESS, Tags.NODE],
-        github: {
-          ok: true,
-          url: "https://github.com/veriel-dev/CRUD-REACT",
-        },
-        demo: {
-          ok: true,
-          url: "https://crud-react-snowy.vercel.app/",
-        },
-      },
+      // {
+      //   title: "CRUD-REACT",
+      //   description: "Proyecto Full Stack",
+      //   tags: [Tags.TS, Tags.REACT, Tags.MONGO, Tags.EXPRESS, Tags.NODE],
+      //   github: {
+      //     ok: true,
+      //     url: "https://github.com/veriel-dev/CRUD-REACT",
+      //   },
+      //   demo: {
+      //     ok: true,
+      //     url: "https://crud-react-snowy.vercel.app/",
+      //   },
+      // },
       {
         title: "Trello Clone",
         description: "Clome del famoso software Trello Clone",
@@ -314,32 +314,32 @@ export const homePage = {
           url: "https://spa-vanilla-js-beryl.vercel.app/",
         },
       },
-      {
-        title: "Pokedex: Los primeros 151 pokemons",
-        description: "Pokdex basada en la PokeAPI",
-        tags: [Tags.NEXT, Tags.CSS, Tags.TS],
-        github: {
-          ok: true,
-          url: "https://github.com/veriel-dev/pokedex/",
-        },
-        demo: {
-          ok: true,
-          url: "https://pokedex-roan-alpha.vercel.app/",
-        },
-      },
-      {
-        title: "To Do React",
-        description: "Lista de tareas realizada en React",
-        tags: [Tags.TS, Tags.REACT, Tags.CSS],
-        github: {
-          ok: true,
-          url: "https://github.com/veriel-dev/To-Do-React/",
-        },
-        demo: {
-          ok: true,
-          url: "https://tod-do-react.vercel.app/",
-        },
-      },
+      // {
+      //   title: "Pokedex: Los primeros 151 pokemons",
+      //   description: "Pokdex basada en la PokeAPI",
+      //   tags: [Tags.NEXT, Tags.CSS, Tags.TS],
+      //   github: {
+      //     ok: true,
+      //     url: "https://github.com/veriel-dev/pokedex/",
+      //   },
+      //   demo: {
+      //     ok: true,
+      //     url: "https://pokedex-roan-alpha.vercel.app/",
+      //   },
+      // },
+      // {
+      //   title: "To Do React",
+      //   description: "Lista de tareas realizada en React",
+      //   tags: [Tags.TS, Tags.REACT, Tags.CSS],
+      //   github: {
+      //     ok: true,
+      //     url: "https://github.com/veriel-dev/To-Do-React/",
+      //   },
+      //   demo: {
+      //     ok: true,
+      //     url: "https://tod-do-react.vercel.app/",
+      //   },
+      // },
     ],
   },
   contactSetion: {

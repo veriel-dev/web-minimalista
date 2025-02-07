@@ -2,8 +2,8 @@ import { useEffect, useState, useCallback } from 'react';
 import { ExternalLink, Github, } from "lucide-react";
 import { Button, Card, Section } from "../ui";
 import { motion, AnimatePresence } from "framer-motion";
-import { homePage } from '../../locales/home';
 import { transitions } from '../../const/transitions';
+import { homePage } from '../../data/pages';
 
 
 
@@ -107,7 +107,9 @@ const ProjectsSection = () => {
                                                     <a href={project.github.url} target="_blank" rel="noopener noreferrer">
                                                         <Button
                                                             variant="ghost"
-                                                            className="mt-4 w-[80px] border-2 border-main hover:scale-110 transition-transform"
+                                                            className="p-2 w-[80px] border-2 border-main hover:scale-110 transition-transform"
+                                                            title={`GitHub - ${project.title}`}
+                                                            ariaLabel={`Aria Github - ${project.title}`}
                                                         >
                                                             <Github className="h-4 w-4" />
                                                         </Button>
@@ -116,7 +118,9 @@ const ProjectsSection = () => {
                                                 {!project.demo.ok ? (
                                                     <Button
                                                         variant="ghost"
-                                                        className="mt-4 w-[80px] border-2 border-main bg-secondary"
+                                                        className="p-2 w-[80px] border-2 border-main bg-secondary"
+                                                        title={`External Link - ${project.title}`}
+                                                        ariaLabel={`External Link - ${project.title}`}
                                                     >
                                                         <ExternalLink className="h-4 w-4" />
                                                     </Button>
@@ -124,7 +128,9 @@ const ProjectsSection = () => {
                                                     <a href={project.demo.url} target="_blank" rel="noopener noreferrer">
                                                         <Button
                                                             variant="ghost"
-                                                            className="mt-4 w-[80px] border-2 border-main hover:scale-110 transition-transform"
+                                                            className="p-2 w-[80px] border-2 border-main hover:scale-110 transition-transform"
+                                                            title={`Demo - ${project.title}`}
+                                                            ariaLabel={`Demo - ${project.title}`}
                                                         >
                                                             <ExternalLink className="h-4 w-4" />
                                                         </Button>

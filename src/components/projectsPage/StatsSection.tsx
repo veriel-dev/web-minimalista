@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Section } from '../ui';
-import { projectsPage } from '../../locales/projects';
+import { projectsPage } from '../../data/pages/projects';
 import { configAnimate } from '../../config/animation';
 
 
@@ -17,7 +17,7 @@ const StatsSection = () => {
     return (
         <Section variant="light" className="rounded-lg">
             <div className="mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {statsSection.map((stat, index) => (
                         <motion.div
                             key={index}

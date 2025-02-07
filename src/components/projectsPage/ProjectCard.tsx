@@ -1,18 +1,17 @@
 
 import { useState } from 'react';
-import { Github, ExternalLink, Maximize2, Tag } from 'lucide-react';
+import { Github, ExternalLink, Tag } from 'lucide-react';
 import { TypeProject } from './ProjectsSection';
 import { Card } from '../ui';
 
 interface Props {
     project: TypeProject
     viewMode: string
-    onOpenModal: (project: TypeProject) => void
 }
 
 
 
-const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }: Props) => {
+const ProjectCard = ({ project, viewMode = 'grid' }: Props) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const cardContent = (
@@ -50,7 +49,10 @@ const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }: Props) => {
                     {
                         project.github && (
                             <a href={project.github} target="_blank">
-                                <button className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors">
+                                <button 
+                                    className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors" 
+                                    title={`GitHub - ${project.title}`} 
+                                    aria-label={`Aria Github - ${project.title}`}>
                                     <Github className="w-5 h-5" />
                                 </button>
                             </a>
@@ -58,24 +60,29 @@ const ProjectCard = ({ project, viewMode = 'grid', onOpenModal }: Props) => {
                     }
                     {
                         project.demo && (
-                            <a href={project.demo} target="_blank">
-                                <button className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors">
+                            <a href={project.demo} target="_blank" title='ExtenalLink'>
+                                <button 
+                                    className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
+                                    title={`External Link - ${project.title}`} 
+                                    aria-label={`Aria External Link - ${project.title}`}
+                                >
                                     <ExternalLink className="w-5 h-5" />
                                 </button>
                             </a>
                         )
                     }
-                    {
+                    {/* {
                         project.img && (
                             <button
                                 className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
+                                title={`Maximize - ${project.title}`} 
+                                aria-label={`Aria Maximize - ${project.title}`}
                                 onClick={() => onOpenModal(project)}
                             >
                                 <Maximize2 className="w-5 h-5" />
                             </button>
                         )
-                    }
-
+                    } */}
                 </div>
             </div>
         </>

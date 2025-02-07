@@ -3,8 +3,8 @@ import { Section } from "../../ui"
 import { motion } from 'framer-motion';
 import { StatsContainer } from "./StatsContainer"
 import { memo } from "react";
-import { homePage } from "../../../locales/home";
 import { configAnimate } from "../../../config/animation";
+import { homePage } from "../../../data";
 
 const AboutSection = memo(() => {
     const {aboutSection} = homePage

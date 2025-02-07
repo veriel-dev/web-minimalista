@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Section } from '../ui';
-import { projectsPage } from '../../locales/projects';
+import { projectsPage } from '../../data/pages/projects';
 import { configAnimate } from '../../config/animation';
 const HeroSection = () => {
     const { heroSection } = projectsPage

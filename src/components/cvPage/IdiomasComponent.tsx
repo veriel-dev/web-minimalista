@@ -1,5 +1,5 @@
 import { Languages } from 'lucide-react'
-import { cvPage } from '../../locales/cv'
+import { cvPage } from '../../data/pages/cv'
 
 const IdiomasComponent = () => {
     const { languages } = cvPage

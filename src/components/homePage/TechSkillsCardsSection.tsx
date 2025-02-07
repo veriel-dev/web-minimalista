@@ -3,7 +3,7 @@ import { Card, Section, TabsList } from "../ui";
 import { useState } from "react";
 import TabsTrigger from "../ui/TabsTrigger";
 import { motion } from "framer-motion";
-import { homePage } from "../../locales/home";
+import { homePage } from "../../data/pages";
 export type TabType = 'frontend' | 'backend' | 'database' | "languages" | "devOps";
 
 
@@ -59,12 +59,12 @@ const TechSkillsCardsSection = () => {
                             <div className="flex items-center gap-2 mb-4">
                                 <h3 className="text-lg font-bold">{tech.name}</h3>
                             </div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                            <p className="text-sm text-gray-400 font-semibold mb-4">
                                 {tech.description}
                             </p>
-                            <div className="w-full bg-secondary rounded-full h-2">
+                            <div className="w-full bg-secondary h-2 rounded-full overflow-hidden ">
                                 <div
-                                    className="bg-blue-600 rounded-full h-2 transition-all group-hover:bg-blue-400"
+                                    className="h-full bg-gradient-to-r from-blue-500 to-violet-500 transition-all duration-500"
                                     style={{ width: `${tech.level}%` }}
                                 />
                             </div>

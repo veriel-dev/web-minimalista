@@ -1,5 +1,5 @@
 import { Landmark } from "lucide-react"
-import { cvPage } from "../../locales/cv"
+import { cvPage } from "../../data/pages/cv"
 
 const LogrosComponent = () => {
     const {achievements} = cvPage

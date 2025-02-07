@@ -10,6 +10,6 @@ export const projectsPage = {
         { label: "Proyectos Completados", value: "15+" },
         { label: "Tecnologías Utilizadas", value: "20+" },
         { label: "Años de Experiencia", value: "3+" },
-        { label: "Contribuciones Open Source", value: "50+" },
+        // { label: "Contribuciones Open Source", value: "150+" },
     ],
 };

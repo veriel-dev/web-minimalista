@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { CircleCheckBigIcon, CircleX, Mail } from 'lucide-react';
 import { Input } from './Input';
 import { cn } from '../../../../libs/utils';
-import { homePage } from '../../../locales/home';
+import { homePage } from '../../../data';
+
 
 
 
@@ -168,7 +169,7 @@ export const FormSendEmail = () => {
                             "w-full py-2 px-4 rounded-md text-white font-medium transition-colors",
                             isSubmitting 
                                 ? "bg-blue-400 cursor-not-allowed" 
-                                : "bg-blue-500 hover:bg-blue-600 active:bg-blue-700"
+                                : "bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600"
                         )}
                     >
                         {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}

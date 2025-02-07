@@ -7,6 +7,8 @@ interface Props {
     variant?: "ghost" | "default" | "outline" | "subtle",
     onClick?: (() => void) | ((e: React.MouseEvent<HTMLElement>) => void)
     disabled?: boolean
+    ariaLabel: string;
+    title: string;
 }
 
 const buttonVariants = {
@@ -15,13 +17,15 @@ const buttonVariants = {
     outline: "border border-main hover:bg-secondary text-zinc-400",
     subtle: "bg-secondary/50 hover:bg-secondary text-zinc-400",
 }
-export const Button = ({ children, variant = "default", className, onClick, disabled }: Props) => {
+export const Button = ({ children, variant = "default", className, onClick, disabled, ariaLabel, title }: Props) => {
     return (
         <button className={cn(
             "p-2 rounded-md hover:bg-secondary transition-colors duration-200 flex items-center justify-center",
             buttonVariants[variant],
-            className
+            className,
         )}
+            aria-label={ariaLabel}
+            title={title}
             onClick={onClick}
             disabled={disabled}
         >

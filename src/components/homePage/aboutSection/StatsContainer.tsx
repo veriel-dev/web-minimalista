@@ -1,7 +1,7 @@
 
 
+import { homePage } from "../../../data";
 import { useCountAnimation } from "../../../hooks/useAnimatedCounter";
-import { homePage } from "../../../locales/home";
 import { Card } from "../../ui"
 
 
