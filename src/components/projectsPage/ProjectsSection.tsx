@@ -36,7 +36,8 @@ const ProjectsSection = () => {
                 (activeFilter === "backend" && project.proyectType === "backend") ||
                 (activeFilter === "frontend" && project.proyectType === "frontend") ||
                 (activeFilter === "completed" && project.status === "completed") ||
-                (activeFilter === "progress" && project.status === "progress");
+                (activeFilter === "progress" && project.status === "progress") ||
+                (activeFilter === "fullstack" && project.proyectType === "fullstack");
 
             const matchesSearch =
                 project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -88,41 +89,6 @@ const ProjectsSection = () => {
                     </div>
 
                     <div className="flex gap-2">
-                        {/* <button
-                            className={`px-4 py-2 rounded-lg transition-colors ${activeFilter === 'all' ? 'bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600' : 'bg-zinc-800'
-                                }`}
-                            onClick={() => setActiveFilter('all')}
-                        >
-                            Todos
-                        </button>
-                        <button
-                            className={`px-4 py-2 rounded-lg transition-colors ${activeFilter === 'backend' ? 'bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600' : 'bg-zinc-800'
-                                }`}
-                            onClick={() => setActiveFilter('backend')}
-                        >
-                            Backend
-                        </button>
-                        <button
-                            className={`px-4 py-2 rounded-lg transition-colors ${activeFilter === 'frontend' ? 'bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600' : 'bg-zinc-800'
-                                }`}
-                            onClick={() => setActiveFilter('frontend')}
-                        >
-                            Frontend
-                        </button>
-                        <button
-                            className={`px-4 py-2 rounded-lg transition-colors ${activeFilter === 'completed' ? 'bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600' : 'bg-zinc-800'
-                                }`}
-                            onClick={() => setActiveFilter('completed')}
-                        >
-                            Completado
-                        </button>
-                        <button
-                            className={`px-4 py-2 rounded-lg transition-colors ${activeFilter === 'progress' ? 'bg-gradient-to-r from-blue-500 to-violet-500 hover:from-blue-600 hover:to-violet-600' : 'bg-zinc-800'
-                                }`}
-                            onClick={() => setActiveFilter('progress')}
-                        >
-                            En Progreso
-                        </button> */}
                         <Selector activeFilter={activeFilter} setActiveFilter={setActiveFilter} />
                     </div>
                 </div>

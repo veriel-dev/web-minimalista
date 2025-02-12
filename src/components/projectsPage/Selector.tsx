@@ -10,8 +10,9 @@ const options = [
   { value: "all", name: "Todos" },
   { value: "backend", name: "Backend" },
   { value: "frontend", name: "Frontend" },
+  { value: "fullstack", name: "Fullstack" },
   { value: "completed", name: "Completado" },
-  { value: "progress", name: "En progreso" }
+  { value: "progress", name: "En progreso" },
 ];
 export const Selector = ({ activeFilter, setActiveFilter }: Props) => {
   const [selectedOption, setSelectedOption] = useState(activeFilter || 'all');

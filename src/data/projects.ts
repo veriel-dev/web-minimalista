@@ -310,6 +310,21 @@ const projects: TypeProject[] = [
         demo: "https://fakemon-api-production.up.railway.app/api/v1/fakemons",
         status: "completed"
     },
+    {
+        title: "Healthcare System",
+        description: "Sistema de gestión de salud",
+        technologies: [
+            "Node",
+            "ExpressJS",
+            "TypeScript",
+            "React",
+            "MonogDB",
+        ],
+        proyectType: "fullstack",
+        featured: false,
+        github: "https://github.com/veriel-dev/healthcare-system",
+        status: "progress"
+    },
     /*{
         title: "crud-clients-spring",
         description: "Crud básico de clientes en Spring",
