@@ -1,8 +1,10 @@
 
 import { useState } from 'react';
-import { Github, ExternalLink, Tag } from 'lucide-react';
+import { Github, ExternalLink, CircleCheckBig, LoaderCircle } from 'lucide-react';
 import { TypeProject } from './ProjectsSection';
 import { Card } from '../ui';
+
+
 
 interface Props {
     project: TypeProject
@@ -26,9 +28,13 @@ const ProjectCard = ({ project, viewMode = 'grid' }: Props) => {
                             {project.description}
                         </p>
                     </div>
-                    {project.featured && (
+                    {/* {project.featured && (
                         <Tag className="w-4 h-4 text-yellow-400" />
-                    )}
+                    )} */}
+
+                    {
+                        project.status === "completed" ? <CircleCheckBig className="w-6 h-6 text-green-500" /> : <LoaderCircle className='w-6 h-& text-yellow-500 animate-spin' />
+                    }
                 </div>
             </div>
 
@@ -49,9 +55,9 @@ const ProjectCard = ({ project, viewMode = 'grid' }: Props) => {
                     {
                         project.github && (
                             <a href={project.github} target="_blank">
-                                <button 
-                                    className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors" 
-                                    title={`GitHub - ${project.title}`} 
+                                <button
+                                    className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
+                                    title={`GitHub - ${project.title}`}
                                     aria-label={`Aria Github - ${project.title}`}>
                                     <Github className="w-5 h-5" />
                                 </button>
@@ -61,9 +67,9 @@ const ProjectCard = ({ project, viewMode = 'grid' }: Props) => {
                     {
                         project.demo && (
                             <a href={project.demo} target="_blank" title='ExtenalLink'>
-                                <button 
+                                <button
                                     className="p-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors"
-                                    title={`External Link - ${project.title}`} 
+                                    title={`External Link - ${project.title}`}
                                     aria-label={`Aria External Link - ${project.title}`}
                                 >
                                     <ExternalLink className="w-5 h-5" />

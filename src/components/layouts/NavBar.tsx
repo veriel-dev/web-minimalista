@@ -15,8 +15,8 @@ export const NavBar = memo(() => {
                         </Button>
                     </Link>
                     <Link href="/projects" title="Proyectos">
-                        <Button variant={"ghost"} ariaLabel="Aria Proyectos" title="Proctos">
-                            <FolderKanban className="h-5 w-5" />    
+                        <Button variant={"ghost"} ariaLabel="Aria Proyectos" title="Proyectos">
+                            <FolderKanban className="h-5 w-5" />
                         </Button>
                     </Link>
                 </div>

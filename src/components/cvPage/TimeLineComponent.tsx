@@ -11,9 +11,9 @@ interface Props {
         }[];
         isEducation: boolean
     },
-    
+
 }
-const TimeLineComponent = ({elements}:Props) => {
+const TimeLineComponent = ({ elements }: Props) => {
     return (
         <section className="mb-12">
             <div className="flex items-center gap-2 mb-6 border-b-2 border-blue-400 text-blue-600">
@@ -23,7 +23,7 @@ const TimeLineComponent = ({elements}:Props) => {
                 {
                     elements.isEducation && (<GraduationCap className="w-5 h-5 text-blue-600" />)
                 }
-                
+
                 <h2 className="text-2xl font-bold ">{elements.title}</h2>
             </div>
             <div className="space-y-8">
@@ -35,10 +35,10 @@ const TimeLineComponent = ({elements}:Props) => {
                                 <h3 className="text-xl font-semibold text-blue-800">{element.item}</h3>
                                 <p className="text-gray-600 mb-2">{element.company}</p>
                                 {/* Item List */}
-                                <ul className="mt-4 space-y-2 list-disc list-inside text-gray-700 ">
+                                <ul className="mt-4 space-y-2 list-disc text-gray-700">
                                     {
                                         element.expertise.map((item, index) => (
-                                            <li key={index} className="pl-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                                            <li key={index} className="ml-8 list-item">
                                                 {item}
                                             </li>
                                         ))

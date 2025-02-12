@@ -27,3 +27,8 @@ stats.html
 tsconfig.app.tsbuildinfo
 tsconfig.node.tsbuildinfo
 .vscode
+
+# Docker 
+.dockerignore
+docker-compose.yml
+Dockerfile

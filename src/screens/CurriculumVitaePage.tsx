@@ -40,10 +40,23 @@ const CurriculumVitae = memo(() => {
                 @media print {
                     @page {
                         margin: 0.5cm;
+                        size: A4;
                     }
                     body {
                         -webkit-print-color-adjust: exact;
                         print-color-adjust: exact;
+                    }
+                    html, body {
+                        width: 210mm;
+                        height: 297mm;
+                    }
+                    ul, ol {
+                        page-break-inside: avoid;
+                        break-inside: avoid;
+                    }
+                    h1, h2, h3 {
+                        page-break-after: avoid;
+                        break-after: avoid;
                     }
                     .print\\:bg-white {
                         background: white !important;

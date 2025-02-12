@@ -10,17 +10,17 @@ const IdiomasComponent = () => {
                 <h2 className="text-2xl font-bold">{languages.title}</h2>
             </div>
             <div className="grid grid-cols-1 gap-6">
-                <ul className="mt-4 space-y-2 list-disc list-inside text-gray-700 ">
+                <ul className="mt-4 space-y-2 list-disc text-gray-700">
                     {
                         languages.expertise.map((item, index) => (
-                            <li key={index} className="pl-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                            <li key={index} className="ml-8 list-item">
                                 {item}
                             </li>
                         ))
                     }
                 </ul>
             </div>
-        </section>
+        </section >
     )
 }
 export default IdiomasComponent
