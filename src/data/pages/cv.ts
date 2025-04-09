@@ -8,7 +8,8 @@ export const cvPage = {
     phone: "685394859",
     email: "vmordiales@gmail.com",
     linkedin: "https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/",
-    gitHub: "https://github.com/veriel-dev"
+    gitHub: "https://github.com/veriel-dev",
+    web: "https://veriel.dev/"
   },
   about: {
     title: "PERFIL PROFESIONAL",
@@ -16,7 +17,7 @@ export const cvPage = {
     text1: "Además, en mis proyectos personales, he ampliado mi stack tecnológico para incluir herramientas avanzadas como React , el runtime Node.js junto con frameworks como Nest y Next.js para el desarrollo backend y frontend, respectivamente. También cuento con experiencia en herramientas de construcción de sitios estáticos como Astro y la orquestación de contenedores con Docker . Esta combinación de experiencia profesional y personal me permite abordar proyectos desde múltiples perspectivas, garantizando soluciones innovadoras y eficientes para problemas complejos.",
     expertise: [
       "Diseño e implementación de soluciones web eficientes y escalables.",
-      "OWCS, Spring Framework, JavaScript/TypeScript, Java, Web Components, React, Node.js, Nest, NextJS, Astro, Docker.",
+      "OWCS, Spring Framework, JavaScript/TypeScript, Java, Web Components, React, Node.js, Nest.js, Next.js, Astro, Docker.",
       "Dominio de stack tecnológico completo y actualizado para desarrollo empresarial.",
       "El uso de prácticas ágiles y la constante actualización del conocimiento técnico para ofrecer soluciones optimizadas y alineadas con las necesidades actuales del mercado."
     ]
@@ -25,14 +26,31 @@ export const cvPage = {
     title: "EXPERIENCIA PROFESIONAL",
     jobs: [
       {
-        item: "Desarrollador FullStack - Analista",
-        company: "Viewnext S.A · Cáceres · ago. 2021 - Actualidad",
+        item: "Desarrollador OWCS",
+        project: 'Portales Públicos Naturgy',
+        company: "Viewnext S.A · Cáceres · ago. 2021 - dic. 2023 | Portales Públicos Naturgy",
         expertise: [
-          "Evolución hacia roles analíticos tras iniciar como desarrollador, implementando funcionalidades con JS/TS/Java.",
-          "Participación activa en la definición, diseño e implementación completa de soluciones empresariales.",
-          "Gestión y mejora continua de sistemas CMS (OWCS), asegurando su adaptabilidad a las necesidades del negocio.",
-          "Optimización del rendimiento y escalabilidad de aplicaciones existentes, mejorando significativamente su eficiencia operativa.",
-          "Integración de arquitecturas monolíticas y basadas en microservicios mediante Spring Framework."
+          "Diseño e implementación de soluciones empresariales completas en Oracle WebCenter Sites (OWCS)",
+          "Gestión y optimización del CMS adaptándolo a necesidades específicas del negocio",
+          "Mejora del rendimiento y escalabilidad de aplicaciones, incrementando su eficiencia operativa",
+        ]
+      },
+      {
+        item: "Desarrollador FullStack OWCS + Spring Framework",
+        company: "Viewnext S.A · Cáceres · feb. 2023 - mar. 2025 | Portales Públicos Naturgy y Áreas Clientes",
+        expertise: [
+          "Evolución desde desarrollo a roles analíticos implementando soluciones con JavaScript/TypeScript y Java",
+          "Arquitectura e implementación de soluciones empresariales integrales en OWCS/Spring Framework",
+          "Optimización de rendimiento en aplicaciones críticas para el negocio",
+        ]
+      },
+      {
+        item: "Desarrollador Frontend",
+        company: "Viewnext S.A · Cáceres · abr. 2025 - Actualidad | Portal de Contratación Naturgy",
+        expertise: [
+          "Desarrollo de interfaces modernas y responsivas con React",
+          "Implementación de mejoras UX/UI basadas en necesidades de usuario y métricas de negocio",
+          "Optimización de aplicaciones React para máximo rendimiento y escalabilidad",
         ]
       },
       {
@@ -78,17 +96,17 @@ export const cvPage = {
     tecs: [
       {
         title: "FRONTEND",
-        tec: ['HTML5/CSS3', 'Java Script/Type Script', 'React', 'Vite', 'Astro', 'Web Component'],
+        tec: ['HTML5/CSS3', 'JavaScript/Type Script', 'React', 'Vite', 'Astro', 'Web Components'],
         icon: ChromeIcon
       },
       {
         title: "BACKEND",
-        tec: ['Node', 'Python', 'Java', 'JSP', 'Spring MVC', 'Expess', 'Nest', 'Next.js'],
+        tec: ['Node', 'Python', 'Java', 'JSP', 'Spring MVC', 'Express', 'Nest', 'Next.js'],
         icon: Server
       },
       {
-        title: "DATA BASES",
-        tec: ['MongoDB', 'OracleSQL', 'PostgeSQL', 'MySQL'],
+        title: "BASES DE DATOS",
+        tec: ['MongoDB', 'OracleSQL', 'PostgreSQL', 'MySQL'],
         icon: Database
       }
     ]

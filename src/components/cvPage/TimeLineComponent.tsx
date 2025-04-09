@@ -32,7 +32,7 @@ const TimeLineComponent = ({ elements }: Props) => {
                         <div className="relative pl-8 border-l-2 border-blue-400" key={index}>
                             <div className="absolute w-4 h-4 bg-white border-2 border-blue-600 rounded-full -left-[9px] top-0"></div>
                             <div>
-                                <h3 className="text-xl font-semibold text-blue-800">{element.item}</h3>
+                                <h3 className="text-xl font-semibold text-blue-800 mb-2">{element.item}</h3>
                                 <p className="text-gray-600 mb-2">{element.company}</p>
                                 {/* Item List */}
                                 <ul className="mt-4 space-y-2 list-disc text-gray-700">
