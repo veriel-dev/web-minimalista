@@ -52,7 +52,7 @@ export const cvPage = {
         ],
       },
       {
-        item: 'Desarrollador FullStack OWCS + Spring Framework',
+        item: 'Desarrollador OWCS + Spring Boot',
         company:
           'Viewnext S.A · Cáceres · feb. 2023 - mar. 2025 | Portales Públicos Naturgy y Áreas Clientes',
         expertise: [
@@ -63,11 +63,24 @@ export const cvPage = {
       },
       {
         item: 'Desarrollador Frontend',
-        company: 'Viewnext S.A · Cáceres · abr. 2025 - Actualidad | Portal de Contratación Naturgy',
+        company: 'Viewnext S.A · Cáceres · abr. 2025 - may 2025 | Portal de Contratación Naturgy',
         expertise: [
           'Desarrollo de interfaces modernas y responsivas con React',
           'Implementación de mejoras UX/UI basadas en necesidades de usuario y métricas de negocio',
           'Optimización de aplicaciones React para máximo rendimiento y escalabilidad',
+        ],
+      },
+      {
+        item: 'Desarrollador OWCS + Spring Boot',
+        company:
+          'Alvea Soluciones Tecnológicas S.L · Cáceres · may. 2025 - Actualidad | Web Pública Aena',
+        expertise: [
+          'Arquitectura e implementación de soluciones empresariales integrales utilizando OWCS y Spring Boot',
+          'Optimización de rendimiento y escalabilidad en aplicaciones críticas para el negocio',
+          'Resolución proactiva de incidencias técnicas y mantenimiento correctivo de sistemas en producción',
+          'Gestión directa de relaciones con clientes, proporcionando soporte técnico especializado y seguimiento continuo',
+          'Desarrollo e implementación de nuevas funcionalidades siguiendo metodologías ágiles y mejores prácticas de desarrollo',
+          'Proyecto manejado y mantenido por Indra/Minsait',
         ],
       },
     ],
