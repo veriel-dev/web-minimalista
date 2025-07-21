@@ -107,7 +107,7 @@ export const MainLayoutNew = ({ children }: Props) => {
     };
   }, []);
   return (
-    <div className="min-h-screen bg-black text-primary">
+    <div className="min-h-screen bg-black">
       <canvas
         ref={canvasRef}
         className="fixed inset-0 pointer-events-none h-full w-full"
@@ -116,7 +116,7 @@ export const MainLayoutNew = ({ children }: Props) => {
       <NavBarNew />
       {children}
       <Footer />
-      <ScrollToTop variant="scrollToTopMinimal" />
+      <ScrollToTop variant="scrollToTopMinimalMatrix" />
     </div>
   );
 };
