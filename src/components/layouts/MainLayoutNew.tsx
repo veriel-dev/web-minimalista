@@ -4,7 +4,7 @@ import { Footer } from './Footer';
 import { ScrollToTop } from '../ui/ScrollElement';
 import { NavBarNew } from './NavBarNew';
 
-interface MatrixDrop {
+export interface MatrixDrop {
   x: number;
   y: number;
   speed: number;

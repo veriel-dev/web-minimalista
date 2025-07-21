@@ -8,7 +8,7 @@ export const cvPage = {
   },
   header: {
     name: 'Víctor Manuel Ordiales García',
-    job: 'Full Stack Developer - Mid/Senior',
+    job: 'Software Developer',
     street: 'Casar de Cáceres, Cáceres, España',
     phone: '685394859',
     email: 'vmordiales@gmail.com',
@@ -18,7 +18,7 @@ export const cvPage = {
   },
   about: {
     title: 'PERFIL PROFESIONAL',
-    text: 'Desarrollador Full-Stack con más de 3 años de experiencia en entornos empresariales dinámicos, enfocado en el diseño, desarrollo e implementación de soluciones tecnológicas escalables y eficientes. He trabajado extensivamente en sistemas CMS empresariales (OWCS), desarrollando backend robusto con Spring Framework y creando interfaces frontend avanzadas utilizando JavaScript/TypeScript y web components, así como arquitecturas monolíticas y basadas en microservicios.',
+    text: 'Software Developer con más de 4 años de experiencia en entornos empresariales dinámicos, enfocado en el diseño, desarrollo e implementación de soluciones tecnológicas escalables y eficientes. He trabajado extensivamente en sistemas CMS empresariales (OWCS), desarrollando backend robusto con Spring Framework y creando interfaces frontend avanzadas utilizando JavaScript/TypeScript y web components, así como arquitecturas monolíticas y basadas en microservicios.',
     text1:
       'Además, en mis proyectos personales, he ampliado mi stack tecnológico para incluir herramientas avanzadas como React , el runtime Node.js junto con frameworks como Nest y Next.js para el desarrollo backend y frontend, respectivamente. También cuento con experiencia en herramientas de construcción de sitios estáticos como Astro y la orquestación de contenedores con Docker . Esta combinación de experiencia profesional y personal me permite abordar proyectos desde múltiples perspectivas, garantizando soluciones innovadoras y eficientes para problemas complejos.',
     expertise: [
@@ -33,7 +33,8 @@ export const cvPage = {
     jobs: [
       {
         item: 'Desarrollador en I+D',
-        company: 'eCapture3D S.L · Badajoz · abr. 2021 - jun. 2021',
+        company: 'eCapture3D S.L · Badajoz',
+        period: 'Abr. 2021 - Jun. 2021',
         expertise: [
           'Modelos predictivos basados en Machine Learning y Deep Learning para análisis de variables climáticas con datos de AEMET.',
           'Identificación de patrones clave en grandes volúmenes de datos meteorológicos, mejorando la precisión de los modelos.',
@@ -44,7 +45,8 @@ export const cvPage = {
       {
         item: 'Desarrollador OWCS',
         project: 'Portales Públicos Naturgy',
-        company: 'Viewnext S.A · Cáceres · ago. 2021 - dic. 2023 | Portales Públicos Naturgy',
+        company: 'Viewnext S.A · Cáceres | Portales Públicos Naturgy',
+        period: 'Ago. 2021 - Dic. 2023',
         expertise: [
           'Diseño e implementación de soluciones empresariales completas en Oracle WebCenter Sites (OWCS)',
           'Gestión y optimización del CMS adaptándolo a necesidades específicas del negocio',
@@ -53,8 +55,8 @@ export const cvPage = {
       },
       {
         item: 'Desarrollador OWCS + Spring Boot',
-        company:
-          'Viewnext S.A · Cáceres · feb. 2023 - mar. 2025 | Portales Públicos Naturgy y Áreas Clientes',
+        company: 'Viewnext S.A · Cáceres  | Portales Públicos Naturgy y Áreas Clientes',
+        period: 'Feb. 2023 - Mar. 2025',
         expertise: [
           'Evolución desde desarrollo a roles analíticos implementando soluciones con JavaScript/TypeScript y Java',
           'Arquitectura e implementación de soluciones empresariales integrales en OWCS/Spring Framework',
@@ -63,7 +65,8 @@ export const cvPage = {
       },
       {
         item: 'Desarrollador Frontend',
-        company: 'Viewnext S.A · Cáceres · abr. 2025 - may 2025 | Portal de Contratación Naturgy',
+        company: 'Viewnext S.A · Cáceres | Portal de Contratación Naturgy',
+        period: 'Abr. 2025 - may 2025',
         expertise: [
           'Desarrollo de interfaces modernas y responsivas con React',
           'Implementación de mejoras UX/UI basadas en necesidades de usuario y métricas de negocio',
@@ -72,8 +75,8 @@ export const cvPage = {
       },
       {
         item: 'Desarrollador OWCS + Spring Boot',
-        company:
-          'Alvea Soluciones Tecnológicas S.L · Cáceres · may. 2025 - Actualidad | Web Pública Aena',
+        company: 'Alvea Soluciones Tecnológicas S.L · Cáceres | Web Pública Aena',
+        period: 'May. 2025 - Actualidad',
         expertise: [
           'Arquitectura e implementación de soluciones empresariales integrales utilizando OWCS y Spring Boot',
           'Optimización de rendimiento y escalabilidad en aplicaciones críticas para el negocio',
@@ -91,7 +94,8 @@ export const cvPage = {
     jobs: [
       {
         item: 'Graduado en Física',
-        company: 'Universidad de Extremadura - 2014 - 2021',
+        company: 'Universidad de Extremadura',
+        period: '2014 - 2021',
         expertise: [
           'Especialización en física teórica y experimental',
           'Énfasis en mecánica cuántica y física estadística',
@@ -101,7 +105,8 @@ export const cvPage = {
       },
       {
         item: 'Bachiller',
-        company: 'I.E.S.O. Norba Caesarina - 2012 - 2014',
+        company: 'I.E.S.O. Norba Caesarina',
+        period: '2012 - 2014',
         expertise: [
           'Modalidad de Ciencias y Tecnología con excelencia académica',
           'Desarrollo de fundamentos sólidos en matemáticas, física y química',
@@ -116,18 +121,39 @@ export const cvPage = {
     tecs: [
       {
         title: 'FRONTEND',
-        tec: ['HTML5/CSS3', 'JavaScript/Type Script', 'React', 'Vite', 'Astro', 'Web Components'],
+        tec: [
+          'React.js & Next.js',
+          'TypeScript & JavaScript (ES6+)',
+          'HTML5 & CSS3',
+          'Tailwind CSS & Sass',
+          'Web Components',
+          'Astro',
+        ],
         icon: ChromeIcon,
       },
       {
         title: 'BACKEND',
-        tec: ['Node', 'Java', 'Spring', 'Express', 'Nest', 'Next.js'],
+        tec: ['Node.js & Express.js & Nest.js', 'Spring Boot & Java', 'Golang (Go)'],
         icon: Server,
       },
       {
-        title: 'BASES DE DATOS',
-        tec: ['MongoDB', 'OracleSQL', 'PostgreSQL'],
+        title: 'Database & Infrastructure',
+        tec: [
+          'MySQL & PostgreSQL & Oracle',
+          'MongoDB & Redis',
+          'ORM & ODM',
+          'Docker & Container Orchestration',
+        ],
         icon: Database,
+      },
+      {
+        title: 'Development Tools',
+        tec: [
+          'Git & GitHub',
+          'CI/CD (Jenkins, GitHub Actions)',
+          'Agile Methodologies (Scrum, Kanban)',
+          'Testing (Jest, Mocha, Chai)',
+        ],
       },
     ],
   },
