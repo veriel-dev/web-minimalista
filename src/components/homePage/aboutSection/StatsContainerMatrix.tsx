@@ -24,10 +24,7 @@ const StatItem = ({ label, value, plus, icon: Icon }: StatItemProps) => {
               {count} {plus}
             </div>
 
-            <p className="text-green-500 text-sm">
-              {'// '}
-              {label}
-            </p>
+            <p className="text-green-500 text-sm">{label}</p>
           </div>
         </div>
       </Card>

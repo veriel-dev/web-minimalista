@@ -19,7 +19,7 @@ const HeroSectionMatrix = memo(() => {
     animateHeroSecion: { initial, animate },
   } = configAnimate;
   return (
-    <Section className="z-10 relative">
+    <Section className="z-10 relative mt-10">
       <motion.div
         initial={{ opacity: initial.opacity, y: initial.y }}
         animate={{ opacity: animate.opacity, y: animate.y }}
@@ -33,11 +33,9 @@ const HeroSectionMatrix = memo(() => {
         </div>
         <div className="space-y-4">
           <h1 className="text-5xl font-bold mb-6 text-green-400 tracking-wider">
-            {'> '}
             {heroSection.title}
           </h1>
           <p className="text-xl text-green-300 mb-12 max-w-3xl mx-auto leading-relaxed tracking-wide">
-            {'// '}
             {heroSection.description}
           </p>
         </div>

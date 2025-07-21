@@ -15,10 +15,10 @@ const experienceData: ExperienceItem[] = [
     company: 'eCapture3D S.L',
     dates: 'Abr 2021 - Jun 2021',
     description: [
-      'Modelos predictivos basados en Machine Learning y Deep Learning para análisis de variables climáticas con datos de AEMET.',
-      'Identificación de patrones clave en grandes volúmenes de datos meteorológicos, mejorando la precisión de los modelos.',
-      'Procesamiento y análisis de datos de AEMET.',
-      'Participación en proyectos de investigación tecnológica avanzada en análisis de datos climáticos.',
+      '1. Modelos predictivos basados en Machine Learning y Deep Learning para análisis de variables climáticas con datos de AEMET.',
+      '2. Identificación de patrones clave en grandes volúmenes de datos meteorológicos, mejorando la precisión de los modelos.',
+      '3. Procesamiento y análisis de datos de AEMET.',
+      '4. Participación en proyectos de investigación tecnológica avanzada en análisis de datos climáticos.',
     ],
   },
   {
@@ -26,9 +26,10 @@ const experienceData: ExperienceItem[] = [
     company: 'Viewnext S.A',
     dates: 'Ago 2021 - Dic 2023',
     description: [
-      'Diseño e implementación de soluciones empresariales completas en Oracle WebCenter Sites (OWCS).',
-      'Gestión y optimización del CMS adaptándolo a necesidades específicas del negocio.',
-      'Mejora del rendimiento y escalabilidad de aplicaciones, incrementando su eficiencia operativa.',
+      '1. Proyecto: Portales Públicos Naturgy',
+      '2. Diseño e implementación de soluciones empresariales completas en Oracle WebCenter Sites (OWCS).',
+      '3. Gestión y optimización del CMS adaptándolo a necesidades específicas del negocio.',
+      '4. Mejora del rendimiento y escalabilidad de aplicaciones, incrementando su eficiencia operativa.',
     ],
   },
   {
@@ -36,19 +37,21 @@ const experienceData: ExperienceItem[] = [
     company: 'Viewnext S.A',
     dates: 'Febre 2023 - Mar 2025',
     description: [
-      'Evolución desde desarrollo a roles analíticos implementando soluciones con JavaScript/TypeScript y Java.',
-      'Arquitectura e implementación de soluciones empresariales integrales en OWCS/Spring Framework.',
-      'Optimización de rendimiento en aplicaciones críticas para el negocio.',
+      '1. Proyectos: Portales Públicos Naturgy y Áreas Clientes Naturgy',
+      '2. Evolución desde desarrollo a roles analíticos implementando soluciones con JavaScript/TypeScript y Java.',
+      '3. Arquitectura e implementación de soluciones empresariales integrales en OWCS/Spring Framework.',
+      '4. Optimización de rendimiento en aplicaciones críticas para el negocio.',
     ],
   },
   {
     title: 'Desarrollador Frontend',
     company: 'Viewnext S.A',
-    dates: 'Abr 2025 - Mayo 2018',
+    dates: 'Abr 2025 - Mayo 2025',
     description: [
-      'Desarrollo de interfaces modernas y responsivas con React.',
-      'Implementación de mejoras UX/UI basadas en necesidades de usuario y métricas de negocio.',
-      'Optimización de aplicaciones React para máximo rendimiento y escalabilidad.',
+      '1. Proyecto: Portal de Contratación Naturgy',
+      '2. Desarrollo de interfaces modernas y responsivas con React.',
+      '3. Implementación de mejoras UX/UI basadas en necesidades de usuario y métricas de negocio.',
+      '4. Optimización de aplicaciones React para máximo rendimiento y escalabilidad.',
     ],
   },
   {
@@ -56,12 +59,13 @@ const experienceData: ExperienceItem[] = [
     company: 'Alvea Soluciones Tecnológicas S.L',
     dates: 'May 2025 - Presente',
     description: [
-      'Arquitectura e implementación de soluciones empresariales integrales utilizando OWCS y Spring Boot.',
-      'Optimización de rendimiento y escalabilidad en aplicaciones críticas para el negocio.',
-      'Resolución proactiva de incidencias técnicas y mantenimiento correctivo de sistemas en producción.',
-      'Gestión directa de relaciones con clientes, proporcionando soporte técnico especializado y seguimiento continuo',
-      'Desarrollo e implementación de nuevas funcionalidades siguiendo metodologías ágiles y mejores prácticas de desarrollo',
-      'Proyecto manejado y mantenido por Indra/Minsait',
+      '1. Proyecto: Web Pública Aena',
+      '2. Arquitectura e implementación de soluciones empresariales integrales utilizando OWCS y Spring Boot.',
+      '3. Optimización de rendimiento y escalabilidad en aplicaciones críticas para el negocio.',
+      '4. Resolución proactiva de incidencias técnicas y mantenimiento correctivo de sistemas en producción.',
+      '5. Gestión directa de relaciones con clientes, proporcionando soporte técnico especializado y seguimiento continuo',
+      '6. Desarrollo e implementación de nuevas funcionalidades siguiendo metodologías ágiles y mejores prácticas de desarrollo',
+      '7. Proyecto manejado y mantenido por Indra/Minsait',
     ],
   },
 ];
@@ -106,9 +110,9 @@ export default function ExperienceSectionMatrix() {
   return (
     <Section
       variant="light"
-      className="z-10 relative  bg-black/20  backdrop-blur-sm  shadow-2xl p-12 rounded-lg"
+      className="z-10 relative  bg-black/20  backdrop-blur-sm  shadow-2xl p-12 rounded-lg sm:mt-40"
     >
-      <div ref={sectionRef} className="px-6 py-20 font-mono">
+      <div ref={sectionRef} className="font-mono">
         <style>{`
         @keyframes pulse-border {
           0% { box-shadow: 0 0 0px rgba(0, 255, 65, 0.5); }
@@ -166,11 +170,11 @@ export default function ExperienceSectionMatrix() {
         }
       `}</style>
 
-        <div className="max-w-6xl mx-auto">
+        <div className="w-full mx-auto">
           {/* <Card className="bg-black/90"> */}
           <Card className="bg-transparent backdrop-blur-sm">
             <div className="p-0 md:p-12">
-              <h2 className="text-3xl font-bold mb-12 flex items-center justify-center flex-wrap gap-4 md:gap-0 text-green-400">
+              <h2 className="text-4xl font-bold mb-12 flex items-center justify-center flex-wrap gap-4 text-green-400">
                 <div className="w-16 h-16  border-2 border-green-400 rounded-none flex items-center justify-center">
                   <Briefcase className="h-8 w-8 text-green-400" />
                 </div>
@@ -179,9 +183,8 @@ export default function ExperienceSectionMatrix() {
 
               <div className="relative">
                 {/* Vertical Timeline Line - Solo en desktop */}
-                <div className="absolute left-8 top-0 bottom-0 w-0.5 timeline-line hidden sm:block"></div>
-
-                <div className="space-y-8">
+                <div className="absolute left-8 top-16 bottom-0 w-0.5 timeline-line hidden sm:block"></div>
+                <div className="grid grid-cols-1 gap-4">
                   {experienceData.map((item, index) => (
                     <div
                       key={index}
@@ -197,7 +200,7 @@ export default function ExperienceSectionMatrix() {
                       </div>
 
                       {/* Content Card */}
-                      <div className="ml-0 sm:ml-20 ">
+                      <div className="ml-0 sm:ml-20">
                         <Card className="experience-card border-2 border-green-700/30 hover:border-green-400/70 transition-all duration-300 B shadow-lg hover:shadow-green-400/20 card-hover-effect rounded-lg">
                           <div className="p-6">
                             {/* Header con botón toggle solo en desktop */}
@@ -236,7 +239,7 @@ export default function ExperienceSectionMatrix() {
                             </div>
 
                             {/* Description */}
-                            <div className="border-t border-green-900/30 pt-4">
+                            <div className="border-t border-green-900/30 pt-4 hidden sm:block">
                               {/* Desktop: Con toggle */}
                               <div
                                 className={`hidden sm:block overflow-hidden transition-all duration-500 ease-in-out ${

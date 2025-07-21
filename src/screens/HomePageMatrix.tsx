@@ -1,9 +1,11 @@
 import { HeadSEO } from '../components';
 
 import AboutSectionMatrix from '../components/homePage/aboutSection/AboutSectionMatrix';
+import ContactSectionMatrix from '../components/homePage/ContactSectionMatrix';
 import ExperienceSectionMatrix from '../components/homePage/ExperienceSectionMatrix';
 
 import HeroSectionMatrix from '../components/homePage/HeroSectionMatrix';
+import TechSkillsCardsSectionMatrix from '../components/homePage/TechSkillsCardsSectionMatrix';
 
 import { MainLayoutNew } from '../components/layouts/MainLayoutNew';
 const HomePageMatrix = () => {
@@ -21,6 +23,8 @@ const HomePageMatrix = () => {
       <HeroSectionMatrix />
       <AboutSectionMatrix />
       <ExperienceSectionMatrix />
+      <TechSkillsCardsSectionMatrix />
+      <ContactSectionMatrix />
     </MainLayoutNew>
   );
 };

@@ -1,226 +1,210 @@
-import { Tags } from "../../const/enums/tags";
+import { Tags } from '../../const/enums/tags';
 
 export const homePage = {
   heroSection: {
-    title: "Veriel.dev",
-    description:
-      "Del código a la experiencia: Construyendo soluciones que importan",
-    contact: "Contactar",
+    title: 'Veriel.dev',
+    description: 'Del código a la experiencia: Construyendo soluciones que importan',
+    contact: 'Contactar',
     cv: {
-      text: "Descargar CV",
-      to: "/curriculum-vitae",
+      text: 'Descargar CV',
+      to: '/curriculum-vitae',
     },
   },
   aboutSection: {
-    title: "Sobre Mí",
+    title: 'Sobre Mí',
     description:
-      "Desarrollador Full Stack con 3+ años de experiencia en aplicaciones web empresariales. Dominio de TypeScript, Node.js, Java y Spring Framework. Experiencia en bases de datos SQL y NoSQL",
+      'Desarrollador Full Stack con 3+ años de experiencia en aplicaciones web empresariales. Dominio de TypeScript, Node.js, Java y Spring Framework. Experiencia en bases de datos SQL y NoSQL',
     stats: [
       {
-        label: "Experiencia",
+        label: 'Experiencia',
         value: 3,
-        plus: "+ años",
+        plus: '+ años',
       },
       {
-        label: "Proyectos/Evol",
+        label: 'Proyectos/Evol',
         value: 30,
-        plus: "+",
+        plus: '+',
       },
       {
-        label: "Tecnologías",
+        label: 'Tecnologías',
         value: 20,
-        plus: "+",
+        plus: '+',
       },
     ],
   },
   skillsSection: {
-    title: "Habilidades Técnicas",
+    title: 'Habilidades_Técnicas',
     technologies: {
       frontend: [
         {
-          name: "React",
+          name: 'React',
           description:
-            "Biblioteca líder para construcción de interfaces modernas y aplicaciones SPA",
+            'Biblioteca líder para construcción de interfaces modernas y aplicaciones SPA',
           level: 85,
         },
         {
-          name: "Astro",
+          name: 'Astro',
           description:
-            "Framework moderno para sitios web de alto rendimiento con hidratación parcial",
+            'Framework moderno para sitios web de alto rendimiento con hidratación parcial',
           level: 50,
         },
         {
-          name: "Next",
-          description:
-            "Framework React para aplicaciones web de alto rendimiento con SSR y SSG",
+          name: 'Next',
+          description: 'Framework React para aplicaciones web de alto rendimiento con SSR y SSG',
           level: 50,
         },
         {
-          name: "HTML/CSS",
-          description:
-            "Dominio avanzado de estándares web modernos y layouts responsive",
+          name: 'HTML/CSS',
+          description: 'Dominio avanzado de estándares web modernos y layouts responsive',
           level: 85,
         },
         {
-          name: "Tailwind",
+          name: 'Tailwind',
           level: 85,
-          description:
-            "Framework CSS utility-first para diseño rápido y consistent",
+          description: 'Framework CSS utility-first para diseño rápido y consistent',
         },
         {
-          name: "Vite",
-          description:
-            "Build tool de nueva generación para desarrollo web moderno",
+          name: 'Vite',
+          description: 'Build tool de nueva generación para desarrollo web moderno',
           level: 55,
         },
         {
-          name: "Web Components",
-          description:
-            "Desarrollo de componentes web nativos reutilizables y encapsulados",
+          name: 'Web Components',
+          description: 'Desarrollo de componentes web nativos reutilizables y encapsulados',
           level: 55,
         },
       ],
       backend: [
         {
-          name: "Node",
+          name: 'Node',
           description:
-            "Runtime JavaScript para backend de alto rendimiento y aplicaciones en tiempo real",
+            'Runtime JavaScript para backend de alto rendimiento y aplicaciones en tiempo real',
           level: 65,
         },
         {
-          name: "Spring",
-          description:
-            "Framework empresarial Java para aplicaciones robustas y escalables",
+          name: 'Spring',
+          description: 'Framework empresarial Java para aplicaciones robustas y escalables',
           level: 75,
         },
         {
-          name: "JSP",
-          description: "Java Server Pages",
+          name: 'JSP',
+          description: 'Java Server Pages',
           level: 70,
         },
         {
-          name: "OWCS",
-          description:
-            "Sistema de gestión de contenido empresarial Oracle WebCenter Sites",
+          name: 'OWCS',
+          description: 'Sistema de gestión de contenido empresarial Oracle WebCenter Sites',
           level: 75,
         },
         {
-          name: "Express",
-          description: "Framework web minimalista y flexible para Node.js",
+          name: 'Express',
+          description: 'Framework web minimalista y flexible para Node.js',
         },
         {
-          name: "Nest",
-          description:
-            "Framework Node.js progresivo para aplicaciones escalables y empresariales",
+          name: 'Nest',
+          description: 'Framework Node.js progresivo para aplicaciones escalables y empresariales',
           level: 65,
         },
       ],
       database: [
         {
-          name: "PostgreSQL",
-          description:
-            "Sistema de gestión de bases de datos relacional avanzad",
+          name: 'PostgreSQL',
+          description: 'Sistema de gestión de bases de datos relacional avanzad',
           level: 55,
         },
         {
-          name: "MongoDB",
-          description: "Base de datos NoSQL líder para aplicaciones moderna",
+          name: 'MongoDB',
+          description: 'Base de datos NoSQL líder para aplicaciones moderna',
           level: 65,
         },
         {
-          name: "OracleSQL",
-          description:
-            "RDBMS empresarial para aplicaciones de alta disponibilidad",
+          name: 'OracleSQL',
+          description: 'RDBMS empresarial para aplicaciones de alta disponibilidad',
           level: 55,
         },
       ],
       languages: [
         {
-          name: "Java",
-          description:
-            "Lenguaje robusto para aplicaciones empresariales de alto rendimiento",
+          name: 'Java',
+          description: 'Lenguaje robusto para aplicaciones empresariales de alto rendimiento',
           level: 70,
         },
         {
-          name: "Java Script",
-          description: "Lenguaje versátil para desarrollo full-stack moderno",
+          name: 'Java Script',
+          description: 'Lenguaje versátil para desarrollo full-stack moderno',
           level: 80,
         },
         {
-          name: "Type Script",
-          description:
-            "Superset de JavaScript con tipado estático para desarrollo escalable",
+          name: 'Type Script',
+          description: 'Superset de JavaScript con tipado estático para desarrollo escalable',
           level: 80,
         },
         {
-          name: "Python",
+          name: 'Python',
+          description: 'Lenguaje versátil para desarrollo backend y análisis de datos',
+          level: 50,
+        },
+        {
+          name: 'Go/Golang',
           description:
-            "Lenguaje versátil para desarrollo backend y análisis de datos",
+            'Lenguaje de programación eficiente y concurrente para sistemas distribuidos',
           level: 50,
         },
       ],
       devOps: [
         {
-          name: "Git",
-          description: "Sistema de control de versiones distribuido",
+          name: 'Git',
+          description: 'Sistema de control de versiones distribuido',
           level: 75,
         },
         {
-          name: "Docker",
-          description:
-            "Plataforma de containerización para desarrollo y despliegue",
+          name: 'Docker',
+          description: 'Plataforma de containerización para desarrollo y despliegue',
           level: 60,
         },
       ],
     },
   },
   projectsSections: {
-    title: "Proyectos Destacado",
+    title: 'Proyectos Destacado',
     projects: [
       {
-        title: "Portfolio",
-        description: "Mi actual web hasta el día de hoy",
-        tags: [
-          Tags.REACT,
-          Tags.NODE,
-          Tags.NEXT,
-          "NodeMailer",
-          "FramerMotion",
-          Tags.TAILWIND,
-        ],
+        title: 'Portfolio',
+        description: 'Mi actual web hasta el día de hoy',
+        tags: [Tags.REACT, Tags.NODE, Tags.NEXT, 'NodeMailer', 'FramerMotion', Tags.TAILWIND],
         github: {
           ok: true,
-          url: "https://github.com/veriel-dev/01-portfolio",
+          url: 'https://github.com/veriel-dev/01-portfolio',
         },
         demo: {
           ok: true,
-          url: "https://01-portfolio-samuraidevord.vercel.app/",
+          url: 'https://01-portfolio-samuraidevord.vercel.app/',
         },
       },
       {
-        title: "Clone Spring MVC",
-        description: "Clone de esta mítica tecnología",
-        tags: [Tags.NODE, Tags.TS, "Reflect MetaData"],
+        title: 'Clone Spring MVC',
+        description: 'Clone de esta mítica tecnología',
+        tags: [Tags.NODE, Tags.TS, 'Reflect MetaData'],
         github: {
           ok: true,
-          url: "https://github.com/veriel-dev/clone-spring-mvc",
+          url: 'https://github.com/veriel-dev/clone-spring-mvc',
         },
         demo: {
           ok: true,
-          url: "https://clone-spring-mvc-production.up.railway.app/",
+          url: 'https://clone-spring-mvc-production.up.railway.app/',
         },
       },
       {
-        title: "Ts-Engine-Template",
-        description: "Clone de handlebars",
+        title: 'Ts-Engine-Template',
+        description: 'Clone de handlebars',
         tags: [Tags.NODE, Tags.TS],
         github: {
           ok: true,
-          url: "https://github.com/veriel-dev/ts-engine-template",
+          url: 'https://github.com/veriel-dev/ts-engine-template',
         },
         demo: {
           ok: false,
-          url: "",
+          url: '',
         },
       },
       // {
@@ -237,81 +221,81 @@ export const homePage = {
       //   },
       // },
       {
-        title: "Trello Clone",
-        description: "Clome del famoso software Trello Clone",
-        tags: [Tags.REACT, "DndKit", Tags.TS],
+        title: 'Trello Clone',
+        description: 'Clome del famoso software Trello Clone',
+        tags: [Tags.REACT, 'DndKit', Tags.TS],
         github: {
           ok: true,
-          url: "https://github.com/samuraiOrDev/trello-clone",
+          url: 'https://github.com/samuraiOrDev/trello-clone',
         },
         demo: {
           ok: true,
-          url: "https://github.com/veriel-dev/trello-clone",
+          url: 'https://github.com/veriel-dev/trello-clone',
         },
       },
       {
-        title: "Responsive Web",
-        description: "Web para visualizar tu web en diferentes resoluciones",
-        tags: [Tags.REACT, Tags.VITE, "React-Icons"],
+        title: 'Responsive Web',
+        description: 'Web para visualizar tu web en diferentes resoluciones',
+        tags: [Tags.REACT, Tags.VITE, 'React-Icons'],
         github: {
           ok: true,
-          url: "https://github.com/veriel-dev/responsive-web",
+          url: 'https://github.com/veriel-dev/responsive-web',
         },
         demo: {
           ok: true,
-          url: "https://responsive-web-pi.vercel.app/",
+          url: 'https://responsive-web-pi.vercel.app/',
         },
       },
       {
-        title: "Old newspaper",
-        description: "Maquetación de un antinguo periódico",
+        title: 'Old newspaper',
+        description: 'Maquetación de un antinguo periódico',
         tags: [Tags.ASTRO, Tags.CSS],
         github: {
           ok: true,
-          url: "https://github.com/veriel-dev/web-personal-paper",
+          url: 'https://github.com/veriel-dev/web-personal-paper',
         },
         demo: {
           ok: true,
-          url: "https://web-personal-paper.vercel.app/",
+          url: 'https://web-personal-paper.vercel.app/',
         },
       },
       {
-        title: "Clone Cards Yu-Gi-oh",
-        description: "Diseño de cartas similares a la mítica serie YuGiOh",
-        tags: [Tags.REACT, Tags.CSS, "Atropos", Tags.VITE],
+        title: 'Clone Cards Yu-Gi-oh',
+        description: 'Diseño de cartas similares a la mítica serie YuGiOh',
+        tags: [Tags.REACT, Tags.CSS, 'Atropos', Tags.VITE],
         github: {
           ok: true,
-          url: "https://github.com/veriel-dev/cards-yu-gi-oh/",
+          url: 'https://github.com/veriel-dev/cards-yu-gi-oh/',
         },
         demo: {
           ok: true,
-          url: "https://cards-yu-gi-oh.vercel.app/",
+          url: 'https://cards-yu-gi-oh.vercel.app/',
         },
       },
       {
-        title: "Game  Boy Color",
-        description: "Maquetación de la mítica video consola",
+        title: 'Game  Boy Color',
+        description: 'Maquetación de la mítica video consola',
         tags: [Tags.CSS, Tags.VITE, Tags.JS],
         github: {
           ok: true,
-          url: "https://github.com/veriel-dev/gameboy-color",
+          url: 'https://github.com/veriel-dev/gameboy-color',
         },
         demo: {
           ok: true,
-          url: "https://gameboy-color.vercel.app/",
+          url: 'https://gameboy-color.vercel.app/',
         },
       },
       {
-        title: "SPA Web Component",
-        description: "Single Page Application realizada con Web Component",
+        title: 'SPA Web Component',
+        description: 'Single Page Application realizada con Web Component',
         tags: [Tags.WEB_COMPONENTS, Tags.JS, Tags.CSS],
         github: {
           ok: true,
-          url: "https://github.com/veriel-dev/spa-vanilla-js/",
+          url: 'https://github.com/veriel-dev/spa-vanilla-js/',
         },
         demo: {
           ok: true,
-          url: "https://spa-vanilla-js-beryl.vercel.app/",
+          url: 'https://spa-vanilla-js-beryl.vercel.app/',
         },
       },
       // {
@@ -343,19 +327,19 @@ export const homePage = {
     ],
   },
   contactSetion: {
-    title: "Contacto",
+    title: 'Contacto',
     subTitles: {
-      one: "!Hablemos!",
-      two: "Gracias por visitar mi sitio web !",
+      one: '!Hablemos!',
+      two: 'Gracias por visitar mi sitio web !',
     },
     description:
-      "Espero que hayas disfrutado explorando mi trabajo y que hayas obtenido una idea clara de mis habilidades y experiencia.",
+      'Espero que hayas disfrutado explorando mi trabajo y que hayas obtenido una idea clara de mis habilidades y experiencia.',
     form: {
-      title: "Enviar Mensaje",
+      title: 'Enviar Mensaje',
       placeholder: {
-        name: "Nombre",
-        email: "Email",
-        msg: "Mensaje",
+        name: 'Nombre',
+        email: 'Email',
+        msg: 'Mensaje',
       },
     },
   },
