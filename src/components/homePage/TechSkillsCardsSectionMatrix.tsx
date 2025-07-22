@@ -1,5 +1,5 @@
 import { Code, Cog, Computer, Container, Database, LucideIcon, Server } from 'lucide-react';
-import { Card, Section, TabsList } from '../ui';
+import { Card, ElementTitle, Section, TabsList } from '../ui';
 import { useState } from 'react';
 import TabsTrigger from '../ui/TabsTrigger';
 import { motion } from 'framer-motion';
@@ -36,12 +36,7 @@ const TechSkillsCardsSectionMatrix = () => {
         initial={{ opacity: initial.opacity, y: initial.y }}
         animate={{ opacity: animate.opacity, y: animate.y }}
       >
-        <h2 className="text-4xl font-bold mb-12 flex items-center justify-center flex-wrap gap-4 text-green-400">
-          <div className="w-16 h-16  border-2 border-green-400 rounded-none flex items-center justify-center">
-            <Cog className="h-8 w-8 animate-spin" />
-          </div>
-          {skillsSection.title.toLocaleUpperCase()}
-        </h2>
+        <ElementTitle title={skillsSection.title} Icon={Cog} />'
         <TabsList>
           {Object.keys(technologies).map(tab => {
             return (

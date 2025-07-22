@@ -1,4 +1,3 @@
-import CurriculumVitae from './screens/CurriculumVitaePage';
 import { Route, Switch } from 'wouter';
 import { NotFoundPage } from './screens/NotFoundPage';
 import HomePageMatrix from './screens/HomePageMatrix';
@@ -12,7 +11,6 @@ const App = () => {
         <Route path="/" component={HomePageMatrix} />
         <Route path="/projects" component={ProjectsPageMatrix} />
         <Route path="/curriculum-vitae" component={CVComponent} />
-        <Route path="/curriculum-vitae-old" component={CurriculumVitae} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
     </>

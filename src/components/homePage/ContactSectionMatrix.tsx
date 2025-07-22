@@ -1,5 +1,5 @@
 import { ContactRound, Github, Linkedin, Mail } from 'lucide-react';
-import { Card, Section } from '../ui';
+import { Card, ElementTitle, Section } from '../ui';
 
 import { homePage } from '../../data/pages';
 import { FormSendEmailMatrix } from './formSendEmail/FormSendEmailMatrix';
@@ -21,12 +21,7 @@ const ContactSectionMatrix = () => {
         initial={{ opacity: initial.opacity, y: initial.y }}
         animate={{ opacity: animate.opacity, y: animate.y }}
       >
-        <h2 className="text-4xl font-bold mb-12 flex items-center justify-center flex-wrap gap-4 text-green-400">
-          <div className="w-16 h-16  border-2 border-green-400 rounded-none flex items-center justify-center">
-            <ContactRound className="h-8 w-8" />
-          </div>
-          {contactSetion.title.toLocaleUpperCase()}
-        </h2>
+        <ElementTitle title={contactSetion.title} Icon={ContactRound} />
         <Card className="p-6 rounded-lg bg-black/20  backdrop-blur-sm shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">

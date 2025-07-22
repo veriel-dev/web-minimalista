@@ -6,18 +6,18 @@ import ExperienceSectionMatrix from '../components/homePage/ExperienceSectionMat
 
 import HeroSectionMatrix from '../components/homePage/HeroSectionMatrix';
 import TechSkillsCardsSectionMatrix from '../components/homePage/TechSkillsCardsSectionMatrix';
+import { MainLayoutMatrix } from '../components/layouts/MainLayoutMatrix';
 
-import { MainLayoutNew } from '../components/layouts/MainLayoutNew';
 const HomePageMatrix = () => {
   return (
-    <MainLayoutNew>
+    <MainLayoutMatrix>
       <HeadSEO
-        title="Veriel Dev | Desarrollador Full Stack"
+        title="Veriel Dev | Software Developer"
         description={
-          'Desarrollador Full Stack especializado en crear experiencias web únicas y aplicaciones modernas. Experto en React, Node.js, Java y más'
+          'Software Developer especializado en crear experiencias web únicas y aplicaciones modernas'
         }
         keywords={
-          'desarrollador full stack, react, node.js, javascript, java, desarrollo web, frontend, backend'
+          'Software Developer, react, node.js, javascript, java, desarrollo web, frontend, backend'
         }
       />
       <HeroSectionMatrix />
@@ -25,7 +25,7 @@ const HomePageMatrix = () => {
       <ExperienceSectionMatrix />
       <TechSkillsCardsSectionMatrix />
       <ContactSectionMatrix />
-    </MainLayoutNew>
+    </MainLayoutMatrix>
   );
 };
 
