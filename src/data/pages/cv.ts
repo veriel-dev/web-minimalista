@@ -158,15 +158,29 @@ export const cvPage = {
     ],
   },
   languages: {
-    title: 'IDIOMAS',
+    title: 'Idiomas',
     expertise: ['Español: Nativo', 'Inglés: Básico'],
   },
   achievements: {
-    title: 'LOGROS',
+    title: 'Logros',
     expertise: [
-      'Mejora de arquitecturas empresariales, orientadas a aumentar la eficiencia del sistema y reducción de costes.',
-      'Contribución a la mejora del rendimiento en aplicaciones de alto tráfico.',
-      'Evolución profesional desde un rol técnico inicial hasta funciones analíticas.',
+      'Desarrollo full-stack en proyectos estratégicos para grandes corporaciones (Naturgy, AENA) utilizando tecnologías cómo React, Spring, JavaScript y CMS empresariales (OWCS), contribuyendo al éxito de iniciativas críticas de negocio',
+      'Progresión técnica acelerada desde desarrollador junior hasta analista técnico con participación en arquitecturas de software, estimaciones de proyectos y toma de decisiones técnicas en 4 años',
+      'Soporte técnico especializado N2/N3 resolviendo incidencias críticas y complejas, desde problemas de aplicaciones hasta análisis de sistemas, con escalación a nivel experto cuando se requiere desarrollo de soluciones personalizadas',
+      'Gestión integral de proyectos desde análisis de requisitos hasta implementación, liderando tanto evolutivos como medianas transformaciones tecnológicas en entornos enterprise',
+      'Versatilidad tecnológica comprobada en ecosistemas frontend (React, jQuery, JSP) y backend (Spring), con experiencia en integración de sistemas y arquitecturas escalables',
+      'Contribución a la optimización de procesos mediante mejoras en arquitecturas empresariales que han resultado en mayor eficiencia operativa y reducción de costes',
     ],
   },
+  projects: [
+    {
+      title: 'Portafolio Profesional',
+      description:
+        'Desarrollo de sitio web personal con React.js, TypeScript, Vite.JS y Tailwind CSS. Implementación de una SPA (Single Page Application) con contenido mayormente estático, donde la navegación y la presentación de la información se gestionan en el frontend. El contenido principal no cambia frecuentemente y no depende de un backend dinámico para su generación en tiempo real',
+      links: [
+        { text: 'Ver Sitio Web', href: 'https://veriel.dev' },
+        { text: 'Código Fuente', href: 'https://github.com/veriel-dev/web-minimalista' },
+      ],
+    },
+  ],
 };

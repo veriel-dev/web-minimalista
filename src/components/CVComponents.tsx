@@ -4,20 +4,17 @@ import { HeadSEO } from './seo';
 import ButtonDownload from './cvPage/ButtonDownload';
 
 const CVComponent = () => {
-  const { experience, education, metadata, header, about, skills } = cvPage;
-
-  // Definición: Este tipo de web es .
-  const projects = [
-    {
-      title: 'Portafolio Profesional',
-      description:
-        'Desarrollo de sitio web personal con React.js, TypeScript, Vite.JS y Tailwind CSS. Implementación de una SPA (Single Page Application) con contenido mayormente estático, donde la navegación y la presentación de la información se gestionan en el frontend. El contenido principal no cambia frecuentemente y no depende de un backend dinámico para su generación en tiempo real',
-      links: [
-        { text: 'Ver Sitio Web', href: 'https://veriel.dev' },
-        { text: 'Código Fuente', href: 'https://github.com/veriel-dev/web-minimalista' },
-      ],
-    },
-  ];
+  const {
+    experience,
+    education,
+    metadata,
+    header,
+    about,
+    skills,
+    languages,
+    achievements,
+    projects,
+  } = cvPage;
 
   return (
     <>
@@ -101,9 +98,9 @@ const CVComponent = () => {
                         </span>
                       </div>
                     </div>
-                    <ul className="ttext-sm text-gray-600 leading-relaxed mt-4">
+                    <ul className="ttext-sm text-gray-600 leading-relaxed list-disc mt-4">
                       {exp.expertise.map((skill, skillIndex) => (
-                        <li key={skillIndex} className="list-disc list-inside">
+                        <li key={skillIndex} className="list-item ml-4">
                           {skill}
                         </li>
                       ))}
@@ -132,9 +129,9 @@ const CVComponent = () => {
                         </span>
                       </div>
                     </div>
-                    <ul className="ttext-sm text-gray-600 leading-relaxed mt-4">
+                    <ul className="text-sm text-gray-600 leading-relaxed list-disc mt-4">
                       {exp.expertise.map((skill, skillIndex) => (
-                        <li key={skillIndex} className="list-disc list-inside">
+                        <li key={skillIndex} className="list-item ml-4">
                           {skill}
                         </li>
                       ))}
@@ -165,6 +162,44 @@ const CVComponent = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </section>
+            {/* Idiomas */}
+            <section className="mb-14">
+              <h2 className="text-2xl font-bold text-gray-900 mb-7 relative pb-3">
+                {languages.title}
+                <div className="absolute bottom-0 left-0 w-16 h-0.5 bg-gray-900"></div>
+              </h2>
+              <div className="relative pl-8">
+                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                <div className="relative mb-12  last:mb-0 last:pb-0">
+                  <ul className="ttext-sm text-gray-600 leading-relaxed mt-4">
+                    {languages.expertise.map((skill, skillIndex) => (
+                      <li key={skillIndex} className="list-disc list-inside list-item">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
+            {/* Logros */}
+            <section className="mb-14">
+              <h2 className="text-2xl font-bold text-gray-900 mb-7 relative pb-3">
+                {achievements.title}
+                <div className="absolute bottom-0 left-0 w-16 h-0.5 bg-gray-900"></div>
+              </h2>
+              <div className="relative pl-8">
+                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200"></div>
+                <div className="relative mb-12  last:mb-0 last:pb-0">
+                  <ul className="text-sm text-gray-600 leading-relaxed list-disc mt-4">
+                    {achievements.expertise.map((skill, skillIndex) => (
+                      <li key={skillIndex} className="list-item">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </section>
 
