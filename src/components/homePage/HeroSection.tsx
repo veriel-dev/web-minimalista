@@ -8,7 +8,7 @@ import { homePage } from "../../data/pages";
 
 const HeroSection = memo(() => {
 
-    const scrollToContact = (e:React.MouseEvent<HTMLElement>) => {
+    const scrollToContact = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault();
         document.getElementById('contact')?.scrollIntoView({
             behavior: 'smooth'
@@ -41,8 +41,8 @@ const HeroSection = memo(() => {
                 </div>
                 <div className="flex gap-4">
 
-                    <Button 
-                        className="bg-blue-600 transition-all transform duration-300 hover:-translate-y-2 hover:bg-gradient-to-r hover:from-blue-600 hover:to-violet-600" 
+                    <Button
+                        className="bg-blue-600 transition-all transform duration-300 hover:-translate-y-2 hover:bg-gradient-to-r hover:from-blue-600 hover:to-violet-600"
                         onClick={scrollToContact}
                         title="Email Contacnt"
                         ariaLabel="Aria Email Contact"
@@ -56,8 +56,8 @@ const HeroSection = memo(() => {
                         rel="noopener noreferrer"
                         target="_blank"
                     >
-                        <Button 
-                            variant="outline" 
+                        <Button
+                            variant="outline"
                             className="border-secondary transition-all transform duration-300 hover:-translate-y-2"
                             title="Download CV"
                             ariaLabel="Aria Donwload CV"

@@ -30,7 +30,7 @@ const TechSkillsCardsSectionMatrix = () => {
   return (
     <Section
       variant="light"
-      className="z-10 relative  bg-black/20  backdrop-blur-sm  shadow-2xl p-12 rounded-lg sm:mt-20"
+      className="z-10 relative  bg-black/20  backdrop-blur-sm  shadow-2xl  rounded-lg sm:mt-20"
     >
       <motion.div
         initial={{ opacity: initial.opacity, y: initial.y }}

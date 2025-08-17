@@ -14,7 +14,7 @@ const ContactSectionMatrix = () => {
   return (
     <Section
       variant="light"
-      className="z-10 relative  bg-black/20  backdrop-blur-sm  shadow-2xl p-12 rounded-lg sm:mt-20"
+      className="z-10 relative bg-black/20 backdrop-blur-sm shadow-2xl rounded-lg sm:mt-20"
       id="contact"
     >
       <motion.div
@@ -28,7 +28,7 @@ const ContactSectionMatrix = () => {
               <h3 className="text-xl font-bold mb-4 text-green-500">
                 {contactSetion.subTitles.one}
               </h3>
-              <h4 className="text-xl text-green-400 font-bold">{contactSetion.subTitles.two}</h4>
+              <h4 className="text-lg sm:text-xl text-green-400 font-bold">{contactSetion.subTitles.two}</h4>
               <p className="text-green-300">{contactSetion.description}</p>
               <div className="flex items-center justify-strart gap-4">
                 <a href="mailto:vmordiales@gmail.com" title="Email">

@@ -204,7 +204,7 @@ const CVComponent = () => {
             </section>
 
             {/* Featured Projects */}
-            <section className="mb-0">
+            {/* <section className="mb-0">
               <h2 className="text-2xl font-bold text-gray-900 mb-7 relative pb-3">
                 Proyectos Destacados
                 <div className="absolute bottom-0 left-0 w-16 h-0.5 bg-gray-900"></div>
@@ -230,11 +230,11 @@ const CVComponent = () => {
                   </div>
                 ))}
               </div>
-            </section>
+            </section> */}
           </main>
 
           {/* Footer */}
-          <footer className="bg-gray-100 px-12 py-10 border-t border-gray-200 text-center">
+          {/* <footer className="bg-gray-100 px-12 py-10 border-t border-gray-200 text-center">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
               Disponible para Nuevos Proyectos
             </h2>
@@ -257,9 +257,39 @@ const CVComponent = () => {
                 Ver Portafolio
               </a>
             </div>
-          </footer>
+          </footer> */}
         </div>
       </div>
+      <style>{`
+                @media print {
+                    @page {
+                        margin: 0.5cm;
+                        size: A4;
+                    }
+                    body {
+                        -webkit-print-color-adjust: exact;
+                        print-color-adjust: exact;
+                    }
+                    html, body {
+                        width: 210mm;
+                        height: 297mm;
+                    }
+                    ul, ol {
+                        page-break-inside: avoid;
+                        break-inside: avoid;
+                    }
+                    h1, h2, h3 {
+                        page-break-after: avoid;
+                        break-after: avoid;
+                    }
+                    .print\\:bg-white {
+                        background: white !important;
+                    }
+                    .print\\:border {
+                        border: 1px solid #e5e7eb !important;
+                    }
+                }
+            `}</style>
     </>
   );
 };

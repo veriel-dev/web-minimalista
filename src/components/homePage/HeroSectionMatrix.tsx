@@ -39,9 +39,9 @@ const HeroSectionMatrix = memo(() => {
             {heroSection.description}
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <Button
-            className="bg-green-900/50 border-2 border-green-400 hover:bg-green-900/70 text-green-400 px-4 py-4 rounded-none transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-400/30"
+            className="bg-green-900/50 border-2 border-green-400 hover:bg-green-900/70 text-green-400 px-4 py-4 rounded-none transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-400/30 min-w-[200px]"
             onClick={scrollToContact}
             title="Email Contacnt"
             ariaLabel="Aria Email Contact"
@@ -53,7 +53,7 @@ const HeroSectionMatrix = memo(() => {
           <a href={heroSection.cv.to} rel="noopener noreferrer" target="_blank">
             <Button
               variant="outline"
-              className="bg-black border-2 border-green-400 text-green-400 hover:bg-green-900/30 px-4 py-4 rounded-none transition-all duration-300 hover:scale-105"
+              className="bg-black border-2 border-green-400 text-green-400 hover:bg-green-900/30 px-4 py-4 rounded-none transition-all duration-300 hover:scale-105 min-w-[200px]"
               title="Download CV"
               ariaLabel="Aria Donwload CV"
             >

@@ -15,7 +15,7 @@ const AboutSectionMatrix = memo(() => {
   return (
     <Section
       variant="light"
-      className="z-10 relative  bg-black/20  backdrop-blur-sm md:border-2 md:border-green-900/50 shadow-2xl p-12 rounded-lg"
+      className="z-10 relative bg-black/20  backdrop-blur-sm md:border-2 md:border-green-900/50 shadow-2xl p-10 rounded-lg"
     >
       <motion.div
         initial={{ opacity: initial.opacity, y: initial.y }}
@@ -25,7 +25,7 @@ const AboutSectionMatrix = memo(() => {
         <div>
           <ElementTitle title={aboutSection.title} Icon={User} />
           <div className="space-y-4 text-green-300">
-            <p className="text-lg leading-relaxed">{aboutSection.description}</p>
+            <p className="text-lg leading-relaxed text-center sm:text-start">{aboutSection.description}</p>
           </div>
           <div className="mt-8 grid grid-cols-2 gap-3">
             {aboutSection.tags.map(skill => (

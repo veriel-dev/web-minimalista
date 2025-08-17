@@ -20,7 +20,7 @@ const StatItem = ({ label, value, plus, icon: Icon }: StatItemProps) => {
             <Icon className={`h-8 w-8 text-green-400`} />
           </div>
           <div>
-            <div className="text-4xl font-bold text-green-400 mb-2">
+            <div className="text-3xl font-bold text-green-400 mb-2">
               {count} {plus}
             </div>
 

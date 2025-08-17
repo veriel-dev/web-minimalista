@@ -49,15 +49,15 @@ const ProjectsSectionMatrix = () => {
     });
   }, [activeFilter, searchQuery]);
   return (
-    <Section className="z-10 relative  bg-black/20  backdrop-blur-sm shadow-2xl p-12 rounded-lg mt-20 sm:mt-0">
+    <Section className="z-10 relative  bg-black/20  backdrop-blur-sm shadow-2xl sm:p-12 rounded-lg mt-20 sm:mt-0">
       <div className="flex flex-col md:flex-row justify-end items-center gap-4 mb-8">
         <div className="flex flex-wrap gap-4 ">
-          <div className="relative flex items-center">
+          <div className="relative flex items-center  backdrop-blur-sm shadow-2xl ">
             <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-green-400" />
             <input
               type="text"
               placeholder="Buscar por etiqueta..."
-              className="pl-10 pr-4 py-2 bg-black/20 backdrop-blur-sm rounded-lg  shadow-2xl  border-2 md:border-2 border-green-900/50 focus:outline-none focus:ring-2 focus:ring-green-500  text-green-400 placeholder:text-green-400"
+              className="pl-10 pr-4 py-2 bg-black/20  rounded-lg  shadow-2xl  border-2 md:border-2 border-green-900/50 focus:outline-none focus:ring-2 focus:ring-green-500  text-green-400 placeholder:text-green-400"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
             />
@@ -67,9 +67,8 @@ const ProjectsSectionMatrix = () => {
             <button
               title="Grid"
               aria-label="Aria Grid"
-              className={`p-2 rounded-md transition-colors ${
-                viewMode === 'grid' ? 'border-green-400/50 border-2' : ''
-              }`}
+              className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'border-green-400/50 border-2' : ''
+                }`}
               onClick={() => setViewMode('grid')}
             >
               <Grid className="w-5 h-5 text-green-400" />
@@ -77,9 +76,8 @@ const ProjectsSectionMatrix = () => {
             <button
               title="List"
               aria-label="Aria List"
-              className={`p-2 rounded-md transition-colors ${
-                viewMode === 'list' ? 'border-green-400/50 border-2' : ''
-              }`}
+              className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'border-green-400/50 border-2' : ''
+                }`}
               onClick={() => setViewMode('list')}
             >
               <List className="w-5 h-5 text-green-400" />

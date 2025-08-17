@@ -6,7 +6,7 @@ import { memo } from 'react';
 
 export const NavBarNew = memo(() => {
   return (
-    <nav className="fixed z-20 bg-black/50 backdrop-blur-sm border-b border-green-900/50 top-0 w-full">
+    <nav className="sticky z-20 bg-black/50 backdrop-blur-sm border-b border-green-900/50 top-0 w-full">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
           <Link href="/" title="Inicio">

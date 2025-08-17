@@ -43,7 +43,7 @@ export default function ExperienceSectionMatrix() {
   return (
     <Section
       variant="light"
-      className="z-10 relative  bg-black/20  backdrop-blur-sm  shadow-2xl p-12 rounded-lg sm:mt-40"
+      className="z-10 relative  bg-black/20  backdrop-blur-sm  shadow-2xl rounded-lg sm:mt-40"
     >
       <div ref={sectionRef} className="font-mono">
         <style>{`
@@ -115,11 +115,10 @@ export default function ExperienceSectionMatrix() {
                   {experienceData.map((item, index) => (
                     <div
                       key={index}
-                      className={`relative transition-all duration-700 ease-out ${
-                        visibleItems.includes(index)
-                          ? 'opacity-100 translate-y-0'
-                          : 'opacity-0 translate-y-10'
-                      }`}
+                      className={`relative transition-all duration-700 ease-out ${visibleItems.includes(index)
+                        ? 'opacity-100 translate-y-0'
+                        : 'opacity-0 translate-y-10'
+                        }`}
                     >
                       {/* Timeline Dot - Solo en desktop */}
                       <div className="absolute left-2 top-6 w-12 h-12 bg-green-400 rounded-full border-4 border-green-950 z-10 timeline-dot-pulse hidden sm:flex items-center justify-center">
@@ -169,11 +168,10 @@ export default function ExperienceSectionMatrix() {
                             <div className="border-t border-green-900/30 pt-4 hidden sm:block">
                               {/* Desktop: Con toggle */}
                               <div
-                                className={`hidden sm:block overflow-hidden transition-all duration-500 ease-in-out ${
-                                  expandedItem === index
-                                    ? 'max-h-96 opacity-100'
-                                    : 'max-h-0 opacity-0'
-                                }`}
+                                className={`hidden sm:block overflow-hidden transition-all duration-500 ease-in-out ${expandedItem === index
+                                  ? 'max-h-96 opacity-100'
+                                  : 'max-h-0 opacity-0'
+                                  }`}
                               >
                                 {item.description.map((desc, descIndex) => (
                                   <p
