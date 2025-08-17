@@ -13,7 +13,6 @@ const CVComponent = () => {
     skills,
     languages,
     achievements,
-    projects,
   } = cvPage;
 
   return (
