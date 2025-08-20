@@ -2,23 +2,23 @@ import { TypeProject } from '../components/projectsPage/ProjectsSection';
 
 const projects: TypeProject[] = [
   /* Portfolio Antiguo */
-  {
-    title: 'Portfolio',
-    description: 'Mi actual web hasta el día de hoy',
-    technologies: ['React', 'Node', 'Next.js', 'NodeMailer', 'FramerMotion', 'Tailwind'],
-    featured: true,
-    stats: {
-      stars: 24,
-      forks: 8,
-      startDate: '2024-01',
-      lastUpdate: '2 días',
-    },
-    proyectType: 'frontend',
-    github: 'https://github.com/veriel-dev/01-portfolio',
-    demo: 'https://01-portfolio-samuraidevord.vercel.app/',
-    img: '/img/portfolio_preview.png',
-    status: 'completed',
-  },
+  // {
+  //   title: 'Portfolio',
+  //   description: 'Mi actual web hasta el día de hoy',
+  //   technologies: ['React', 'Node', 'Next.js', 'NodeMailer', 'FramerMotion', 'Tailwind'],
+  //   featured: true,
+  //   stats: {
+  //     stars: 24,
+  //     forks: 8,
+  //     startDate: '2024-01',
+  //     lastUpdate: '2 días',
+  //   },
+  //   proyectType: 'frontend',
+  //   github: 'https://github.com/veriel-dev/01-portfolio',
+  //   demo: 'https://01-portfolio-samuraidevord.vercel.app/',
+  //   img: '/img/portfolio_preview.png',
+  //   status: 'completed',
+  // },
   /* Clone Spring MVC */
   {
     title: 'Clone Spring MVC',

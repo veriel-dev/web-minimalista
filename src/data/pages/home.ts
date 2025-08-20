@@ -329,8 +329,8 @@ export const homePage = {
   contactSetion: {
     title: 'Contacto',
     subTitles: {
-      one: '!Hablemos!',
-      two: 'Gracias por visitar mi sitio web !',
+      one: '¡Hablemos!',
+      two: 'Gracias por visitar mi sitio web',
     },
     description:
       'Espero que hayas disfrutado explorando mi trabajo y que hayas obtenido una idea clara de mis habilidades y experiencia.',

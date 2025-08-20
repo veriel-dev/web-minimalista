@@ -103,16 +103,16 @@ export const cvPage = {
           'Desarrollo de proyectos de investigación y análisis experimental',
         ],
       },
-      {
-        item: 'Bachiller',
-        company: 'I.E.S.O. Norba Caesarina',
-        period: '2012 - 2014',
-        expertise: [
-          'Modalidad de Ciencias y Tecnología con excelencia académica',
-          'Desarrollo de fundamentos sólidos en matemáticas, física y química',
-          'Participación activa en olimpiadas científicas y proyectos de investigación a nivel escolar',
-        ],
-      },
+      // {
+      //   item: 'Bachiller',
+      //   company: 'I.E.S.O. Norba Caesarina',
+      //   period: '2012 - 2014',
+      //   expertise: [
+      //     'Modalidad de Ciencias y Tecnología con excelencia académica',
+      //     'Desarrollo de fundamentos sólidos en matemáticas, física y química',
+      //     'Participación activa en olimpiadas científicas y proyectos de investigación a nivel escolar',
+      //   ],
+      // },
     ],
     isEducation: true,
   },
