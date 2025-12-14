@@ -11,7 +11,7 @@ const ProjectsPageMatrix = memo(() => {
     <MainLayoutMatrix>
       <HeadSEO
         title={'Veriel Dev | Proyectos'}
-        description={'Sección de proyectos del softwarea developer Veriel.dev'}
+        description={'Sección de proyectos del software developer Veriel.dev'}
         keywords={
           'software developer, desarrollo web, proyectos frontend, proyectos backend, destacados'
         }
