@@ -227,6 +227,15 @@ const projects: TypeProject[] = [
     demo: 'https://veriel.dev/',
     status: 'completed',
   },
+  {
+    title: 'Veriel SO',
+    description: 'Portfolio retro interactivo',
+    technologies: ['React', 'TypeScript'],
+    proyectType: 'frontend',
+    featured: false,
+    demo: 'https://os.veriel.dev/',
+    status: 'completed',
+  },
   // {
   //   title: 'Auth Service',
   //   description: 'Servicio de autenticación y autorización',

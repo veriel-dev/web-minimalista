@@ -33,3 +33,7 @@ tsconfig.node.tsbuildinfo
 docker-compose.yml
 Dockerfile
 .history
+
+
+docs/*
+CLAUDE.md
