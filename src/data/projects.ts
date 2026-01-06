@@ -230,7 +230,7 @@ const projects: TypeProject[] = [
   {
     title: 'Veriel SO',
     description: 'Portfolio retro interactivo',
-    technologies: ['React', 'TypeScript'],
+    technologies: ['React', 'TypeScript', 'CSS Modules'],
     proyectType: 'frontend',
     featured: false,
     demo: 'https://os.veriel.dev/',
