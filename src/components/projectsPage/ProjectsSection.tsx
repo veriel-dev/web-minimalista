@@ -1,8 +1,7 @@
 import { useMemo, useState } from "react";
 import { Section } from "../ui"
 import { Grid, List, Search, } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
-import ProjectCard from "./ProjectCard";
+import LazyProjectCard from "./LazyProjectCard";
 import projects from "../../data/projects";
 import { Selector } from "./Selector";
 
@@ -98,22 +97,13 @@ const ProjectsSection = () => {
                     ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                     : "flex flex-col gap-4"
             }>
-                <AnimatePresence>
-                    {filteredProjects.map((project, index) => (
-                        <motion.div
-                            key={project.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ delay: index * 0.1 }}
-                        >
-                            <ProjectCard
-                                project={project}
-                                viewMode={viewMode}
-                            />
-                        </motion.div>
-                    ))}
-                </AnimatePresence>
+                {filteredProjects.map((project) => (
+                    <LazyProjectCard
+                        key={project.title}
+                        project={project}
+                        viewMode={viewMode}
+                    />
+                ))}
             </div>
             {filteredProjects.length === 0 && (
                 <div className="text-center py-12">

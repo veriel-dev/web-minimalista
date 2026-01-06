@@ -236,6 +236,15 @@ const projects: TypeProject[] = [
     demo: 'https://os.veriel.dev/',
     status: 'completed',
   },
+  {
+    title: 'Cartas SU-Gi-Oh',
+    description: 'Editor de cartas estilo yu-gi-oh',
+    technologies: ['React', 'Canvas', 'TypeScript', 'Astro', 'IndexedDB'],
+    featured: false,
+    proyectType: 'frontend',
+    demo: 'https://sugioh.veriel.dev/',
+    status: 'completed',
+  },
   // {
   //   title: 'Auth Service',
   //   description: 'Servicio de autenticación y autorización',

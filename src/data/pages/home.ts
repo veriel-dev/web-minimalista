@@ -13,7 +13,7 @@ export const homePage = {
   aboutSection: {
     title: 'Sobre Mí',
     description:
-      'Desarrollador Full Stack con 3+ años de experiencia en aplicaciones web empresariales. Dominio de TypeScript, Node.js, Java y Spring Framework. Experiencia en bases de datos SQL y NoSQL',
+      'Desarrollador Full Stack con 4+ años de experiencia en aplicaciones web empresariales. Dominio de TypeScript, Node.js, Java y Spring Framework. Experiencia en bases de datos SQL y NoSQL',
     stats: [
       {
         label: 'Experiencia',
