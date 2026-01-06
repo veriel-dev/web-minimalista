@@ -20,16 +20,15 @@ const projects: TypeProject[] = [
   //   status: 'completed',
   // },
   /* Clone Spring MVC */
-  // {
-  //   title: 'Clone Spring MVC',
-  //   description: 'Clone de esta mítica tecnología',
-  //   technologies: ['Node', 'TypeScript', 'Reflect MetaData'],
-  //   featured: true,
-  //   github: 'https://github.com/veriel-dev/clone-spring-mvc',
-  //   proyectType: 'backend',
-  //   demo: 'https://clone-spring-mvc-production.up.railway.app/',
-  //   status: 'completed',
-  // },
+  {
+    title: 'Clone Spring MVC',
+    description: 'Clone de esta mítica tecnología',
+    technologies: ['Node', 'TypeScript', 'Reflect MetaData'],
+    featured: true,
+    github: 'https://github.com/veriel-dev/clone-spring-mvc',
+    proyectType: 'backend',
+    status: 'completed',
+  },
   /* Ts-Engine-Template */
   // {
   //   title: 'Ts-Engine-Template',
