@@ -50,6 +50,15 @@ const projects: TypeProject[] = [
     proyectType: 'backend',
     status: 'completed',
   },
+  {
+    title: 'Task Scheduler Service',
+    description: 'Sistema de colas y tareas programadas con prioridades, DLQ y recuperación automática',
+    technologies: ['TypeScript', 'Express', 'PostgreSQL', 'Redis', 'Prisma'],
+    featured: true,
+    github: 'https://github.com/veriel-dev/task-scheduler-service',
+    proyectType: 'backend',
+    status: 'progress',
+  },
   /* Ts-Engine-Template */
   // {
   //   title: 'Ts-Engine-Template',
