@@ -38,7 +38,8 @@ const ProjectsSectionMatrix = () => {
         (activeFilter === 'frontend' && project.proyectType === 'frontend') ||
         (activeFilter === 'completed' && project.status === 'completed') ||
         (activeFilter === 'progress' && project.status === 'progress') ||
-        (activeFilter === 'fullstack' && project.proyectType === 'fullstack');
+        (activeFilter === 'fullstack' && project.proyectType === 'fullstack') ||
+        (activeFilter === 'games' && project.proyectType === 'games');
 
       const matchesSearch =
         project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -67,8 +68,9 @@ const ProjectsSectionMatrix = () => {
             <button
               title="Grid"
               aria-label="Aria Grid"
-              className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'border-green-400/50 border-2' : ''
-                }`}
+              className={`p-2 rounded-md transition-colors ${
+                viewMode === 'grid' ? 'border-green-400/50 border-2' : ''
+              }`}
               onClick={() => setViewMode('grid')}
             >
               <Grid className="w-5 h-5 text-green-400" />
@@ -76,8 +78,9 @@ const ProjectsSectionMatrix = () => {
             <button
               title="List"
               aria-label="Aria List"
-              className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'border-green-400/50 border-2' : ''
-                }`}
+              className={`p-2 rounded-md transition-colors ${
+                viewMode === 'list' ? 'border-green-400/50 border-2' : ''
+              }`}
               onClick={() => setViewMode('list')}
             >
               <List className="w-5 h-5 text-green-400" />

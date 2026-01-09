@@ -12,6 +12,7 @@ const options = [
   { value: 'fullstack', name: 'Fullstack' },
   { value: 'completed', name: 'Completado' },
   { value: 'progress', name: 'En progreso' },
+  { value: 'games', name: 'Juegos' },
 ];
 
 export const Selector = ({ activeFilter, setActiveFilter }: Props) => {
@@ -57,7 +58,7 @@ export const Selector = ({ activeFilter, setActiveFilter }: Props) => {
     <div className="relative w-[180px]" ref={selectRef}>
       <label
         htmlFor={selectId}
-        className="absolute w-px h-px p-0 overflow-hidden whitespace-nowrap border-0 -m-px"
+        className="absolute w-px h-px p-0 overflow-hidden whitespace-nowrap border-0 -m-px]"
       >
         Filter projects by status
       </label>
@@ -87,7 +88,7 @@ export const Selector = ({ activeFilter, setActiveFilter }: Props) => {
       {/* Dropdown de opciones con todos los estilos personalizados */}
       {isOpen && (
         <div
-          className="absolute top-full left-0 w-full mt-1 z-50 rounded-lg overflow-hidden bg-black/20 backdrop-blur-sm shadow-2xl border-2 border-green-900/50"
+          className="absolute top-full left-0 w-full mt-1 z-[9999] rounded-lg overflow-hidden bg-black/20 backdrop-blur-sm shadow-2xl border-2 border-green-900/50"
           role="listbox"
         >
           {options.map(option => (

@@ -30,6 +30,16 @@ const projects: TypeProject[] = [
     proyectType: 'backend',
     status: 'completed',
   },
+  {
+    title: 'Kodamon - Digital Battles',
+    description: 'Juego básico por turnos en phaser ',
+    technologies: ['Vite', 'TypeScript', 'Phaser'],
+    featured: true,
+    github: 'https://github.com/veriel-dev/screen-battle/tree/main',
+    demo: 'https://kodamon.veriel.dev/',
+    proyectType: 'games',
+    status: 'completed',
+  },
   /* Ts-Engine-Template */
   // {
   //   title: 'Ts-Engine-Template',
