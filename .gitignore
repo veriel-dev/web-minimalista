@@ -28,10 +28,11 @@ tsconfig.app.tsbuildinfo
 tsconfig.node.tsbuildinfo
 .vscode
 
-# Docker 
+# Docker
 .dockerignore
 docker-compose.yml
 Dockerfile
+nginx.conf
 .history
 
 
