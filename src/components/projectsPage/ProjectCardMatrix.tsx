@@ -34,7 +34,7 @@ const ProjectCardMatrix = ({ project, viewMode = 'grid' }: Props) => {
 
       <div className="px-6 pb-6">
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.map((tech) => (
+          {project.technologies.map(tech => (
             <span
               key={tech}
               className="px-2 py-1 text-sm rounded-full bg-black/50 backdrop-blur-sm border-2 border-green-900/50 text-green-500"
@@ -50,7 +50,7 @@ const ProjectCardMatrix = ({ project, viewMode = 'grid' }: Props) => {
           {project.github && (
             <a href={project.github} target="_blank" rel="noopener noreferrer">
               <button
-                className="p-2 rounded-lg rounded-full bg-black/50 backdrop-blur-sm border-2 border-green-900/50 text-green-500 transition-colors"
+                className="p-2 rounded-lg bg-black/50 backdrop-blur-sm border-2 border-green-900/50 text-green-500 transition-colors"
                 title={`GitHub - ${project.title}`}
                 aria-label={`GitHub - ${project.title}`}
               >
@@ -61,7 +61,7 @@ const ProjectCardMatrix = ({ project, viewMode = 'grid' }: Props) => {
           {project.demo && (
             <a href={project.demo} target="_blank" rel="noopener noreferrer" title="External Link">
               <button
-                className="p-2 rounded-lg rounded-full bg-black/50 backdrop-blur-sm border-2 border-green-900/50 text-green-500 transition-colors"
+                className="p-2 rounded-lg bg-black/50 backdrop-blur-sm border-2 border-green-900/50 text-green-500 transition-colors"
                 title={`External Link - ${project.title}`}
                 aria-label={`External Link - ${project.title}`}
               >
@@ -71,6 +71,7 @@ const ProjectCardMatrix = ({ project, viewMode = 'grid' }: Props) => {
           )}
           <Link
             href={`/projects/${project.slug}`}
+            onClick={() => window.scrollTo(0, 0)}
             className="flex items-center gap-1 px-3 py-2 rounded-lg bg-green-600/20 backdrop-blur-sm border-2 border-green-500/50 text-green-300 hover:bg-green-600/30 hover:border-green-400 transition-colors text-sm"
           >
             <span>Ver más</span>

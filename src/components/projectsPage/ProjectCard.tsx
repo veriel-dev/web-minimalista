@@ -79,6 +79,7 @@ const ProjectCard = ({ project, viewMode = 'grid' }: Props) => {
                     }
                     <Link
                         href={`/projects/${project.slug}`}
+                        onClick={() => window.scrollTo(0, 0)}
                         className="flex items-center gap-1 px-3 py-2 rounded-lg bg-blue-600/20 border border-blue-500/50 text-blue-300 hover:bg-blue-600/30 hover:border-blue-400 transition-colors text-sm"
                     >
                         <span>Ver más</span>
