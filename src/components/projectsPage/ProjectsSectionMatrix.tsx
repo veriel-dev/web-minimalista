@@ -64,10 +64,10 @@ const ProjectsSectionMatrix = () => {
             />
           </div>
 
-          <div className="flex gap-2 bg-black/20 backdrop-blur-sm  shadow-2xl  border-2 md:border-2 border-green-900/50 p-1 rounded-lg">
+          <div className="flex gap-2 bg-black/20 backdrop-blur-sm shadow-2xl border-2 border-green-900/50 p-1 rounded-lg">
             <button
               title="Grid"
-              aria-label="Aria Grid"
+              aria-label="Vista cuadrícula"
               className={`p-2 rounded-md transition-colors ${
                 viewMode === 'grid' ? 'border-green-400/50 border-2' : ''
               }`}
@@ -77,7 +77,7 @@ const ProjectsSectionMatrix = () => {
             </button>
             <button
               title="List"
-              aria-label="Aria List"
+              aria-label="Vista lista"
               className={`p-2 rounded-md transition-colors ${
                 viewMode === 'list' ? 'border-green-400/50 border-2' : ''
               }`}

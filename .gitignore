@@ -37,5 +37,8 @@ Dockerfile
 
 # Claude Code
 .claude/
-docs/
+docs/*
 CLAUDE.md
+
+# Screenshots script
+screenshots.json

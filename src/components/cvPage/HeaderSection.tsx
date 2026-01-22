@@ -20,19 +20,19 @@ const HeaderSection = () => {
                     </div>
                     <div className="flex items-center gap-2">
                         <Mail className="w-4 h-4" />
-                        <a href="mailto:{header.email}">{header.email}</a>
+                        <a href={`mailto:${header.email}`}>{header.email}</a>
                     </div>
-                    <div className='flex items-center gap-2'>
+                    <div className="flex items-center gap-2">
                         <LinkedinIcon className="w-4 h-4" />
-                        <a href={header.linkedin} target='_blank' rel='noreferrer'>{header.linkedin}</a>
+                        <a href={header.linkedin} target="_blank" rel="noopener noreferrer">{header.linkedin}</a>
                     </div>
-                    <div className='flex items-center gap-2'>
+                    <div className="flex items-center gap-2">
                         <Github className="w-4 h-4" />
-                        <a href={header.gitHub} target='_blank' rel='noreferrer'>{header.gitHub}</a>
+                        <a href={header.gitHub} target="_blank" rel="noopener noreferrer">{header.gitHub}</a>
                     </div>
-                    <div className='flex items-center gap-2'>
+                    <div className="flex items-center gap-2">
                         <Globe className="w-4 h-4" />
-                        <a href={header.web} target='_blank' rel='noreferrer'>{header.web}</a>
+                        <a href={header.web} target="_blank" rel="noopener noreferrer">{header.web}</a>
                     </div>
                 </div>
             </div>

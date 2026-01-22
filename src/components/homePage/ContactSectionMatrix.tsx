@@ -30,17 +30,18 @@ const ContactSectionMatrix = () => {
               </h3>
               <h4 className="text-lg sm:text-xl text-green-400 font-bold">{contactSetion.subTitles.two}</h4>
               <p className="text-green-300">{contactSetion.description}</p>
-              <div className="flex items-center justify-strart gap-4">
+              <div className="flex items-center justify-start gap-4">
                 <a href="mailto:vmordiales@gmail.com" title="Email">
                   <Mail className="h-5 w-5 text-green-400" />
                 </a>
-                <a href="https://github.com/samuraiOrDev" target="_blank" title="GitHub">
+                <a href="https://github.com/samuraiOrDev" target="_blank" rel="noopener noreferrer" title="GitHub">
                   <Github className="h-5 w-5 text-green-400" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/"
                   target="_blank"
-                  title="Linkedin"
+                  rel="noopener noreferrer"
+                  title="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5 text-green-400" />
                 </a>

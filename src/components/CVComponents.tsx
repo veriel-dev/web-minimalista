@@ -4,16 +4,8 @@ import { HeadSEO } from './seo';
 import ButtonDownload from './cvPage/ButtonDownload';
 
 const CVComponent = () => {
-  const {
-    experience,
-    education,
-    metadata,
-    header,
-    about,
-    skills,
-    languages,
-    achievements,
-  } = cvPage;
+  const { experience, education, metadata, header, about, skills, languages, achievements } =
+    cvPage;
 
   return (
     <>
@@ -41,23 +33,23 @@ const CVComponent = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:{header.email}">{header.email}</a>
+                  <a href={`mailto:${header.email}`}>{header.email}</a>
                 </div>
                 <div className="flex items-center gap-2">
                   <LinkedinIcon className="w-4 h-4" />
-                  <a href={header.linkedin} target="_blank" rel="noreferrer">
+                  <a href={header.linkedin} target="_blank" rel="noopener noreferrer">
                     {header.linkedin}
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Github className="w-4 h-4" />
-                  <a href={header.gitHub} target="_blank" rel="noreferrer">
+                  <a href={header.gitHub} target="_blank" rel="noopener noreferrer">
                     {header.gitHub}
                   </a>
                 </div>
                 <div className="flex items-center gap-2">
                   <Globe className="w-4 h-4" />
-                  <a href={header.web} target="_blank" rel="noreferrer">
+                  <a href={header.web} target="_blank" rel="noopener noreferrer">
                     {header.web}
                   </a>
                 </div>
@@ -97,7 +89,7 @@ const CVComponent = () => {
                         </span>
                       </div>
                     </div>
-                    <ul className="ttext-sm text-gray-600 leading-relaxed list-disc mt-4">
+                    <ul className="text-sm text-gray-600 leading-relaxed list-disc mt-4">
                       {exp.expertise.map((skill, skillIndex) => (
                         <li key={skillIndex} className="list-item ml-4">
                           {skill}
@@ -172,7 +164,7 @@ const CVComponent = () => {
               <div className="relative pl-8">
                 <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200"></div>
                 <div className="relative mb-12  last:mb-0 last:pb-0">
-                  <ul className="ttext-sm text-gray-600 leading-relaxed mt-4">
+                  <ul className="text-sm text-gray-600 leading-relaxed mt-4">
                     {languages.expertise.map((skill, skillIndex) => (
                       <li key={skillIndex} className="list-disc list-inside list-item">
                         {skill}

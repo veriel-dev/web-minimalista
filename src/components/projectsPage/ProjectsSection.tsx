@@ -5,22 +5,29 @@ import LazyProjectCard from "./LazyProjectCard";
 import projects from "../../data/projects";
 import { Selector } from "./Selector";
 
+export interface TechDetail {
+    name: string;
+    reason: string;
+}
+
 export interface TypeProject {
     title: string;
     description: string;
     technologies: string[];
     featured: boolean;
-    stats?: {
-        stars: number;
-        forks: number;
-        startDate: string;
-        lastUpdate: string;
-    },
-    proyectType: string;
-    github?: string,
-    demo?: string,
-    img?: string,
-    status: "completed" | "progress"
+    proyectType: 'frontend' | 'backend' | 'fullstack' | 'games';
+    github?: string;
+    demo?: string;
+    img?: string;
+    status: 'completed' | 'progress';
+    // Campos para página de detalle
+    slug: string;
+    longDescription: string;
+    features: string[];
+    techDetails: TechDetail[];
+    challenges?: string;
+    learnings?: string;
+    screenshots?: string[];
 }
 const ProjectsSection = () => {
     const [viewMode, setViewMode] = useState('grid');
@@ -69,7 +76,7 @@ const ProjectsSection = () => {
                     <div className="flex gap-2 bg-secondary p-1 rounded-lg">
                         <button
                             title="Grid"
-                            aria-label="Aria Grid"
+                            aria-label="Vista cuadrícula"
                             className={`p-2 rounded-md transition-colors ${viewMode === 'grid' ? 'bg-zinc-700' : ''
                                 }`}
                             onClick={() => setViewMode('grid')}
@@ -78,7 +85,7 @@ const ProjectsSection = () => {
                         </button>
                         <button
                             title="List"
-                            aria-label="Aria List"
+                            aria-label="Vista lista"
                             className={`p-2 rounded-md transition-colors ${viewMode === 'list' ? 'bg-zinc-700' : ''
                                 }`}
                             onClick={() => setViewMode('list')}
