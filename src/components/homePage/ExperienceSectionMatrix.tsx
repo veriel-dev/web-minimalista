@@ -9,6 +9,9 @@ export default function ExperienceSectionMatrix() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const element = sectionRef.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -25,14 +28,10 @@ export default function ExperienceSectionMatrix() {
       { threshold: 0.1 },
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    observer.observe(element);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      observer.unobserve(element);
     };
   }, []);
 

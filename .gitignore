@@ -35,5 +35,7 @@ Dockerfile
 .history
 
 
-docs/*
+# Claude Code
+.claude/
+docs/
 CLAUDE.md
