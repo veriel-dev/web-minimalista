@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Page Transitions
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Enter/Exit Animations
+   -------------------------------------------------------------------------- */
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+/* --------------------------------------------------------------------------
+   Fade Transitions
+   -------------------------------------------------------------------------- */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* --------------------------------------------------------------------------
+   Slide Transitions
+   -------------------------------------------------------------------------- */
+.slide-up-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.slide-up-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
+}
+
+.slide-up-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 400ms ease-in, transform 400ms ease-in;
+}
+
+/* --------------------------------------------------------------------------
+   Scale Transitions
+   -------------------------------------------------------------------------- */
+.scale-enter {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.scale-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.scale-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scale-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+/* --------------------------------------------------------------------------
+   Stagger Children Animation
+   -------------------------------------------------------------------------- */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.stagger-children.visible > *:nth-child(1) { animation: staggerIn 0.4s ease-out 0.0s forwards; }
+.stagger-children.visible > *:nth-child(2) { animation: staggerIn 0.4s ease-out 0.1s forwards; }
+.stagger-children.visible > *:nth-child(3) { animation: staggerIn 0.4s ease-out 0.2s forwards; }
+.stagger-children.visible > *:nth-child(4) { animation: staggerIn 0.4s ease-out 0.3s forwards; }
+.stagger-children.visible > *:nth-child(5) { animation: staggerIn 0.4s ease-out 0.4s forwards; }
+.stagger-children.visible > *:nth-child(6) { animation: staggerIn 0.4s ease-out 0.5s forwards; }
+
+@keyframes staggerIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

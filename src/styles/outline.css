@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Outline + Storytelling Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Outline Text Base
+   -------------------------------------------------------------------------- */
+.text-outline {
+  -webkit-text-stroke: 2px currentColor;
+  -webkit-text-fill-color: transparent;
+  transition: -webkit-text-fill-color 0.3s ease;
+}
+
+.text-outline-thick {
+  -webkit-text-stroke: 3px currentColor;
+  -webkit-text-fill-color: transparent;
+  transition: -webkit-text-fill-color 0.3s ease;
+}
+
+.text-outline-filled {
+  -webkit-text-fill-color: currentColor;
+}
+
+/* Hover fill effect */
+.text-outline-hover:hover {
+  -webkit-text-fill-color: currentColor;
+}
+
+/* Hover fill usando data-color */
+.outline-text-hover {
+  cursor: pointer;
+}
+
+.outline-text-hover:hover {
+  -webkit-text-fill-color: attr(data-color);
+}
+
+/* --------------------------------------------------------------------------
+   Outline Colors
+   -------------------------------------------------------------------------- */
+.text-outline-white {
+  -webkit-text-stroke-color: #ffffff;
+  color: #ffffff;
+}
+
+.text-outline-violet {
+  -webkit-text-stroke-color: #a78bfa;
+  color: #a78bfa;
+}
+
+.text-outline-cyan {
+  -webkit-text-stroke-color: #22d3ee;
+  color: #22d3ee;
+}
+
+.text-outline-emerald {
+  -webkit-text-stroke-color: #34d399;
+  color: #34d399;
+}
+
+.text-outline-rose {
+  -webkit-text-stroke-color: #fb7185;
+  color: #fb7185;
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Snap Container
+   -------------------------------------------------------------------------- */
+.scroll-snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.scroll-snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   Progress Indicator
+   -------------------------------------------------------------------------- */
+.progress-bar {
+  width: 4px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.progress-bar-active {
+  box-shadow: 0 0 10px currentColor;
+}
+
+.progress-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.progress-dot-active {
+  background: currentColor;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   Section Transitions
+   -------------------------------------------------------------------------- */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Utility Classes
+   -------------------------------------------------------------------------- */
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

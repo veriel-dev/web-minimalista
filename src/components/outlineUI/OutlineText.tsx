@@ -1,0 +1,75 @@
+import { type ReactNode, type CSSProperties, useState } from 'react'
+import { cn } from '../../../libs/utils'
+
+type OutlineColor = 'white' | 'violet' | 'cyan' | 'emerald' | 'rose'
+type OutlineSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
+type OutlineTag = 'h1' | 'h2' | 'h3' | 'h4' | 'span' | 'p'
+
+interface OutlineTextProps {
+  children: ReactNode
+  as?: OutlineTag
+  color?: OutlineColor
+  size?: OutlineSize
+  thick?: boolean
+  filled?: boolean
+  hoverFill?: boolean
+  className?: string
+}
+
+const sizeClasses: Record<OutlineSize, string> = {
+  sm: 'text-xl',
+  md: 'text-2xl',
+  lg: 'text-4xl',
+  xl: 'text-5xl md:text-6xl',
+  '2xl': 'text-6xl md:text-7xl',
+  '3xl': 'text-7xl md:text-9xl',
+}
+
+const colorValues: Record<OutlineColor, string> = {
+  white: '#ffffff',
+  violet: '#a78bfa',
+  cyan: '#22d3ee',
+  emerald: '#34d399',
+  rose: '#fb7185',
+}
+
+export function OutlineText({
+  children,
+  as: Tag = 'span',
+  color = 'white',
+  size = 'lg',
+  thick = false,
+  filled = false,
+  hoverFill = false,
+  className,
+}: OutlineTextProps) {
+  const [isHovered, setIsHovered] = useState(false)
+
+  const strokeWidth = thick ? '3px' : '2px'
+  const colorValue = colorValues[color]
+  const shouldFill = filled || (hoverFill && isHovered)
+
+  const style: CSSProperties = {
+    WebkitTextStroke: `${strokeWidth} ${colorValue}`,
+    WebkitTextFillColor: shouldFill ? colorValue : 'transparent',
+    transition: 'all 0.3s ease',
+  }
+
+  return (
+    <Tag
+      className={cn(
+        'font-syne font-bold',
+        sizeClasses[size],
+        hoverFill && 'cursor-pointer',
+        className
+      )}
+      style={style}
+      onMouseEnter={() => hoverFill && setIsHovered(true)}
+      onMouseLeave={() => hoverFill && setIsHovered(false)}
+    >
+      {children}
+    </Tag>
+  )
+}
+
+export default OutlineText
