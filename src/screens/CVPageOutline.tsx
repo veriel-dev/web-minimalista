@@ -24,8 +24,8 @@ const CVPageOutline = memo(() => {
   } = cvData;
 
   const breadcrumbItems = [
-    { label: 'Inicio', href: '/outline' },
-    { label: 'CV', href: '/outline/cv' },
+    { label: 'Inicio', href: '/' },
+    { label: 'CV' },
   ];
 
   const experienceItems = useMemo(() =>

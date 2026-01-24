@@ -47,7 +47,7 @@ export const homeOutlineData = {
     title: 'Lead',
     titleHighlight: 'Developer',
     subtitle: 'Del código a la experiencia: Construyendo soluciones que importan',
-    ctaPrimary: { label: 'Ver Proyectos', href: '/outline/projects' },
+    ctaPrimary: { label: 'Ver Proyectos', href: '/projects' },
     ctaSecondary: { label: 'Contactar', href: '#contact' },
   },
 

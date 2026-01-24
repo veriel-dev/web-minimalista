@@ -14,9 +14,9 @@ export interface Section {
 }
 
 export const mainNavLinks: NavLink[] = [
-  { label: 'Inicio', href: '/outline' },
-  { label: 'Proyectos', href: '/outline/projects' },
-  { label: 'CV', href: '/outline/cv' },
+  { label: 'Inicio', href: '/' },
+  { label: 'Proyectos', href: '/projects' },
+  { label: 'CV', href: '/curriculum-vitae' },
 ];
 
 export const homeSections: Section[] = [

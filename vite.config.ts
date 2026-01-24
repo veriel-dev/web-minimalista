@@ -12,10 +12,10 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          layout: ['./src/components/layouts/MainLayout'],
-          home: ['./src/screens/HomePage'],
-          cv: ['./src/screens/CurriculumVitaePage'],
+          vendor: ['react', 'react-dom', 'framer-motion'],
+          layout: ['./src/components/outlineUI/MainLayoutOutline'],
+          home: ['./src/screens/HomePageOutline'],
+          cv: ['./src/screens/CVPageOutline'],
         },
       },
     },

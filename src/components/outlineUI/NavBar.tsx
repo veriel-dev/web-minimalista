@@ -72,7 +72,7 @@ export function NavBar({
       <nav className="max-w-7xl mx-auto px-6 md:px-8 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-4">
-          <Link href="/outline" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <OutlineText as="span" size="sm" color="white" hoverFill className="text-2xl">
               V
             </OutlineText>

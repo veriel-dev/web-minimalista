@@ -1,6 +1,27 @@
-import { TypeProject } from '../components/projectsPage/ProjectsSection';
+export interface TechDetail {
+  name: string;
+  reason: string;
+}
 
-const projects: TypeProject[] = [
+export interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  featured?: boolean;
+  github?: string;
+  demo?: string;
+  img?: string;
+  proyectType: 'frontend' | 'backend' | 'games';
+  status: 'completed' | 'progress';
+  slug: string;
+  longDescription?: string;
+  features?: string[];
+  techDetails?: TechDetail[];
+  challenges?: string;
+  learnings?: string;
+}
+
+const projects: Project[] = [
   /* Clone Spring MVC */
   {
     title: 'Clone Spring MVC',

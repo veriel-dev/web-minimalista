@@ -21,7 +21,7 @@ export function NavigationSection({ prevProject, nextProject, className }: Navig
         {/* Previous */}
         {prevProject ? (
           <Link
-            href={`/outline/projects/${prevProject.slug}`}
+            href={`/projects/${prevProject.slug}`}
             className="group p-6 border border-zinc-800 hover:border-zinc-600 transition-colors"
           >
             <div className="flex items-center gap-2 text-zinc-500 text-xs font-mono mb-2">
@@ -39,7 +39,7 @@ export function NavigationSection({ prevProject, nextProject, className }: Navig
         {/* Next */}
         {nextProject ? (
           <Link
-            href={`/outline/projects/${nextProject.slug}`}
+            href={`/projects/${nextProject.slug}`}
             className="group p-6 border border-zinc-800 hover:border-zinc-600 transition-colors text-right"
           >
             <div className="flex items-center justify-end gap-2 text-zinc-500 text-xs font-mono mb-2">

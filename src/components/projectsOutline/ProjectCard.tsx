@@ -96,7 +96,7 @@ export function ProjectCard({ project, index, className }: ProjectCardProps) {
 
       {/* View Details Link */}
       <Link
-        href={`/outline/projects/${project.slug}`}
+        href={`/projects/${project.slug}`}
         className="inline-flex items-center gap-2 text-zinc-500 text-xs font-mono
                    group-hover:text-white transition-colors"
       >

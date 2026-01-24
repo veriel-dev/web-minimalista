@@ -72,7 +72,7 @@ export function NotFoundContent({ className }: NotFoundContentProps) {
         custom={3}
       >
         <Link
-          href="/outline"
+          href="/"
           className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-zinc-900 hover:bg-zinc-200 transition-colors font-mono text-sm"
         >
           <Home size={18} />

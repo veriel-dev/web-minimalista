@@ -23,7 +23,7 @@ interface ProjectsPreviewSectionProps {
 export function ProjectsPreviewSection({
   projects,
   viewAllLabel = 'VER TODOS LOS PROYECTOS',
-  viewAllHref = '/outline/projects',
+  viewAllHref = '/projects',
   className,
 }: ProjectsPreviewSectionProps) {
   return (

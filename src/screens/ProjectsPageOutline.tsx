@@ -21,7 +21,7 @@ export default function ProjectsPageOutline() {
   }, [activeFilter, projects]);
 
   const breadcrumbItems = [
-    { label: 'Home', href: '/outline' },
+    { label: 'Inicio', href: '/' },
     { label: 'Proyectos' },
   ];
 

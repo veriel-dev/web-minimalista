@@ -32,7 +32,7 @@ export function ProjectRow({
 }: ProjectRowProps) {
   return (
     <Link
-      href={`/outline/projects/${slug}`}
+      href={`/projects/${slug}`}
       className="group block border-b border-zinc-800 pb-4 sm:pb-6 cursor-pointer"
     >
       <div className="flex justify-between items-start gap-2">

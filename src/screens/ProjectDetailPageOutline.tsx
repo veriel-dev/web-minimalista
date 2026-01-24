@@ -11,7 +11,7 @@ import {
   NavigationSection,
 } from '../components/projectDetailOutline';
 import projects from '../data/projects';
-import { NotFoundPage } from './NotFoundPage';
+import NotFoundPageOutline from './NotFoundPageOutline';
 
 export default function ProjectDetailPageOutline() {
   const { slug } = useParams<{ slug: string }>();
@@ -30,12 +30,12 @@ export default function ProjectDetailPageOutline() {
   }, [slug]);
 
   if (!project) {
-    return <NotFoundPage />;
+    return <NotFoundPageOutline />;
   }
 
   const breadcrumbItems = [
-    { label: 'Home', href: '/outline' },
-    { label: 'Proyectos', href: '/outline/projects' },
+    { label: 'Inicio', href: '/' },
+    { label: 'Proyectos', href: '/projects' },
     { label: project.title },
   ];
 
