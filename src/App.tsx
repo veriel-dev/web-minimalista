@@ -10,11 +10,11 @@ import HomePageOutline from './screens/HomePageOutline';
 import ProjectsPageOutline from './screens/ProjectsPageOutline';
 import ProjectDetailPageOutline from './screens/ProjectDetailPageOutline';
 import CVPageOutline from './screens/CVPageOutline';
+import NotFoundPageOutline from './screens/NotFoundPageOutline';
 
 const App = () => {
   return (
-    <>
-      <Switch>
+    <Switch>
         <Route path="/" component={HomePageMatrix} />
         <Route path="/projects" component={ProjectsPageMatrix} />
         <Route path="/projects/:slug" component={ProjectDetailPage} />
@@ -31,9 +31,10 @@ const App = () => {
         <Route path="/outline/projects/:slug" component={ProjectDetailPageOutline} />
         {/* Ruta temporal para verificar Fase 6 - CV Outline */}
         <Route path="/outline/cv" component={CVPageOutline} />
+        {/* Ruta para Fase 7 - 404 Outline (captura rutas /outline/* no encontradas) */}
+        <Route path="/outline/:rest*" component={NotFoundPageOutline} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
-    </>
   );
 };
 
