@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { NotFoundContent } from '../components/notFoundOutline';
+import { NotFoundContent } from '../components/notFound';
 import { HeadSEO } from '../components';
 
 const NotFoundPageOutline = memo(() => {

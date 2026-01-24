@@ -1,4 +1,4 @@
-import type { OutlineColor } from '../../components/outlineUI/OutlineText';
+import type { OutlineColor } from '../../components/ui/OutlineText';
 
 export interface ProjectOutline {
   slug: string;

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { useParams } from 'wouter';
 import { Helmet } from 'react-helmet-async';
-import { MainLayoutOutline, Breadcrumb } from '../components/outlineUI';
+import { MainLayoutOutline, Breadcrumb } from '../components/ui';
 import {
   HeroSection,
   OverviewSection,
@@ -9,7 +9,7 @@ import {
   FeaturesSection,
   ChallengesSection,
   NavigationSection,
-} from '../components/projectDetailOutline';
+} from '../components/projectDetail';
 import projects from '../data/projects';
 import NotFoundPageOutline from './NotFoundPageOutline';
 

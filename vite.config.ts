@@ -13,7 +13,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'framer-motion'],
-          layout: ['./src/components/outlineUI/MainLayoutOutline'],
+          layout: ['./src/components/ui/MainLayoutOutline'],
           home: ['./src/screens/HomePageOutline'],
           cv: ['./src/screens/CVPageOutline'],
         },

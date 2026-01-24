@@ -1,12 +1,12 @@
 import { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MainLayoutOutline, Breadcrumb } from '../components/outlineUI';
+import { MainLayoutOutline, Breadcrumb } from '../components/ui';
 import {
   HeroSection,
   StatsSection,
   FilterBar,
   ProjectsGrid,
-} from '../components/projectsOutline';
+} from '../components/projects';
 import { projectsOutlineData, type ProjectCategory } from '../data/pages/projects.outline';
 
 export default function ProjectsPageOutline() {

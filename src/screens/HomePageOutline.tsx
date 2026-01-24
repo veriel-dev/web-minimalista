@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async'
 import {
   MainLayoutOutline,
   ScrollSection,
-} from '../components/outlineUI'
+} from '../components/ui'
 import {
   HeroSection,
   AboutSection,
@@ -10,7 +10,7 @@ import {
   TechStackSection,
   ProjectsPreviewSection,
   ContactSection,
-} from '../components/homeOutline'
+} from '../components/home'
 import { homeOutlineData } from '../data/pages/home.outline'
 
 export default function HomePageOutline() {

@@ -1,12 +1,12 @@
 import { memo, useMemo } from 'react';
-import { MainLayoutOutline, Breadcrumb } from '../components/outlineUI';
+import { MainLayoutOutline, Breadcrumb } from '../components/ui';
 import {
   HeaderSection,
   TimelineSection,
   SkillsSection,
   DownloadButton,
   PrintableCV,
-} from '../components/cvOutline';
+} from '../components/cv';
 import { HeadSEO } from '../components';
 import { cvData } from '../data/pages/cv.outline';
 import { Briefcase, GraduationCap } from 'lucide-react';
