@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { Link, useLocation } from 'wouter'
 import { cn } from '../../../libs/utils'
 import { OutlineText } from './OutlineText'
-import { ArrowLeft, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useScrollToSection } from '../../hooks/useScrollToSection'
 
 interface NavLink {
@@ -15,8 +15,6 @@ interface NavBarProps {
   links: NavLink[]
   ctaLabel?: string
   ctaHref?: string
-  showBackButton?: boolean
-  backHref?: string
   transparent?: boolean
   blur?: boolean
   className?: string
@@ -26,8 +24,6 @@ export function NavBar({
   links,
   ctaLabel,
   ctaHref,
-  showBackButton = false,
-  backHref = '/',
   transparent = true,
   blur = true,
   className,
@@ -74,24 +70,14 @@ export function NavBar({
       )}
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-8 h-16 md:h-20 flex items-center justify-between">
-        {/* Logo / Back Button */}
+        {/* Logo */}
         <div className="flex items-center gap-4">
-          {showBackButton ? (
-            <Link
-              href={backHref}
-              className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors"
-            >
-              <ArrowLeft size={20} />
-              <span className="hidden sm:inline text-sm">Volver</span>
-            </Link>
-          ) : (
-            <Link href="/" className="flex items-center">
-              <OutlineText as="span" size="sm" color="white" hoverFill className="text-2xl">
-                V
-              </OutlineText>
-              <span className="font-syne font-bold text-xl text-white">ERIEL</span>
-            </Link>
-          )}
+          <Link href="/outline" className="flex items-center">
+            <OutlineText as="span" size="sm" color="white" hoverFill className="text-2xl">
+              V
+            </OutlineText>
+            <span className="font-syne font-bold text-xl text-white">ERIEL</span>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}

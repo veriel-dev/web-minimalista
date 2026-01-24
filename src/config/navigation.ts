@@ -14,8 +14,8 @@ export interface Section {
 }
 
 export const mainNavLinks: NavLink[] = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Proyectos', href: '/projects' },
+  { label: 'Inicio', href: '/outline' },
+  { label: 'Proyectos', href: '/outline/projects' },
   { label: 'CV', href: '/curriculum-vitae' },
 ];
 

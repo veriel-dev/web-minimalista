@@ -16,7 +16,6 @@ interface MainLayoutOutlineProps {
   showFooter?: boolean
   footerVariant?: 'full' | 'minimal'
   pageType?: PageType
-  backHref?: string
   className?: string
 }
 
@@ -27,7 +26,6 @@ export function MainLayoutOutline({
   showFooter = true,
   footerVariant = 'full',
   pageType = 'home',
-  backHref = '/',
   className,
 }: MainLayoutOutlineProps) {
   const sectionIds = homeSections.map((s) => s.id)
@@ -35,7 +33,6 @@ export function MainLayoutOutline({
   const scrollToSection = useScrollToSection()
 
   const isHomePage = pageType === 'home'
-  const showBackButton = pageType !== 'home'
 
   const navLinks = isHomePage
     ? homeSections.slice(0, 4).map((section) => ({
@@ -57,8 +54,6 @@ export function MainLayoutOutline({
           links={navLinks}
           ctaLabel={isHomePage ? 'Contacto' : undefined}
           ctaHref={isHomePage ? '#contact' : undefined}
-          showBackButton={showBackButton}
-          backHref={backHref}
           transparent={isHomePage}
           blur
         />

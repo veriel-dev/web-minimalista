@@ -8,6 +8,7 @@ import OutlineTestPage from './screens/OutlineTestPage';
 import LayoutTestPage from './screens/LayoutTestPage';
 import HomePageOutline from './screens/HomePageOutline';
 import ProjectsPageOutline from './screens/ProjectsPageOutline';
+import ProjectDetailPageOutline from './screens/ProjectDetailPageOutline';
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
         <Route path="/outline" component={HomePageOutline} />
         {/* Ruta temporal para verificar Fase 4 - Projects Outline */}
         <Route path="/outline/projects" component={ProjectsPageOutline} />
+        {/* Ruta temporal para verificar Fase 5 - Project Detail Outline */}
+        <Route path="/outline/projects/:slug" component={ProjectDetailPageOutline} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
     </>
