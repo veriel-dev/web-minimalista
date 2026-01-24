@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Link, useLocation } from 'wouter'
 import { cn } from '../../../libs/utils'
 import { OutlineText } from './OutlineText'
 import { ArrowLeft, Menu, X } from 'lucide-react'
+import { useScrollToSection } from '../../hooks/useScrollToSection'
 
 interface NavLink {
   label: string
@@ -34,6 +35,14 @@ export function NavBar({
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [location] = useLocation()
+  const scrollToSection = useScrollToSection()
+
+  const handleAnchorClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    const sectionId = href.replace('#', '')
+    scrollToSection(sectionId)
+    setIsMobileMenuOpen(false)
+  }, [scrollToSection])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +86,7 @@ export function NavBar({
             </Link>
           ) : (
             <Link href="/" className="flex items-center">
-              <OutlineText as="span" size="sm" color="violet" hoverFill>
+              <OutlineText as="span" size="sm" color="white" hoverFill className="text-2xl">
                 V
               </OutlineText>
               <span className="font-syne font-bold text-xl text-white">ERIEL</span>
@@ -87,43 +96,65 @@ export function NavBar({
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <li key={link.href}>
-              {link.isExternal ? (
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-zinc-400 hover:text-white transition-colors"
-                >
-                  {link.label}
-                </a>
-              ) : (
-                <Link
-                  href={link.href}
-                  className={cn(
-                    'text-sm transition-colors',
-                    isActive(link.href)
-                      ? 'text-white font-medium'
-                      : 'text-zinc-400 hover:text-white'
-                  )}
-                >
-                  {link.label}
-                </Link>
-              )}
-            </li>
-          ))}
+          {links.map((link) => {
+            const isAnchor = link.href.startsWith('#')
+
+            return (
+              <li key={link.href}>
+                {link.isExternal ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-zinc-400 hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ) : isAnchor ? (
+                  <a
+                    href={link.href}
+                    onClick={(e) => handleAnchorClick(e, link.href)}
+                    className="text-sm text-zinc-400 hover:text-white transition-colors cursor-pointer"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      'text-sm transition-colors',
+                      isActive(link.href)
+                        ? 'text-white font-medium'
+                        : 'text-zinc-400 hover:text-white'
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            )
+          })}
         </ul>
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center gap-4">
           {ctaLabel && ctaHref && (
-            <Link
-              href={ctaHref}
-              className="px-4 py-2 text-sm font-medium border border-zinc-700 rounded-lg text-white hover:bg-zinc-800 transition-colors"
-            >
-              {ctaLabel}
-            </Link>
+            ctaHref.startsWith('#') ? (
+              <a
+                href={ctaHref}
+                onClick={(e) => handleAnchorClick(e, ctaHref)}
+                className="px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors cursor-pointer"
+              >
+                {ctaLabel}
+              </a>
+            ) : (
+              <Link
+                href={ctaHref}
+                className="px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors"
+              >
+                {ctaLabel}
+              </Link>
+            )
           )}
         </div>
 
@@ -145,40 +176,63 @@ export function NavBar({
         )}
       >
         <ul className="px-6 py-4 space-y-4">
-          {links.map((link) => (
-            <li key={link.href}>
-              {link.isExternal ? (
+          {links.map((link) => {
+            const isAnchor = link.href.startsWith('#')
+
+            return (
+              <li key={link.href}>
+                {link.isExternal ? (
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-zinc-400 hover:text-white transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ) : isAnchor ? (
+                  <a
+                    href={link.href}
+                    className="block text-zinc-400 hover:text-white transition-colors cursor-pointer"
+                    onClick={(e) => handleAnchorClick(e, link.href)}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      'block transition-colors',
+                      isActive(link.href)
+                        ? 'text-white font-medium'
+                        : 'text-zinc-400 hover:text-white'
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                )}
+              </li>
+            )
+          })}
+          {ctaLabel && ctaHref && (
+            <li>
+              {ctaHref.startsWith('#') ? (
                 <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-zinc-400 hover:text-white transition-colors"
+                  href={ctaHref}
+                  className="inline-block px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors cursor-pointer"
+                  onClick={(e) => handleAnchorClick(e, ctaHref)}
                 >
-                  {link.label}
+                  {ctaLabel}
                 </a>
               ) : (
                 <Link
-                  href={link.href}
-                  className={cn(
-                    'block transition-colors',
-                    isActive(link.href)
-                      ? 'text-white font-medium'
-                      : 'text-zinc-400 hover:text-white'
-                  )}
+                  href={ctaHref}
+                  className="inline-block px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors"
                 >
-                  {link.label}
+                  {ctaLabel}
                 </Link>
               )}
-            </li>
-          ))}
-          {ctaLabel && ctaHref && (
-            <li>
-              <Link
-                href={ctaHref}
-                className="inline-block px-4 py-2 text-sm font-medium border border-zinc-700 rounded-lg text-white hover:bg-zinc-800 transition-colors"
-              >
-                {ctaLabel}
-              </Link>
             </li>
           )}
         </ul>

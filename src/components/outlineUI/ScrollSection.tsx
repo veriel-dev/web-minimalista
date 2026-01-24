@@ -23,9 +23,9 @@ export function ScrollSection({
       id={id}
       className={cn(
         'scroll-snap-align-start scroll-snap-stop-always',
-        fullHeight && 'min-h-screen',
+        fullHeight && 'min-h-[100svh] py-20 md:py-0',
         centered && 'flex items-center justify-center',
-        padded && 'px-6 md:px-8 lg:px-12',
+        padded && 'px-4 sm:px-6 md:px-8 lg:px-12',
         className
       )}
     >

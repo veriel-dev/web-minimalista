@@ -17,12 +17,12 @@ interface OutlineTextProps {
 }
 
 const sizeClasses: Record<OutlineSize, string> = {
-  sm: 'text-xl',
-  md: 'text-2xl',
-  lg: 'text-4xl',
-  xl: 'text-5xl md:text-6xl',
-  '2xl': 'text-6xl md:text-7xl',
-  '3xl': 'text-7xl md:text-9xl',
+  sm: 'text-base sm:text-lg lg:text-xl',
+  md: 'text-lg sm:text-xl lg:text-2xl',
+  lg: 'text-xl sm:text-2xl lg:text-4xl',
+  xl: 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl',
+  '2xl': 'text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl',
+  '3xl': 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl',
 }
 
 const colorValues: Record<OutlineColor, string> = {
