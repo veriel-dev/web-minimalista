@@ -1,16 +1,17 @@
-import { cn } from '../../../libs/utils';
-import { OutlineText } from '../outlineUI';
-import type { OutlineColor } from '../../config/theme';
+import { cn } from '../../../libs/utils'
+import { OutlineText } from '../outlineUI'
+import { TechCard } from './TechCard'
+import type { OutlineColor } from '../../config/theme'
 
 interface TechItem {
-  name: string;
-  type: string;
-  color: OutlineColor;
+  name: string
+  type: string
+  color: OutlineColor
 }
 
 interface TechStackSectionProps {
-  items: TechItem[];
-  className?: string;
+  items: TechItem[]
+  className?: string
 }
 
 export function TechStackSection({ items, className }: TechStackSectionProps) {
@@ -34,37 +35,7 @@ export function TechStackSection({ items, className }: TechStackSectionProps) {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-interface TechCardProps {
-  name: string;
-  type: string;
-  color: OutlineColor;
-}
-
-function TechCard({ name, type, color }: TechCardProps) {
-  const borderColorClasses: Record<OutlineColor, string> = {
-    white: 'hover:border-zinc-500/50',
-    violet: 'hover:border-violet-500/50',
-    cyan: 'hover:border-cyan-500/50',
-    emerald: 'hover:border-emerald-500/50',
-    rose: 'hover:border-rose-500/50',
-  };
-
-  return (
-    <div
-      className={cn(
-        'group p-3 sm:p-4 md:p-6 border border-zinc-800 rounded-lg sm:rounded-xl transition cursor-pointer',
-        borderColorClasses[color],
-      )}
-    >
-      <OutlineText as="h3" size="sm" color={color} hoverFill className="mb-1">
-        {name}
-      </OutlineText>
-      <p className="text-zinc-600 text-[10px] sm:text-xs">{type}</p>
-    </div>
-  );
-}
-
-export default TechStackSection;
+export default TechStackSection
