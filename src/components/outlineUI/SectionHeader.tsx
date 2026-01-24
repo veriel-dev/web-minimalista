@@ -1,14 +1,14 @@
 import { type ReactNode } from 'react'
 import { cn } from '../../../libs/utils'
-import { OutlineText } from './OutlineText'
-
-type OutlineColor = 'white' | 'violet' | 'cyan' | 'emerald' | 'rose'
+import { OutlineText, type OutlineColor } from './OutlineText'
+import type { LucideIcon } from 'lucide-react'
 
 interface SectionHeaderProps {
   number?: string
   title: string
   subtitle?: string
   color?: OutlineColor
+  icon?: LucideIcon
   align?: 'left' | 'center' | 'right'
   children?: ReactNode
   className?: string
@@ -19,6 +19,7 @@ export function SectionHeader({
   title,
   subtitle,
   color = 'white',
+  icon: Icon,
   align = 'left',
   children,
   className,
@@ -31,11 +32,14 @@ export function SectionHeader({
 
   return (
     <header className={cn('mb-12', alignClasses[align], className)}>
-      {number && (
-        <span className="block text-zinc-500 font-mono text-sm mb-2">
-          {number}
-        </span>
-      )}
+      <div className="flex items-center gap-3 mb-2">
+        {Icon && <Icon size={20} className="text-zinc-500" />}
+        {number && (
+          <span className="text-zinc-500 font-mono text-sm">
+            {number}
+          </span>
+        )}
+      </div>
       <OutlineText as="h2" size="xl" color={color} hoverFill>
         {title}
       </OutlineText>

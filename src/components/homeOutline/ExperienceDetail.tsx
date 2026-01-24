@@ -35,7 +35,7 @@ export function ExperienceDetail({ experience, className }: ExperienceDetailProp
       </div>
 
       {/* Título del puesto */}
-      <h4 className="font-black font-syne mb-2">
+      <h3 className="font-black font-syne mb-2">
         <OutlineText
           as="span"
           size="lg"
@@ -44,21 +44,21 @@ export function ExperienceDetail({ experience, className }: ExperienceDetailProp
         >
           {position}
         </OutlineText>
-      </h4>
+      </h3>
 
       {/* Empresa */}
       <p className="text-lg sm:text-xl text-zinc-300 mb-6">{company}</p>
 
       {/* Responsabilidades */}
       <div>
-        <h5
+        <p
           className={cn(
             'text-sm font-medium mb-3',
             current ? 'text-emerald-400' : 'text-zinc-400'
           )}
         >
           Responsabilidades
-        </h5>
+        </p>
         <ul className="space-y-2">
           {description.map((item, index) => (
             <li

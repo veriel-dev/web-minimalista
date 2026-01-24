@@ -38,14 +38,14 @@ export function ExperienceListItem({
       >
         {periodText}
       </span>
-      <h4
+      <span
         className={cn(
-          'font-bold font-syne mt-1',
+          'block font-bold font-syne mt-1',
           isSelected ? 'text-white' : 'text-zinc-400'
         )}
       >
         {position}
-      </h4>
+      </span>
       <p className="text-zinc-500 text-sm">{company}</p>
     </button>
   )

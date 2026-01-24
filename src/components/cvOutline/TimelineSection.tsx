@@ -1,4 +1,5 @@
 import { cn } from '../../../libs/utils';
+import { motion, useReducedMotion } from 'framer-motion';
 import { OutlineText, SectionHeader } from '../outlineUI';
 import type { LucideIcon } from 'lucide-react';
 import type { OutlineColor } from '../../config/theme';
@@ -27,6 +28,8 @@ export function TimelineSection({
   items,
   className,
 }: TimelineSectionProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   const colorClasses: Record<OutlineColor, { border: string; dot: string; text: string; bullet: string }> = {
     white: { border: 'hover:border-white/50', dot: 'bg-white/50 border-white', text: 'text-white', bullet: 'text-white/70' },
     violet: { border: 'hover:border-violet-500/50', dot: 'bg-violet-500/50 border-violet-500', text: 'text-violet-500', bullet: 'text-violet-500/70' },
@@ -39,6 +42,23 @@ export function TimelineSection({
 
   const colors = colorClasses[color];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: shouldReduceMotion ? 0 : 0.15 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: shouldReduceMotion ? 0 : -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: [0, 0, 0.2, 1] },
+    },
+  };
+
   return (
     <section className={cn('mb-16 sm:mb-20', className)}>
       <SectionHeader
@@ -48,14 +68,21 @@ export function TimelineSection({
         icon={icon}
       />
 
-      <div className="mt-8 space-y-8">
+      <motion.div
+        className="mt-8 space-y-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+        variants={containerVariants}
+      >
         {items.map((item) => (
-          <article
+          <motion.article
             key={`${item.title}-${item.period}`}
             className={cn(
               'relative pl-6 border-l border-zinc-800 transition-colors',
               colors.border
             )}
+            variants={itemVariants}
           >
             <div
               className={cn(
@@ -90,9 +117,9 @@ export function TimelineSection({
                 </li>
               ))}
             </ul>
-          </article>
+          </motion.article>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

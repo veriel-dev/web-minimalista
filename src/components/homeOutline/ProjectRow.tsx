@@ -38,7 +38,7 @@ export function ProjectRow({
       <div className="flex justify-between items-start gap-2">
         <div className="min-w-0 flex-1">
           {/* Number */}
-          <span className="text-zinc-600 text-[10px] sm:text-xs font-mono">{number}</span>
+          <span className="text-zinc-400 text-[10px] sm:text-xs font-mono">{number}</span>
 
           {/* Title */}
           <h3 className="font-bold font-syne mt-1 sm:mt-2">

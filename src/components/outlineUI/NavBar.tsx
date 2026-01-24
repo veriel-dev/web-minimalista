@@ -149,13 +149,17 @@ export function NavBar({
           className="md:hidden p-2 text-zinc-400 hover:text-white transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </nav>
 
       {/* Mobile Menu */}
-      <div
+      <nav
+        id="mobile-menu"
+        aria-label="Menú de navegación móvil"
         className={cn(
           'md:hidden absolute top-full left-0 right-0 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800 transition-all duration-300 overflow-hidden',
           isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
@@ -222,7 +226,7 @@ export function NavBar({
             </li>
           )}
         </ul>
-      </div>
+      </nav>
     </header>
   )
 }

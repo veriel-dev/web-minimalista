@@ -22,7 +22,7 @@ export function ContactSection({
   return (
     <div className={cn('max-w-4xl mx-auto w-full text-center', className)}>
       {/* Header */}
-      <p className="text-zinc-600 text-xs uppercase tracking-[0.3em] mb-3 sm:mb-4 font-mono">
+      <p className="text-zinc-400 text-xs uppercase tracking-[0.3em] mb-3 sm:mb-4 font-mono">
         06 / Contacto
       </p>
       <h2 className="font-black font-syne leading-none mb-4 sm:mb-6 md:mb-8">
@@ -66,7 +66,7 @@ export function ContactSection({
       </div>
 
       {/* Availability note */}
-      <p className="text-zinc-600 text-[10px] sm:text-xs md:text-sm mt-8 sm:mt-12 md:mt-16">
+      <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm mt-8 sm:mt-12 md:mt-16">
         Disponible para proyectos freelance y oportunidades full-time
       </p>
     </div>

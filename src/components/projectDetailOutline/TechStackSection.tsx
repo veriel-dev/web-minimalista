@@ -15,7 +15,7 @@ interface TechStackSectionProps {
 export function TechStackSection({ technologies, techDetails, className }: TechStackSectionProps) {
   return (
     <section className={cn('mb-16 sm:mb-24', className)}>
-      <p className="text-zinc-600 text-xs uppercase tracking-[0.3em] mb-4 font-mono">
+      <p className="text-zinc-400 text-xs uppercase tracking-[0.3em] mb-4 font-mono">
         02 / Tech Stack
       </p>
       <h2 className="font-black font-syne leading-none mb-8">
@@ -44,7 +44,7 @@ export function TechStackSection({ technologies, techDetails, className }: TechS
               key={tech.name}
               className="p-6 border border-zinc-800 hover:border-zinc-600 transition-colors"
             >
-              <span className="text-zinc-600 text-xs font-mono mb-2 block">
+              <span className="text-zinc-400 text-xs font-mono mb-2 block">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <h3 className="text-white font-syne font-bold text-lg mb-2">{tech.name}</h3>

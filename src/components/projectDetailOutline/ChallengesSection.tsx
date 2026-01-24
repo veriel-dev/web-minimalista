@@ -12,7 +12,7 @@ export function ChallengesSection({ challenges, learnings, className }: Challeng
 
   return (
     <section className={cn('mb-16 sm:mb-24', className)}>
-      <p className="text-zinc-600 text-xs uppercase tracking-[0.3em] mb-4 font-mono">
+      <p className="text-zinc-400 text-xs uppercase tracking-[0.3em] mb-4 font-mono">
         04 / Insights
       </p>
       <h2 className="font-black font-syne leading-none mb-8">

@@ -15,7 +15,7 @@ interface BreadcrumbProps {
 
 export function Breadcrumb({
   items,
-  separator = <ChevronRight size={14} className="text-zinc-600" />,
+  separator = <ChevronRight size={14} className="text-zinc-400" />,
   className,
 }: BreadcrumbProps) {
   return (

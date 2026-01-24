@@ -29,7 +29,7 @@ export function ProjectsPreviewSection({
   return (
     <div className={cn('max-w-5xl mx-auto w-full', className)}>
       {/* Header */}
-      <p className="text-zinc-600 text-xs uppercase tracking-[0.3em] mb-3 sm:mb-4 font-mono">
+      <p className="text-zinc-400 text-xs uppercase tracking-[0.3em] mb-3 sm:mb-4 font-mono">
         05 / Portfolio
       </p>
       <h2 className="font-black font-syne leading-none mb-6 sm:mb-8 md:mb-10">

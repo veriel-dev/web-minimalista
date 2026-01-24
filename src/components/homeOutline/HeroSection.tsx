@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { cn } from '../../../libs/utils';
+import { motion, useReducedMotion } from 'framer-motion';
 import { OutlineText } from '../outlineUI';
 import { ArrowDown } from 'lucide-react';
 import { useScrollToSection } from '../../hooks/useScrollToSection';
@@ -24,46 +25,86 @@ export function HeroSection({
   className,
 }: HeroSectionProps) {
   const scrollToSection = useScrollToSection();
+  const shouldReduceMotion = useReducedMotion();
 
   // Split name into first and last name for two-line display
   const nameParts = name.split('.');
   const firstName = nameParts[0];
   const lastName = nameParts.slice(1).join('.');
 
+  const variants = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 30 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.12, duration: 0.6, ease: [0, 0, 0.2, 1] },
+    }),
+  };
+
   return (
     <div className={cn('max-w-5xl mx-auto px-6 text-center', className)}>
       {/* Section number */}
-      <p className="text-zinc-600 text-xs uppercase tracking-[0.4em] mb-4 font-mono">
+      <motion.p
+        className="text-zinc-400 text-xs uppercase tracking-[0.4em] mb-4 font-mono"
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        custom={0}
+      >
         01 / Portfolio 2026
-      </p>
+      </motion.p>
 
       {/* Name - Two lines */}
-      <h1 className="font-black font-syne leading-none mb-4 sm:mb-6">
+      <motion.h1
+        className="font-black font-syne leading-none mb-4 sm:mb-6"
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        custom={1}
+      >
         <OutlineText as="span" size="3xl" color="violet" hoverFill>
           {firstName}
         </OutlineText>{' '}
         <span className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">.{lastName}</span>
-      </h1>
+      </motion.h1>
 
       {/* Title with highlight */}
-      <p className="text-zinc-500 text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 mb-4">
+      <motion.p
+        className="text-zinc-500 text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 mb-4"
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        custom={2}
+      >
         {title}{' '}
         {titleHighlight && (
           <OutlineText as="span" size="md" color="violet" hoverFill className="font-bold">
             {titleHighlight}
           </OutlineText>
         )}
-      </p>
+      </motion.p>
 
       {/* Subtitle */}
       {subtitle && (
-        <p className="text-zinc-600 text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-12">
+        <motion.p
+          className="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto mb-8 sm:mb-12"
+          initial="hidden"
+          animate="visible"
+          variants={variants}
+          custom={3}
+        >
           {subtitle}
-        </p>
+        </motion.p>
       )}
 
       {/* CTAs */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <motion.div
+        className="flex flex-col sm:flex-row gap-4 justify-center"
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        custom={4}
+      >
         {ctaPrimary && (
           <Link
             href={ctaPrimary.href}
@@ -81,18 +122,24 @@ export function HeroSection({
             {ctaSecondary.label}
           </Link>
         )}
-      </div>
+      </motion.div>
 
       {/* Scroll indicator */}
-      <div className="mt-12 sm:mt-20 animate-bounce">
+      <motion.div
+        className="mt-12 sm:mt-20 animate-bounce"
+        initial="hidden"
+        animate="visible"
+        variants={variants}
+        custom={5}
+      >
         <button
           onClick={() => scrollToSection('about')}
-          className="text-zinc-600 hover:text-white transition inline-block cursor-pointer"
+          className="text-zinc-400 hover:text-white transition inline-block cursor-pointer"
           aria-label="Ir a la sección Sobre mí"
         >
           <ArrowDown size={24} />
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 }

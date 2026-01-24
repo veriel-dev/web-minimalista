@@ -1,4 +1,5 @@
 import { cn } from '../../../libs/utils';
+import { motion, useReducedMotion } from 'framer-motion';
 import { SectionHeader } from '../outlineUI';
 import { Code2 } from 'lucide-react';
 import type { CVSkillCategory, CVLanguage, CVAchievement } from '../../data/pages/cv.outline';
@@ -16,6 +17,25 @@ export function SkillsSection({
   achievements,
   className,
 }: SkillsSectionProps) {
+  const shouldReduceMotion = useReducedMotion();
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: shouldReduceMotion ? 0 : 0.1 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] },
+    },
+  };
+
   return (
     <section className={cn('mb-16 sm:mb-20', className)}>
       <SectionHeader
@@ -26,13 +46,20 @@ export function SkillsSection({
       />
 
       {/* Skills Grid */}
-      <div className="mt-8 grid sm:grid-cols-2 gap-6">
+      <motion.div
+        className="mt-8 grid sm:grid-cols-2 gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+        variants={containerVariants}
+      >
         {skills.map((category, index) => {
           const Icon = category.icon;
           return (
-            <div
+            <motion.div
               key={index}
               className="p-4 border border-zinc-800 hover:border-rose-500/30 transition-colors"
+              variants={itemVariants}
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-rose-500/10 rounded">
@@ -53,15 +80,21 @@ export function SkillsSection({
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
 
       {/* Languages & Achievements row */}
-      <div className="mt-8 grid sm:grid-cols-2 gap-6">
+      <motion.div
+        className="mt-8 grid sm:grid-cols-2 gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-50px' }}
+        variants={containerVariants}
+      >
         {/* Languages */}
-        <div className="p-4 border border-zinc-800">
+        <motion.div className="p-4 border border-zinc-800" variants={itemVariants}>
           <h3 className="font-syne font-bold text-white mb-4">Idiomas</h3>
           <div className="space-y-2">
             {languages.map((lang, index) => (
@@ -71,10 +104,10 @@ export function SkillsSection({
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Achievements summary */}
-        <div className="p-4 border border-zinc-800">
+        <motion.div className="p-4 border border-zinc-800" variants={itemVariants}>
           <h3 className="font-syne font-bold text-white mb-4">Logros Destacados</h3>
           <ul className="space-y-2">
             {achievements.slice(0, 3).map((achievement, index) => (
@@ -87,8 +120,8 @@ export function SkillsSection({
               </li>
             ))}
           </ul>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

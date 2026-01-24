@@ -2,7 +2,7 @@ import { type ReactNode, type CSSProperties } from 'react'
 import { cn } from '../../../libs/utils'
 
 export type OutlineColor = 'white' | 'violet' | 'cyan' | 'emerald' | 'rose' | 'amber' | 'blue'
-type OutlineSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
+export type OutlineSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
 type OutlineTag = 'h1' | 'h2' | 'h3' | 'h4' | 'span' | 'p'
 
 interface OutlineTextProps {
@@ -17,6 +17,7 @@ interface OutlineTextProps {
 }
 
 const sizeClasses: Record<OutlineSize, string> = {
+  xs: 'text-sm sm:text-base lg:text-lg',
   sm: 'text-base sm:text-lg lg:text-xl',
   md: 'text-lg sm:text-xl lg:text-2xl',
   lg: 'text-xl sm:text-2xl lg:text-4xl',

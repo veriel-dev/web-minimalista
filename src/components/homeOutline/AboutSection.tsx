@@ -19,7 +19,7 @@ export function AboutSection({ title, paragraphs, stats, className }: AboutSecti
       <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
         {/* Left column - Text */}
         <div>
-          <p className="text-zinc-600 text-xs uppercase tracking-[0.3em] mb-4 font-mono">
+          <p className="text-zinc-400 text-xs uppercase tracking-[0.3em] mb-4 font-mono">
             02 / Sobre mí
           </p>
           <h2 className="font-black font-syne leading-none mb-6 md:mb-8">

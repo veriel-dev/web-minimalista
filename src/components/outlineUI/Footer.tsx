@@ -82,7 +82,7 @@ export function Footer({
 
           {/* Enlaces de navegación */}
           <div className="space-y-4">
-            <h3 className="font-syne font-semibold text-white">Navegación</h3>
+            <p className="font-syne font-semibold text-white">Navegación</p>
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.href}>
@@ -100,7 +100,7 @@ export function Footer({
           {/* Redes sociales */}
           {showSocial && (
             <div className="space-y-4">
-              <h3 className="font-syne font-semibold text-white">Conecta</h3>
+              <p className="font-syne font-semibold text-white">Conecta</p>
               <ul className="space-y-2">
                 {socialLinks.map((link) => (
                   <li key={link.label}>
@@ -126,7 +126,7 @@ export function Footer({
             <p className="text-sm text-zinc-500">
               © {currentYear} Veriel. Todos los derechos reservados.
             </p>
-            <p className="text-sm text-zinc-600">
+            <p className="text-sm text-zinc-400">
               Hecho con <span className="text-rose-500">♥</span> y mucho código
             </p>
           </div>

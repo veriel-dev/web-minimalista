@@ -24,18 +24,16 @@ export function ProjectCard({ project, index, className }: ProjectCardProps) {
   return (
     <div
       className={cn(
-        'group border border-zinc-800 p-4 sm:p-6 transition-all duration-300',
+        'group border border-zinc-800 p-4 sm:p-6 transition-all duration-300 h-full',
         'hover:border-zinc-600 hover:bg-zinc-900/50',
-        'animate-fade-in',
         className,
       )}
-      style={{ animationDelay: `${index * 80}ms` }}
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-4 mb-4">
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-zinc-600 text-xs font-mono">
+            <span className="text-zinc-400 text-xs font-mono">
               {String(index + 1).padStart(2, '0')}
             </span>
             {isInProgress && (
@@ -90,7 +88,7 @@ export function ProjectCard({ project, index, className }: ProjectCardProps) {
           </span>
         ))}
         {project.technologies.length > 4 && (
-          <span className="text-zinc-600 text-xs px-2 py-1 font-mono">
+          <span className="text-zinc-400 text-xs px-2 py-1 font-mono">
             +{project.technologies.length - 4}
           </span>
         )}

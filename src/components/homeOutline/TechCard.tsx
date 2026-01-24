@@ -29,7 +29,7 @@ export function TechCard({ name, type, color }: TechCardProps) {
       <OutlineText as="h3" size="sm" color={color} hoverFill className="mb-1">
         {name}
       </OutlineText>
-      <p className="text-zinc-600 text-[10px] sm:text-xs">{type}</p>
+      <p className="text-zinc-400 text-[10px] sm:text-xs">{type}</p>
     </div>
   )
 }
