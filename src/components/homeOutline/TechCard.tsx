@@ -14,6 +14,8 @@ const borderColorClasses: Record<OutlineColor, string> = {
   cyan: 'hover:border-cyan-500/50',
   emerald: 'hover:border-emerald-500/50',
   rose: 'hover:border-rose-500/50',
+  amber: 'hover:border-amber-500/50',
+  blue: 'hover:border-blue-500/50',
 }
 
 export function TechCard({ name, type, color }: TechCardProps) {

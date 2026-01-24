@@ -1,17 +1,17 @@
-import { cn } from '../../../libs/utils'
-import { OutlineText } from '../outlineUI'
-import { TechCard } from './TechCard'
-import type { OutlineColor } from '../../config/theme'
+import { cn } from '../../../libs/utils';
+import { OutlineText } from '../outlineUI';
+import { TechCard } from './TechCard';
+import type { OutlineColor } from '../../config/theme';
 
 interface TechItem {
-  name: string
-  type: string
-  color: OutlineColor
+  name: string;
+  type: string;
+  color: OutlineColor;
 }
 
 interface TechStackSectionProps {
-  items: TechItem[]
-  className?: string
+  items: TechItem[];
+  className?: string;
 }
 
 export function TechStackSection({ items, className }: TechStackSectionProps) {
@@ -22,7 +22,7 @@ export function TechStackSection({ items, className }: TechStackSectionProps) {
         04 / Habilidades
       </p>
       <h2 className="font-black font-syne leading-none mb-6 sm:mb-8 md:mb-10">
-        <OutlineText as="span" size="2xl" color="rose">
+        <OutlineText as="span" size="2xl" color="rose" hoverFill>
           TECH
         </OutlineText>{' '}
         <span className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl">STACK</span>
@@ -35,7 +35,7 @@ export function TechStackSection({ items, className }: TechStackSectionProps) {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
-export default TechStackSection
+export default TechStackSection;

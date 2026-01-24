@@ -4,6 +4,8 @@ export const outlineColors = {
   cyan: '#22d3ee',
   emerald: '#34d399',
   rose: '#fb7185',
+  amber: '#fbbf24',
+  blue: '#60a5fa',
 } as const
 
 export type OutlineColor = keyof typeof outlineColors
@@ -13,8 +15,8 @@ export const sectionColors: Record<string, OutlineColor> = {
   about: 'cyan',
   experience: 'emerald',
   skills: 'rose',
-  projects: 'violet',
-  contact: 'cyan',
+  projects: 'amber',
+  contact: 'blue',
 }
 
 export const fonts = {

@@ -26,13 +26,10 @@
   -webkit-text-fill-color: currentColor;
 }
 
-/* Hover fill usando data-color */
-.outline-text-hover {
-  cursor: pointer;
-}
-
-.outline-text-hover:hover {
-  -webkit-text-fill-color: attr(data-color);
+/* Hover fill usando CSS custom property */
+.outline-text-hover:hover,
+.group:hover .outline-text-hover {
+  -webkit-text-fill-color: var(--outline-color) !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -61,6 +58,16 @@
 .text-outline-rose {
   -webkit-text-stroke-color: #fb7185;
   color: #fb7185;
+}
+
+.text-outline-amber {
+  -webkit-text-stroke-color: #fbbf24;
+  color: #fbbf24;
+}
+
+.text-outline-blue {
+  -webkit-text-stroke-color: #60a5fa;
+  color: #60a5fa;
 }
 
 /* --------------------------------------------------------------------------
@@ -119,6 +126,47 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* --------------------------------------------------------------------------
+   Component Animations
+   -------------------------------------------------------------------------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Staggered animation - elementos secuenciales */
+@keyframes staggerFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-stagger > * {
+  opacity: 0;
+  animation: staggerFade 0.3s ease-out forwards;
+}
+
+.animate-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.animate-stagger > *:nth-child(2) { animation-delay: 60ms; }
+.animate-stagger > *:nth-child(3) { animation-delay: 120ms; }
+.animate-stagger > *:nth-child(4) { animation-delay: 180ms; }
+.animate-stagger > *:nth-child(5) { animation-delay: 240ms; }
 
 /* --------------------------------------------------------------------------
    Utility Classes

@@ -18,6 +18,8 @@ const arrowColorClasses: Record<OutlineColor, string> = {
   cyan: 'group-hover:text-cyan-400',
   emerald: 'group-hover:text-emerald-400',
   rose: 'group-hover:text-rose-400',
+  amber: 'group-hover:text-amber-400',
+  blue: 'group-hover:text-blue-400',
 }
 
 export function ProjectRow({

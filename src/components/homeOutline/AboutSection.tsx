@@ -1,24 +1,18 @@
-import { cn } from '../../../libs/utils'
-import { OutlineText } from '../outlineUI'
-import type { StatItem } from '../../data/pages/home.outline'
+import { cn } from '../../../libs/utils';
+import { OutlineText } from '../outlineUI';
+import type { StatItem } from '../../data/pages/home.outline';
 
 interface AboutSectionProps {
-  title: string
-  paragraphs: string[]
-  stats: StatItem[]
-  className?: string
+  title: string;
+  paragraphs: string[];
+  stats: StatItem[];
+  className?: string;
 }
 
-export function AboutSection({
-  title,
-  paragraphs,
-  stats,
-  className,
-}: AboutSectionProps) {
-  // Split title for two-line display (e.g., "SOBRE MÍ" -> "SOBRE" and "MÍ")
-  const titleParts = title.split(' ')
-  const titleFirst = titleParts[0]
-  const titleRest = titleParts.slice(1).join(' ')
+export function AboutSection({ title, paragraphs, stats, className }: AboutSectionProps) {
+  const titleParts = title.split(' ');
+  const titleFirst = titleParts[0];
+  const titleRest = titleParts.slice(1).join(' ');
 
   return (
     <div className={cn('max-w-5xl mx-auto w-full px-6', className)}>
@@ -29,17 +23,21 @@ export function AboutSection({
             02 / Sobre mí
           </p>
           <h2 className="font-black font-syne leading-none mb-6 md:mb-8">
-            <OutlineText as="span" size="2xl" color="white" className="block">
+            <OutlineText as="span" size="2xl" color="cyan" className="block" hoverFill>
               {titleFirst}
             </OutlineText>
-            {titleRest && <span className="block text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl">{titleRest}</span>}
+            {titleRest && (
+              <span className="block text-white text-3xl sm:text-4xl md:text-5xl lg:text-7xl">
+                {titleRest}
+              </span>
+            )}
           </h2>
           {paragraphs.map((paragraph, index) => (
             <p
               key={index}
               className={cn(
                 'leading-relaxed text-sm sm:text-base',
-                index === 0 ? 'text-zinc-400 mb-4 sm:mb-6' : 'text-zinc-500'
+                index === 0 ? 'text-zinc-400 mb-4 sm:mb-6' : 'text-zinc-500',
               )}
             >
               {paragraph}
@@ -47,9 +45,8 @@ export function AboutSection({
           ))}
         </div>
 
-        {/* Right column - Stats */}
         <div className="space-y-4 sm:space-y-6">
-          {stats.map((stat) => (
+          {stats.map(stat => (
             <div
               key={stat.label}
               className="group border-b border-zinc-800 pb-4 sm:pb-6 cursor-pointer"
@@ -71,7 +68,7 @@ export function AboutSection({
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default AboutSection
+export default AboutSection;

@@ -1,23 +1,23 @@
-import { Link } from 'wouter'
-import { cn } from '../../../libs/utils'
-import { OutlineText } from '../outlineUI'
-import { ProjectRow } from './ProjectRow'
-import type { OutlineColor } from '../../config/theme'
+import { Link } from 'wouter';
+import { cn } from '../../../libs/utils';
+import { OutlineText } from '../outlineUI';
+import { ProjectRow } from './ProjectRow';
+import type { OutlineColor } from '../../config/theme';
 
 interface ProjectPreviewItem {
-  number: string
-  title: string
-  description: string
-  tags: string[]
-  color: OutlineColor
-  slug: string
+  number: string;
+  title: string;
+  description: string;
+  tags: string[];
+  color: OutlineColor;
+  slug: string;
 }
 
 interface ProjectsPreviewSectionProps {
-  projects: ProjectPreviewItem[]
-  viewAllLabel?: string
-  viewAllHref?: string
-  className?: string
+  projects: ProjectPreviewItem[];
+  viewAllLabel?: string;
+  viewAllHref?: string;
+  className?: string;
 }
 
 export function ProjectsPreviewSection({
@@ -33,14 +33,14 @@ export function ProjectsPreviewSection({
         05 / Portfolio
       </p>
       <h2 className="font-black font-syne leading-none mb-6 sm:mb-8 md:mb-10">
-        <OutlineText as="span" size="2xl" color="white">
+        <OutlineText as="span" size="2xl" color="violet" hoverFill>
           PROYECTOS
         </OutlineText>
       </h2>
 
       {/* Projects List */}
       <div className="space-y-4 sm:space-y-6 max-h-[50vh] sm:max-h-[60vh] overflow-y-auto pr-2">
-        {projects.map((project) => (
+        {projects.map(project => (
           <ProjectRow key={project.slug} {...project} />
         ))}
       </div>
@@ -54,7 +54,7 @@ export function ProjectsPreviewSection({
         </Link>
       </div>
     </div>
-  )
+  );
 }
 
-export default ProjectsPreviewSection
+export default ProjectsPreviewSection;
