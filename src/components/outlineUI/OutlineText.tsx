@@ -1,7 +1,7 @@
 import { type ReactNode, type CSSProperties } from 'react'
 import { cn } from '../../../libs/utils'
 
-type OutlineColor = 'white' | 'violet' | 'cyan' | 'emerald' | 'rose' | 'amber' | 'blue'
+export type OutlineColor = 'white' | 'violet' | 'cyan' | 'emerald' | 'rose' | 'amber' | 'blue'
 type OutlineSize = 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
 type OutlineTag = 'h1' | 'h2' | 'h3' | 'h4' | 'span' | 'p'
 

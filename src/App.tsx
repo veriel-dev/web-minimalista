@@ -7,6 +7,7 @@ import CVComponent from './components/CVComponents';
 import OutlineTestPage from './screens/OutlineTestPage';
 import LayoutTestPage from './screens/LayoutTestPage';
 import HomePageOutline from './screens/HomePageOutline';
+import ProjectsPageOutline from './screens/ProjectsPageOutline';
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
         <Route path="/layout-test" component={LayoutTestPage} />
         {/* Ruta temporal para verificar Fase 3 - Home Outline */}
         <Route path="/outline" component={HomePageOutline} />
+        {/* Ruta temporal para verificar Fase 4 - Projects Outline */}
+        <Route path="/outline/projects" component={ProjectsPageOutline} />
         <Route path="*" component={NotFoundPage} />
       </Switch>
     </>
