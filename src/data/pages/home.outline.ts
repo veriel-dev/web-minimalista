@@ -1,44 +1,44 @@
-import type { OutlineColor } from '../../config/theme'
+import type { OutlineColor } from '../../config/theme';
 
 export interface StatItem {
-  value: string
-  label: string
-  color: OutlineColor
+  value: string;
+  label: string;
+  color: OutlineColor;
 }
 
 export interface SkillItem {
-  name: string
-  category: 'frontend' | 'backend' | 'database' | 'languages' | 'devops'
-  color: OutlineColor
+  name: string;
+  category: 'frontend' | 'backend' | 'database' | 'languages' | 'devops';
+  color: OutlineColor;
 }
 
 export interface TechItem {
-  name: string
-  type: string
-  color: OutlineColor
+  name: string;
+  type: string;
+  color: OutlineColor;
 }
 
 export interface ExperienceItem {
-  company: string
-  position: string
-  period: { start: string; end?: string }
-  description: string[]
-  current?: boolean
+  company: string;
+  position: string;
+  period: { start: string; end?: string };
+  description: string[];
+  current?: boolean;
 }
 
 export interface ProjectPreviewItem {
-  number: string
-  title: string
-  description: string
-  tags: string[]
-  color: OutlineColor
-  slug: string
+  number: string;
+  title: string;
+  description: string;
+  tags: string[];
+  color: OutlineColor;
+  slug: string;
 }
 
 export interface SocialLinkItem {
-  platform: 'github' | 'linkedin' | 'email'
-  href: string
-  label: string
+  platform: 'github' | 'linkedin' | 'email';
+  href: string;
+  label: string;
 }
 
 export const homeOutlineData = {
@@ -123,14 +123,34 @@ export const homeOutlineData = {
 
   techStack: {
     items: [
+      // Frontend
       { name: 'React', type: 'Frontend Library', color: 'violet' as OutlineColor },
-      { name: 'TypeScript', type: 'Language', color: 'cyan' as OutlineColor },
+      { name: 'Astro', type: 'Frontend Framework', color: 'violet' as OutlineColor },
+      { name: 'Next.js', type: 'Full Stack Framework', color: 'white' as OutlineColor },
+      { name: 'HTML/CSS', type: 'Web Standards', color: 'cyan' as OutlineColor },
+      { name: 'Tailwind', type: 'CSS Framework', color: 'cyan' as OutlineColor },
+      { name: 'Vite', type: 'Build Tool', color: 'amber' as OutlineColor },
+      { name: 'Web Components', type: 'Native Components', color: 'violet' as OutlineColor },
+      // Backend
       { name: 'Node.js', type: 'Backend Runtime', color: 'emerald' as OutlineColor },
-      { name: 'Java', type: 'Backend Language', color: 'rose' as OutlineColor },
-      { name: 'Spring', type: 'Java Framework', color: 'white' as OutlineColor },
-      { name: 'Docker', type: 'Containerization', color: 'white' as OutlineColor },
-      { name: 'PostgreSQL', type: 'Database', color: 'white' as OutlineColor },
-      { name: 'Tailwind', type: 'CSS Framework', color: 'white' as OutlineColor },
+      { name: 'Spring', type: 'Java Framework', color: 'emerald' as OutlineColor },
+      { name: 'Express', type: 'Node Framework', color: 'emerald' as OutlineColor },
+      { name: 'NestJS', type: 'Node Framework', color: 'rose' as OutlineColor },
+      { name: 'JSP', type: 'Java Server Pages', color: 'rose' as OutlineColor },
+      { name: 'OWCS', type: 'Enterprise CMS', color: 'rose' as OutlineColor },
+      // Database
+      { name: 'PostgreSQL', type: 'SQL Database', color: 'blue' as OutlineColor },
+      { name: 'MongoDB', type: 'NoSQL Database', color: 'emerald' as OutlineColor },
+      { name: 'OracleSQL', type: 'Enterprise Database', color: 'rose' as OutlineColor },
+      // Languages
+      { name: 'TypeScript', type: 'Language', color: 'cyan' as OutlineColor },
+      { name: 'JavaScript', type: 'Language', color: 'amber' as OutlineColor },
+      { name: 'Java', type: 'Language', color: 'rose' as OutlineColor },
+      { name: 'Python', type: 'Language', color: 'blue' as OutlineColor },
+      { name: 'Go', type: 'Language', color: 'cyan' as OutlineColor },
+      // DevOps
+      { name: 'Git', type: 'Version Control', color: 'amber' as OutlineColor },
+      { name: 'Docker', type: 'Containerization', color: 'blue' as OutlineColor },
     ],
   },
 
@@ -176,11 +196,15 @@ export const homeOutlineData = {
   contact: {
     title: 'HABLEMOS',
     subtitle: '¿Tienes un proyecto en mente? Me encantaría saber más y ver cómo puedo ayudarte.',
-    email: 'hola@veriel.dev',
+    email: 'vmordiales@gmail.com',
     socialLinks: [
       { platform: 'github', href: 'https://github.com/veriel-dev', label: 'GitHub' },
-      { platform: 'linkedin', href: 'https://linkedin.com/in/veriel-dev', label: 'LinkedIn' },
-      { platform: 'email', href: 'mailto:hola@veriel.dev', label: 'Email' },
+      {
+        platform: 'linkedin',
+        href: 'https://www.linkedin.com/in/v%C3%ADctor-manuel-ordiales-garc%C3%ADa/',
+        label: 'LinkedIn',
+      },
+      { platform: 'email', href: 'mailto:vmordiales@gmail.com', label: 'Email' },
     ] as SocialLinkItem[],
   },
-}
+};
