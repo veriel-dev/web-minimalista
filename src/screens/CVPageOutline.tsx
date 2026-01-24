@@ -61,7 +61,7 @@ const CVPageOutline = memo(() => {
         <MainLayoutOutline
           pageType="static"
           showProgress={false}
-          footerVariant="minimal"
+          footerVariant="full"
         >
           <div className="max-w-4xl mx-auto px-6 md:px-8 py-12">
             <Breadcrumb items={breadcrumbItems} className="mb-8" />

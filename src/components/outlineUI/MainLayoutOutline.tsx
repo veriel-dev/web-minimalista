@@ -1,4 +1,5 @@
-import { type ReactNode } from 'react'
+import { type ReactNode, useEffect } from 'react'
+import { useLocation } from 'wouter'
 import { cn } from '../../../libs/utils'
 import { NavBar } from './NavBar'
 import { Footer } from './Footer'
@@ -28,9 +29,15 @@ export function MainLayoutOutline({
   pageType = 'home',
   className,
 }: MainLayoutOutlineProps) {
+  const [location] = useLocation()
   const sectionIds = homeSections.map((s) => s.id)
   const activeSection = useActiveSection(sectionIds)
   const scrollToSection = useScrollToSection()
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location])
 
   const isHomePage = pageType === 'home'
 
