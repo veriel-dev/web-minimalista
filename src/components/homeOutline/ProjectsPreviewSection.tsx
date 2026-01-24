@@ -33,7 +33,7 @@ export function ProjectsPreviewSection({
         05 / Portfolio
       </p>
       <h2 className="font-black font-syne leading-none mb-6 sm:mb-8 md:mb-10">
-        <OutlineText as="span" size="2xl" color="violet" hoverFill>
+        <OutlineText as="span" size="2xl" color="amber" hoverFill>
           PROYECTOS
         </OutlineText>
       </h2>

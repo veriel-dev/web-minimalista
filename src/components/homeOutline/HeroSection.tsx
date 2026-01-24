@@ -1,17 +1,17 @@
-import { Link } from 'wouter'
-import { cn } from '../../../libs/utils'
-import { OutlineText } from '../outlineUI'
-import { ArrowDown } from 'lucide-react'
-import { useScrollToSection } from '../../hooks/useScrollToSection'
+import { Link } from 'wouter';
+import { cn } from '../../../libs/utils';
+import { OutlineText } from '../outlineUI';
+import { ArrowDown } from 'lucide-react';
+import { useScrollToSection } from '../../hooks/useScrollToSection';
 
 interface HeroSectionProps {
-  name: string
-  title: string
-  titleHighlight?: string
-  subtitle?: string
-  ctaPrimary?: { label: string; href: string }
-  ctaSecondary?: { label: string; href: string }
-  className?: string
+  name: string;
+  title: string;
+  titleHighlight?: string;
+  subtitle?: string;
+  ctaPrimary?: { label: string; href: string };
+  ctaSecondary?: { label: string; href: string };
+  className?: string;
 }
 
 export function HeroSection({
@@ -23,12 +23,12 @@ export function HeroSection({
   ctaSecondary,
   className,
 }: HeroSectionProps) {
-  const scrollToSection = useScrollToSection()
+  const scrollToSection = useScrollToSection();
 
   // Split name into first and last name for two-line display
-  const nameParts = name.split(' ')
-  const firstName = nameParts[0]
-  const lastName = nameParts.slice(1).join(' ')
+  const nameParts = name.split('.');
+  const firstName = nameParts[0];
+  const lastName = nameParts.slice(1).join('.');
 
   return (
     <div className={cn('max-w-5xl mx-auto px-6 text-center', className)}>
@@ -39,10 +39,10 @@ export function HeroSection({
 
       {/* Name - Two lines */}
       <h1 className="font-black font-syne leading-none mb-4 sm:mb-6">
-        <OutlineText as="span" size="3xl" color="white" thick className="block">
+        <OutlineText as="span" size="3xl" color="violet" hoverFill>
           {firstName}
-        </OutlineText>
-        <span className="block text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">{lastName}</span>
+        </OutlineText>{' '}
+        <span className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-9xl">.{lastName}</span>
       </h1>
 
       {/* Title with highlight */}
@@ -94,7 +94,7 @@ export function HeroSection({
         </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

@@ -43,8 +43,8 @@ export interface SocialLinkItem {
 
 export const homeOutlineData = {
   hero: {
-    name: 'VÍCTOR ORDIALES',
-    title: 'Full Stack',
+    name: 'Veriel.Dev',
+    title: 'Lead',
     titleHighlight: 'Developer',
     subtitle: 'Del código a la experiencia: Construyendo soluciones que importan',
     ctaPrimary: { label: 'Ver Proyectos', href: '#projects' },
@@ -146,7 +146,6 @@ export const homeOutlineData = {
       { name: 'TypeScript', type: 'Language', color: 'cyan' as OutlineColor },
       { name: 'JavaScript', type: 'Language', color: 'amber' as OutlineColor },
       { name: 'Java', type: 'Language', color: 'rose' as OutlineColor },
-      { name: 'Python', type: 'Language', color: 'blue' as OutlineColor },
       { name: 'Go', type: 'Language', color: 'cyan' as OutlineColor },
       // DevOps
       { name: 'Git', type: 'Version Control', color: 'amber' as OutlineColor },
