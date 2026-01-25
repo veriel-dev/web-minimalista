@@ -388,16 +388,16 @@ const projects: Project[] = [
   },
   /* Web Personal */
   {
-    title: 'Web Personal',
+    title: 'Old Web Personal',
     description: 'Portfolio minimalista con diseño Outline y animaciones fluidas',
     technologies: ['React', 'Wouter', 'Vite', 'FramerMotion', 'Tailwind'],
     proyectType: 'frontend',
     featured: false,
-    github: 'https://github.com/veriel-dev/web-minimalista',
-    demo: 'https://veriel.dev/',
+    github: 'https://github.com/veriel-dev/web-minimalista/tree/legacy/matrix',
+    demo: 'https://old.veriel.dev/',
     status: 'completed',
     img: '/img/web-personal.png',
-    slug: 'web-personal',
+    slug: 'old-web-personal',
     longDescription:
       'Portfolio personal con diseño minimalista y temática Matrix. Desarrollado con React y Tailwind CSS, incluye animaciones fluidas con Framer Motion y un diseño completamente responsive.',
     features: [

@@ -176,8 +176,8 @@ export const projectsOutlineData = {
       demo: 'https://sugioh.veriel.dev/',
     },
     {
-      slug: 'web-personal',
-      title: 'Web Personal',
+      slug: 'old-web-personal',
+      title: 'Old Web Personal',
       description: 'Este portfolio que estás viendo ahora',
       technologies: ['React', 'Wouter', 'Vite', 'Framer Motion', 'Tailwind'],
       category: 'frontend' as ProjectCategory,
