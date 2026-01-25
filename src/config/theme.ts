@@ -6,9 +6,9 @@ export const outlineColors = {
   rose: '#fb7185',
   amber: '#fbbf24',
   blue: '#60a5fa',
-} as const
+} as const;
 
-export type OutlineColor = keyof typeof outlineColors
+export type OutlineColor = keyof typeof outlineColors;
 
 export const sectionColors: Record<string, OutlineColor> = {
   hero: 'violet',
@@ -17,18 +17,18 @@ export const sectionColors: Record<string, OutlineColor> = {
   skills: 'rose',
   projects: 'amber',
   contact: 'blue',
-}
+};
 
 export const fonts = {
   heading: 'Syne, sans-serif',
   body: 'Inter, sans-serif',
-} as const
+} as const;
 
 export const transitions = {
   fast: 150,
   normal: 300,
   slow: 500,
-} as const
+} as const;
 
 export const breakpoints = {
   sm: 640,
@@ -36,4 +36,4 @@ export const breakpoints = {
   lg: 1024,
   xl: 1280,
   '2xl': 1536,
-} as const
+} as const;

@@ -1,30 +1,30 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react';
 
 export function useActiveSection(sectionIds: string[]): string {
-  const [activeSection, setActiveSection] = useState<string>(sectionIds[0] || '')
+  const [activeSection, setActiveSection] = useState<string>(sectionIds[0] || '');
 
   const handleScroll = useCallback(() => {
-    const scrollPosition = window.scrollY + window.innerHeight / 3
+    const scrollPosition = window.scrollY + window.innerHeight / 3;
 
     for (let i = sectionIds.length - 1; i >= 0; i--) {
-      const section = document.getElementById(sectionIds[i])
+      const section = document.getElementById(sectionIds[i]);
       if (section && section.offsetTop <= scrollPosition) {
-        setActiveSection(sectionIds[i])
-        break
+        setActiveSection(sectionIds[i]);
+        break;
       }
     }
-  }, [sectionIds])
+  }, [sectionIds]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [handleScroll])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
 
-  return activeSection
+  return activeSection;
 }
 
-export default useActiveSection
+export default useActiveSection;

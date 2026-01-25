@@ -12,10 +12,7 @@ export function StatsSection({ stats, className }: StatsSectionProps) {
     <div className={cn('max-w-5xl mx-auto w-full px-6', className)}>
       <div className="grid grid-cols-3 gap-4 sm:gap-8">
         {stats.map(stat => (
-          <div
-            key={stat.label}
-            className="text-center group cursor-pointer"
-          >
+          <div key={stat.label} className="text-center group cursor-pointer">
             <OutlineText
               as="span"
               size="xl"

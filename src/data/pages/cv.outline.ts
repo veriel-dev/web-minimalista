@@ -71,7 +71,7 @@ export const cvData: CVData = {
   },
   header: {
     name: 'Víctor Manuel Ordiales García',
-    title: 'Software Developer',
+    title: 'Lead Developer',
     location: 'Casar de Cáceres, Cáceres, España',
     phone: '685394859',
     email: 'vmordiales@gmail.com',
@@ -82,8 +82,8 @@ export const cvData: CVData = {
   summary: {
     title: 'Perfil Profesional',
     paragraphs: [
-      'Software Developer con más de 4 años de experiencia en entornos empresariales dinámicos, enfocado en el diseño, desarrollo e implementación de soluciones tecnológicas escalables y eficientes. He trabajado extensivamente en sistemas CMS empresariales (OWCS), desarrollando backend robusto con Spring Framework y creando interfaces frontend avanzadas utilizando JavaScript/TypeScript y web components, así como arquitecturas monolíticas y basadas en microservicios.',
-      'Además, en mis proyectos personales, he ampliado mi stack tecnológico para incluir herramientas avanzadas como React, el runtime Node.js junto con frameworks como Nest y Next.js para el desarrollo backend y frontend, respectivamente. También cuento con experiencia en herramientas de construcción de sitios estáticos como Astro y la orquestación de contenedores con Docker.',
+      'Lead Developer con más de 4 años de experiencia en aplicaciones web empresariales. Especializado en CMS empresariales (OWCS), backend con Spring Framework y frontend con JavaScript/TypeScript y Web Components.',
+      'En proyectos personales, he ampliado mi stack con React, Node.js, NestJS y Next.js. También trabajo con Astro para sitios estáticos y Docker para contenedores.',
     ],
     highlights: [
       'Diseño e implementación de soluciones web eficientes y escalables',
@@ -98,10 +98,10 @@ export const cvData: CVData = {
       project: 'Web Pública Aena',
       period: 'May. 2025 - Actualidad',
       achievements: [
-        'Arquitectura e implementación de soluciones empresariales con OWCS y Spring Boot',
-        'Optimización de rendimiento y escalabilidad en aplicaciones críticas',
-        'Resolución proactiva de incidencias técnicas y mantenimiento correctivo',
-        'Gestión directa de relaciones con clientes y soporte técnico especializado',
+        'Desarrollo del portal público de AENA con OWCS y Spring Boot',
+        'Mejora de tiempos de respuesta en aplicaciones de alto tráfico',
+        'Resolución de incidencias técnicas N2/N3',
+        'Comunicación directa con cliente para requisitos y soporte',
       ],
     },
     {
@@ -110,9 +110,9 @@ export const cvData: CVData = {
       project: 'Portal de Contratación Naturgy',
       period: 'Abr. 2025 - May. 2025',
       achievements: [
-        'Desarrollo de interfaces modernas y responsivas con React',
-        'Implementación de mejoras UX/UI basadas en métricas de negocio',
-        'Optimización de aplicaciones React para máximo rendimiento',
+        'Desarrollo de interfaces con React para portal de contratación',
+        'Implementación de mejoras UX/UI según métricas de conversión',
+        'Reducción de re-renders y optimización de componentes',
       ],
     },
     {
@@ -121,9 +121,9 @@ export const cvData: CVData = {
       project: 'Portales Públicos y Áreas Clientes Naturgy',
       period: 'Feb. 2023 - Mar. 2025',
       achievements: [
-        'Evolución desde desarrollo a roles analíticos con JavaScript/TypeScript y Java',
-        'Arquitectura e implementación de soluciones empresariales integrales',
-        'Optimización de rendimiento en aplicaciones críticas',
+        'Evolución de desarrollador a analista técnico en 2 años',
+        'Diseño de arquitectura para portales públicos y áreas de cliente',
+        'Implementación de features con JavaScript/TypeScript y Java/Spring',
       ],
     },
     {
@@ -132,9 +132,9 @@ export const cvData: CVData = {
       project: 'Portales Públicos Naturgy',
       period: 'Ago. 2021 - Dic. 2023',
       achievements: [
-        'Diseño e implementación de soluciones empresariales en Oracle WebCenter Sites',
-        'Gestión y optimización del CMS adaptándolo a necesidades del negocio',
-        'Mejora del rendimiento y escalabilidad de aplicaciones',
+        'Desarrollo de portales corporativos en Oracle WebCenter Sites (OWCS)',
+        'Configuración y personalización del CMS según requisitos de negocio',
+        'Creación de componentes reutilizables y templates',
       ],
     },
     {
@@ -176,11 +176,7 @@ export const cvData: CVData = {
     {
       title: 'Backend',
       icon: Server,
-      skills: [
-        'Node.js & Express.js & Nest.js',
-        'Spring Boot & Java',
-        'Golang (Go)',
-      ],
+      skills: ['Node.js & Express.js & Nest.js', 'Spring Boot & Java', 'Golang (Go)'],
     },
     {
       title: 'Database & Infrastructure',
@@ -208,10 +204,16 @@ export const cvData: CVData = {
     { language: 'Inglés', level: 'Básico' },
   ],
   achievements: [
-    { text: 'Desarrollo full-stack en proyectos estratégicos para grandes corporaciones (Naturgy, AENA) utilizando tecnologías como React, Spring, JavaScript y CMS empresariales' },
-    { text: 'Progresión técnica acelerada desde desarrollador junior hasta analista técnico en 4 años' },
+    {
+      text: 'Desarrollo full-stack en proyectos estratégicos para grandes corporaciones (Naturgy, AENA) utilizando tecnologías como React, Spring, JavaScript y CMS empresariales',
+    },
+    {
+      text: 'Progresión técnica acelerada desde desarrollador junior hasta analista técnico en 4 años',
+    },
     { text: 'Soporte técnico especializado N2/N3 resolviendo incidencias críticas y complejas' },
     { text: 'Gestión integral de proyectos desde análisis de requisitos hasta implementación' },
-    { text: 'Versatilidad tecnológica en ecosistemas frontend (React, jQuery, JSP) y backend (Spring)' },
+    {
+      text: 'Versatilidad tecnológica en ecosistemas frontend (React, jQuery, JSP) y backend (Spring)',
+    },
   ],
 };

@@ -1,12 +1,7 @@
 import { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { MainLayoutOutline, Breadcrumb } from '../components/ui';
-import {
-  HeroSection,
-  StatsSection,
-  FilterBar,
-  ProjectsGrid,
-} from '../components/projects';
+import { HeroSection, StatsSection, FilterBar, ProjectsGrid } from '../components/projects';
 import { projectsOutlineData, type ProjectCategory } from '../data/pages/projects.outline';
 
 export default function ProjectsPageOutline() {
@@ -20,10 +15,7 @@ export default function ProjectsPageOutline() {
     return projects.filter(project => project.category === activeFilter);
   }, [activeFilter, projects]);
 
-  const breadcrumbItems = [
-    { label: 'Inicio', href: '/' },
-    { label: 'Proyectos' },
-  ];
+  const breadcrumbItems = [{ label: 'Inicio', href: '/' }, { label: 'Proyectos' }];
 
   return (
     <>
@@ -33,9 +25,15 @@ export default function ProjectsPageOutline() {
           name="description"
           content="Portfolio de proyectos de desarrollo web: aplicaciones full-stack, juegos, herramientas y experimentos con React, TypeScript, Node.js y más."
         />
-        <meta name="keywords" content="proyectos, portfolio, desarrollo web, react, typescript, node.js" />
+        <meta
+          name="keywords"
+          content="proyectos, portfolio, desarrollo web, react, typescript, node.js"
+        />
         <meta property="og:title" content="Proyectos | Veriel.dev" />
-        <meta property="og:description" content="Explora mi portfolio de proyectos de desarrollo web" />
+        <meta
+          property="og:description"
+          content="Explora mi portfolio de proyectos de desarrollo web"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://veriel.dev/projects" />
         <link rel="canonical" href="https://veriel.dev/projects" />

@@ -30,14 +30,52 @@ export function TimelineSection({
 }: TimelineSectionProps) {
   const shouldReduceMotion = useReducedMotion();
 
-  const colorClasses: Record<OutlineColor, { border: string; dot: string; text: string; bullet: string }> = {
-    white: { border: 'hover:border-white/50', dot: 'bg-white/50 border-white', text: 'text-white', bullet: 'text-white/70' },
-    violet: { border: 'hover:border-violet-500/50', dot: 'bg-violet-500/50 border-violet-500', text: 'text-violet-500', bullet: 'text-violet-500/70' },
-    cyan: { border: 'hover:border-cyan-500/50', dot: 'bg-cyan-500/50 border-cyan-500', text: 'text-cyan-500', bullet: 'text-cyan-500/70' },
-    emerald: { border: 'hover:border-emerald-500/50', dot: 'bg-emerald-500/50 border-emerald-500', text: 'text-emerald-500', bullet: 'text-emerald-500/70' },
-    rose: { border: 'hover:border-rose-500/50', dot: 'bg-rose-500/50 border-rose-500', text: 'text-rose-500', bullet: 'text-rose-500/70' },
-    amber: { border: 'hover:border-amber-500/50', dot: 'bg-amber-500/50 border-amber-500', text: 'text-amber-500', bullet: 'text-amber-500/70' },
-    blue: { border: 'hover:border-blue-500/50', dot: 'bg-blue-500/50 border-blue-500', text: 'text-blue-500', bullet: 'text-blue-500/70' },
+  const colorClasses: Record<
+    OutlineColor,
+    { border: string; dot: string; text: string; bullet: string }
+  > = {
+    white: {
+      border: 'hover:border-white/50',
+      dot: 'bg-white/50 border-white',
+      text: 'text-white',
+      bullet: 'text-white/70',
+    },
+    violet: {
+      border: 'hover:border-violet-500/50',
+      dot: 'bg-violet-500/50 border-violet-500',
+      text: 'text-violet-500',
+      bullet: 'text-violet-500/70',
+    },
+    cyan: {
+      border: 'hover:border-cyan-500/50',
+      dot: 'bg-cyan-500/50 border-cyan-500',
+      text: 'text-cyan-500',
+      bullet: 'text-cyan-500/70',
+    },
+    emerald: {
+      border: 'hover:border-emerald-500/50',
+      dot: 'bg-emerald-500/50 border-emerald-500',
+      text: 'text-emerald-500',
+      bullet: 'text-emerald-500/70',
+    },
+    rose: {
+      border: 'hover:border-rose-500/50',
+      dot: 'bg-rose-500/50 border-rose-500',
+      text: 'text-rose-500',
+      bullet: 'text-rose-500/70',
+    },
+    amber: {
+      border: 'hover:border-amber-500/50',
+      dot: 'bg-amber-500/50 border-amber-500',
+      text: 'text-amber-500',
+      bullet: 'text-amber-500/70',
+    },
+    blue: {
+      border: 'hover:border-blue-500/50',
+      dot: 'bg-blue-500/50 border-blue-500',
+      text: 'text-blue-500',
+      bullet: 'text-blue-500/70',
+    },
   };
 
   const colors = colorClasses[color];
@@ -61,12 +99,7 @@ export function TimelineSection({
 
   return (
     <section className={cn('mb-16 sm:mb-20', className)}>
-      <SectionHeader
-        number={number}
-        title={sectionTitle}
-        color={color}
-        icon={icon}
-      />
+      <SectionHeader number={number} title={sectionTitle} color={color} icon={icon} />
 
       <motion.div
         className="mt-8 space-y-8"
@@ -75,19 +108,19 @@ export function TimelineSection({
         viewport={{ once: true, margin: '-50px' }}
         variants={containerVariants}
       >
-        {items.map((item) => (
+        {items.map(item => (
           <motion.article
             key={`${item.title}-${item.period}`}
             className={cn(
               'relative pl-6 border-l border-zinc-800 transition-colors',
-              colors.border
+              colors.border,
             )}
             variants={itemVariants}
           >
             <div
               className={cn(
                 'absolute -left-[5px] top-0 w-2.5 h-2.5 rounded-full border',
-                colors.dot
+                colors.dot,
               )}
               aria-hidden="true"
             />
@@ -102,17 +135,14 @@ export function TimelineSection({
               </OutlineText>
             </h3>
 
-            <p className="text-zinc-400 text-sm mb-3">
-              {item.subtitle}
-            </p>
+            <p className="text-zinc-400 text-sm mb-3">{item.subtitle}</p>
 
             <ul className="space-y-1.5">
               {item.details.map((detail, detailIndex) => (
-                <li
-                  key={detailIndex}
-                  className="flex items-start gap-2 text-sm text-zinc-400"
-                >
-                  <span className={cn('mt-0.5', colors.bullet)} aria-hidden="true">›</span>
+                <li key={detailIndex} className="flex items-start gap-2 text-sm text-zinc-400">
+                  <span className={cn('mt-0.5', colors.bullet)} aria-hidden="true">
+                    ›
+                  </span>
                   {detail}
                 </li>
               ))}

@@ -1,18 +1,16 @@
-import { cn } from '../../lib/utils'
-import { OutlineText } from '../ui'
-import type { ExperienceItem } from '../../data/pages/home.outline'
+import { cn } from '../../lib/utils';
+import { OutlineText } from '../ui';
+import type { ExperienceItem } from '../../data/pages/home.outline';
 
 interface ExperienceDetailProps {
-  experience: ExperienceItem
-  className?: string
+  experience: ExperienceItem;
+  className?: string;
 }
 
 export function ExperienceDetail({ experience, className }: ExperienceDetailProps) {
-  const { company, position, period, description, current } = experience
+  const { company, position, period, description, current } = experience;
 
-  const periodText = period.end
-    ? `${period.start} - ${period.end}`
-    : `${period.start} - Presente`
+  const periodText = period.end ? `${period.start} - ${period.end}` : `${period.start} - Presente`;
 
   return (
     <div
@@ -21,7 +19,7 @@ export function ExperienceDetail({ experience, className }: ExperienceDetailProp
         current
           ? 'border border-emerald-500/30 bg-emerald-500/5'
           : 'border border-zinc-800 bg-zinc-900/30',
-        className
+        className,
       )}
     >
       {/* Header con badge y fecha */}
@@ -36,12 +34,7 @@ export function ExperienceDetail({ experience, className }: ExperienceDetailProp
 
       {/* Título del puesto */}
       <h3 className="font-black font-syne mb-2">
-        <OutlineText
-          as="span"
-          size="lg"
-          color={current ? 'emerald' : 'white'}
-          hoverFill
-        >
+        <OutlineText as="span" size="lg" color={current ? 'emerald' : 'white'} hoverFill>
           {position}
         </OutlineText>
       </h3>
@@ -52,29 +45,21 @@ export function ExperienceDetail({ experience, className }: ExperienceDetailProp
       {/* Responsabilidades */}
       <div>
         <p
-          className={cn(
-            'text-sm font-medium mb-3',
-            current ? 'text-emerald-400' : 'text-zinc-400'
-          )}
+          className={cn('text-sm font-medium mb-3', current ? 'text-emerald-400' : 'text-zinc-400')}
         >
           Responsabilidades
         </p>
         <ul className="space-y-2">
           {description.map((item, index) => (
-            <li
-              key={index}
-              className="flex items-start gap-2 text-sm sm:text-base text-zinc-400"
-            >
-              <span className={current ? 'text-emerald-500' : 'text-zinc-500'}>
-                →
-              </span>
+            <li key={index} className="flex items-start gap-2 text-sm sm:text-base text-zinc-400">
+              <span className={current ? 'text-emerald-500' : 'text-zinc-500'}>→</span>
               {item}
             </li>
           ))}
         </ul>
       </div>
     </div>
-  )
+  );
 }
 
-export default ExperienceDetail
+export default ExperienceDetail;

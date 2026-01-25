@@ -24,25 +24,27 @@ Portfolio web personal que demuestra competencias en desarrollo frontend moderno
 
 ### Habilidades Demostradas
 
-| Área | Competencias |
-|------|--------------|
-| **Frontend** | React 18, TypeScript estricto, componentes modulares |
-| **Estilos** | Tailwind CSS, diseño responsivo, animaciones fluidas |
-| **Arquitectura** | Code splitting, lazy loading, memorización |
-| **UI/UX** | Dark mode, efectos glow, transiciones suaves |
-| **DevOps** | Vite, ESLint, Prettier, Husky, builds optimizados |
+| Área             | Competencias                                         |
+| ---------------- | ---------------------------------------------------- |
+| **Frontend**     | React 18, TypeScript estricto, componentes modulares |
+| **Estilos**      | Tailwind CSS, diseño responsivo, animaciones fluidas |
+| **Arquitectura** | Code splitting, lazy loading, memorización           |
+| **UI/UX**        | Dark mode, efectos glow, transiciones suaves         |
+| **DevOps**       | Vite, ESLint, Prettier, Husky, builds optimizados    |
 
 ---
 
 ## Características
 
 ### Diseño Matrix
+
 - Tema oscuro con acentos verdes estilo terminal
 - Efectos glow y blur en componentes
 - Animaciones suaves con Framer Motion
 - Totalmente responsive
 
 ### Secciones
+
 - **Hero**: Presentación con efecto typing
 - **About**: Información personal
 - **Skills**: Stack tecnológico
@@ -51,6 +53,7 @@ Portfolio web personal que demuestra competencias en desarrollo frontend moderno
 - **Contacto**: Formulario y redes sociales
 
 ### SEO
+
 - Meta tags optimizados con React Helmet
 - Estructura semántica HTML5
 - Performance optimizado para Core Web Vitals
@@ -61,29 +64,29 @@ Portfolio web personal que demuestra competencias en desarrollo frontend moderno
 
 ### Core
 
-| Tecnología | Versión | Propósito |
-|------------|---------|-----------|
-| **React** | 18.3 | Biblioteca UI con hooks |
-| **TypeScript** | 5.6 | Tipado estático |
-| **Vite** | 5.x | Build tool y dev server |
-| **Tailwind CSS** | 3.4 | Framework CSS utility-first |
+| Tecnología       | Versión | Propósito                   |
+| ---------------- | ------- | --------------------------- |
+| **React**        | 18.3    | Biblioteca UI con hooks     |
+| **TypeScript**   | 5.6     | Tipado estático             |
+| **Vite**         | 5.x     | Build tool y dev server     |
+| **Tailwind CSS** | 3.4     | Framework CSS utility-first |
 
 ### Librerías
 
-| Librería | Propósito |
-|----------|-----------|
+| Librería          | Propósito                |
+| ----------------- | ------------------------ |
 | **Framer Motion** | Animaciones declarativas |
-| **Wouter** | Router ligero (~1.5kb) |
-| **Lucide React** | Iconos SVG |
-| **React Helmet** | Gestión de meta tags |
+| **Wouter**        | Router ligero (~1.5kb)   |
+| **Lucide React**  | Iconos SVG               |
+| **React Helmet**  | Gestión de meta tags     |
 
 ### Desarrollo
 
-| Herramienta | Propósito |
-|-------------|-----------|
-| **ESLint 9** | Análisis estático |
+| Herramienta    | Propósito          |
+| -------------- | ------------------ |
+| **ESLint 9**   | Análisis estático  |
 | **Prettier 3** | Formateo de código |
-| **Husky** | Git hooks |
+| **Husky**      | Git hooks          |
 
 ---
 
@@ -128,39 +131,39 @@ UI Components (Cards, Buttons...)
 
 ### Code Splitting
 
-| Técnica | Implementación |
-|---------|----------------|
-| **Lazy Loading** | `React.lazy()` para cada sección |
-| **Suspense** | Boundaries por sección con fallback |
-| **Chunks** | División manual en Vite config |
+| Técnica          | Implementación                      |
+| ---------------- | ----------------------------------- |
+| **Lazy Loading** | `React.lazy()` para cada sección    |
+| **Suspense**     | Boundaries por sección con fallback |
+| **Chunks**       | División manual en Vite config      |
 
 ### Memorización
 
-| Técnica | Implementación |
-|---------|----------------|
-| **React.memo** | Todos los componentes memorizados |
-| **useMemo** | Cálculos costosos (filtros, búsquedas) |
-| **DisplayName** | Nombres para debugging en DevTools |
+| Técnica         | Implementación                         |
+| --------------- | -------------------------------------- |
+| **React.memo**  | Todos los componentes memorizados      |
+| **useMemo**     | Cálculos costosos (filtros, búsquedas) |
+| **DisplayName** | Nombres para debugging en DevTools     |
 
 ### Bundle
 
-| Métrica | Valor |
-|---------|-------|
-| **CSS** | ~32kb (gzip: 6kb) |
+| Métrica       | Valor               |
+| ------------- | ------------------- |
+| **CSS**       | ~32kb (gzip: 6kb)   |
 | **JS Vendor** | ~141kb (gzip: 45kb) |
-| **JS App** | ~234kb (gzip: 75kb) |
+| **JS App**    | ~234kb (gzip: 75kb) |
 
 ---
 
 ## Scripts
 
-| Comando | Descripción |
-|---------|-------------|
-| `pnpm dev` | Servidor de desarrollo con HMR |
-| `pnpm build` | Build de producción (tsc + vite) |
-| `pnpm preview` | Preview del build |
-| `pnpm lint` | Análisis con ESLint |
-| `pnpm format` | Formateo con Prettier |
+| Comando        | Descripción                      |
+| -------------- | -------------------------------- |
+| `pnpm dev`     | Servidor de desarrollo con HMR   |
+| `pnpm build`   | Build de producción (tsc + vite) |
+| `pnpm preview` | Preview del build                |
+| `pnpm lint`    | Análisis con ESLint              |
+| `pnpm format`  | Formateo con Prettier            |
 
 ---
 

@@ -1,36 +1,27 @@
-import { Link } from 'wouter'
-import { cn } from '../../lib/utils'
-import { OutlineText } from './OutlineText'
-import { footerLinks, socialLinks } from '../../config/navigation'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Link } from 'wouter';
+import { cn } from '../../lib/utils';
+import { OutlineText } from './OutlineText';
+import { footerLinks, socialLinks } from '../../config/navigation';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 interface FooterProps {
-  variant?: 'full' | 'minimal'
-  showSocial?: boolean
-  className?: string
+  variant?: 'full' | 'minimal';
+  showSocial?: boolean;
+  className?: string;
 }
 
 const socialIcons: Record<string, React.ReactNode> = {
   GitHub: <Github size={20} />,
   LinkedIn: <Linkedin size={20} />,
   Email: <Mail size={20} />,
-}
+};
 
-export function Footer({
-  variant = 'full',
-  showSocial = true,
-  className,
-}: FooterProps) {
-  const currentYear = new Date().getFullYear()
+export function Footer({ variant = 'full', showSocial = true, className }: FooterProps) {
+  const currentYear = new Date().getFullYear();
 
   if (variant === 'minimal') {
     return (
-      <footer
-        className={cn(
-          'border-t border-zinc-800/50 bg-zinc-950',
-          className
-        )}
-      >
+      <footer className={cn('border-t border-zinc-800/50 bg-zinc-950', className)}>
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-zinc-500">
@@ -38,7 +29,7 @@ export function Footer({
             </p>
             {showSocial && (
               <div className="flex items-center gap-4">
-                {socialLinks.map((link) => (
+                {socialLinks.map(link => (
                   <a
                     key={link.label}
                     href={link.href}
@@ -55,16 +46,11 @@ export function Footer({
           </div>
         </div>
       </footer>
-    )
+    );
   }
 
   return (
-    <footer
-      className={cn(
-        'border-t border-zinc-800/50 bg-zinc-950',
-        className
-      )}
-    >
+    <footer className={cn('border-t border-zinc-800/50 bg-zinc-950', className)}>
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Logo y descripción */}
@@ -84,7 +70,7 @@ export function Footer({
           <div className="space-y-4">
             <p className="font-syne font-semibold text-white">Navegación</p>
             <ul className="space-y-2">
-              {footerLinks.map((link) => (
+              {footerLinks.map(link => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -102,7 +88,7 @@ export function Footer({
             <div className="space-y-4">
               <p className="font-syne font-semibold text-white">Conecta</p>
               <ul className="space-y-2">
-                {socialLinks.map((link) => (
+                {socialLinks.map(link => (
                   <li key={link.label}>
                     <a
                       href={link.href}
@@ -133,7 +119,7 @@ export function Footer({
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

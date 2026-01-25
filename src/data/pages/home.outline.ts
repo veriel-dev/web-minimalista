@@ -55,7 +55,7 @@ export const homeOutlineData = {
     title: 'SOBRE MÍ',
     paragraphs: [
       'Desarrollador Full Stack con 4+ años de experiencia en aplicaciones web empresariales.',
-      'Dominio de TypeScript, Node.js, Java y Spring Framework. Experiencia en bases de datos SQL y NoSQL. Apasionado por crear experiencias web únicas y funcionales.',
+      'Dominio de TypeScript, Node.js, Java y Spring Framework. Especializado en arquitectura de sistemas escalables y bien estructurados.',
     ],
     stats: [
       { value: '4+', label: 'Años de experiencia', color: 'violet' as OutlineColor },
@@ -175,18 +175,10 @@ export const homeOutlineData = {
       },
       {
         number: '03',
-        title: 'Task Scheduler',
-        description: 'Servicio de programación de tareas con cron jobs.',
-        tags: ['Java', 'Spring Boot'],
-        color: 'emerald' as OutlineColor,
-        slug: 'task-scheduler-service',
-      },
-      {
-        number: '04',
         title: 'Kodamon',
         description: 'Juego de batallas por turnos estilo RPG.',
         tags: ['React', 'TypeScript'],
-        color: 'rose' as OutlineColor,
+        color: 'emerald' as OutlineColor,
         slug: 'kodamon-digital-battles',
       },
     ] as ProjectPreviewItem[],

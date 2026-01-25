@@ -23,6 +23,19 @@
     "tailwind-merge": "^2.6.0",
     "wouter": "^3.5.1"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{js,cjs,mjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,html}": [
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@types/react": "^18.3.18",
@@ -34,6 +47,7 @@
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "postcss": "^8.5.1",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",

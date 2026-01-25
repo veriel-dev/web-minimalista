@@ -11,12 +11,7 @@ interface SkillsSectionProps {
   className?: string;
 }
 
-export function SkillsSection({
-  skills,
-  languages,
-  achievements,
-  className,
-}: SkillsSectionProps) {
+export function SkillsSection({ skills, languages, achievements, className }: SkillsSectionProps) {
   const shouldReduceMotion = useReducedMotion();
 
   const containerVariants = {
@@ -38,12 +33,7 @@ export function SkillsSection({
 
   return (
     <section className={cn('mb-16 sm:mb-20', className)}>
-      <SectionHeader
-        number="03"
-        title="Competencias Técnicas"
-        color="rose"
-        icon={Code2}
-      />
+      <SectionHeader number="03" title="Competencias Técnicas" color="rose" icon={Code2} />
 
       {/* Skills Grid */}
       <motion.div
@@ -65,9 +55,7 @@ export function SkillsSection({
                 <div className="p-2 bg-rose-500/10 rounded">
                   <Icon size={18} className="text-rose-500" />
                 </div>
-                <h3 className="font-syne font-bold text-white">
-                  {category.title}
-                </h3>
+                <h3 className="font-syne font-bold text-white">{category.title}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -111,10 +99,7 @@ export function SkillsSection({
           <h3 className="font-syne font-bold text-white mb-4">Logros Destacados</h3>
           <ul className="space-y-2">
             {achievements.slice(0, 3).map((achievement, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-2 text-sm text-zinc-400"
-              >
+              <li key={index} className="flex items-start gap-2 text-sm text-zinc-400">
                 <span className="text-rose-500/70 mt-0.5">▸</span>
                 <span className="line-clamp-2">{achievement.text}</span>
               </li>

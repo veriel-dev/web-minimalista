@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       // Fuentes para Outline + Storytelling
@@ -13,15 +10,15 @@ export default {
       },
       // Colores existentes
       backgroundColor: {
-        "main": "#09090b",
-        "main-light": "rgb(24 24 27)",
-        "secondary": "#27272a"
+        main: '#09090b',
+        'main-light': 'rgb(24 24 27)',
+        secondary: '#27272a',
       },
       textColor: {
-        "primary": "#e4e4e7"
+        primary: '#e4e4e7',
       },
       borderColor: {
-        "main": "#27272a"
+        main: '#27272a',
       },
       // Colores Outline
       colors: {
@@ -30,7 +27,7 @@ export default {
           cyan: '#22d3ee',
           emerald: '#34d399',
           rose: '#fb7185',
-        }
+        },
       },
       // Animaciones para scroll storytelling
       animation: {
@@ -55,4 +52,4 @@ export default {
     },
   },
   plugins: [],
-}
+};

@@ -1,16 +1,16 @@
-import { Link } from 'wouter'
-import { cn } from '../../lib/utils'
-import { ChevronRight } from 'lucide-react'
+import { Link } from 'wouter';
+import { cn } from '../../lib/utils';
+import { ChevronRight } from 'lucide-react';
 
 interface BreadcrumbItem {
-  label: string
-  href?: string
+  label: string;
+  href?: string;
 }
 
 interface BreadcrumbProps {
-  items: BreadcrumbItem[]
-  separator?: React.ReactNode
-  className?: string
+  items: BreadcrumbItem[];
+  separator?: React.ReactNode;
+  className?: string;
 }
 
 export function Breadcrumb({
@@ -19,28 +19,20 @@ export function Breadcrumb({
   className,
 }: BreadcrumbProps) {
   return (
-    <nav
-      aria-label="Breadcrumb"
-      className={cn('flex items-center gap-2 text-sm', className)}
-    >
+    <nav aria-label="Breadcrumb" className={cn('flex items-center gap-2 text-sm', className)}>
       <ol className="flex items-center gap-2">
         {items.map((item, index) => {
-          const isLast = index === items.length - 1
+          const isLast = index === items.length - 1;
 
           return (
             <li key={item.label} className="flex items-center gap-2">
               {item.href && !isLast ? (
-                <Link
-                  href={item.href}
-                  className="text-zinc-400 hover:text-white transition-colors"
-                >
+                <Link href={item.href} className="text-zinc-400 hover:text-white transition-colors">
                   {item.label}
                 </Link>
               ) : (
                 <span
-                  className={cn(
-                    isLast ? 'text-white font-medium' : 'text-zinc-400'
-                  )}
+                  className={cn(isLast ? 'text-white font-medium' : 'text-zinc-400')}
                   aria-current={isLast ? 'page' : undefined}
                 >
                   {item.label}
@@ -48,11 +40,11 @@ export function Breadcrumb({
               )}
               {!isLast && separator}
             </li>
-          )
+          );
         })}
       </ol>
     </nav>
-  )
+  );
 }
 
-export default Breadcrumb
+export default Breadcrumb;

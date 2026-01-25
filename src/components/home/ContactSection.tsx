@@ -1,14 +1,14 @@
-import { cn } from '../../lib/utils'
-import { OutlineText } from '../ui'
-import type { SocialLinkItem } from '../../data/pages/home.outline'
+import { cn } from '../../lib/utils';
+import { OutlineText } from '../ui';
+import type { SocialLinkItem } from '../../data/pages/home.outline';
 
 interface ContactSectionProps {
-  title: string
-  subtitle?: string
-  description?: string
-  email: string
-  socialLinks: SocialLinkItem[]
-  className?: string
+  title: string;
+  subtitle?: string;
+  description?: string;
+  email: string;
+  socialLinks: SocialLinkItem[];
+  className?: string;
 }
 
 export function ContactSection({
@@ -50,7 +50,7 @@ export function ContactSection({
 
       {/* Social Links */}
       <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-8 justify-center mt-6 sm:mt-8 md:mt-12">
-        {socialLinks.map((link) => (
+        {socialLinks.map(link => (
           <a
             key={link.platform}
             href={link.href}
@@ -70,7 +70,7 @@ export function ContactSection({
         Disponible para proyectos freelance y oportunidades full-time
       </p>
     </div>
-  )
+  );
 }
 
-export default ContactSection
+export default ContactSection;

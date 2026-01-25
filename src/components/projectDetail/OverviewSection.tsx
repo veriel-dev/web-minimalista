@@ -17,9 +17,7 @@ export function OverviewSection({ content, className }: OverviewSectionProps) {
           SOBRE EL PROYECTO
         </OutlineText>
       </h2>
-      <p className="text-zinc-300 text-base sm:text-lg leading-relaxed max-w-3xl">
-        {content}
-      </p>
+      <p className="text-zinc-300 text-base sm:text-lg leading-relaxed max-w-3xl">{content}</p>
     </section>
   );
 }

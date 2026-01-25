@@ -71,9 +71,7 @@ export default function ProjectDetailPageOutline() {
               img={project.img}
             />
 
-            {project.longDescription && (
-              <OverviewSection content={project.longDescription} />
-            )}
+            {project.longDescription && <OverviewSection content={project.longDescription} />}
 
             <TechStackSection
               technologies={project.technologies}
@@ -82,14 +80,15 @@ export default function ProjectDetailPageOutline() {
 
             <FeaturesSection features={project.features} />
 
-            <ChallengesSection
-              challenges={project.challenges}
-              learnings={project.learnings}
-            />
+            <ChallengesSection challenges={project.challenges} learnings={project.learnings} />
 
             <NavigationSection
-              prevProject={prevProject ? { slug: prevProject.slug, title: prevProject.title } : null}
-              nextProject={nextProject ? { slug: nextProject.slug, title: nextProject.title } : null}
+              prevProject={
+                prevProject ? { slug: prevProject.slug, title: prevProject.title } : null
+              }
+              nextProject={
+                nextProject ? { slug: nextProject.slug, title: nextProject.title } : null
+              }
             />
           </div>
         </div>

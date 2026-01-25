@@ -1,1 +1,1 @@
-export * from "./HeadSEO"
+export * from './HeadSEO';

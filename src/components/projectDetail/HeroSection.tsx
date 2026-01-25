@@ -40,9 +40,7 @@ export function HeroSection({
             </OutlineText>
           </h1>
 
-          <p className="text-zinc-400 text-base sm:text-lg leading-relaxed mb-8">
-            {description}
-          </p>
+          <p className="text-zinc-400 text-base sm:text-lg leading-relaxed mb-8">{description}</p>
 
           {/* Links */}
           <div className="flex flex-wrap gap-4">

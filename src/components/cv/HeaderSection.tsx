@@ -94,9 +94,7 @@ export function HeaderSection({ header, summary, className }: HeaderSectionProps
         variants={variants}
         custom={3}
       >
-        <h2 className="font-syne font-bold text-lg text-white mb-4">
-          {summary.title}
-        </h2>
+        <h2 className="font-syne font-bold text-lg text-white mb-4">{summary.title}</h2>
 
         <div className="space-y-4 mb-6">
           {summary.paragraphs.map((paragraph, index) => (

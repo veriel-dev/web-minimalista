@@ -21,9 +21,7 @@ export function FilterBar({ filters, activeFilter, onFilterChange, className }: 
               onClick={() => onFilterChange(filter.value)}
               className={cn(
                 'px-4 py-2 sm:px-6 sm:py-3 border transition-all duration-300 font-syne text-sm sm:text-base',
-                isActive
-                  ? 'border-current bg-zinc-900'
-                  : 'border-zinc-800 hover:border-zinc-600',
+                isActive ? 'border-current bg-zinc-900' : 'border-zinc-800 hover:border-zinc-600',
               )}
             >
               <OutlineText

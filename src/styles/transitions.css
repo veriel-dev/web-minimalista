@@ -13,7 +13,9 @@
 .page-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  transition:
+    opacity 300ms ease-out,
+    transform 300ms ease-out;
 }
 
 .page-exit {
@@ -24,7 +26,9 @@
 .page-exit-active {
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 300ms ease-in, transform 300ms ease-in;
+  transition:
+    opacity 300ms ease-in,
+    transform 300ms ease-in;
 }
 
 /* --------------------------------------------------------------------------
@@ -59,7 +63,9 @@
 .slide-up-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 400ms ease-out, transform 400ms ease-out;
+  transition:
+    opacity 400ms ease-out,
+    transform 400ms ease-out;
 }
 
 .slide-up-exit {
@@ -70,7 +76,9 @@
 .slide-up-exit-active {
   opacity: 0;
   transform: translateY(-20px);
-  transition: opacity 400ms ease-in, transform 400ms ease-in;
+  transition:
+    opacity 400ms ease-in,
+    transform 400ms ease-in;
 }
 
 /* --------------------------------------------------------------------------
@@ -84,7 +92,9 @@
 .scale-enter-active {
   opacity: 1;
   transform: scale(1);
-  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  transition:
+    opacity 300ms ease-out,
+    transform 300ms ease-out;
 }
 
 .scale-exit {
@@ -95,7 +105,9 @@
 .scale-exit-active {
   opacity: 0;
   transform: scale(0.95);
-  transition: opacity 300ms ease-in, transform 300ms ease-in;
+  transition:
+    opacity 300ms ease-in,
+    transform 300ms ease-in;
 }
 
 /* --------------------------------------------------------------------------
@@ -106,12 +118,24 @@
   transform: translateY(10px);
 }
 
-.stagger-children.visible > *:nth-child(1) { animation: staggerIn 0.4s ease-out 0.0s forwards; }
-.stagger-children.visible > *:nth-child(2) { animation: staggerIn 0.4s ease-out 0.1s forwards; }
-.stagger-children.visible > *:nth-child(3) { animation: staggerIn 0.4s ease-out 0.2s forwards; }
-.stagger-children.visible > *:nth-child(4) { animation: staggerIn 0.4s ease-out 0.3s forwards; }
-.stagger-children.visible > *:nth-child(5) { animation: staggerIn 0.4s ease-out 0.4s forwards; }
-.stagger-children.visible > *:nth-child(6) { animation: staggerIn 0.4s ease-out 0.5s forwards; }
+.stagger-children.visible > *:nth-child(1) {
+  animation: staggerIn 0.4s ease-out 0s forwards;
+}
+.stagger-children.visible > *:nth-child(2) {
+  animation: staggerIn 0.4s ease-out 0.1s forwards;
+}
+.stagger-children.visible > *:nth-child(3) {
+  animation: staggerIn 0.4s ease-out 0.2s forwards;
+}
+.stagger-children.visible > *:nth-child(4) {
+  animation: staggerIn 0.4s ease-out 0.3s forwards;
+}
+.stagger-children.visible > *:nth-child(5) {
+  animation: staggerIn 0.4s ease-out 0.4s forwards;
+}
+.stagger-children.visible > *:nth-child(6) {
+  animation: staggerIn 0.4s ease-out 0.5s forwards;
+}
 
 @keyframes staggerIn {
   to {

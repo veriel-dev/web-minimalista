@@ -25,7 +25,7 @@ const projects: Project[] = [
   /* Clone Spring MVC */
   {
     title: 'Clone Spring MVC',
-    description: 'Clone de esta mítica tecnología',
+    description: 'Framework MVC inspirado en Spring, construido desde cero',
     technologies: ['Node', 'TypeScript', 'Reflect MetaData'],
     featured: true,
     github: 'https://github.com/veriel-dev/clone-spring-mvc',
@@ -51,8 +51,7 @@ const projects: Project[] = [
       },
       {
         name: 'TypeScript',
-        reason:
-          'Tipado estático necesario para implementar decoradores y reflexión de tipos',
+        reason: 'Tipado estático necesario para implementar decoradores y reflexión de tipos',
       },
       {
         name: 'Reflect Metadata',
@@ -68,7 +67,7 @@ const projects: Project[] = [
   /* Kodamon */
   {
     title: 'Kodamon - Digital Battles',
-    description: 'Juego básico por turnos en phaser ',
+    description: 'Juego de batallas por turnos con Phaser',
     technologies: ['Vite', 'TypeScript', 'Phaser'],
     featured: true,
     github: 'https://github.com/veriel-dev/screen-battle',
@@ -154,8 +153,7 @@ const projects: Project[] = [
   /* Task Scheduler Service */
   {
     title: 'Task Scheduler Service',
-    description:
-      'Sistema de colas y tareas programadas con prioridades, DLQ y recuperación automática',
+    description: 'Sistema de colas con prioridades, DLQ y recuperación automática',
     technologies: ['TypeScript', 'Express', 'PostgreSQL', 'Redis', 'Prisma'],
     featured: true,
     github: 'https://github.com/veriel-dev/task-scheduler-service',
@@ -203,7 +201,7 @@ const projects: Project[] = [
   /* Responsive Web */
   {
     title: 'Responsive Web',
-    description: 'Web para visualizar tu web en diferentes resoluciones',
+    description: 'Herramienta para previsualizar webs en múltiples resoluciones',
     technologies: ['React', 'Vite', 'React-Icons'],
     featured: false,
     proyectType: 'frontend',
@@ -239,7 +237,7 @@ const projects: Project[] = [
   /* Old newspaper */
   {
     title: 'Old newspaper',
-    description: 'Maquetación de un antiguo periódico',
+    description: 'Maquetación CSS avanzada recreando un periódico vintage',
     technologies: ['Astro', 'CSS'],
     featured: false,
     proyectType: 'frontend',
@@ -271,7 +269,7 @@ const projects: Project[] = [
   /* Clone Cards Yu-gi-oh */
   {
     title: 'Clone Cards Yu-Gi-oh',
-    description: 'Diseño de cartas similares a la mítica serie YuGiOh',
+    description: 'Cartas coleccionables con efectos 3D holográficos interactivos',
     technologies: ['React', 'CSS', 'Atropos', 'Vite'],
     featured: true,
     proyectType: 'frontend',
@@ -315,7 +313,7 @@ const projects: Project[] = [
   /* Game Boy Color */
   {
     title: 'Game Boy Color',
-    description: 'Maquetación de la mítica video consola',
+    description: 'Recreación pixel-perfect de la Game Boy Color en CSS puro',
     technologies: ['CSS', 'Vite', 'JavaScript'],
     featured: false,
     proyectType: 'frontend',
@@ -351,7 +349,7 @@ const projects: Project[] = [
   /* SPA Web Component */
   {
     title: 'SPA Web Component',
-    description: 'Single Page Application realizada con Web Component',
+    description: 'SPA construida exclusivamente con Web Components nativos',
     technologies: ['Web Components', 'JavaScript', 'CSS'],
     featured: false,
     proyectType: 'frontend',
@@ -391,7 +389,7 @@ const projects: Project[] = [
   /* Web Personal */
   {
     title: 'Web Personal',
-    description: 'Mi actual web hasta el día de hoy',
+    description: 'Portfolio minimalista con diseño Outline y animaciones fluidas',
     technologies: ['React', 'Wouter', 'Vite', 'FramerMotion', 'Tailwind'],
     proyectType: 'frontend',
     featured: false,
@@ -432,6 +430,10 @@ const projects: Project[] = [
         reason: 'Utility-first CSS para desarrollo rápido y consistente',
       },
     ],
+    challenges:
+      'Organizar más de 50 componentes de forma mantenible, estableciendo una arquitectura clara que facilitara la evolución del proyecto.',
+    learnings:
+      'Aprendí a crear un design system consistente desde cero, definiendo tokens, variantes y patrones reutilizables.',
   },
   /* Veriel SO */
   {
@@ -476,7 +478,7 @@ const projects: Project[] = [
   /* Cartas SU-Gi-Oh */
   {
     title: 'Cartas SU-Gi-Oh',
-    description: 'Editor de cartas estilo yu-gi-oh',
+    description: 'Editor visual de cartas estilo Yu-Gi-Oh! con Canvas',
     technologies: ['React', 'Canvas', 'TypeScript', 'Astro', 'IndexedDB'],
     featured: false,
     proyectType: 'frontend',

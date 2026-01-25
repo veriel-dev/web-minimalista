@@ -1,13 +1,13 @@
-import { type ReactNode } from 'react'
-import { cn } from '../../lib/utils'
+import { type ReactNode } from 'react';
+import { cn } from '../../lib/utils';
 
 interface ScrollSectionProps {
-  id: string
-  children: ReactNode
-  className?: string
-  fullHeight?: boolean
-  centered?: boolean
-  padded?: boolean
+  id: string;
+  children: ReactNode;
+  className?: string;
+  fullHeight?: boolean;
+  centered?: boolean;
+  padded?: boolean;
 }
 
 export function ScrollSection({
@@ -26,12 +26,12 @@ export function ScrollSection({
         fullHeight && 'min-h-[100svh] py-20 md:py-0',
         centered && 'flex items-center justify-center',
         padded && 'px-4 sm:px-6 md:px-8 lg:px-12',
-        className
+        className,
       )}
     >
       {children}
     </section>
-  )
+  );
 }
 
-export default ScrollSection
+export default ScrollSection;

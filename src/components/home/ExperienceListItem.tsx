@@ -1,9 +1,9 @@
-import { cn } from '../../lib/utils'
-import type { ExperienceItem } from '../../data/pages/home.outline'
+import { cn } from '../../lib/utils';
+import type { ExperienceItem } from '../../data/pages/home.outline';
 
 interface ExperienceListItemProps extends ExperienceItem {
-  isSelected: boolean
-  onClick: () => void
+  isSelected: boolean;
+  onClick: () => void;
 }
 
 export function ExperienceListItem({
@@ -14,9 +14,7 @@ export function ExperienceListItem({
   isSelected,
   onClick,
 }: ExperienceListItemProps) {
-  const periodText = period.end
-    ? `${period.start} - ${period.end}`
-    : `${period.start} - Presente`
+  const periodText = period.end ? `${period.start} - ${period.end}` : `${period.start} - Presente`;
 
   return (
     <button
@@ -27,13 +25,13 @@ export function ExperienceListItem({
           ? current
             ? 'bg-emerald-500/10 border-emerald-500'
             : 'bg-zinc-800/50 border-white'
-          : 'border-transparent hover:border-zinc-600 hover:bg-zinc-900/50'
+          : 'border-transparent hover:border-zinc-600 hover:bg-zinc-900/50',
       )}
     >
       <span
         className={cn(
           'text-xs font-mono',
-          isSelected && current ? 'text-emerald-400' : 'text-zinc-500'
+          isSelected && current ? 'text-emerald-400' : 'text-zinc-500',
         )}
       >
         {periodText}
@@ -41,14 +39,14 @@ export function ExperienceListItem({
       <span
         className={cn(
           'block font-bold font-syne mt-1',
-          isSelected ? 'text-white' : 'text-zinc-400'
+          isSelected ? 'text-white' : 'text-zinc-400',
         )}
       >
         {position}
       </span>
       <p className="text-zinc-500 text-sm">{company}</p>
     </button>
-  )
+  );
 }
 
-export default ExperienceListItem
+export default ExperienceListItem;

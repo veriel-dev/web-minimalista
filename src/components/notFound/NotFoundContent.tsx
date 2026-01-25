@@ -24,7 +24,7 @@ export function NotFoundContent({ className }: NotFoundContentProps) {
     <div
       className={cn(
         'min-h-screen bg-zinc-950 flex flex-col items-center justify-center px-6 py-12',
-        className
+        className,
       )}
     >
       {/* 404 Number */}

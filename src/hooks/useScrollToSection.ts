@@ -1,18 +1,18 @@
-import { useCallback } from 'react'
+import { useCallback } from 'react';
 
 export function useScrollToSection(): (sectionId: string) => void {
   const scrollTo = useCallback((sectionId: string) => {
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
 
     if (section) {
       section.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
-      })
+      });
     }
-  }, [])
+  }, []);
 
-  return scrollTo
+  return scrollTo;
 }
 
-export default useScrollToSection
+export default useScrollToSection;

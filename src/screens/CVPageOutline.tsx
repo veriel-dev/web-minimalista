@@ -12,40 +12,31 @@ import { cvData } from '../data/pages/cv.outline';
 import { Briefcase, GraduationCap } from 'lucide-react';
 
 const CVPageOutline = memo(() => {
-  const {
-    metadata,
-    header,
-    summary,
-    experience,
-    education,
-    skills,
-    languages,
-    achievements,
-  } = cvData;
+  const { metadata, header, summary, experience, education, skills, languages, achievements } =
+    cvData;
 
-  const breadcrumbItems = [
-    { label: 'Inicio', href: '/' },
-    { label: 'CV' },
-  ];
+  const breadcrumbItems = [{ label: 'Inicio', href: '/' }, { label: 'CV' }];
 
-  const experienceItems = useMemo(() =>
-    experience.map(job => ({
-      title: job.role,
-      subtitle: job.project ? `${job.company} · ${job.project}` : job.company,
-      period: job.period,
-      details: job.achievements,
-    })),
-    [experience]
+  const experienceItems = useMemo(
+    () =>
+      experience.map(job => ({
+        title: job.role,
+        subtitle: job.project ? `${job.company} · ${job.project}` : job.company,
+        period: job.period,
+        details: job.achievements,
+      })),
+    [experience],
   );
 
-  const educationItems = useMemo(() =>
-    education.map(edu => ({
-      title: edu.degree,
-      subtitle: edu.institution,
-      period: edu.period,
-      details: edu.highlights,
-    })),
-    [education]
+  const educationItems = useMemo(
+    () =>
+      education.map(edu => ({
+        title: edu.degree,
+        subtitle: edu.institution,
+        period: edu.period,
+        details: edu.highlights,
+      })),
+    [education],
   );
 
   return (
@@ -58,11 +49,7 @@ const CVPageOutline = memo(() => {
 
       {/* Web version - hidden when printing */}
       <div className="print:hidden">
-        <MainLayoutOutline
-          pageType="static"
-          showProgress={false}
-          footerVariant="full"
-        >
+        <MainLayoutOutline pageType="static" showProgress={false} footerVariant="full">
           <div className="max-w-4xl mx-auto px-6 md:px-8 py-12">
             <Breadcrumb items={breadcrumbItems} className="mb-8" />
 
@@ -84,11 +71,7 @@ const CVPageOutline = memo(() => {
               items={educationItems}
             />
 
-            <SkillsSection
-              skills={skills}
-              languages={languages}
-              achievements={achievements}
-            />
+            <SkillsSection skills={skills} languages={languages} achievements={achievements} />
             <DownloadButton className="mt-12" />
           </div>
         </MainLayoutOutline>
