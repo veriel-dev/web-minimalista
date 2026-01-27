@@ -41,13 +41,10 @@ export function MainLayoutOutline({
 
   const isHomePage = pageType === 'home';
 
-  // Links para la home: secciones + Contacto
   const homeNavLinks = [
-    ...homeSections.slice(0, 5).map(section => ({
-      label: section.label,
-      href: `#${section.id}`,
-    })),
-    { label: 'Contacto', href: '#contact', isCta: true },
+    { label: 'Inicio', href: '/' },
+    { label: 'Proyectos', href: '/projects' },
+    { label: 'CV', href: '/curriculum-vitae' },
   ];
 
   const navLinks = isHomePage ? homeNavLinks : mainNavLinks;
