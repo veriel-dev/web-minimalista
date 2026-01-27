@@ -36,6 +36,16 @@
   -webkit-text-fill-color: var(--outline-color) !important;
 }
 
+/* Logo outline hover effect */
+.logo-outline-hover .logo-path {
+  transition: fill 0.3s ease;
+}
+
+.logo-outline-hover:hover .logo-path,
+.group:hover .logo-outline-hover .logo-path {
+  fill: var(--logo-color);
+}
+
 /* --------------------------------------------------------------------------
    Outline Colors
    -------------------------------------------------------------------------- */

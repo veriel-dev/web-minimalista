@@ -1,8 +1,8 @@
 import { Link } from 'wouter';
 import { cn } from '../../lib/utils';
-import { OutlineText } from './OutlineText';
 import { footerLinks, socialLinks } from '../../config/navigation';
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { Logo } from './Logo';
 
 interface FooterProps {
   variant?: 'full' | 'minimal';
@@ -55,11 +55,9 @@ export function Footer({ variant = 'full', showSocial = true, className }: Foote
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Logo y descripción */}
           <div className="space-y-4">
-            <Link href="/" className="inline-flex items-center">
-              <OutlineText as="span" size="sm" color="violet" hoverFill>
-                V
-              </OutlineText>
-              <span className="font-syne font-bold text-xl text-white">ERIEL</span>
+            <Link href="/" className="group inline-flex items-center gap-2">
+              <Logo size="sm" />
+              <span className="font-syne font-bold text-xl text-white">VERIEL</span>
             </Link>
             <p className="text-sm text-zinc-400 max-w-xs">
               Full Stack Developer apasionado por crear experiencias web únicas y funcionales.

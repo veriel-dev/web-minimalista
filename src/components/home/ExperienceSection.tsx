@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'wouter';
 import { cn } from '../../lib/utils';
 import { OutlineText } from '../ui';
 import { ExperienceListItem } from './ExperienceListItem';
@@ -49,6 +50,15 @@ export function ExperienceSection({ title, experiences, className }: ExperienceS
             className="animate-stagger"
           />
         </div>
+      </div>
+
+      {/* Link al CV */}
+      <div className="text-center mt-8 sm:mt-12">
+        <Link href="/curriculum-vitae" className="inline-block">
+          <OutlineText as="span" size="sm" color="emerald" hoverFill>
+            VER CV COMPLETO →
+          </OutlineText>
+        </Link>
       </div>
     </div>
   );

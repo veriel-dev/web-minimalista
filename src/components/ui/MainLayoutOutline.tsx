@@ -41,12 +41,16 @@ export function MainLayoutOutline({
 
   const isHomePage = pageType === 'home';
 
-  const navLinks = isHomePage
-    ? homeSections.slice(0, 4).map(section => ({
-        label: section.label,
-        href: `#${section.id}`,
-      }))
-    : mainNavLinks;
+  // Links para la home: secciones + Contacto
+  const homeNavLinks = [
+    ...homeSections.slice(0, 5).map(section => ({
+      label: section.label,
+      href: `#${section.id}`,
+    })),
+    { label: 'Contacto', href: '#contact', isCta: true },
+  ];
+
+  const navLinks = isHomePage ? homeNavLinks : mainNavLinks;
 
   return (
     <div
@@ -56,15 +60,7 @@ export function MainLayoutOutline({
         className,
       )}
     >
-      {showNav && (
-        <NavBar
-          links={navLinks}
-          ctaLabel={isHomePage ? 'Contacto' : undefined}
-          ctaHref={isHomePage ? '#contact' : undefined}
-          transparent={isHomePage}
-          blur
-        />
-      )}
+      {showNav && <NavBar links={navLinks} transparent={isHomePage} blur />}
 
       {showProgress && isHomePage && (
         <ProgressIndicator

@@ -1,33 +1,25 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'wouter';
 import { cn } from '../../lib/utils';
-import { OutlineText } from './OutlineText';
 import { Menu, X } from 'lucide-react';
 import { useScrollToSection } from '../../hooks/useScrollToSection';
+import { Logo } from './Logo';
 
 interface NavLink {
   label: string;
   href: string;
   isExternal?: boolean;
+  isCta?: boolean;
 }
 
 interface NavBarProps {
   links: NavLink[];
-  ctaLabel?: string;
-  ctaHref?: string;
   transparent?: boolean;
   blur?: boolean;
   className?: string;
 }
 
-export function NavBar({
-  links,
-  ctaLabel,
-  ctaHref,
-  transparent = true,
-  blur = true,
-  className,
-}: NavBarProps) {
+export function NavBar({ links, transparent = true, blur = true, className }: NavBarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location] = useLocation();
@@ -73,20 +65,22 @@ export function NavBar({
       )}
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-8 h-16 md:h-20 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center">
-            <OutlineText as="span" size="sm" color="white" hoverFill className="text-2xl">
-              V
-            </OutlineText>
-            <span className="font-syne font-bold text-xl text-white">ERIEL</span>
-          </Link>
-        </div>
+        {/* Logo + Brand */}
+        <Link href="/" className="group flex items-center gap-2">
+          <Logo size="sm" className="md:w-10 md:h-10" />
+          <span className="font-syne font-bold text-lg md:text-xl text-white">VERIEL</span>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-8">
           {links.map(link => {
             const isAnchor = link.href.startsWith('#');
+            const ctaStyles =
+              'px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors';
+            const linkStyles = cn(
+              'text-sm transition-colors',
+              isActive(link.href) ? 'text-white font-medium' : 'text-zinc-400 hover:text-white',
+            );
 
             return (
               <li key={link.href}>
@@ -95,7 +89,11 @@ export function NavBar({
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-zinc-400 hover:text-white transition-colors"
+                    className={
+                      link.isCta
+                        ? ctaStyles
+                        : 'text-sm text-zinc-400 hover:text-white transition-colors'
+                    }
                   >
                     {link.label}
                   </a>
@@ -103,20 +101,17 @@ export function NavBar({
                   <a
                     href={link.href}
                     onClick={e => handleAnchorClick(e, link.href)}
-                    className="text-sm text-zinc-400 hover:text-white transition-colors cursor-pointer"
+                    className={cn(
+                      link.isCta
+                        ? ctaStyles
+                        : 'text-sm text-zinc-400 hover:text-white transition-colors',
+                      'cursor-pointer',
+                    )}
                   >
                     {link.label}
                   </a>
                 ) : (
-                  <Link
-                    href={link.href}
-                    className={cn(
-                      'text-sm transition-colors',
-                      isActive(link.href)
-                        ? 'text-white font-medium'
-                        : 'text-zinc-400 hover:text-white',
-                    )}
-                  >
+                  <Link href={link.href} className={link.isCta ? ctaStyles : linkStyles}>
                     {link.label}
                   </Link>
                 )}
@@ -124,28 +119,6 @@ export function NavBar({
             );
           })}
         </ul>
-
-        {/* CTA Button */}
-        <div className="hidden md:flex items-center gap-4">
-          {ctaLabel &&
-            ctaHref &&
-            (ctaHref.startsWith('#') ? (
-              <a
-                href={ctaHref}
-                onClick={e => handleAnchorClick(e, ctaHref)}
-                className="px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors cursor-pointer"
-              >
-                {ctaLabel}
-              </a>
-            ) : (
-              <Link
-                href={ctaHref}
-                className="px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors"
-              >
-                {ctaLabel}
-              </Link>
-            ))}
-        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -171,6 +144,12 @@ export function NavBar({
         <ul className="px-6 py-4 space-y-4">
           {links.map(link => {
             const isAnchor = link.href.startsWith('#');
+            const ctaStyles =
+              'inline-block px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors';
+            const linkStyles = cn(
+              'block transition-colors',
+              isActive(link.href) ? 'text-white font-medium' : 'text-zinc-400 hover:text-white',
+            );
 
             return (
               <li key={link.href}>
@@ -179,7 +158,11 @@ export function NavBar({
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-zinc-400 hover:text-white transition-colors"
+                    className={
+                      link.isCta
+                        ? ctaStyles
+                        : 'block text-zinc-400 hover:text-white transition-colors'
+                    }
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -187,47 +170,24 @@ export function NavBar({
                 ) : isAnchor ? (
                   <a
                     href={link.href}
-                    className="block text-zinc-400 hover:text-white transition-colors cursor-pointer"
+                    className={cn(
+                      link.isCta
+                        ? ctaStyles
+                        : 'block text-zinc-400 hover:text-white transition-colors',
+                      'cursor-pointer',
+                    )}
                     onClick={e => handleAnchorClick(e, link.href)}
                   >
                     {link.label}
                   </a>
                 ) : (
-                  <Link
-                    href={link.href}
-                    className={cn(
-                      'block transition-colors',
-                      isActive(link.href)
-                        ? 'text-white font-medium'
-                        : 'text-zinc-400 hover:text-white',
-                    )}
-                  >
+                  <Link href={link.href} className={link.isCta ? ctaStyles : linkStyles}>
                     {link.label}
                   </Link>
                 )}
               </li>
             );
           })}
-          {ctaLabel && ctaHref && (
-            <li>
-              {ctaHref.startsWith('#') ? (
-                <a
-                  href={ctaHref}
-                  className="inline-block px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors cursor-pointer"
-                  onClick={e => handleAnchorClick(e, ctaHref)}
-                >
-                  {ctaLabel}
-                </a>
-              ) : (
-                <Link
-                  href={ctaHref}
-                  className="inline-block px-4 py-2 text-sm font-medium border border-zinc-700 rounded-full text-white hover:border-white transition-colors"
-                >
-                  {ctaLabel}
-                </Link>
-              )}
-            </li>
-          )}
         </ul>
       </nav>
     </header>
