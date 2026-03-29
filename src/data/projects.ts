@@ -22,6 +22,107 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  /* VulnScan Web */
+  {
+    title: 'VulnScan Web',
+    description: 'Interfaz web para escáner pasivo de vulnerabilidades',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Query'],
+    featured: true,
+    github: 'https://github.com/veriel-cloud/vulnscan',
+    demo: 'https://vulnscan.veriel.dev/',
+    img: '/img/vulnscan-preview.png',
+    proyectType: 'frontend',
+    status: 'completed',
+    slug: 'vulnscan-web',
+    longDescription:
+      'Frontend del escáner pasivo de vulnerabilidades web VulnScan. Permite analizar cualquier URL pública detectando problemas de seguridad en cabeceras HTTP, configuración TLS, cookies, DNS, CORS y más. Incluye progreso en tiempo real, historial de escaneos con paginación e internacionalización (ES/EN).',
+    features: [
+      'Escaneo de URLs con progreso en tiempo real',
+      'Resultados agrupados por categoría con nivel de severidad',
+      'Historial de escaneos con paginación y eliminación',
+      'Internacionalización completa (español e inglés)',
+      'Traducciones específicas por vulnerabilidad',
+      'Contexto del escaneo: servidor, TLS, tecnologías detectadas, WAF',
+      'Diseño responsive con tema oscuro',
+    ],
+    techDetails: [
+      {
+        name: 'React',
+        reason: 'UI reactiva para mostrar resultados de escaneo en tiempo real',
+      },
+      {
+        name: 'TypeScript',
+        reason: 'Tipado estricto para los modelos de vulnerabilidades y respuestas de la API',
+      },
+      {
+        name: 'Vite',
+        reason: 'Build tool con proxy de desarrollo hacia la API y HMR instantáneo',
+      },
+      {
+        name: 'Tailwind CSS',
+        reason: 'Sistema de diseño con variables CSS personalizadas para colores de severidad',
+      },
+      {
+        name: 'React Query',
+        reason: 'Gestión de estado servidor con polling automático durante los escaneos',
+      },
+    ],
+    challenges:
+      'Diseñar un sistema de polling eficiente que actualice los resultados sin sobrecargar la API, y crear un sistema de i18n ligero que traduzca tanto la UI como las descripciones de cada vulnerabilidad.',
+    learnings:
+      'Aprendí a construir interfaces de monitorización en tiempo real con React Query, y a diseñar sistemas de internacionalización con traducciones dinámicas basadas en patrones.',
+  },
+  /* VulnScan API */
+  {
+    title: 'VulnScan API',
+    description: 'API REST y motor de análisis de vulnerabilidades web',
+    technologies: ['Hono', 'TypeScript', 'SQLite', 'Drizzle ORM', 'Node.js'],
+    featured: true,
+    github: 'https://github.com/veriel-cloud/vulnscan',
+    demo: 'https://api.vulnscan.veriel.dev/health',
+    img: '/img/hono-logo.png',
+    proyectType: 'backend',
+    status: 'completed',
+    slug: 'vulnscan-api',
+    longDescription:
+      'Backend del escáner pasivo de vulnerabilidades VulnScan. Arquitectura Clean Architecture con motor de análisis que ejecuta 8 analizadores de seguridad en paralelo. Incluye protección SSRF con resolución DNS, rate limiting, control de concurrencia y graceful shutdown. Desplegado en Railway con volumen persistente para SQLite.',
+    features: [
+      '8 analizadores: cabeceras, TLS, cookies, DNS, CORS, mixed-content, info disclosure, tech fingerprint',
+      'Protección SSRF con validación DNS de IPs privadas',
+      'Rate limiting in-memory (5 req/min por IP)',
+      'Límite de escaneos concurrentes (máx. 5)',
+      'Migraciones automáticas con Drizzle ORM',
+      'Graceful shutdown con espera de escaneos en curso',
+      'Sanitización de errores antes de almacenar en base de datos',
+      'Health check endpoint para monitorización',
+    ],
+    techDetails: [
+      {
+        name: 'Hono',
+        reason: 'Framework web ultraligero con tipado nativo y middleware composable',
+      },
+      {
+        name: 'TypeScript',
+        reason: 'Clean Architecture con tipos estrictos en domain, application e infrastructure',
+      },
+      {
+        name: 'SQLite',
+        reason: 'Base de datos embebida sin infraestructura externa, persistida en volumen Railway',
+      },
+      {
+        name: 'Drizzle ORM',
+        reason: 'ORM con migraciones tipadas y zero-overhead sobre better-sqlite3',
+      },
+      {
+        name: 'Node.js',
+        reason: 'Acceso a módulos nativos (tls, dns) necesarios para los analizadores de seguridad',
+      },
+    ],
+    challenges:
+      'Implementar la protección SSRF resolviendo DNS antes de cada escaneo para bloquear IPs privadas, y manejar correctamente los redirects que podrían apuntar a direcciones internas.',
+    learnings:
+      'Profundicé en Clean Architecture aplicada a TypeScript, seguridad de APIs (SSRF, rate limiting), y despliegue de aplicaciones con SQLite persistente en Railway.',
+  },
   /* Clone Spring MVC */
   {
     title: 'Clone Spring MVC',
