@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'wouter';
 import { cn } from '../../lib/utils';
-import { Menu, X } from 'lucide-react';
+import { IconMenu2, IconX } from '@tabler/icons-react';
 import { useScrollToSection } from '../../hooks/useScrollToSection';
 import { Logo } from './Logo';
 
@@ -128,7 +128,7 @@ export function NavBar({ links, transparent = true, blur = true, className }: Na
           aria-expanded={isMobileMenuOpen}
           aria-controls="mobile-menu"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <IconX size={24} /> : <IconMenu2 size={24} />}
         </button>
       </nav>
 

@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { cn } from '../../lib/utils';
 import { footerLinks, socialLinks } from '../../config/navigation';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
 import { Logo } from './Logo';
 
 interface FooterProps {
@@ -11,9 +11,9 @@ interface FooterProps {
 }
 
 const socialIcons: Record<string, React.ReactNode> = {
-  GitHub: <Github size={20} />,
-  LinkedIn: <Linkedin size={20} />,
-  Email: <Mail size={20} />,
+  GitHub: <IconBrandGithub size={20} />,
+  LinkedIn: <IconBrandLinkedin size={20} />,
+  Email: <IconMail size={20} />,
 };
 
 export function Footer({ variant = 'full', showSocial = true, className }: FooterProps) {

@@ -1,6 +1,6 @@
 import { cn } from '../../lib/utils';
 import { OutlineText } from '../ui';
-import { Check } from 'lucide-react';
+import { IconCheck } from '@tabler/icons-react';
 
 interface FeaturesSectionProps {
   features?: string[];
@@ -27,7 +27,7 @@ export function FeaturesSection({ features, className }: FeaturesSectionProps) {
             key={index}
             className="flex items-start gap-3 p-4 border border-zinc-800 hover:border-zinc-600 transition-colors"
           >
-            <Check size={18} className="text-emerald-400 flex-shrink-0 mt-0.5" />
+            <IconCheck size={18} className="text-emerald-400 flex-shrink-0 mt-0.5" />
             <span className="text-zinc-300 text-sm leading-relaxed">{feature}</span>
           </li>
         ))}

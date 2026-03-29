@@ -1,7 +1,7 @@
 import { cn } from '../../lib/utils';
 import { OutlineText } from '../ui';
 import { Link } from 'wouter';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react';
 
 interface ProjectNav {
   slug: string;
@@ -25,7 +25,10 @@ export function NavigationSection({ prevProject, nextProject, className }: Navig
             className="group p-6 border border-zinc-800 hover:border-zinc-600 transition-colors"
           >
             <div className="flex items-center gap-2 text-zinc-500 text-xs font-mono mb-2">
-              <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
+              <IconArrowLeft
+                size={14}
+                className="group-hover:-translate-x-1 transition-transform"
+              />
               Anterior
             </div>
             <OutlineText as="span" size="sm" color="white" hoverFill>
@@ -44,7 +47,10 @@ export function NavigationSection({ prevProject, nextProject, className }: Navig
           >
             <div className="flex items-center justify-end gap-2 text-zinc-500 text-xs font-mono mb-2">
               Siguiente
-              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+              <IconArrowRight
+                size={14}
+                className="group-hover:translate-x-1 transition-transform"
+              />
             </div>
             <OutlineText as="span" size="sm" color="white" hoverFill>
               {nextProject.title}

@@ -9,7 +9,7 @@ import {
 } from '../components/cv';
 import { HeadSEO } from '../components';
 import { cvData } from '../data/pages/cv.outline';
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { IconBriefcase, IconSchool } from '@tabler/icons-react';
 
 const CVPageOutline = memo(() => {
   const { metadata, header, summary, experience, education, skills, languages, achievements } =
@@ -59,7 +59,7 @@ const CVPageOutline = memo(() => {
               number="01"
               sectionTitle="Experiencia Profesional"
               color="emerald"
-              icon={Briefcase}
+              icon={IconBriefcase}
               items={experienceItems}
             />
 
@@ -67,7 +67,7 @@ const CVPageOutline = memo(() => {
               number="02"
               sectionTitle="Formación Académica"
               color="cyan"
-              icon={GraduationCap}
+              icon={IconSchool}
               items={educationItems}
             />
 

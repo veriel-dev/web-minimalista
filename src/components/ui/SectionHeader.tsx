@@ -1,14 +1,14 @@
 import { type ReactNode } from 'react';
 import { cn } from '../../lib/utils';
 import { OutlineText, type OutlineColor } from './OutlineText';
-import type { LucideIcon } from 'lucide-react';
+import type { Icon } from '@tabler/icons-react';
 
 interface SectionHeaderProps {
   number?: string;
   title: string;
   subtitle?: string;
   color?: OutlineColor;
-  icon?: LucideIcon;
+  icon?: Icon;
   align?: 'left' | 'center' | 'right';
   children?: ReactNode;
   className?: string;

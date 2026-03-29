@@ -1,7 +1,14 @@
 import { cn } from '../../lib/utils';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { OutlineText } from '../ui';
-import { MapPin, Phone, Mail, Linkedin, Github, Globe } from 'lucide-react';
+import {
+  IconMapPin,
+  IconPhone,
+  IconMail,
+  IconBrandLinkedin,
+  IconBrandGithub,
+  IconWorld,
+} from '@tabler/icons-react';
 import type { CVHeader, CVSummary } from '../../data/pages/cv.outline';
 
 interface HeaderSectionProps {
@@ -14,12 +21,17 @@ export function HeaderSection({ header, summary, className }: HeaderSectionProps
   const shouldReduceMotion = useReducedMotion();
 
   const contactItems = [
-    { icon: MapPin, value: header.location, href: null, label: 'Ubicación' },
-    { icon: Phone, value: header.phone, href: `tel:${header.phone}`, label: 'Teléfono' },
-    { icon: Mail, value: header.email, href: `mailto:${header.email}`, label: 'Email' },
-    { icon: Linkedin, value: 'LinkedIn', href: header.linkedin, label: 'Perfil de LinkedIn' },
-    { icon: Github, value: 'GitHub', href: header.github, label: 'Perfil de GitHub' },
-    { icon: Globe, value: 'veriel.dev', href: header.website, label: 'Sitio web personal' },
+    { icon: IconMapPin, value: header.location, href: null, label: 'Ubicación' },
+    { icon: IconPhone, value: header.phone, href: `tel:${header.phone}`, label: 'Teléfono' },
+    { icon: IconMail, value: header.email, href: `mailto:${header.email}`, label: 'Email' },
+    {
+      icon: IconBrandLinkedin,
+      value: 'LinkedIn',
+      href: header.linkedin,
+      label: 'Perfil de LinkedIn',
+    },
+    { icon: IconBrandGithub, value: 'GitHub', href: header.github, label: 'Perfil de GitHub' },
+    { icon: IconWorld, value: 'veriel.dev', href: header.website, label: 'Sitio web personal' },
   ];
 
   const variants = {
@@ -27,7 +39,7 @@ export function HeaderSection({ header, summary, className }: HeaderSectionProps
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.1, duration: 0.5, ease: [0, 0, 0.2, 1] },
+      transition: { delay: i * 0.1, duration: 0.5, ease: [0, 0, 0.2, 1] as const },
     }),
   };
 

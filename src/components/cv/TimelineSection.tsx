@@ -1,7 +1,7 @@
 import { cn } from '../../lib/utils';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { OutlineText, SectionHeader } from '../ui';
-import type { LucideIcon } from 'lucide-react';
+import type { Icon } from '@tabler/icons-react';
 import type { OutlineColor } from '../../config/theme';
 
 interface TimelineItem {
@@ -15,7 +15,7 @@ interface TimelineSectionProps {
   number: string;
   sectionTitle: string;
   color: OutlineColor;
-  icon: LucideIcon;
+  icon: Icon;
   items: TimelineItem[];
   className?: string;
 }
@@ -93,7 +93,7 @@ export function TimelineSection({
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: [0, 0, 0.2, 1] },
+      transition: { duration: 0.5, ease: [0, 0, 0.2, 1] as const },
     },
   };
 

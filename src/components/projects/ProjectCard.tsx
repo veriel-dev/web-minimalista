@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { cn } from '../../lib/utils';
 import { OutlineText } from '../ui';
-import { Github, ExternalLink } from 'lucide-react';
+import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
 import type { ProjectOutline } from '../../data/pages/projects.outline';
 
 interface ProjectCardProps {
@@ -57,7 +57,7 @@ export function ProjectCard({ project, index, className }: ProjectCardProps) {
               className="text-zinc-400 hover:text-white transition-colors"
               aria-label={`Ver código de ${project.title} en GitHub`}
             >
-              <Github size={20} />
+              <IconBrandGithub size={20} />
             </a>
           )}
           {project.demo && (
@@ -68,7 +68,7 @@ export function ProjectCard({ project, index, className }: ProjectCardProps) {
               className="text-zinc-400 hover:text-white transition-colors"
               aria-label={`Ver demo de ${project.title}`}
             >
-              <ExternalLink size={20} />
+              <IconExternalLink size={20} />
             </a>
           )}
         </div>

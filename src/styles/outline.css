@@ -1,6 +1,55 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* ==========================================================================
+   Theme Configuration (migrated from tailwind.config.js)
+   ========================================================================== */
+@theme {
+  --font-syne: 'Syne', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+
+  --color-main: #09090b;
+  --color-main-light: rgb(24 24 27);
+  --color-secondary: #27272a;
+  --color-primary: #e4e4e7;
+
+  --color-outline-violet: #a78bfa;
+  --color-outline-cyan: #22d3ee;
+  --color-outline-emerald: #34d399;
+  --color-outline-rose: #fb7185;
+
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+  --animate-fill-text: fillText 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillText {
+  0% {
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    -webkit-text-fill-color: currentColor;
+  }
+}
 
 /* ==========================================================================
    Outline + Storytelling Styles
@@ -146,7 +195,7 @@
 /* --------------------------------------------------------------------------
    Component Animations
    -------------------------------------------------------------------------- */
-@keyframes fadeIn {
+@keyframes componentFadeIn {
   from {
     opacity: 0;
     transform: translateY(8px);
@@ -158,7 +207,7 @@
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.3s ease-out forwards;
+  animation: componentFadeIn 0.3s ease-out forwards;
 }
 
 /* Staggered animation - elementos secuenciales */

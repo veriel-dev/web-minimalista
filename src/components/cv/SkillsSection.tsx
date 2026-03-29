@@ -1,7 +1,7 @@
 import { cn } from '../../lib/utils';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { SectionHeader } from '../ui';
-import { Code2 } from 'lucide-react';
+import { IconCode } from '@tabler/icons-react';
 import type { CVSkillCategory, CVLanguage, CVAchievement } from '../../data/pages/cv.outline';
 
 interface SkillsSectionProps {
@@ -27,13 +27,13 @@ export function SkillsSection({ skills, languages, achievements, className }: Sk
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] },
+      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] as const },
     },
   };
 
   return (
     <section className={cn('mb-16 sm:mb-20', className)}>
-      <SectionHeader number="03" title="Competencias Técnicas" color="rose" icon={Code2} />
+      <SectionHeader number="03" title="Competencias Técnicas" color="rose" icon={IconCode} />
 
       {/* Skills Grid */}
       <motion.div

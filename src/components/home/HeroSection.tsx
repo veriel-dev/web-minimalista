@@ -1,8 +1,8 @@
 import { Link } from 'wouter';
 import { cn } from '../../lib/utils';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { OutlineText } from '../ui';
-import { ArrowDown } from 'lucide-react';
+import { IconArrowDown } from '@tabler/icons-react';
 import { useScrollToSection } from '../../hooks/useScrollToSection';
 
 interface HeroSectionProps {
@@ -37,7 +37,7 @@ export function HeroSection({
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.12, duration: 0.6, ease: [0, 0, 0.2, 1] },
+      transition: { delay: i * 0.12, duration: 0.6, ease: [0, 0, 0.2, 1] as const },
     }),
   };
 
@@ -137,7 +137,7 @@ export function HeroSection({
           className="text-zinc-400 hover:text-white transition inline-block cursor-pointer"
           aria-label="Ir a la sección Sobre mí"
         >
-          <ArrowDown size={24} />
+          <IconArrowDown size={24} />
         </button>
       </motion.div>
     </div>

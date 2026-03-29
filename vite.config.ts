@@ -1,6 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
+import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
+
+const chunkMap: Record<string, string[]> = {
+  vendor: ['react', 'react-dom', 'motion'],
+  layout: ['MainLayoutOutline'],
+  home: ['HomePageOutline'],
+  cv: ['CVPageOutline'],
+};
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -10,6 +18,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    tailwindcss(),
     visualizer({
       filename: 'stats.html',
       open: false,
@@ -20,11 +29,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'framer-motion'],
-          layout: ['./src/components/ui/MainLayoutOutline'],
-          home: ['./src/screens/HomePageOutline'],
-          cv: ['./src/screens/CVPageOutline'],
+        manualChunks(id) {
+          for (const [chunk, modules] of Object.entries(chunkMap)) {
+            if (modules.some(m => id.includes(m))) return chunk;
+          }
         },
       },
     },

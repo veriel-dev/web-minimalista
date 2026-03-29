@@ -1,6 +1,6 @@
 import { cn } from '../../lib/utils';
 import { OutlineText } from '../ui';
-import { Github, ExternalLink } from 'lucide-react';
+import { IconBrandGithub, IconExternalLink } from '@tabler/icons-react';
 
 interface HeroSectionProps {
   title: string;
@@ -51,7 +51,7 @@ export function HeroSection({
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-zinc-700 hover:border-white text-zinc-300 hover:text-white transition-all"
               >
-                <Github size={18} />
+                <IconBrandGithub size={18} />
                 <span className="font-mono text-sm">Código</span>
               </a>
             )}
@@ -62,7 +62,7 @@ export function HeroSection({
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-zinc-900 hover:bg-zinc-200 transition-all"
               >
-                <ExternalLink size={18} />
+                <IconExternalLink size={18} />
                 <span className="font-mono text-sm">Demo</span>
               </a>
             )}

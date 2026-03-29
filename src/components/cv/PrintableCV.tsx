@@ -1,4 +1,11 @@
-import { MapPin, Phone, Mail, Linkedin, Github, Globe } from 'lucide-react';
+import {
+  IconMapPin,
+  IconPhone,
+  IconMail,
+  IconBrandLinkedin,
+  IconBrandGithub,
+  IconWorld,
+} from '@tabler/icons-react';
 import type { CVData } from '../../data/pages/cv.outline';
 
 interface PrintableCVProps {
@@ -16,27 +23,27 @@ export function PrintableCV({ data }: PrintableCVProps) {
         <h2 className="text-lg font-medium mb-5">{header.title}</h2>
         <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
           <div className="flex items-center gap-2">
-            <MapPin className="w-4 h-4" />
+            <IconMapPin className="w-4 h-4" />
             <span>{header.location}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4" />
+            <IconPhone className="w-4 h-4" />
             <span>{header.phone}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Mail className="w-4 h-4" />
+            <IconMail className="w-4 h-4" />
             <span>{header.email}</span>
           </div>
           <div className="flex items-center gap-2">
-            <Linkedin className="w-4 h-4" />
+            <IconBrandLinkedin className="w-4 h-4" />
             <span>LinkedIn</span>
           </div>
           <div className="flex items-center gap-2">
-            <Github className="w-4 h-4" />
+            <IconBrandGithub className="w-4 h-4" />
             <span>GitHub</span>
           </div>
           <div className="flex items-center gap-2">
-            <Globe className="w-4 h-4" />
+            <IconWorld className="w-4 h-4" />
             <span>veriel.dev</span>
           </div>
         </div>

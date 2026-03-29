@@ -1,8 +1,8 @@
 import { Link } from 'wouter';
 import { cn } from '../../lib/utils';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { OutlineText } from '../ui';
-import { Home, ArrowLeft } from 'lucide-react';
+import { IconHome, IconArrowLeft } from '@tabler/icons-react';
 
 interface NotFoundContentProps {
   className?: string;
@@ -16,7 +16,7 @@ export function NotFoundContent({ className }: NotFoundContentProps) {
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.15, duration: 0.5, ease: [0, 0, 0.2, 1] },
+      transition: { delay: i * 0.15, duration: 0.5, ease: [0, 0, 0.2, 1] as const },
     }),
   };
 
@@ -75,7 +75,7 @@ export function NotFoundContent({ className }: NotFoundContentProps) {
           href="/"
           className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-zinc-900 hover:bg-zinc-200 transition-colors font-mono text-sm"
         >
-          <Home size={18} />
+          <IconHome size={18} />
           Ir al inicio
         </Link>
 
@@ -83,7 +83,7 @@ export function NotFoundContent({ className }: NotFoundContentProps) {
           onClick={() => window.history.back()}
           className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-zinc-700 hover:border-white text-zinc-300 hover:text-white transition-colors font-mono text-sm"
         >
-          <ArrowLeft size={18} />
+          <IconArrowLeft size={18} />
           Volver atrás
         </button>
       </motion.div>

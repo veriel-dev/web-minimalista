@@ -1,5 +1,5 @@
 import { cn } from '../../lib/utils';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { ProjectCard } from './ProjectCard';
 import type { ProjectOutline } from '../../data/pages/projects.outline';
 
@@ -32,7 +32,7 @@ export function ProjectsGrid({ projects, className }: ProjectsGridProps) {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] },
+      transition: { duration: 0.4, ease: [0, 0, 0.2, 1] as const },
     },
   };
 

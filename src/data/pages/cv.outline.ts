@@ -1,5 +1,5 @@
-import type { LucideIcon } from 'lucide-react';
-import { Chrome, Server, Database, Wrench } from 'lucide-react';
+import type { Icon } from '@tabler/icons-react';
+import { IconBrowser, IconServer, IconDatabase, IconTool } from '@tabler/icons-react';
 
 export interface CVHeader {
   name: string;
@@ -35,7 +35,7 @@ export interface CVEducation {
 
 export interface CVSkillCategory {
   title: string;
-  icon: LucideIcon;
+  icon: Icon;
   skills: string[];
 }
 
@@ -163,7 +163,7 @@ export const cvData: CVData = {
   skills: [
     {
       title: 'Frontend',
-      icon: Chrome,
+      icon: IconBrowser,
       skills: [
         'React.js & Next.js',
         'TypeScript & JavaScript (ES6+)',
@@ -175,12 +175,12 @@ export const cvData: CVData = {
     },
     {
       title: 'Backend',
-      icon: Server,
+      icon: IconServer,
       skills: ['Node.js & Express.js & Nest.js', 'Spring Boot & Java', 'Golang (Go)'],
     },
     {
       title: 'Database & Infrastructure',
-      icon: Database,
+      icon: IconDatabase,
       skills: [
         'MySQL & PostgreSQL & Oracle',
         'MongoDB & Redis',
@@ -190,7 +190,7 @@ export const cvData: CVData = {
     },
     {
       title: 'Development Tools',
-      icon: Wrench,
+      icon: IconTool,
       skills: [
         'Git & GitHub',
         'CI/CD (Jenkins, GitHub Actions)',

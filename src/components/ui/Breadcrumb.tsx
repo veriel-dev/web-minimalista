@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { cn } from '../../lib/utils';
-import { ChevronRight } from 'lucide-react';
+import { IconChevronRight } from '@tabler/icons-react';
 
 interface BreadcrumbItem {
   label: string;
@@ -15,7 +15,7 @@ interface BreadcrumbProps {
 
 export function Breadcrumb({
   items,
-  separator = <ChevronRight size={14} className="text-zinc-400" />,
+  separator = <IconChevronRight size={14} className="text-zinc-400" />,
   className,
 }: BreadcrumbProps) {
   return (

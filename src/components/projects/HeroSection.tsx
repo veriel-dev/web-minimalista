@@ -1,5 +1,5 @@
 import { cn } from '../../lib/utils';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion } from 'motion/react';
 import { OutlineText } from '../ui';
 
 interface HeroSectionProps {
@@ -17,7 +17,7 @@ export function HeroSection({ title, subtitle, description, className }: HeroSec
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.1, duration: 0.5, ease: [0, 0, 0.2, 1] },
+      transition: { delay: i * 0.1, duration: 0.5, ease: [0, 0, 0.2, 1] as const },
     }),
   };
 
