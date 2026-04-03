@@ -171,6 +171,7 @@ export const cvData: CVData = {
         'Tailwind CSS & Sass',
         'Web Components',
         'Astro',
+        'Angular 19+',
       ],
     },
     {
@@ -205,7 +206,7 @@ export const cvData: CVData = {
   ],
   achievements: [
     {
-      text: 'Desarrollo full-stack en proyectos estratégicos para grandes corporaciones (Naturgy, AENA) utilizando tecnologías como React, Spring, JavaScript y CMS empresariales',
+      text: 'Desarrollo Oracle Web Center Sites en proyectos estratégicos para grandes corporaciones (Naturgy, AENA) utilizando tecnologías como React, Spring, JavaScript y CMS empresariales',
     },
     {
       text: 'Progresión técnica acelerada desde desarrollador junior hasta analista técnico en 4 años',
