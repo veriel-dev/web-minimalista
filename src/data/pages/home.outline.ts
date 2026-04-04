@@ -125,18 +125,15 @@ export const homeOutlineData = {
     items: [
       // Frontend
       { name: 'React', type: 'Frontend Library', color: 'violet' as OutlineColor },
+      { name: 'Angular', type: 'Frontend Framework', color: 'rose' as OutlineColor },
       { name: 'Astro', type: 'Frontend Framework', color: 'violet' as OutlineColor },
-      { name: 'Next.js', type: 'React Framework', color: 'white' as OutlineColor },
-      { name: 'HTML/CSS', type: 'Web Standards', color: 'cyan' as OutlineColor },
       { name: 'Tailwind', type: 'CSS Framework', color: 'cyan' as OutlineColor },
       { name: 'Vite', type: 'Build Tool', color: 'amber' as OutlineColor },
-      { name: 'Web Components', type: 'Native Components', color: 'violet' as OutlineColor },
       // Backend
       { name: 'Node.js', type: 'Backend Runtime', color: 'emerald' as OutlineColor },
       { name: 'Spring', type: 'Java Framework', color: 'emerald' as OutlineColor },
       { name: 'Express', type: 'Node Framework', color: 'emerald' as OutlineColor },
-      { name: 'NestJS', type: 'Node Framework', color: 'rose' as OutlineColor },
-      { name: 'JSP', type: 'Java Server Pages', color: 'rose' as OutlineColor },
+      { name: 'Hono', type: 'Node Framework', color: 'amber' as OutlineColor },
       { name: 'OWCS', type: 'Enterprise CMS', color: 'rose' as OutlineColor },
       // Database
       { name: 'PostgreSQL', type: 'SQL Database', color: 'blue' as OutlineColor },
@@ -144,7 +141,6 @@ export const homeOutlineData = {
       { name: 'OracleSQL', type: 'Enterprise Database', color: 'rose' as OutlineColor },
       // Languages
       { name: 'TypeScript', type: 'Language', color: 'cyan' as OutlineColor },
-      { name: 'JavaScript', type: 'Language', color: 'amber' as OutlineColor },
       { name: 'Java', type: 'Language', color: 'rose' as OutlineColor },
       { name: 'Go', type: 'Language', color: 'cyan' as OutlineColor },
       // DevOps

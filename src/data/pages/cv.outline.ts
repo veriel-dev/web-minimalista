@@ -83,7 +83,7 @@ export const cvData: CVData = {
     title: 'Perfil Profesional',
     paragraphs: [
       'Software Engineer con más de 4 años de experiencia en aplicaciones web empresariales. He trabajado en portales de alto tráfico para Naturgy y AENA con OWCS como CMS, Spring Framework en backend y JavaScript/TypeScript en frontend.',
-      'Fuera del ámbito corporativo, trabajo con React, Node.js, NestJS y Next.js en proyectos propios. Astro para sitios estáticos y Docker para contenedores.',
+      'Fuera del ámbito corporativo, trabajo con React, Angular, Node.js y Hono en proyectos propios. Astro para sitios estáticos y Docker para contenedores.',
     ],
     highlights: [
       'Portales corporativos de alto tráfico: Naturgy y AENA',
@@ -163,20 +163,12 @@ export const cvData: CVData = {
     {
       title: 'Frontend',
       icon: IconBrowser,
-      skills: [
-        'React.js & Next.js',
-        'TypeScript & JavaScript (ES6+)',
-        'HTML5 & CSS3',
-        'Tailwind CSS & Sass',
-        'Web Components',
-        'Astro',
-        'Angular 19+',
-      ],
+      skills: ['React', 'Angular', 'Astro', 'TypeScript', 'Tailwind CSS'],
     },
     {
       title: 'Backend',
       icon: IconServer,
-      skills: ['Node.js & Express.js & Nest.js', 'Spring Boot & Java', 'Golang (Go)'],
+      skills: ['Node.js & Express', 'Hono', 'Spring Boot & Java', 'Golang (Go)'],
     },
     {
       title: 'Bases de datos e infraestructura',
