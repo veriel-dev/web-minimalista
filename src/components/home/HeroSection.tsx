@@ -115,12 +115,18 @@ export function HeroSection({
           </Link>
         )}
         {ctaSecondary && (
-          <Link
+          <a
             href={ctaSecondary.href}
+            onClick={e => {
+              if (ctaSecondary.href.startsWith('#')) {
+                e.preventDefault();
+                scrollToSection(ctaSecondary.href.slice(1));
+              }
+            }}
             className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-zinc-700 hover:border-white rounded-full transition text-white text-center"
           >
             {ctaSecondary.label}
-          </Link>
+          </a>
         )}
       </motion.div>
 

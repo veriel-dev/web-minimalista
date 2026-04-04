@@ -3,6 +3,7 @@ import { cn } from '../../lib/utils';
 import { footerLinks, socialLinks } from '../../config/navigation';
 import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
 import { Logo } from './Logo';
+import { useScrollToSection } from '../../hooks/useScrollToSection';
 
 interface FooterProps {
   variant?: 'full' | 'minimal';
@@ -18,6 +19,7 @@ const socialIcons: Record<string, React.ReactNode> = {
 
 export function Footer({ variant = 'full', showSocial = true, className }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const scrollToSection = useScrollToSection();
 
   if (variant === 'minimal') {
     return (
@@ -68,16 +70,32 @@ export function Footer({ variant = 'full', showSocial = true, className }: Foote
           <div className="space-y-4">
             <p className="font-syne font-semibold text-white">Navegación</p>
             <ul className="space-y-2">
-              {footerLinks.map(link => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-zinc-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {footerLinks.map(link => {
+                const isAnchor = link.href.includes('#');
+                return (
+                  <li key={link.href}>
+                    {isAnchor ? (
+                      <a
+                        href={link.href}
+                        onClick={e => {
+                          e.preventDefault();
+                          scrollToSection(link.href.split('#')[1]);
+                        }}
+                        className="text-sm text-zinc-400 hover:text-white transition-colors cursor-pointer"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-zinc-400 hover:text-white transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
