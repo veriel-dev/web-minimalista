@@ -23,7 +23,7 @@ export default function ProjectsPageOutline() {
         <title>Proyectos | Veriel.dev</title>
         <meta
           name="description"
-          content="Portfolio de proyectos de desarrollo web: aplicaciones full-stack, juegos, herramientas y experimentos con React, TypeScript, Node.js y más."
+          content="Portfolio de proyectos de desarrollo web: aplicaciones, juegos, herramientas y experimentos con React, TypeScript, Node.js y más."
         />
         <meta
           name="keywords"

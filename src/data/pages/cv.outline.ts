@@ -66,8 +66,8 @@ export interface CVData {
 export const cvData: CVData = {
   metadata: {
     title: 'Veriel Dev | Curriculum Vitae',
-    description: 'Curriculum Vitae del desarrollador full stack Veriel.dev',
-    keywords: 'desarrollador full stack, desarrollo web, frontend, backend, cv, bases de datos',
+    description: 'Curriculum Vitae de Veriel.dev — Software Engineer',
+    keywords: 'software engineer, desarrollo web, frontend, backend, cv, bases de datos',
   },
   header: {
     name: 'Víctor Manuel Ordiales García',
@@ -82,13 +82,13 @@ export const cvData: CVData = {
   summary: {
     title: 'Perfil Profesional',
     paragraphs: [
-      'Lead Developer con más de 4 años de experiencia en aplicaciones web empresariales. Especializado en CMS empresariales (OWCS), backend con Spring Framework y frontend con JavaScript/TypeScript y Web Components.',
-      'En proyectos personales, he ampliado mi stack con React, Node.js, NestJS y Next.js. También trabajo con Astro para sitios estáticos y Docker para contenedores.',
+      'Software Engineer con más de 4 años de experiencia en aplicaciones web empresariales. He trabajado en portales de alto tráfico para Naturgy y AENA con OWCS como CMS, Spring Framework en backend y JavaScript/TypeScript en frontend.',
+      'Fuera del ámbito corporativo, trabajo con React, Node.js, NestJS y Next.js en proyectos propios. Astro para sitios estáticos y Docker para contenedores.',
     ],
     highlights: [
-      'Diseño e implementación de soluciones web eficientes y escalables',
-      'Stack completo: OWCS, Spring, JavaScript/TypeScript, React, Node.js, Docker',
-      'Prácticas ágiles y actualización técnica constante',
+      'Portales corporativos de alto tráfico: Naturgy y AENA',
+      'Backend con Spring/Java, frontend con TypeScript/React',
+      'Progresión de desarrollador a analista técnico en 4 años',
     ],
   },
   experience: [
@@ -154,8 +154,7 @@ export const cvData: CVData = {
       institution: 'Universidad de Extremadura',
       period: '2014 - 2021',
       highlights: [
-        'Especialización en física teórica y experimental',
-        'Énfasis en mecánica cuántica y física estadística',
+        'Física teórica y experimental: mecánica cuántica, física estadística',
         'Formación en programación científica y análisis de datos',
       ],
     },
@@ -180,22 +179,22 @@ export const cvData: CVData = {
       skills: ['Node.js & Express.js & Nest.js', 'Spring Boot & Java', 'Golang (Go)'],
     },
     {
-      title: 'Database & Infrastructure',
+      title: 'Bases de datos e infraestructura',
       icon: IconDatabase,
       skills: [
         'MySQL & PostgreSQL & Oracle',
         'MongoDB & Redis',
-        'ORM & ODM',
-        'Docker & Container Orchestration',
+        'Hibernate, Prisma, Drizzle, Mongoose',
+        'Docker & Kubernetes',
       ],
     },
     {
-      title: 'Development Tools',
+      title: 'Herramientas de desarrollo',
       icon: IconTool,
       skills: [
         'Git & GitHub',
         'CI/CD (Jenkins, GitHub Actions)',
-        'Agile Methodologies (Scrum, Kanban)',
+        'Metodologías ágiles (Scrum, Kanban)',
         'Testing (Jest, Mocha, Chai)',
       ],
     },
@@ -206,15 +205,15 @@ export const cvData: CVData = {
   ],
   achievements: [
     {
-      text: 'Desarrollo Oracle Web Center Sites en proyectos estratégicos para grandes corporaciones (Naturgy, AENA) utilizando tecnologías como React, Spring, JavaScript y CMS empresariales',
+      text: 'Desarrollo con Oracle WebCenter Sites y Spring en portales estratégicos para Naturgy y AENA',
     },
     {
       text: 'Progresión técnica acelerada desde desarrollador junior hasta analista técnico en 4 años',
     },
-    { text: 'Soporte técnico especializado N2/N3 resolviendo incidencias críticas y complejas' },
+    { text: 'Soporte técnico N2/N3 en entornos de producción de alto tráfico' },
     { text: 'Gestión integral de proyectos desde análisis de requisitos hasta implementación' },
     {
-      text: 'Versatilidad tecnológica en ecosistemas frontend (React, jQuery, JSP) y backend (Spring)',
+      text: 'Comunicación directa con cliente en toma de requisitos y soporte técnico',
     },
   ],
 };

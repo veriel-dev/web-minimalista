@@ -60,7 +60,7 @@ export function Footer({ variant = 'full', showSocial = true, className }: Foote
               <span className="font-syne font-bold text-xl text-white">VERIEL</span>
             </Link>
             <p className="text-sm text-zinc-400 max-w-xs">
-              Full Stack Developer apasionado por crear experiencias web únicas y funcionales.
+              Software Engineer — TypeScript, Java, Spring, React.
             </p>
           </div>
 

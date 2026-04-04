@@ -33,7 +33,7 @@ export const projectsOutlineData = {
     title: 'PROYECTOS',
     subtitle: 'Código que cuenta historias',
     description:
-      'Cada proyecto es un desafío resuelto, una idea materializada. Explora mi portfolio de soluciones full-stack.',
+      'Cada proyecto es un desafío resuelto, una idea materializada. Explora lo que he construido.',
   },
   stats: [
     { value: '14+', label: 'Proyectos', color: 'violet' as OutlineColor },

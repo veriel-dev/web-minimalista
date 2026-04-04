@@ -67,7 +67,7 @@ export function ContactSection({
 
       {/* Availability note */}
       <p className="text-zinc-400 text-[10px] sm:text-xs md:text-sm mt-8 sm:mt-12 md:mt-16">
-        Disponible para proyectos freelance y oportunidades full-time
+        Abierto a colaborar en proyectos que necesiten ingeniería sólida
       </p>
     </div>
   );

@@ -16,19 +16,19 @@ export default function HomePageOutline() {
   return (
     <>
       <Helmet>
-        <title>Veriel.dev | Full Stack Developer</title>
+        <title>Veriel.dev | Lead Developer</title>
         <meta
           name="description"
-          content="Portfolio de Víctor Ordiales - Full Stack Developer. Desarrollo web con React, TypeScript, Node.js y más."
+          content="Portfolio de Víctor Ordiales — Software Engineer. Desarrollo web empresarial con React, TypeScript, Spring y más."
         />
         <meta
           name="keywords"
-          content="desarrollador web, full stack, react, typescript, node.js, portfolio"
+          content="software engineer, desarrollo web, react, typescript, spring, portfolio"
         />
-        <meta property="og:title" content="Veriel.dev | Full Stack Developer" />
+        <meta property="og:title" content="Veriel.dev | Lead Developer" />
         <meta
           property="og:description"
-          content="Del código a la experiencia: Construyendo soluciones que importan"
+          content="Ingeniería de software para entornos empresariales y productos web"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://veriel.dev" />

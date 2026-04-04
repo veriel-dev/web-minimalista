@@ -46,7 +46,7 @@ export const homeOutlineData = {
     name: 'Veriel.Dev',
     title: 'Lead',
     titleHighlight: 'Developer',
-    subtitle: 'Del código a la experiencia: Construyendo soluciones que importan',
+    subtitle: 'Ingeniería de software para entornos empresariales y productos web',
     ctaPrimary: { label: 'Ver Proyectos', href: '/projects' },
     ctaSecondary: { label: 'Contactar', href: '#contact' },
   },
@@ -54,8 +54,8 @@ export const homeOutlineData = {
   about: {
     title: 'SOBRE MÍ',
     paragraphs: [
-      'Desarrollador Full Stack con 4+ años de experiencia en aplicaciones web empresariales.',
-      'Dominio de TypeScript, Node.js, Java y Spring Framework. Especializado en arquitectura de sistemas escalables y bien estructurados.',
+      'Software Engineer con 4+ años de experiencia construyendo aplicaciones web empresariales.',
+      'TypeScript y Java como lenguajes principales. Enfocado en arquitectura de sistemas que escalan y se mantienen bien.',
     ],
     stats: [
       { value: '4+', label: 'Años de experiencia', color: 'violet' as OutlineColor },
@@ -126,7 +126,7 @@ export const homeOutlineData = {
       // Frontend
       { name: 'React', type: 'Frontend Library', color: 'violet' as OutlineColor },
       { name: 'Astro', type: 'Frontend Framework', color: 'violet' as OutlineColor },
-      { name: 'Next.js', type: 'Full Stack Framework', color: 'white' as OutlineColor },
+      { name: 'Next.js', type: 'React Framework', color: 'white' as OutlineColor },
       { name: 'HTML/CSS', type: 'Web Standards', color: 'cyan' as OutlineColor },
       { name: 'Tailwind', type: 'CSS Framework', color: 'cyan' as OutlineColor },
       { name: 'Vite', type: 'Build Tool', color: 'amber' as OutlineColor },

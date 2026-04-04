@@ -143,7 +143,7 @@ Components (Sections → UI)
 
 ## Autor
 
-**Veriel.dev** — Software Developer especializado en Oracle WebCenter Sites, JavaScript, TypeScript, Java y Go.
+**Veriel.dev** — Software Engineer especializado en Oracle WebCenter Sites, TypeScript, Java y Go.
 
 ---
 
