@@ -10,3 +10,4 @@ export { NavBar } from './NavBar';
 export { Footer } from './Footer';
 export { Breadcrumb } from './Breadcrumb';
 export { ProgressIndicator } from './ProgressIndicator';
+export { CommandPalette } from './CommandPalette';

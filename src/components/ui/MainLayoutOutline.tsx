@@ -4,6 +4,7 @@ import { cn } from '../../lib/utils';
 import { NavBar } from './NavBar';
 import { Footer } from './Footer';
 import { ProgressIndicator } from './ProgressIndicator';
+import { CommandPalette } from './CommandPalette';
 import { useActiveSection } from '../../hooks/useActiveSection';
 import { useScrollToSection } from '../../hooks/useScrollToSection';
 import { mainNavLinks, homeSections } from '../../config/navigation';
@@ -58,6 +59,7 @@ export function MainLayoutOutline({
       )}
     >
       {showNav && <NavBar links={navLinks} transparent={isHomePage} blur />}
+      <CommandPalette />
 
       {showProgress && isHomePage && (
         <ProgressIndicator
