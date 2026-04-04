@@ -1,6 +1,5 @@
 import { useMemo } from 'react';
 import { useParams } from 'wouter';
-import { Helmet } from 'react-helmet-async';
 import { MainLayoutOutline, Breadcrumb } from '../components/ui';
 import {
   HeroSection,
@@ -10,6 +9,7 @@ import {
   ChallengesSection,
   NavigationSection,
 } from '../components/projectDetail';
+import { HeadSEO } from '../components';
 import projects from '../data/projects';
 import NotFoundPageOutline from './NotFoundPageOutline';
 
@@ -41,19 +41,14 @@ export default function ProjectDetailPageOutline() {
 
   return (
     <>
-      <Helmet>
-        <title>{project.title} | Veriel.dev</title>
-        <meta
-          name="description"
-          content={project.longDescription?.slice(0, 160) || project.description}
-        />
-        <meta name="keywords" content={project.technologies.join(', ')} />
-        <meta property="og:title" content={`${project.title} | Veriel.dev`} />
-        <meta property="og:description" content={project.description} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://veriel.dev/projects/${project.slug}`} />
-        {project.img && <meta property="og:image" content={project.img} />}
-      </Helmet>
+      <HeadSEO
+        title={`${project.title} | Veriel.dev`}
+        description={project.longDescription?.slice(0, 160) || project.description}
+        keywords={project.technologies.join(', ')}
+        ogType="article"
+        ogUrl={`https://veriel.dev/projects/${project.slug}`}
+        ogImage={project.img}
+      />
 
       <MainLayoutOutline showNav showFooter footerVariant="minimal" pageType="detail">
         <div className="min-h-screen pt-24 pb-16">

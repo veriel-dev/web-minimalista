@@ -5,9 +5,20 @@ interface Props {
   description: string;
   keywords: string;
   noIndex?: boolean;
+  ogType?: string;
+  ogUrl?: string;
+  ogImage?: string;
 }
 
-export const HeadSEO = ({ title, description, keywords, noIndex = false }: Props) => {
+export const HeadSEO = ({
+  title,
+  description,
+  keywords,
+  noIndex = false,
+  ogType,
+  ogUrl,
+  ogImage,
+}: Props) => {
   return (
     <Helmet>
       <title>{title}</title>
@@ -18,6 +29,9 @@ export const HeadSEO = ({ title, description, keywords, noIndex = false }: Props
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      {ogType && <meta property="og:type" content={ogType} />}
+      {ogUrl && <meta property="og:url" content={ogUrl} />}
+      {ogImage && <meta property="og:image" content={ogImage} />}
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
     </Helmet>
