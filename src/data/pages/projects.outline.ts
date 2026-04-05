@@ -113,7 +113,7 @@ export const projectsOutlineData = {
       description: 'Sistema de colas y tareas programadas con prioridades y DLQ',
       technologies: ['TypeScript', 'Express', 'PostgreSQL', 'Redis', 'Prisma'],
       category: 'backend' as ProjectCategory,
-      status: 'progress' as const,
+      status: 'completed' as const,
       featured: true,
       github: 'https://github.com/veriel-dev/task-scheduler-service',
       img: '/img/nodejs-logo.svg',
