@@ -44,8 +44,8 @@ export interface SocialLinkItem {
 export const homeOutlineData = {
   hero: {
     name: 'Veriel.Dev',
-    title: 'Lead',
-    titleHighlight: 'Developer',
+    title: 'Senior Software',
+    titleHighlight: 'Engineer',
     subtitle: 'Ingeniería de software para entornos empresariales y productos web',
     ctaPrimary: { label: 'Ver Proyectos', href: '/projects' },
     ctaSecondary: { label: 'Contactar', href: '#contact' },
