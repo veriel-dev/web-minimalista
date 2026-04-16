@@ -71,7 +71,7 @@ export const cvData: CVData = {
   },
   header: {
     name: 'Víctor Manuel Ordiales García',
-    title: 'Lead Developer',
+    title: 'Senior Software Engineer',
     location: 'Casar de Cáceres, Cáceres, España',
     phone: '685394859',
     email: 'vmordiales@gmail.com',

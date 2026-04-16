@@ -16,7 +16,7 @@ export default function HomePageOutline() {
   return (
     <>
       <Helmet>
-        <title>Veriel.dev | Lead Developer</title>
+        <title>Veriel.dev | Senior Software Engineer</title>
         <meta
           name="description"
           content="Portfolio de Víctor Ordiales — Software Engineer. Desarrollo web empresarial con React, TypeScript, Spring y más."
@@ -25,7 +25,7 @@ export default function HomePageOutline() {
           name="keywords"
           content="software engineer, desarrollo web, react, typescript, spring, portfolio"
         />
-        <meta property="og:title" content="Veriel.dev | Lead Developer" />
+        <meta property="og:title" content="Veriel.dev | Senior Software Engineer" />
         <meta
           property="og:description"
           content="Ingeniería de software para entornos empresariales y productos web"
