@@ -36,7 +36,7 @@ export const projectsOutlineData = {
       'Cada proyecto es un desafío resuelto, una idea materializada. Explora lo que he construido.',
   },
   stats: [
-    { value: '14+', label: 'Proyectos', color: 'violet' as OutlineColor },
+    { value: '15+', label: 'Proyectos', color: 'violet' as OutlineColor },
     { value: '30+', label: 'Tecnologías', color: 'cyan' as OutlineColor },
     { value: '4+', label: 'Años', color: 'emerald' as OutlineColor },
   ],
@@ -47,6 +47,17 @@ export const projectsOutlineData = {
     { value: 'games' as ProjectCategory, label: 'Games', color: 'rose' as OutlineColor },
   ],
   projects: [
+    {
+      slug: 'pokemon-champions',
+      title: 'Pokémon Champions',
+      description: 'Toolkit VGC: team builder, calculadora y meta',
+      technologies: ['Astro', 'TypeScript', 'Vitest', 'Biome'],
+      category: 'frontend' as ProjectCategory,
+      status: 'completed' as const,
+      featured: true,
+      demo: 'https://pokemon-champions.veriel.dev/',
+      img: '/img/pokemon-champions-preview.png',
+    },
     {
       slug: 'vulnscan-web',
       title: 'VulnScan Web',

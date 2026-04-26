@@ -22,6 +22,55 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  /* Pokémon Champions (ChampDex) */
+  {
+    title: 'Pokémon Champions',
+    description: 'Toolkit VGC para Pokémon Champions: team builder, calculadora y meta',
+    technologies: ['Astro', 'TypeScript', 'Vitest', 'Biome'],
+    featured: true,
+    demo: 'https://pokemon-champions.veriel.dev/',
+    img: '/img/pokemon-champions-preview.png',
+    proyectType: 'frontend',
+    status: 'completed',
+    slug: 'pokemon-champions',
+    longDescription:
+      'ChampDex es un toolkit competitivo para el formato VGC de Pokémon Champions (Gen 9, dobles 4v4). Construido como sitio estático con Astro 6 y TypeScript estricto, no envía ningún framework JS al cliente: toda la interactividad es vanilla JS sobre las APIs nativas del navegador. Incluye Pokédex, Team Builder, Damage Calculator con la fórmula de Gen 9 completa, análisis del metajuego basado en datos de Smogon y un Battle Bot.',
+    features: [
+      'Pokédex completa con búsqueda, filtros por tipo y detalle por Pokémon',
+      'Team Builder con persistencia local (localStorage) y exportación/importación',
+      'Damage Calculator con la fórmula de Gen 9: STAB, climas, terrenos, screens, ítems, habilidades',
+      'Meta dashboard con uso, core pairs, top moves y win rates derivados de los chaos JSON de Smogon',
+      'Battle Bot para simular combates rápidos',
+      'Pipeline de datos (PokeAPI + Smogon) ejecutado offline con scripts Node',
+      '0 KB de framework JS en el cliente — solo HTML, CSS y vanilla JS',
+      'Tests con Vitest + happy-dom y coverage ≥ 80% sobre src/lib/',
+    ],
+    techDetails: [
+      {
+        name: 'Astro',
+        reason:
+          'SSG file-based con frontmatter en Node y scripts vanilla en el cliente, ideal para un toolkit estático con interactividad puntual',
+      },
+      {
+        name: 'TypeScript',
+        reason:
+          'Modo estricto con astro check para tipar el motor de daño, las naturalezas y los datasets de PokeAPI',
+      },
+      {
+        name: 'Vitest',
+        reason:
+          'Tests unitarios con happy-dom sobre las funciones puras (damage-calc, naturalezas, navegación) con threshold del 80%',
+      },
+      {
+        name: 'Biome',
+        reason: 'Lint y format unificados con configuración compartida y rendimiento muy alto',
+      },
+    ],
+    challenges:
+      'Implementar la fórmula completa de daño de Gen 9 (incluyendo doubles spread, weather, terrain, screens, ítems y habilidades) compartiendo el mismo motor entre el render del servidor y el script cliente del calculator, sin duplicar lógica.',
+    learnings:
+      'Profundicé en los tres contextos de ejecución de Astro (frontmatter, template y client script), en cómo serializar datos del build al cliente vía <script type="application/json">, y en construir un pipeline de datos reproducible a partir de los chaos JSON de Smogon.',
+  },
   /* VulnScan Web */
   {
     title: 'VulnScan Web',
