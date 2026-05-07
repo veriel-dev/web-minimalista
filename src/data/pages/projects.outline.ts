@@ -48,6 +48,17 @@ export const projectsOutlineData = {
   ],
   projects: [
     {
+      slug: 'veriel-ops',
+      title: 'Veriel Ops',
+      description: 'Plataforma DevOps tipo Vercel para despliegues, rollbacks y dominios',
+      technologies: ['Bun', 'Hono', 'React 19', 'TanStack Query', 'Tauri 2', 'SQLite'],
+      category: 'backend' as ProjectCategory,
+      status: 'completed' as const,
+      featured: true,
+      github: 'https://github.com/veriel-cloud/veriel-ops',
+      img: '/img/veriel-ops-preview.png',
+    },
+    {
       slug: 'pokemon-champions',
       title: 'Pokémon Champions',
       description: 'Toolkit VGC: team builder, calculadora y meta',

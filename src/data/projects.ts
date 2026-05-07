@@ -22,6 +22,63 @@ export interface Project {
 }
 
 const projects: Project[] = [
+  /* Veriel Ops */
+  {
+    title: 'Veriel Ops',
+    description: 'Plataforma DevOps tipo Vercel para despliegues, rollbacks y dominios',
+    technologies: ['Bun', 'Hono', 'React 19', 'TanStack Query', 'Tauri 2', 'SQLite'],
+    featured: true,
+    github: 'https://github.com/veriel-cloud/veriel-ops',
+    img: '/img/veriel-ops-preview.png',
+    proyectType: 'backend',
+    status: 'completed',
+    slug: 'veriel-ops',
+    longDescription:
+      'Plataforma de DevOps que orquesta GitHub, Cloudflare Pages/Workers, R2 y DNS detrás de una API en Bun + Hono y un dashboard en React 19 que también funciona como app de escritorio multi-plataforma con Tauri 2. Pensado como panel unificado tipo Vercel para infraestructura propia: despliegues con un click a tres entornos (DES/PRE/PRO), rollback instantáneo desde artefactos en R2 y onboarding de proyectos en un único pipeline.',
+    features: [
+      'Despliegues con un click a tres entornos (DES/PRE/PRO) con tracking en tiempo real vía SSE',
+      'Rollback instantáneo desde artefactos versionados en R2',
+      'Promote release → main con PR automático y guard de cobertura ≥ 80%',
+      'Onboarding de proyectos: crea repo, DNS, Pages y secrets en un único pipeline',
+      'Dashboard reactivo con TanStack Query y tema claro/oscuro + 5 variantes',
+      'App de escritorio nativa multi-plataforma con Tauri 2',
+      'Webhooks de GitHub que disparan workflows reutilizables',
+      'Persistencia con Bun SQLite (WAL, prepared statements)',
+    ],
+    techDetails: [
+      {
+        name: 'Bun',
+        reason:
+          'Runtime ultrarrápido con SQLite nativo, server persistente y soporte de TypeScript sin compilar',
+      },
+      {
+        name: 'Hono',
+        reason: 'Framework web ligero sobre Bun, ideal para API REST con SSE y webhooks de GitHub',
+      },
+      {
+        name: 'React 19',
+        reason:
+          'Dashboard reactivo con las últimas APIs (transitions, actions) sin Redux ni Zustand',
+      },
+      {
+        name: 'TanStack Query',
+        reason: 'Cache servidor, revalidación y SSE como única fuente de estado remoto',
+      },
+      {
+        name: 'Tauri 2',
+        reason: 'Bundle nativo multi-plataforma reutilizando el dashboard web sin Electron',
+      },
+      {
+        name: 'SQLite',
+        reason:
+          'Bun SQLite con WAL para persistencia local de pipelines, jobs y deploys sin infra adicional',
+      },
+    ],
+    challenges:
+      'Orquestar GitHub Actions, Cloudflare Pages, Workers, R2 y DNS desde una sola API manteniendo el progreso de cada deploy en vivo a través de SSE y persistido en SQLite, con rollback instantáneo desde artefactos versionados.',
+    learnings:
+      'Profundicé en Bun como runtime productivo, SSE para tracking en tiempo real de pipelines distribuidos, y empaquetado de aplicaciones de escritorio con Tauri 2 reutilizando el mismo SPA web.',
+  },
   /* Pokémon Champions (ChampDex) */
   {
     title: 'Pokémon Champions',
