@@ -56,7 +56,7 @@ export const projectsOutlineData = {
       status: 'completed' as const,
       featured: true,
       github: 'https://github.com/veriel-cloud/veriel-ops',
-      img: '/img/veriel-ops-preview.png',
+      img: '/img/veriel-ops-preview.webp',
     },
     {
       slug: 'pokemon-champions',
@@ -67,7 +67,7 @@ export const projectsOutlineData = {
       status: 'completed' as const,
       featured: true,
       demo: 'https://pokemon-champions.veriel.dev/',
-      img: '/img/pokemon-champions-preview.png',
+      img: '/img/pokemon-champions-preview.webp',
     },
     {
       slug: 'vulnscan-web',
@@ -79,7 +79,7 @@ export const projectsOutlineData = {
       featured: true,
       github: 'https://github.com/veriel-cloud/vulnscan',
       demo: 'https://vulnscan.veriel.dev/',
-      img: '/img/vulnscan-preview.png',
+      img: '/img/vulnscan-preview.webp',
     },
     {
       slug: 'vulnscan-api',
@@ -91,7 +91,7 @@ export const projectsOutlineData = {
       featured: true,
       github: 'https://github.com/veriel-cloud/vulnscan',
       demo: 'https://api.vulnscan.veriel.dev/health',
-      img: '/img/hono-logo.png',
+      img: '/img/hono-logo.webp',
     },
     {
       slug: 'clone-spring-mvc',
@@ -103,7 +103,7 @@ export const projectsOutlineData = {
       featured: true,
       github: 'https://github.com/veriel-dev/clone-spring-mvc',
       demo: 'https://clone-spring-mvc-production.up.railway.app/',
-      img: '/img/clone-spring-mvc-preview.png',
+      img: '/img/clone-spring-mvc-preview.webp',
     },
     {
       slug: 'kodamon-digital-battles',
@@ -115,7 +115,7 @@ export const projectsOutlineData = {
       featured: true,
       github: 'https://github.com/veriel-dev/screen-battle',
       demo: 'https://kodamon.veriel.dev/',
-      img: '/img/kodamon-digital-battles-preview.png',
+      img: '/img/kodamon-digital-battles-preview.webp',
     },
     {
       slug: 'merit-app-backend',
@@ -150,7 +150,7 @@ export const projectsOutlineData = {
       featured: true,
       github: 'https://github.com/veriel-dev/cards-yu-gi-oh',
       demo: 'https://cards-yu-gi-oh.vercel.app/',
-      img: '/img/card-yu-gi-oh_preview.png',
+      img: '/img/card-yu-gi-oh_preview.webp',
     },
     {
       slug: 'responsive-web',
@@ -162,7 +162,7 @@ export const projectsOutlineData = {
       featured: false,
       github: 'https://github.com/veriel-dev/responsive-web',
       demo: 'https://responsive-web-pi.vercel.app/',
-      img: '/img/responsive-web-preview.png',
+      img: '/img/responsive-web-preview.webp',
     },
     {
       slug: 'old-newspaper',
@@ -174,7 +174,7 @@ export const projectsOutlineData = {
       featured: false,
       github: 'https://github.com/veriel-dev/web-personal-paper',
       demo: 'https://web-personal-paper.vercel.app/',
-      img: '/img/old-newspaper-preview.png',
+      img: '/img/old-newspaper-preview.webp',
     },
     {
       slug: 'gameboy-color',
@@ -186,7 +186,7 @@ export const projectsOutlineData = {
       featured: false,
       github: 'https://github.com/veriel-dev/gameboy-color',
       demo: 'https://gameboy-color.vercel.app/',
-      img: '/img/gameboy-color-preview.png',
+      img: '/img/gameboy-color-preview.webp',
     },
     {
       slug: 'spa-web-component',
@@ -198,7 +198,7 @@ export const projectsOutlineData = {
       featured: false,
       github: 'https://github.com/veriel-dev/spa-vanilla-js',
       demo: 'https://spa-vanilla-js-beryl.vercel.app/',
-      img: '/img/spa-web-component-preview.png',
+      img: '/img/spa-web-component-preview.webp',
     },
     {
       slug: 'veriel-so',
@@ -209,7 +209,7 @@ export const projectsOutlineData = {
       status: 'completed' as const,
       featured: false,
       demo: 'https://os.veriel.dev/',
-      img: '/img/veriel-so-preview.png',
+      img: '/img/veriel-so-preview.webp',
     },
     {
       slug: 'cartas-sugioh',
@@ -231,7 +231,7 @@ export const projectsOutlineData = {
       featured: false,
       github: 'https://github.com/veriel-dev/web-minimalista',
       demo: 'https://veriel.dev/',
-      img: '/img/web-personal.png',
+      img: '/img/web-personal.webp',
     },
   ] as ProjectOutline[],
 };

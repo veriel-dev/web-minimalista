@@ -1,7 +1,8 @@
 import { type ReactNode, type CSSProperties } from 'react';
 import { cn } from '../../lib/utils';
+import { outlineColors, type OutlineColor } from '../../config/theme';
 
-export type OutlineColor = 'white' | 'violet' | 'cyan' | 'emerald' | 'rose' | 'amber' | 'blue';
+export type { OutlineColor };
 export type OutlineSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
 type OutlineTag = 'h1' | 'h2' | 'h3' | 'h4' | 'span' | 'p';
 
@@ -26,16 +27,6 @@ const sizeClasses: Record<OutlineSize, string> = {
   '3xl': 'text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl',
 };
 
-const colorValues: Record<OutlineColor, string> = {
-  white: '#ffffff',
-  violet: '#a78bfa',
-  cyan: '#22d3ee',
-  emerald: '#34d399',
-  rose: '#fb7185',
-  amber: '#fbbf24',
-  blue: '#60a5fa',
-};
-
 export function OutlineText({
   children,
   as: Tag = 'span',
@@ -47,7 +38,7 @@ export function OutlineText({
   className,
 }: OutlineTextProps) {
   const strokeWidth = thick ? '3px' : '2px';
-  const colorValue = colorValues[color];
+  const colorValue = outlineColors[color];
 
   const style: CSSProperties & Record<string, string> = {
     '--outline-color': colorValue,

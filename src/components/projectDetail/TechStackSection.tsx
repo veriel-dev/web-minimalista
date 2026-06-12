@@ -1,10 +1,6 @@
 import { cn } from '../../lib/utils';
 import { OutlineText } from '../ui';
-
-interface TechDetail {
-  name: string;
-  reason: string;
-}
+import { type TechDetail } from '../../data/projects';
 
 interface TechStackSectionProps {
   technologies: string[];

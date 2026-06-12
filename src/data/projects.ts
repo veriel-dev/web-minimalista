@@ -11,7 +11,7 @@ export interface Project {
   github?: string;
   demo?: string;
   img?: string;
-  proyectType: 'frontend' | 'backend' | 'games';
+  projectType: 'frontend' | 'backend' | 'games';
   status: 'completed' | 'progress';
   slug: string;
   longDescription?: string;
@@ -29,8 +29,8 @@ const projects: Project[] = [
     technologies: ['Bun', 'Hono', 'React 19', 'TanStack Query', 'Tauri 2', 'SQLite'],
     featured: true,
     github: 'https://github.com/veriel-cloud/veriel-ops',
-    img: '/img/veriel-ops-preview.png',
-    proyectType: 'backend',
+    img: '/img/veriel-ops-preview.webp',
+    projectType: 'backend',
     status: 'completed',
     slug: 'veriel-ops',
     longDescription:
@@ -86,8 +86,8 @@ const projects: Project[] = [
     technologies: ['Astro', 'TypeScript', 'Vitest', 'Biome'],
     featured: true,
     demo: 'https://pokemon-champions.veriel.dev/',
-    img: '/img/pokemon-champions-preview.png',
-    proyectType: 'frontend',
+    img: '/img/pokemon-champions-preview.webp',
+    projectType: 'frontend',
     status: 'completed',
     slug: 'pokemon-champions',
     longDescription:
@@ -136,8 +136,8 @@ const projects: Project[] = [
     featured: true,
     github: 'https://github.com/veriel-cloud/vulnscan',
     demo: 'https://vulnscan.veriel.dev/',
-    img: '/img/vulnscan-preview.png',
-    proyectType: 'frontend',
+    img: '/img/vulnscan-preview.webp',
+    projectType: 'frontend',
     status: 'completed',
     slug: 'vulnscan-web',
     longDescription:
@@ -186,8 +186,8 @@ const projects: Project[] = [
     featured: true,
     github: 'https://github.com/veriel-cloud/vulnscan',
     demo: 'https://api.vulnscan.veriel.dev/health',
-    img: '/img/hono-logo.png',
-    proyectType: 'backend',
+    img: '/img/hono-logo.webp',
+    projectType: 'backend',
     status: 'completed',
     slug: 'vulnscan-api',
     longDescription:
@@ -237,8 +237,8 @@ const projects: Project[] = [
     featured: true,
     github: 'https://github.com/veriel-dev/clone-spring-mvc',
     demo: 'https://clone-spring-mvc-production.up.railway.app/',
-    img: '/img/clone-spring-mvc-preview.png',
-    proyectType: 'backend',
+    img: '/img/clone-spring-mvc-preview.webp',
+    projectType: 'backend',
     status: 'completed',
     slug: 'clone-spring-mvc',
     longDescription:
@@ -279,8 +279,8 @@ const projects: Project[] = [
     featured: true,
     github: 'https://github.com/veriel-dev/screen-battle',
     demo: 'https://kodamon.veriel.dev/',
-    img: '/img/kodamon-digital-battles-preview.png',
-    proyectType: 'games',
+    img: '/img/kodamon-digital-battles-preview.webp',
+    projectType: 'games',
     status: 'completed',
     slug: 'kodamon-digital-battles',
     longDescription:
@@ -321,7 +321,7 @@ const projects: Project[] = [
     github: 'https://github.com/veriel-dev/cunado-net-backend',
     demo: 'https://cunado-net-backend-production.up.railway.app/api/info',
     img: '/img/nodejs-logo.svg',
-    proyectType: 'backend',
+    projectType: 'backend',
     status: 'completed',
     slug: 'merit-app-backend',
     longDescription:
@@ -365,7 +365,7 @@ const projects: Project[] = [
     featured: true,
     github: 'https://github.com/veriel-dev/task-scheduler-service',
     img: '/img/nodejs-logo.svg',
-    proyectType: 'backend',
+    projectType: 'backend',
     status: 'progress',
     slug: 'task-scheduler-service',
     longDescription:
@@ -411,10 +411,10 @@ const projects: Project[] = [
     description: 'Herramienta para previsualizar webs en múltiples resoluciones',
     technologies: ['React', 'Vite', 'React-Icons'],
     featured: false,
-    proyectType: 'frontend',
+    projectType: 'frontend',
     github: 'https://github.com/veriel-dev/responsive-web',
     demo: 'https://responsive-web-pi.vercel.app/',
-    img: '/img/responsive-web-preview.png',
+    img: '/img/responsive-web-preview.webp',
     status: 'completed',
     slug: 'responsive-web',
     longDescription:
@@ -447,10 +447,10 @@ const projects: Project[] = [
     description: 'Maquetación CSS avanzada recreando un periódico vintage',
     technologies: ['Astro', 'CSS'],
     featured: false,
-    proyectType: 'frontend',
+    projectType: 'frontend',
     github: 'https://github.com/veriel-dev/web-personal-paper',
     demo: 'https://web-personal-paper.vercel.app/',
-    img: '/img/old-newspaper-preview.png',
+    img: '/img/old-newspaper-preview.webp',
     status: 'completed',
     slug: 'old-newspaper',
     longDescription:
@@ -479,10 +479,10 @@ const projects: Project[] = [
     description: 'Cartas coleccionables con efectos 3D holográficos interactivos',
     technologies: ['React', 'CSS', 'Atropos', 'Vite'],
     featured: true,
-    proyectType: 'frontend',
+    projectType: 'frontend',
     github: 'https://github.com/veriel-dev/cards-yu-gi-oh',
     demo: 'https://cards-yu-gi-oh.vercel.app/',
-    img: '/img/card-yu-gi-oh_preview.png',
+    img: '/img/card-yu-gi-oh_preview.webp',
     status: 'completed',
     slug: 'clone-cards-yugioh',
     longDescription:
@@ -523,10 +523,10 @@ const projects: Project[] = [
     description: 'Recreación pixel-perfect de la Game Boy Color en CSS puro',
     technologies: ['CSS', 'Vite', 'JavaScript'],
     featured: false,
-    proyectType: 'frontend',
+    projectType: 'frontend',
     github: 'https://github.com/veriel-dev/gameboy-color',
     demo: 'https://gameboy-color.vercel.app/',
-    img: '/img/gameboy-color-preview.png',
+    img: '/img/gameboy-color-preview.webp',
     status: 'completed',
     slug: 'gameboy-color',
     longDescription:
@@ -559,10 +559,10 @@ const projects: Project[] = [
     description: 'SPA construida exclusivamente con Web Components nativos',
     technologies: ['Web Components', 'JavaScript', 'CSS'],
     featured: false,
-    proyectType: 'frontend',
+    projectType: 'frontend',
     github: 'https://github.com/veriel-dev/spa-vanilla-js',
     demo: 'https://spa-vanilla-js-beryl.vercel.app/',
-    img: '/img/spa-web-component-preview.png',
+    img: '/img/spa-web-component-preview.webp',
     status: 'completed',
     slug: 'spa-web-component',
     longDescription:
@@ -598,12 +598,12 @@ const projects: Project[] = [
     title: 'Old Web Personal',
     description: 'Portfolio minimalista con diseño Outline y animaciones fluidas',
     technologies: ['React', 'Wouter', 'Vite', 'FramerMotion', 'Tailwind'],
-    proyectType: 'frontend',
+    projectType: 'frontend',
     featured: false,
     github: 'https://github.com/veriel-dev/web-minimalista/tree/legacy/matrix',
     demo: 'https://old.veriel.dev/',
     status: 'completed',
-    img: '/img/web-personal.png',
+    img: '/img/web-personal.webp',
     slug: 'old-web-personal',
     longDescription:
       'Portfolio personal con diseño minimalista y temática Matrix. Desarrollado con React y Tailwind CSS, incluye animaciones fluidas con Framer Motion y un diseño completamente responsive.',
@@ -647,10 +647,10 @@ const projects: Project[] = [
     title: 'Veriel SO',
     description: 'Portfolio retro interactivo',
     technologies: ['React', 'TypeScript', 'CSS Modules'],
-    proyectType: 'frontend',
+    projectType: 'frontend',
     featured: false,
     demo: 'https://os.veriel.dev/',
-    img: '/img/veriel-so-preview.png',
+    img: '/img/veriel-so-preview.webp',
     status: 'completed',
     slug: 'veriel-so',
     longDescription:
@@ -688,7 +688,7 @@ const projects: Project[] = [
     description: 'Editor visual de cartas estilo Yu-Gi-Oh! con Canvas',
     technologies: ['React', 'Canvas', 'TypeScript', 'Astro', 'IndexedDB'],
     featured: false,
-    proyectType: 'frontend',
+    projectType: 'frontend',
     demo: 'https://sugioh.veriel.dev/',
     status: 'completed',
     slug: 'cartas-sugioh',
