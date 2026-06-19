@@ -1,3 +1,6 @@
+import projects from '../projects';
+import type { SectionColor } from '../colors';
+
 export interface CVHeader {
   name: string;
   title: string;
@@ -30,11 +33,6 @@ export interface CVEducation {
   highlights: string[];
 }
 
-export interface CVSkillCategory {
-  title: string;
-  skills: string[];
-}
-
 export interface CVLanguage {
   language: string;
   level: string;
@@ -54,10 +52,30 @@ export interface CVData {
   summary: CVSummary;
   experience: CVJob[];
   education: CVEducation[];
-  skills: CVSkillCategory[];
   languages: CVLanguage[];
   achievements: CVAchievement[];
 }
+
+export interface CVStat {
+  value: string;
+  label: string;
+  color: SectionColor;
+}
+
+const CAREER_START = new Date(2021, 3, 1); // Abril 2021 (eCapture3D, primer empleo)
+
+const computeYearsOfExperience = (): string => {
+  const now = new Date();
+  const years = now.getFullYear() - CAREER_START.getFullYear();
+  const monthAdjustment = now.getMonth() < CAREER_START.getMonth() ? -1 : 0;
+  return `${years + monthAdjustment}+`;
+};
+
+export const cvStats: CVStat[] = [
+  { value: computeYearsOfExperience(), label: 'Años de experiencia', color: 'violet' },
+  { value: '20+', label: 'Proyectos profesionales', color: 'cyan' },
+  { value: `${projects.length}`, label: 'Proyectos personales', color: 'emerald' },
+];
 
 export const cvData: CVData = {
   metadata: {
@@ -153,34 +171,6 @@ export const cvData: CVData = {
       highlights: [
         'Física teórica y experimental: mecánica cuántica, física estadística',
         'Formación en programación científica y análisis de datos',
-      ],
-    },
-  ],
-  skills: [
-    {
-      title: 'Frontend',
-      skills: ['React', 'Angular', 'Astro', 'TypeScript', 'Tailwind CSS'],
-    },
-    {
-      title: 'Backend',
-      skills: ['Node.js & Express', 'Hono', 'Spring Boot & Java', 'Golang (Go)'],
-    },
-    {
-      title: 'Bases de datos e infraestructura',
-      skills: [
-        'MySQL & PostgreSQL & Oracle',
-        'MongoDB & Redis',
-        'Hibernate, Prisma, Drizzle, Mongoose',
-        'Docker & Kubernetes',
-      ],
-    },
-    {
-      title: 'Herramientas de desarrollo',
-      skills: [
-        'Git & GitHub',
-        'CI/CD (GitHub Actions)',
-        'Metodologías ágiles (Scrum, Kanban)',
-        'Testing (Jest, Mocha, Chai)',
       ],
     },
   ],

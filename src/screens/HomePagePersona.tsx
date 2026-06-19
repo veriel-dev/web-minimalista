@@ -1,5 +1,4 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { ComicBackground, Wipe } from '../components/persona/primitives';
 import {
   FanItem,
@@ -139,9 +138,7 @@ const HomePagePersona = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      <Helmet>
-        <title>{documentTitle}</title>
-      </Helmet>
+      <title>{documentTitle}</title>
 
       <PrintableCV />
 

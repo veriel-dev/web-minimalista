@@ -7,11 +7,61 @@ import {
   IconWorld,
 } from '@tabler/icons-react';
 import { cvData } from '../../../data/pages/cv';
+import { homeOutlineData, type TechItem } from '../../../data/pages/home';
 
 const cleanHost = (url: string): string => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
+const SKILL_CATEGORIES = [
+  'Lenguajes',
+  'Frontend',
+  'Backend',
+  'Bases de datos',
+  'Herramientas',
+] as const;
+
+type SkillCategory = (typeof SKILL_CATEGORIES)[number];
+
+const TYPE_TO_CATEGORY: Record<string, SkillCategory> = {
+  Language: 'Lenguajes',
+  'Frontend Library': 'Frontend',
+  'Frontend Framework': 'Frontend',
+  'CSS Framework': 'Frontend',
+  'Build Tool': 'Frontend',
+  'Backend Runtime': 'Backend',
+  'Java Framework': 'Backend',
+  'Node Framework': 'Backend',
+  'Enterprise CMS': 'Backend',
+  'SQL Database': 'Bases de datos',
+  'NoSQL Database': 'Bases de datos',
+  'Enterprise Database': 'Bases de datos',
+  'Embedded SQL': 'Bases de datos',
+  'In-memory Store': 'Bases de datos',
+  ORM: 'Bases de datos',
+  'Version Control': 'Herramientas',
+  Containerization: 'Herramientas',
+  'Edge / Hosting': 'Herramientas',
+  'CI/CD': 'Herramientas',
+  'Desktop Apps': 'Herramientas',
+  'Game Engine': 'Herramientas',
+};
+
+const groupSkillsByCategory = (
+  items: TechItem[],
+): Array<{ category: SkillCategory; skills: string[] }> => {
+  const map = new Map<SkillCategory, string[]>();
+  for (const cat of SKILL_CATEGORIES) map.set(cat, []);
+  for (const item of items) {
+    const category = TYPE_TO_CATEGORY[item.type];
+    if (category) map.get(category)?.push(item.name);
+  }
+  return SKILL_CATEGORIES.map(category => ({ category, skills: map.get(category) ?? [] })).filter(
+    group => group.skills.length > 0,
+  );
+};
+
 const PrintableCV = () => {
-  const { header, summary, experience, education, skills, languages, achievements } = cvData;
+  const { header, summary, experience, education, languages, achievements } = cvData;
+  const skillGroups = groupSkillsByCategory(homeOutlineData.techStack.items);
 
   return (
     <div className="hidden print:block bg-white min-h-screen text-gray-900">
@@ -124,17 +174,13 @@ const PrintableCV = () => {
             Competencias Técnicas
           </h2>
           <div className="grid grid-cols-2 gap-6">
-            {skills.map(category => (
-              <div key={category.title} className="border-l-2 border-gray-200 pl-4">
+            {skillGroups.map(group => (
+              <div key={group.category} className="border-l-2 border-gray-200 pl-4">
                 <h3 className="text-sm font-semibold text-gray-900 mb-2 uppercase tracking-wider">
-                  {category.title}
+                  {group.category}
                 </h3>
-                <div className="space-y-0.5">
-                  {category.skills.map(skill => (
-                    <div key={skill} className="text-xs text-gray-600">
-                      {skill}
-                    </div>
-                  ))}
+                <div className="text-xs text-gray-600 leading-relaxed">
+                  {group.skills.join(' · ')}
                 </div>
               </div>
             ))}

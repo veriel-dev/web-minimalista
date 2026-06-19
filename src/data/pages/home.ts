@@ -1,17 +1,5 @@
 import type { SectionColor } from '../colors';
 
-export interface StatItem {
-  value: string;
-  label: string;
-  color: SectionColor;
-}
-
-export interface SkillItem {
-  name: string;
-  category: 'frontend' | 'backend' | 'database' | 'languages' | 'devops';
-  color: SectionColor;
-}
-
 export interface TechItem {
   name: string;
   type: string;
@@ -50,11 +38,6 @@ export const homeOutlineData = {
       'Aterricé en el código por hartazgo, no por vocación. Empecé a aprender a programar harto de la carrera de Física y el reto técnico me enganchó. Llevo aquí 5 años.',
       'Tres obsesiones se repiten en cada proyecto: construir desde cero para entender qué pasa por debajo, arquitectura que se lee sola y sistema de diseño hasta el último pixel.',
       'Las recreaciones (Game Boy, Yu-Gi-Oh!, OS retro, periódico) son ejercicios de gimnasio. ¿Puedo hacerlo solo con CSS? ¿Sin librerías? ¿Pixel-perfect? Eso. Sin pretensiones.',
-    ],
-    stats: [
-      { value: '5+', label: 'Años de experiencia', color: 'violet' as SectionColor },
-      { value: '20+', label: 'Proyectos profesionales', color: 'cyan' as SectionColor },
-      { value: '16', label: 'Proyectos personales', color: 'emerald' as SectionColor },
     ],
   },
 

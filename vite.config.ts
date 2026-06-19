@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 const chunkMap: Record<string, string[]> = {
-  vendor: ['react', 'react-dom', 'react-helmet-async', 'wouter'],
+  vendor: ['react', 'react-dom', 'wouter'],
   icons: ['@tabler/icons-react'],
 };
 

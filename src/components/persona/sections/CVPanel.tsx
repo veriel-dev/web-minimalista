@@ -2,8 +2,7 @@ import type { ReactNode } from 'react';
 import { PhantomButton, RansomText } from '../primitives';
 import { accentVar } from '../accent';
 import type { SectionColor } from '../../../data/colors';
-import { cvData } from '../../../data/pages/cv';
-import { homeOutlineData } from '../../../data/pages/home';
+import { cvData, cvStats } from '../../../data/pages/cv';
 
 const JOB_ACCENTS: SectionColor[] = ['rose', 'violet', 'emerald', 'cyan', 'amber'];
 
@@ -31,7 +30,6 @@ const CVHeading = ({ children }: { children: ReactNode }) => (
 
 const CVPanel = () => {
   const cv = cvData;
-  const { about } = homeOutlineData;
 
   return (
     <div>
@@ -82,7 +80,7 @@ const CVPanel = () => {
       ))}
 
       <div className="flex gap-2 md:gap-3 my-5 flex-wrap">
-        {about.stats.map(st => (
+        {cvStats.map(st => (
           <div
             key={st.label}
             className="flex-1 border p-3 md:p-4"
