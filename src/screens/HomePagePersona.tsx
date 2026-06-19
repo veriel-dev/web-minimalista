@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { ComicBackground } from '../components/persona/primitives';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { ComicBackground, Wipe } from '../components/persona/primitives';
 import {
   FanItem,
   FanReveal,
@@ -35,21 +35,95 @@ const HomePagePersona = () => {
   const [openProject, setOpenProject] = useState<{ project: Project; color: SectionColor } | null>(
     null,
   );
-  const { muted, toggleMute } = useSfx();
+  const [wipe, setWipe] = useState<{ label: string | null } | null>(null);
+  const { muted, toggleMute, tick, confirm } = useSfx();
+
+  const timersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const clearTimers = useCallback(() => {
+    timersRef.current.forEach(id => clearTimeout(id));
+    timersRef.current = [];
+  }, []);
+
+  useEffect(() => clearTimers, [clearTimers]);
 
   const hoveredSection = personaSections.find(s => s.id === hovered) ?? personaSections[0];
 
-  const handleNavigate = (id: PersonaSectionId) => {
-    setOpenSection(id);
-  };
+  const navTo = useCallback(
+    (id: PersonaSectionId | null) => {
+      confirm();
+      clearTimers();
+      const target = id ? personaSections.find(s => s.id === id) : null;
+      setWipe({ label: target ? target.label : null });
+      timersRef.current = [
+        setTimeout(() => setOpenSection(id), 520),
+        setTimeout(() => setWipe(null), 1150),
+      ];
+    },
+    [clearTimers, confirm],
+  );
 
-  const handleOpenProject = (project: Project) => {
-    const featured = personaSections.findIndex(s => s.id === 'projects');
-    setOpenProject({
-      project,
-      color: PROJECT_ACCENTS[featured % PROJECT_ACCENTS.length],
-    });
-  };
+  const handleHover = useCallback(
+    (id: PersonaSectionId) => {
+      if (id !== hovered) {
+        setHovered(id);
+        tick();
+      }
+    },
+    [hovered, tick],
+  );
+
+  const handleOpenProject = useCallback(
+    (project: Project) => {
+      confirm();
+      const idx = personaSections.findIndex(s => s.id === 'projects');
+      setOpenProject({
+        project,
+        color: PROJECT_ACCENTS[idx % PROJECT_ACCENTS.length],
+      });
+    },
+    [confirm],
+  );
+
+  const handleCloseProject = useCallback(() => {
+    confirm();
+    setOpenProject(null);
+  }, [confirm]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (openProject) {
+        if (e.key === 'Escape') handleCloseProject();
+        return;
+      }
+      if (openSection) {
+        if (e.key === 'Escape') navTo(null);
+        return;
+      }
+      if (!entered) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setEntered(true);
+        }
+        return;
+      }
+      const idx = personaSections.findIndex(s => s.id === hovered);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        handleHover(personaSections[(idx + 1) % personaSections.length].id);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        handleHover(
+          personaSections[(idx - 1 + personaSections.length) % personaSections.length].id,
+        );
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        navTo(hovered);
+      }
+    };
+
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [entered, handleCloseProject, handleHover, hovered, navTo, openProject, openSection]);
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
@@ -88,8 +162,8 @@ const HomePagePersona = () => {
                     <FanItem
                       section={s}
                       active={hovered === s.id}
-                      onHover={() => setHovered(s.id)}
-                      onOpen={() => setOpenSection(s.id)}
+                      onHover={() => handleHover(s.id)}
+                      onOpen={() => navTo(s.id)}
                     />
                   </FanReveal>
                 ))}
@@ -106,8 +180,8 @@ const HomePagePersona = () => {
         )}
 
         {openSection && (
-          <TakeoverFrame sectionId={openSection} onClose={() => setOpenSection(null)}>
-            {openSection === 'hero' && <HeroPanel onNavigate={handleNavigate} />}
+          <TakeoverFrame sectionId={openSection} onClose={() => navTo(null)}>
+            {openSection === 'hero' && <HeroPanel onNavigate={navTo} />}
             {openSection === 'about' && <AboutPanel />}
             {openSection === 'experience' && <CVPanel />}
             {openSection === 'skills' && <SkillsPanel />}
@@ -120,9 +194,11 @@ const HomePagePersona = () => {
           <ProjectDetail
             project={openProject.project}
             color={openProject.color}
-            onClose={() => setOpenProject(null)}
+            onClose={handleCloseProject}
           />
         )}
+
+        {wipe && <Wipe label={wipe.label} />}
       </div>
     </div>
   );
