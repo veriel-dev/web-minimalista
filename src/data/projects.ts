@@ -25,7 +25,8 @@ const projects: Project[] = [
   /* Veriel Ops */
   {
     title: 'Veriel Ops',
-    description: 'Plataforma DevOps tipo Vercel para despliegues, rollbacks y dominios',
+    description:
+      'Panel DevOps tipo Vercel para mi infraestructura: despliegues, rollbacks y dominios en un click.',
     technologies: ['Bun', 'Hono', 'React 19', 'TanStack Query', 'Tauri 2', 'SQLite'],
     featured: true,
     github: 'https://github.com/veriel-cloud/veriel-ops',
@@ -82,7 +83,7 @@ const projects: Project[] = [
   /* Pokémon Champions (ChampDex) */
   {
     title: 'Pokémon Champions',
-    description: 'Toolkit VGC para Pokémon Champions: team builder, calculadora y meta',
+    description: 'Toolkit competitivo VGC: team builder, damage calc con fórmula Gen 9 y meta.',
     technologies: ['Astro', 'TypeScript', 'Vitest', 'Biome'],
     featured: true,
     demo: 'https://pokemon-champions.veriel.dev/',
@@ -91,7 +92,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'pokemon-champions',
     longDescription:
-      'ChampDex es un toolkit competitivo para el formato VGC de Pokémon Champions (Gen 9, dobles 4v4). Construido como sitio estático con Astro 6 y TypeScript estricto, no envía ningún framework JS al cliente: toda la interactividad es vanilla JS sobre las APIs nativas del navegador. Incluye Pokédex, Team Builder, Damage Calculator con la fórmula de Gen 9 completa, análisis del metajuego basado en datos de Smogon y un Battle Bot.',
+      'Toolkit competitivo para el formato VGC de Pokémon Champions (Gen 9, dobles 4v4). Sitio estático con Astro: 0 KB de framework JS en el cliente — toda la interactividad es vanilla JS. Incluye Pokédex, Team Builder con persistencia local, Damage Calculator con la fórmula completa de Gen 9 (climas, terrenos, screens, ítems, habilidades) y meta dashboard sobre los datos chaos de Smogon.',
     features: [
       'Pokédex completa con búsqueda, filtros por tipo y detalle por Pokémon',
       'Team Builder con persistencia local (localStorage) y exportación/importación',
@@ -131,7 +132,8 @@ const projects: Project[] = [
   /* VulnScan Web */
   {
     title: 'VulnScan Web',
-    description: 'Interfaz web para escáner pasivo de vulnerabilidades',
+    description:
+      'Frontend del escáner pasivo de vulnerabilidades: cabeceras, TLS, cookies, DNS, CORS.',
     technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Query'],
     featured: true,
     github: 'https://github.com/veriel-cloud/vulnscan',
@@ -181,7 +183,7 @@ const projects: Project[] = [
   /* VulnScan API */
   {
     title: 'VulnScan API',
-    description: 'API REST y motor de análisis de vulnerabilidades web',
+    description: 'Backend del escáner pasivo con 8 analizadores en paralelo y protección SSRF.',
     technologies: ['Hono', 'TypeScript', 'SQLite', 'Drizzle ORM', 'Node.js'],
     featured: true,
     github: 'https://github.com/veriel-cloud/vulnscan',
@@ -232,7 +234,8 @@ const projects: Project[] = [
   /* Clone Spring MVC */
   {
     title: 'Clone Spring MVC',
-    description: 'Framework MVC inspirado en Spring, construido desde cero',
+    description:
+      'Clon de Spring MVC desde cero en Node + TypeScript: decoradores, IoC y middleware.',
     technologies: ['Node', 'TypeScript', 'Reflect MetaData'],
     featured: true,
     github: 'https://github.com/veriel-dev/clone-spring-mvc',
@@ -242,7 +245,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'clone-spring-mvc',
     longDescription:
-      'Implementación desde cero del patrón MVC inspirado en Spring Framework de Java, pero desarrollado completamente en Node.js con TypeScript. Este proyecto demuestra cómo funcionan internamente los decoradores, la inyección de dependencias y el enrutamiento basado en anotaciones que hacen tan popular a Spring.',
+      'Implementación desde cero del patrón MVC de Spring en Node + TypeScript: decoradores de ruta (@Get, @Post, @Put, @Delete), contenedor IoC para inyección de dependencias, middleware composable y validación automática de parámetros. Hecho para entender por dentro la "magia" que hacen Spring o NestJS.',
     features: [
       'Decoradores personalizados para rutas (@Get, @Post, @Put, @Delete)',
       'Inyección de dependencias con contenedor IoC',
@@ -274,7 +277,7 @@ const projects: Project[] = [
   /* Kodamon */
   {
     title: 'Kodamon - Digital Battles',
-    description: 'Juego de batallas por turnos con Phaser',
+    description: 'Batallas por turnos estilo RPG japonés clásico con Phaser 3.',
     technologies: ['Vite', 'TypeScript', 'Phaser'],
     featured: true,
     github: 'https://github.com/veriel-dev/screen-battle',
@@ -284,7 +287,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'kodamon-digital-battles',
     longDescription:
-      'Juego de batallas por turnos inspirado en los clásicos RPG japoneses. Los jugadores eligen su criatura digital y se enfrentan en combates estratégicos donde cada decisión cuenta. Desarrollado con Phaser 3, el proyecto explora mecánicas de juego, animaciones sprite y gestión de estados.',
+      'Batallas por turnos inspiradas en los RPG japoneses de toda la vida. Selección de criaturas con stats únicos, sistema de daño, animaciones sprite y máquina de estados — todo sobre Phaser 3 con TypeScript estricto.',
     features: [
       'Sistema de combate por turnos',
       'Selección de criaturas con stats únicos',
@@ -315,7 +318,7 @@ const projects: Project[] = [
   /* Merit App Backend */
   {
     title: 'Merit App Backend',
-    description: 'API REST para sistema de méritos grupales con votación en tiempo real',
+    description: 'API REST de méritos grupales con votaciones en tiempo real vía WebSockets.',
     technologies: ['Node.js', 'Express', 'MongoDB', 'Socket.io'],
     featured: true,
     github: 'https://github.com/veriel-dev/cunado-net-backend',
@@ -325,7 +328,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'merit-app-backend',
     longDescription:
-      'Backend completo para una aplicación de gestión de méritos en grupos. Permite crear grupos, añadir miembros y realizar votaciones en tiempo real mediante WebSockets. Incluye autenticación, autorización y persistencia en MongoDB.',
+      'Backend para una app de méritos en grupos: crear grupos, añadir miembros y votar en tiempo real vía WebSockets. Autenticación JWT con refresh tokens, validación con Joi, roles y permisos, persistencia en MongoDB y documentación con Swagger.',
     features: [
       'API RESTful completa con CRUD de usuarios y grupos',
       'Autenticación JWT con refresh tokens',
@@ -360,7 +363,7 @@ const projects: Project[] = [
   /* Task Scheduler Service */
   {
     title: 'Task Scheduler Service',
-    description: 'Sistema de colas con prioridades, DLQ y recuperación automática',
+    description: 'Cola de tareas con prioridades, reintentos exponenciales y Dead Letter Queue.',
     technologies: ['TypeScript', 'Express', 'PostgreSQL', 'Redis', 'Prisma'],
     featured: true,
     github: 'https://github.com/veriel-dev/task-scheduler-service',
@@ -369,7 +372,7 @@ const projects: Project[] = [
     status: 'progress',
     slug: 'task-scheduler-service',
     longDescription:
-      'Servicio de programación de tareas empresarial con soporte para colas de mensajes, prioridades, reintentos automáticos y Dead Letter Queue (DLQ). Diseñado para manejar trabajos en segundo plano de forma confiable y escalable.',
+      'Servicio de scheduling para trabajos en segundo plano: colas con prioridad, reintentos automáticos con backoff exponencial, Dead Letter Queue para fallos persistentes y dashboard de monitorización. PostgreSQL para persistencia, Redis para cola en memoria y bloqueos distribuidos.',
     features: [
       'Programación de tareas con cron expressions',
       'Sistema de colas con prioridades',
@@ -408,7 +411,7 @@ const projects: Project[] = [
   /* Responsive Web */
   {
     title: 'Responsive Web',
-    description: 'Herramienta para previsualizar webs en múltiples resoluciones',
+    description: 'Previsualizador de webs en múltiples viewports a la vez para QA responsive.',
     technologies: ['React', 'Vite', 'React-Icons'],
     featured: false,
     projectType: 'frontend',
@@ -418,7 +421,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'responsive-web',
     longDescription:
-      'Herramienta de desarrollo que permite previsualizar cualquier sitio web en múltiples resoluciones de pantalla simultáneamente. Útil para desarrolladores y diseñadores que necesitan verificar el comportamiento responsive de sus proyectos.',
+      'Mini-herramienta de QA: cargas una URL y la previsualizas en varios viewports a la vez (móvil, tablet, desktop o resoluciones personalizadas) con rotación y edición de URL en vivo. Pensada para revisar el comportamiento responsive sin tener que cambiar DevTools cada dos segundos.',
     features: [
       'Previsualización en múltiples resoluciones',
       'Dispositivos predefinidos (móvil, tablet, desktop)',
@@ -444,7 +447,7 @@ const projects: Project[] = [
   /* Old newspaper */
   {
     title: 'Old newspaper',
-    description: 'Maquetación CSS avanzada recreando un periódico vintage',
+    description: 'Maquetación tipo periódico vintage solo con CSS Grid y multi-column.',
     technologies: ['Astro', 'CSS'],
     featured: false,
     projectType: 'frontend',
@@ -454,7 +457,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'old-newspaper',
     longDescription:
-      'Ejercicio de maquetación CSS avanzada recreando el diseño de un periódico antiguo. El proyecto explora técnicas de layout como CSS Grid y multi-column para lograr un diseño editorial auténtico.',
+      'Ejercicio de maquetación editorial: recrear un periódico antiguo solo con CSS Grid, multi-column y tipografía web. Sin JavaScript, sin trampas. Astro genera el HTML estático y el CSS hace el trabajo.',
     features: [
       'Layout multi-columna estilo periódico',
       'Tipografía vintage cuidadosamente seleccionada',
@@ -476,7 +479,7 @@ const projects: Project[] = [
   /* Clone Cards Yu-gi-oh */
   {
     title: 'Clone Cards Yu-Gi-oh',
-    description: 'Cartas coleccionables con efectos 3D holográficos interactivos',
+    description: 'Cartas Yu-Gi-Oh! con parallax 3D y brillo holográfico que siguen al cursor.',
     technologies: ['React', 'CSS', 'Atropos', 'Vite'],
     featured: true,
     projectType: 'frontend',
@@ -486,7 +489,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'clone-cards-yugioh',
     longDescription:
-      'Recreación visual de las icónicas cartas del juego Yu-Gi-Oh! con efectos 3D interactivos. Cada carta responde al movimiento del cursor creando un efecto de profundidad y brillo holográfico similar a las cartas coleccionables reales.',
+      'Recreación visual de las cartas icónicas de Yu-Gi-Oh! con parallax 3D y brillo holográfico que reacciona al cursor — como las cartas coleccionables reales. CSS 3D transforms con perspective y gradientes en capas, sin canvas.',
     features: [
       'Efecto 3D parallax interactivo',
       'Brillo holográfico dinámico',
@@ -520,7 +523,7 @@ const projects: Project[] = [
   /* Game Boy Color */
   {
     title: 'Game Boy Color',
-    description: 'Recreación pixel-perfect de la Game Boy Color en CSS puro',
+    description: 'Game Boy Color recreada pixel-perfect 100% en CSS, sin una sola imagen.',
     technologies: ['CSS', 'Vite', 'JavaScript'],
     featured: false,
     projectType: 'frontend',
@@ -530,7 +533,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'gameboy-color',
     longDescription:
-      'Recreación pixel-perfect de la Game Boy Color usando únicamente CSS. El proyecto demuestra el poder del CSS moderno para crear ilustraciones detalladas sin imágenes, incluyendo botones interactivos y la pantalla con efecto de encendido.',
+      'Game Boy Color recreada con CSS puro: cero imágenes, todo a base de gradientes, box-shadows y formas. Botones interactivos con feedback táctil, pantalla LCD con tinte verdoso y animación de encendido.',
     features: [
       'Diseño 100% CSS sin imágenes',
       'Botones interactivos con feedback táctil',
@@ -556,7 +559,7 @@ const projects: Project[] = [
   /* SPA Web Component */
   {
     title: 'SPA Web Component',
-    description: 'SPA construida exclusivamente con Web Components nativos',
+    description: 'SPA con routing, state y lazy loading solo con Web Components nativos.',
     technologies: ['Web Components', 'JavaScript', 'CSS'],
     featured: false,
     projectType: 'frontend',
@@ -566,7 +569,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'spa-web-component',
     longDescription:
-      'Single Page Application construida exclusivamente con Web Components nativos, sin frameworks ni bibliotecas. Demuestra cómo crear aplicaciones modernas usando solo las APIs del navegador: Custom Elements, Shadow DOM y HTML Templates.',
+      'SPA con routing, estado global y lazy loading construida solo con APIs nativas del navegador — Custom Elements, Shadow DOM y HTML Templates. Cero frameworks, cero bibliotecas. Ejercicio para entender por qué los frameworks abstraen lo que abstraen.',
     features: [
       'Routing sin bibliotecas externas',
       'Componentes encapsulados con Shadow DOM',
@@ -596,7 +599,7 @@ const projects: Project[] = [
   /* Web Personal */
   {
     title: 'Old Web Personal',
-    description: 'Portfolio minimalista con diseño Outline y animaciones fluidas',
+    description: 'Versión anterior de veriel.dev con tema Matrix y diseño outline.',
     technologies: ['React', 'Wouter', 'Vite', 'FramerMotion', 'Tailwind'],
     projectType: 'frontend',
     featured: false,
@@ -606,7 +609,7 @@ const projects: Project[] = [
     img: '/img/web-personal.webp',
     slug: 'old-web-personal',
     longDescription:
-      'Portfolio personal con diseño minimalista y temática Matrix. Desarrollado con React y Tailwind CSS, incluye animaciones fluidas con Framer Motion y un diseño completamente responsive.',
+      'Portfolio anterior con tema Matrix: React + Tailwind, animaciones declarativas con Framer Motion y router Wouter (~1.5kb). Más de 50 componentes con design system propio — el precedente del actual diseño Phantom Menu.',
     features: [
       'Diseño minimalista con tema Matrix',
       'Animaciones fluidas con Framer Motion',
@@ -645,7 +648,7 @@ const projects: Project[] = [
   /* Veriel SO */
   {
     title: 'Veriel SO',
-    description: 'Portfolio retro interactivo',
+    description: 'Portfolio retro: SO clásico con ventanas arrastrables y barra de tareas.',
     technologies: ['React', 'TypeScript', 'CSS Modules'],
     projectType: 'frontend',
     featured: false,
@@ -654,7 +657,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'veriel-so',
     longDescription:
-      'Portfolio interactivo que simula un sistema operativo retro. Los visitantes pueden interactuar con ventanas arrastrables, explorar carpetas con proyectos y experimentar una interfaz nostálgica inspirada en sistemas operativos clásicos.',
+      'Portfolio con forma de sistema operativo retro. Ventanas arrastrables y redimensionables, sistema de archivos simulado, barra de tareas funcional, iconos de escritorio y menú de inicio. El reto: gestión de z-index dinámico, focus y snap entre ventanas.',
     features: [
       'Ventanas arrastrables y redimensionables',
       'Sistema de archivos simulado',
@@ -685,7 +688,7 @@ const projects: Project[] = [
   /* Cartas SU-Gi-Oh */
   {
     title: 'Cartas SU-Gi-Oh',
-    description: 'Editor visual de cartas estilo Yu-Gi-Oh! con Canvas',
+    description: 'Editor de cartas Yu-Gi-Oh!: sube imagen, edita y exporta PNG. Sin backend.',
     technologies: ['React', 'Canvas', 'TypeScript', 'Astro', 'IndexedDB'],
     featured: false,
     projectType: 'frontend',
@@ -693,7 +696,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'cartas-sugioh',
     longDescription:
-      'Editor visual que permite crear cartas personalizadas con el estilo de Yu-Gi-Oh!. Los usuarios pueden subir imágenes, editar textos y exportar sus creaciones. Las cartas se guardan localmente usando IndexedDB.',
+      'Editor visual WYSIWYG para crear cartas personalizadas estilo Yu-Gi-Oh!. Sube imagen, edita textos sobre varios templates y exporta a PNG de alta calidad. Galería con las cartas creadas guardadas localmente con IndexedDB — todo sin backend.',
     features: [
       'Editor visual WYSIWYG',
       'Subida de imágenes personalizadas',
