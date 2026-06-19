@@ -42,7 +42,13 @@ export const personaSections: PersonaSection[] = [
     color: 'emerald',
   },
   { id: 'skills', number: '04', label: 'Skills', sublabel: 'Stack técnico', color: 'rose' },
-  { id: 'projects', number: '05', label: 'Proyectos', sublabel: 'Destacados', color: 'amber' },
+  {
+    id: 'projects',
+    number: '05',
+    label: 'Proyectos',
+    sublabel: 'Todo el catálogo',
+    color: 'amber',
+  },
   { id: 'contact', number: '06', label: 'Contacto', sublabel: 'Hablemos', color: 'blue' },
 ];
 

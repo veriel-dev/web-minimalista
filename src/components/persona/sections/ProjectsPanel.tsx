@@ -8,15 +8,13 @@ interface ProjectsPanelProps {
 
 const PROJECT_ACCENTS: SectionColor[] = ['violet', 'cyan', 'emerald', 'rose', 'amber', 'blue'];
 
-const featured = projects.filter(p => p.featured);
-
 const ProjectsPanel = ({ onOpenProject }: ProjectsPanelProps) => {
   return (
     <div
       className="grid gap-4"
       style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(230px, 1fr))' }}
     >
-      {featured.map((project, i) => (
+      {projects.map((project, i) => (
         <ProjectTile
           key={project.slug}
           project={project}
