@@ -1,7 +1,7 @@
-import { homeOutlineData } from '../../../data/pages/home';
+import { copy } from '../../../data/copy';
 
 const AboutPanel = () => {
-  const { about } = homeOutlineData;
+  const { about } = copy;
 
   return (
     <div className="flex flex-col" style={{ maxWidth: '60ch' }}>

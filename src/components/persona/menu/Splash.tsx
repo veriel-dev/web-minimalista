@@ -1,4 +1,4 @@
-import { personaUI } from '../../../data/pages/home.persona';
+import { personaUI } from '../../../data/persona';
 import { RansomText, StarBurst } from '../primitives';
 
 interface SplashProps {

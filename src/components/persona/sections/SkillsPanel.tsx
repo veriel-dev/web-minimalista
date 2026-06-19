@@ -1,8 +1,8 @@
 import { accentVar } from '../accent';
-import { homeOutlineData } from '../../../data/pages/home';
+import { techStack } from '../../../data/techStack';
 
 const SkillsPanel = () => {
-  const { items } = homeOutlineData.techStack;
+  const items = techStack;
 
   return (
     <div

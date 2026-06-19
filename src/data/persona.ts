@@ -1,4 +1,4 @@
-import type { SectionColor } from '../colors';
+import type { SectionColor } from './colors';
 import { cvData } from './cv';
 
 export type PersonaSectionId = 'hero' | 'about' | 'experience' | 'skills' | 'projects' | 'contact';

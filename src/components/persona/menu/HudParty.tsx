@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { accentVar } from '../accent';
-import { personaUI, type PersonaPartyMember } from '../../../data/pages/home.persona';
+import { personaUI, type PersonaPartyMember } from '../../../data/persona';
 
 interface PartyChipProps {
   member: PersonaPartyMember;

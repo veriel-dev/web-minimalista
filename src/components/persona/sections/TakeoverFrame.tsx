@@ -1,11 +1,7 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import { ComicTexture, StarBurst } from '../primitives';
 import { useEnter } from '../../../hooks/useEnter';
-import {
-  personaSections,
-  personaUI,
-  type PersonaSectionId,
-} from '../../../data/pages/home.persona';
+import { personaSections, personaUI, type PersonaSectionId } from '../../../data/persona';
 
 interface TakeoverFrameProps {
   sectionId: PersonaSectionId;

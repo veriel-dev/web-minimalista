@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { PhantomButton, RansomText } from '../primitives';
 import { accentVar } from '../accent';
 import type { SectionColor } from '../../../data/colors';
-import { cvData, cvStats } from '../../../data/pages/cv';
+import { cvData, cvStats } from '../../../data/cv';
 
 const JOB_ACCENTS: SectionColor[] = ['rose', 'violet', 'emerald', 'cyan', 'amber'];
 

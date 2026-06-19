@@ -1,5 +1,5 @@
-import projects from '../projects';
-import type { SectionColor } from '../colors';
+import projects from './projects';
+import type { SectionColor } from './colors';
 
 export interface CVHeader {
   name: string;

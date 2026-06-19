@@ -22,7 +22,7 @@ import {
 } from '../components/persona/sections';
 
 const ProjectDetail = lazy(() => import('../components/persona/sections/ProjectDetail'));
-import { personaSections, type PersonaSectionId } from '../data/pages/home.persona';
+import { personaSections, type PersonaSectionId } from '../data/persona';
 import type { SectionColor } from '../data/colors';
 import type { Project } from '../data/projects';
 import { useSfx } from '../hooks/useSfx';

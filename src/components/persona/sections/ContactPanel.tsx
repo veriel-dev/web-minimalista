@@ -1,5 +1,5 @@
 import { PhantomButton } from '../primitives';
-import { homeOutlineData } from '../../../data/pages/home';
+import { copy } from '../../../data/copy';
 
 const prettyHref = (href: string): string => {
   if (href.startsWith('mailto:')) return href.slice(7);
@@ -13,7 +13,7 @@ const prettyHref = (href: string): string => {
 };
 
 const ContactPanel = () => {
-  const { contact } = homeOutlineData;
+  const { contact } = copy;
 
   return (
     <div>

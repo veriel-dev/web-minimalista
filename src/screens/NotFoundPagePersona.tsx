@@ -5,7 +5,7 @@ import {
   RansomText,
   StarBurst,
 } from '../components/persona/primitives';
-import { cvData } from '../data/pages/cv';
+import { cvData } from '../data/cv';
 
 const NotFoundPagePersona = () => {
   const [, setLocation] = useLocation();

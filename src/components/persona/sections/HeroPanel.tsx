@@ -1,13 +1,13 @@
 import { PhantomButton, RansomText } from '../primitives';
-import { homeOutlineData } from '../../../data/pages/home';
-import { personaUI, type PersonaSectionId } from '../../../data/pages/home.persona';
+import { copy } from '../../../data/copy';
+import { personaUI, type PersonaSectionId } from '../../../data/persona';
 
 interface HeroPanelProps {
   onNavigate: (id: PersonaSectionId) => void;
 }
 
 const HeroPanel = ({ onNavigate }: HeroPanelProps) => {
-  const { hero } = homeOutlineData;
+  const { hero } = copy;
   const { brand } = personaUI;
 
   return (

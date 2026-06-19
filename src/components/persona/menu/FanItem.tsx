@@ -1,4 +1,4 @@
-import type { PersonaSection } from '../../../data/pages/home.persona';
+import type { PersonaSection } from '../../../data/persona';
 
 interface FanItemProps {
   section: PersonaSection;

@@ -1,4 +1,4 @@
-import { personaUI } from '../../../data/pages/home.persona';
+import { personaUI } from '../../../data/persona';
 
 const HudMoney = () => {
   const { money } = personaUI;

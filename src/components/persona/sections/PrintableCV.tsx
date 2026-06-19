@@ -6,8 +6,8 @@ import {
   IconPhone,
   IconWorld,
 } from '@tabler/icons-react';
-import { cvData } from '../../../data/pages/cv';
-import { homeOutlineData, type TechItem } from '../../../data/pages/home';
+import { cvData } from '../../../data/cv';
+import { techStack, type TechItem } from '../../../data/techStack';
 
 const cleanHost = (url: string): string => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
@@ -61,7 +61,7 @@ const groupSkillsByCategory = (
 
 const PrintableCV = () => {
   const { header, summary, experience, education, languages, achievements } = cvData;
-  const skillGroups = groupSkillsByCategory(homeOutlineData.techStack.items);
+  const skillGroups = groupSkillsByCategory(techStack);
 
   return (
     <div className="hidden print:block bg-white min-h-screen text-gray-900">

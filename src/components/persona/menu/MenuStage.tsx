@@ -1,6 +1,6 @@
 import { StarBurst, RansomText } from '../primitives';
 import { accentVar } from '../accent';
-import { personaUI, type PersonaSection } from '../../../data/pages/home.persona';
+import { personaUI, type PersonaSection } from '../../../data/persona';
 
 interface MenuStageProps {
   section: PersonaSection;
