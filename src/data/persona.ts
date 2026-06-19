@@ -52,7 +52,7 @@ export const personaSections: PersonaSection[] = [
   { id: 'contact', number: '06', label: 'Contacto', sublabel: 'Hablemos', color: 'blue' },
 ];
 
-const { github, linkedin, website } = cvData.header;
+const { github, linkedin, email } = cvData.header;
 
 export const personaUI: PersonaUI = {
   brand: { name: 'Veriel', suffix: '.dev' },
@@ -79,10 +79,9 @@ export const personaUI: PersonaUI = {
   },
 
   party: [
-    { id: 'V', name: 'Veriel', color: 'red', href: website },
     { id: 'GH', name: 'GitHub', color: 'violet', href: github },
     { id: 'in', name: 'LinkedIn', color: 'blue', href: linkedin },
-    { id: 'W', name: 'Web', color: 'emerald', href: website },
+    { id: 'M', name: 'Mail', color: 'red', href: `mailto:${email}` },
   ],
   partyLabel: 'Party',
 
