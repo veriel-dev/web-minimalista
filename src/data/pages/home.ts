@@ -1,21 +1,21 @@
-import type { OutlineColor } from '../../config/theme';
+import type { SectionColor } from '../colors';
 
 export interface StatItem {
   value: string;
   label: string;
-  color: OutlineColor;
+  color: SectionColor;
 }
 
 export interface SkillItem {
   name: string;
   category: 'frontend' | 'backend' | 'database' | 'languages' | 'devops';
-  color: OutlineColor;
+  color: SectionColor;
 }
 
 export interface TechItem {
   name: string;
   type: string;
-  color: OutlineColor;
+  color: SectionColor;
 }
 
 export interface ExperienceItem {
@@ -31,7 +31,7 @@ export interface ProjectPreviewItem {
   title: string;
   description: string;
   tags: string[];
-  color: OutlineColor;
+  color: SectionColor;
   slug: string;
 }
 
@@ -58,9 +58,9 @@ export const homeOutlineData = {
       'TypeScript y Java como lenguajes principales. Enfocado en arquitectura de sistemas que escalan y se mantienen bien.',
     ],
     stats: [
-      { value: '4+', label: 'Años de experiencia', color: 'violet' as OutlineColor },
-      { value: '30+', label: 'Proyectos completados', color: 'cyan' as OutlineColor },
-      { value: '20+', label: 'Tecnologías dominadas', color: 'emerald' as OutlineColor },
+      { value: '4+', label: 'Años de experiencia', color: 'violet' as SectionColor },
+      { value: '30+', label: 'Proyectos completados', color: 'cyan' as SectionColor },
+      { value: '20+', label: 'Tecnologías dominadas', color: 'emerald' as SectionColor },
     ],
   },
 
@@ -124,28 +124,28 @@ export const homeOutlineData = {
   techStack: {
     items: [
       // Frontend
-      { name: 'React', type: 'Frontend Library', color: 'violet' as OutlineColor },
-      { name: 'Angular', type: 'Frontend Framework', color: 'rose' as OutlineColor },
-      { name: 'Astro', type: 'Frontend Framework', color: 'violet' as OutlineColor },
-      { name: 'Tailwind', type: 'CSS Framework', color: 'cyan' as OutlineColor },
-      { name: 'Vite', type: 'Build Tool', color: 'amber' as OutlineColor },
+      { name: 'React', type: 'Frontend Library', color: 'violet' as SectionColor },
+      { name: 'Angular', type: 'Frontend Framework', color: 'rose' as SectionColor },
+      { name: 'Astro', type: 'Frontend Framework', color: 'violet' as SectionColor },
+      { name: 'Tailwind', type: 'CSS Framework', color: 'cyan' as SectionColor },
+      { name: 'Vite', type: 'Build Tool', color: 'amber' as SectionColor },
       // Backend
-      { name: 'Node.js', type: 'Backend Runtime', color: 'emerald' as OutlineColor },
-      { name: 'Spring', type: 'Java Framework', color: 'emerald' as OutlineColor },
-      { name: 'Express', type: 'Node Framework', color: 'emerald' as OutlineColor },
-      { name: 'Hono', type: 'Node Framework', color: 'amber' as OutlineColor },
-      { name: 'OWCS', type: 'Enterprise CMS', color: 'rose' as OutlineColor },
+      { name: 'Node.js', type: 'Backend Runtime', color: 'emerald' as SectionColor },
+      { name: 'Spring', type: 'Java Framework', color: 'emerald' as SectionColor },
+      { name: 'Express', type: 'Node Framework', color: 'emerald' as SectionColor },
+      { name: 'Hono', type: 'Node Framework', color: 'amber' as SectionColor },
+      { name: 'OWCS', type: 'Enterprise CMS', color: 'rose' as SectionColor },
       // Database
-      { name: 'PostgreSQL', type: 'SQL Database', color: 'blue' as OutlineColor },
-      { name: 'MongoDB', type: 'NoSQL Database', color: 'emerald' as OutlineColor },
-      { name: 'OracleSQL', type: 'Enterprise Database', color: 'rose' as OutlineColor },
+      { name: 'PostgreSQL', type: 'SQL Database', color: 'blue' as SectionColor },
+      { name: 'MongoDB', type: 'NoSQL Database', color: 'emerald' as SectionColor },
+      { name: 'OracleSQL', type: 'Enterprise Database', color: 'rose' as SectionColor },
       // Languages
-      { name: 'TypeScript', type: 'Language', color: 'cyan' as OutlineColor },
-      { name: 'Java', type: 'Language', color: 'rose' as OutlineColor },
-      { name: 'Go', type: 'Language', color: 'cyan' as OutlineColor },
+      { name: 'TypeScript', type: 'Language', color: 'cyan' as SectionColor },
+      { name: 'Java', type: 'Language', color: 'rose' as SectionColor },
+      { name: 'Go', type: 'Language', color: 'cyan' as SectionColor },
       // DevOps
-      { name: 'Git', type: 'Version Control', color: 'amber' as OutlineColor },
-      { name: 'Docker', type: 'Containerization', color: 'blue' as OutlineColor },
+      { name: 'Git', type: 'Version Control', color: 'amber' as SectionColor },
+      { name: 'Docker', type: 'Containerization', color: 'blue' as SectionColor },
     ],
   },
 
@@ -158,7 +158,7 @@ export const homeOutlineData = {
         title: 'Clone Spring MVC',
         description: 'Framework MVC inspirado en Spring, construido desde cero.',
         tags: ['Java', 'TypeScript'],
-        color: 'violet' as OutlineColor,
+        color: 'violet' as SectionColor,
         slug: 'clone-spring-mvc',
       },
       {
@@ -166,7 +166,7 @@ export const homeOutlineData = {
         title: 'Merit App Backend',
         description: 'API REST para gestión de méritos empresariales.',
         tags: ['Node.js', 'Express'],
-        color: 'cyan' as OutlineColor,
+        color: 'cyan' as SectionColor,
         slug: 'merit-app-backend',
       },
       {
@@ -174,7 +174,7 @@ export const homeOutlineData = {
         title: 'Kodamon',
         description: 'Juego de batallas por turnos estilo RPG.',
         tags: ['React', 'TypeScript'],
-        color: 'emerald' as OutlineColor,
+        color: 'emerald' as SectionColor,
         slug: 'kodamon-digital-battles',
       },
     ] as ProjectPreviewItem[],

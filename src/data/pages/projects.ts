@@ -1,4 +1,4 @@
-import type { OutlineColor } from '../../components/ui/OutlineText';
+import type { SectionColor } from '../colors';
 
 export interface ProjectOutline {
   slug: string;
@@ -19,13 +19,13 @@ export type ProjectCategory = 'all' | 'frontend' | 'backend' | 'games';
 export interface FilterOption {
   value: ProjectCategory;
   label: string;
-  color: OutlineColor;
+  color: SectionColor;
 }
 
 export interface StatItem {
   value: string;
   label: string;
-  color: OutlineColor;
+  color: SectionColor;
 }
 
 export const projectsOutlineData = {
@@ -36,15 +36,15 @@ export const projectsOutlineData = {
       'Cada proyecto es un desafío resuelto, una idea materializada. Explora lo que he construido.',
   },
   stats: [
-    { value: '15+', label: 'Proyectos', color: 'violet' as OutlineColor },
-    { value: '30+', label: 'Tecnologías', color: 'cyan' as OutlineColor },
-    { value: '4+', label: 'Años', color: 'emerald' as OutlineColor },
+    { value: '15+', label: 'Proyectos', color: 'violet' as SectionColor },
+    { value: '30+', label: 'Tecnologías', color: 'cyan' as SectionColor },
+    { value: '4+', label: 'Años', color: 'emerald' as SectionColor },
   ],
   filters: [
-    { value: 'all' as ProjectCategory, label: 'Todos', color: 'white' as OutlineColor },
-    { value: 'frontend' as ProjectCategory, label: 'Frontend', color: 'cyan' as OutlineColor },
-    { value: 'backend' as ProjectCategory, label: 'Backend', color: 'emerald' as OutlineColor },
-    { value: 'games' as ProjectCategory, label: 'Games', color: 'rose' as OutlineColor },
+    { value: 'all' as ProjectCategory, label: 'Todos', color: 'white' as SectionColor },
+    { value: 'frontend' as ProjectCategory, label: 'Frontend', color: 'cyan' as SectionColor },
+    { value: 'backend' as ProjectCategory, label: 'Backend', color: 'emerald' as SectionColor },
+    { value: 'games' as ProjectCategory, label: 'Games', color: 'rose' as SectionColor },
   ],
   projects: [
     {

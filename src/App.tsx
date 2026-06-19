@@ -1,18 +1,11 @@
 import { Route, Switch } from 'wouter';
-import HomePageOutline from './screens/HomePageOutline';
-import ProjectsPageOutline from './screens/ProjectsPageOutline';
-import ProjectDetailPageOutline from './screens/ProjectDetailPageOutline';
-import CVPageOutline from './screens/CVPageOutline';
-import NotFoundPageOutline from './screens/NotFoundPageOutline';
+import HomePagePersona from './screens/HomePagePersona';
 
 const App = () => {
   return (
     <Switch>
-      <Route path="/" component={HomePageOutline} />
-      <Route path="/projects" component={ProjectsPageOutline} />
-      <Route path="/projects/:slug" component={ProjectDetailPageOutline} />
-      <Route path="/curriculum-vitae" component={CVPageOutline} />
-      <Route path="*" component={NotFoundPageOutline} />
+      <Route path="/" component={HomePagePersona} />
+      <Route>404</Route>
     </Switch>
   );
 };

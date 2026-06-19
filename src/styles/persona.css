@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+/* ==========================================================================
+   Persona — Phantom Menu (Persona-5 inspired) tokens & primitives
+   ========================================================================== */
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-p5: 'Bungee', 'Anton', sans-serif;
+  --font-p5-tall: 'Anton', 'Archivo Black', sans-serif;
+
+  --color-p5-ink: #0a0a0a;
+  --color-p5-bone: #f5f5f4;
+  --color-p5-red: #e11d2a;
+  --color-p5-red-deep: #b00f1c;
+  --color-p5-red-shadow: #7a0812;
+
+  --color-accent-violet: #a78bfa;
+  --color-accent-cyan: #22d3ee;
+  --color-accent-emerald: #34d399;
+  --color-accent-rose: #fb7185;
+  --color-accent-amber: #fbbf24;
+  --color-accent-blue: #60a5fa;
+
+  --ease-snap: cubic-bezier(0.7, 0.1, 0.25, 1);
+
+  --animate-wipe-slab: wipeSlab 0.66s var(--ease-snap) forwards;
+  --animate-splat-pop: splatPop 0.4s var(--ease-snap);
+  --animate-pulse-p5: pulsP5 1.5s ease-in-out infinite;
+}
+
+:root {
+  --p5-ink: #0a0a0a;
+  --p5-bone: #f5f5f4;
+  --p5-red: #e11d2a;
+  --p5-red-deep: #b00f1c;
+  --p5-red-shadow: #7a0812;
+
+  --p5-font: 'Bungee', 'Anton', sans-serif;
+  --p5-font-tall: 'Anton', 'Archivo Black', sans-serif;
+
+  --p5-ease-snap: cubic-bezier(0.7, 0.1, 0.25, 1);
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--p5-ink);
+  color: var(--p5-bone);
+  min-height: 100vh;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes wipeSlab {
+  0% {
+    transform: skewX(-12deg) translateX(-190%);
+  }
+  42% {
+    transform: skewX(-12deg) translateX(-14%);
+  }
+  58% {
+    transform: skewX(-12deg) translateX(-14%);
+  }
+  100% {
+    transform: skewX(-12deg) translateX(190%);
+  }
+}
+
+@keyframes splatPop {
+  0% {
+    transform: scale(0) rotate(-30deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.15) rotate(6deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes burstSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulsP5 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.p5-burst-spin {
+  animation: burstSpin var(--p5-spin-duration, 60s) linear infinite;
+}
+
+.p5-scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.p5-scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .p5-burst-spin {
+    animation: none !important;
+  }
+}
