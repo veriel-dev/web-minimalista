@@ -39,8 +39,11 @@ nginx.conf
 # Claude Code
 .claude/
 docs/*
+maqueta/*
 CLAUDE.md
+ROADMAP.md
 
 # Screenshots script
 screenshots.jsonstats.html
 screenshots.json
+text.md

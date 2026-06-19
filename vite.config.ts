@@ -4,10 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 const chunkMap: Record<string, string[]> = {
-  vendor: ['react', 'react-dom', 'motion'],
-  layout: ['MainLayoutOutline'],
-  home: ['HomePageOutline'],
-  cv: ['CVPageOutline'],
+  vendor: ['react', 'react-dom', 'wouter'],
+  icons: ['@tabler/icons-react'],
 };
 
 // https://vite.dev/config/
@@ -31,7 +29,7 @@ export default defineConfig({
       output: {
         manualChunks(id) {
           for (const [chunk, modules] of Object.entries(chunkMap)) {
-            if (modules.some(m => id.includes(m))) return chunk;
+            if (modules.some(m => id.includes(`/node_modules/${m}/`))) return chunk;
           }
         },
       },

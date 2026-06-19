@@ -1,9 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './styles/outline.css';
-import './styles/transitions.css';
+import './styles/persona.css';
 import App from './App.tsx';
-import { HelmetProvider } from 'react-helmet-async';
 
 if (import.meta.env.PROD) {
   const styles = [
@@ -33,8 +31,6 @@ if (import.meta.env.PROD) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HelmetProvider>
-      <App />
-    </HelmetProvider>
+    <App />
   </StrictMode>,
 );
