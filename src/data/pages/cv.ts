@@ -1,6 +1,3 @@
-import type { Icon } from '@tabler/icons-react';
-import { IconBrowser, IconServer, IconDatabase, IconTool } from '@tabler/icons-react';
-
 export interface CVHeader {
   name: string;
   title: string;
@@ -35,7 +32,6 @@ export interface CVEducation {
 
 export interface CVSkillCategory {
   title: string;
-  icon: Icon;
   skills: string[];
 }
 
@@ -162,17 +158,14 @@ export const cvData: CVData = {
   skills: [
     {
       title: 'Frontend',
-      icon: IconBrowser,
       skills: ['React', 'Angular', 'Astro', 'TypeScript', 'Tailwind CSS'],
     },
     {
       title: 'Backend',
-      icon: IconServer,
       skills: ['Node.js & Express', 'Hono', 'Spring Boot & Java', 'Golang (Go)'],
     },
     {
       title: 'Bases de datos e infraestructura',
-      icon: IconDatabase,
       skills: [
         'MySQL & PostgreSQL & Oracle',
         'MongoDB & Redis',
@@ -182,7 +175,6 @@ export const cvData: CVData = {
     },
     {
       title: 'Herramientas de desarrollo',
-      icon: IconTool,
       skills: [
         'Git & GitHub',
         'CI/CD (Jenkins, GitHub Actions)',

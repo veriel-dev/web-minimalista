@@ -68,6 +68,9 @@ const Wipe = ({ label }: WipeProps) => {
                   src="/logo-red.svg"
                   alt=""
                   aria-hidden
+                  width={92}
+                  height={92}
+                  decoding="async"
                   className="relative"
                   style={{
                     width: '92px',

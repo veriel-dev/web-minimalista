@@ -45,6 +45,10 @@ const ProjectTile = ({ project, index, color, onOpen }: ProjectTileProps) => {
             src={project.img}
             alt=""
             aria-hidden
+            loading="lazy"
+            decoding="async"
+            width={460}
+            height={300}
             className="w-full h-full object-cover"
             style={{
               filter: hover ? 'saturate(1.05)' : 'saturate(0.85) brightness(0.84)',

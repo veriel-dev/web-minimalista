@@ -7,7 +7,15 @@ const MenuHeader = () => {
   return (
     <header className="flex items-center justify-between">
       <div className="flex items-center gap-3">
-        <img src="/logo-white.svg" alt="" aria-hidden className="w-[40px] h-[40px]" />
+        <img
+          src="/logo-white.svg"
+          alt=""
+          aria-hidden
+          width={40}
+          height={40}
+          decoding="async"
+          className="w-[40px] h-[40px]"
+        />
         <span
           className="text-p5-bone"
           style={{

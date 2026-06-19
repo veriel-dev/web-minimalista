@@ -50,6 +50,10 @@ const ProjectDetail = ({ project, color, onClose }: ProjectDetailProps) => {
               src={project.img}
               alt=""
               aria-hidden
+              loading="lazy"
+              decoding="async"
+              width={940}
+              height={440}
               className="absolute inset-0 w-full h-full object-cover"
             />
           )}

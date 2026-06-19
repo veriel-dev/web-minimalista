@@ -7,4 +7,3 @@ export { default as SkillsPanel } from './SkillsPanel';
 export { default as ProjectsPanel } from './ProjectsPanel';
 export { default as ProjectTile } from './ProjectTile';
 export { default as ContactPanel } from './ContactPanel';
-export { default as ProjectDetail } from './ProjectDetail';

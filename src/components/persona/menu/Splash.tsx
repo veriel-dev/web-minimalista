@@ -23,6 +23,9 @@ const Splash = ({ onEnter }: SplashProps) => {
         src="/logo-white.svg"
         alt=""
         aria-hidden
+        width={220}
+        height={220}
+        decoding="async"
         className="relative w-[220px] h-[220px] mb-4"
         style={{ filter: 'drop-shadow(0 6px 20px rgba(0,0,0,0.6))' }}
       />

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ComicBackground, Wipe } from '../components/persona/primitives';
 import {
@@ -17,11 +17,12 @@ import {
   CVPanel,
   HeroPanel,
   PrintableCV,
-  ProjectDetail,
   ProjectsPanel,
   SkillsPanel,
   TakeoverFrame,
 } from '../components/persona/sections';
+
+const ProjectDetail = lazy(() => import('../components/persona/sections/ProjectDetail'));
 import { personaSections, type PersonaSectionId } from '../data/pages/home.persona';
 import type { SectionColor } from '../data/colors';
 import type { Project } from '../data/projects';
@@ -211,11 +212,13 @@ const HomePagePersona = () => {
         )}
 
         {openProject && (
-          <ProjectDetail
-            project={openProject.project}
-            color={openProject.color}
-            onClose={handleCloseProject}
-          />
+          <Suspense fallback={null}>
+            <ProjectDetail
+              project={openProject.project}
+              color={openProject.color}
+              onClose={handleCloseProject}
+            />
+          </Suspense>
         )}
 
         {wipe && <Wipe label={wipe.label} />}
