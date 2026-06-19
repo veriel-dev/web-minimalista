@@ -78,26 +78,27 @@ export const cvData: CVData = {
   summary: {
     title: 'Perfil Profesional',
     paragraphs: [
-      'Software Engineer con más de 4 años de experiencia en aplicaciones web empresariales. He trabajado en portales de alto tráfico para Naturgy y AENA con OWCS como CMS, Spring Framework en backend y JavaScript/TypeScript en frontend.',
-      'Fuera del ámbito corporativo, trabajo con React, Angular, Node.js y Hono en proyectos propios. Astro para sitios estáticos y Docker para contenedores.',
+      'Software Engineer con 5+ años de experiencia en aplicaciones web empresariales. Especialista en Oracle WebCenter Sites, con portales de alto tráfico para Naturgy y AENA usando Spring/Java en backend y JavaScript/TypeScript en frontend.',
+      'Fuera del ámbito corporativo construyo plataformas, herramientas de desarrollador y recreaciones técnicas con React, Astro, Bun, Hono, Go y Tauri 2. Obsesión por construir desde cero y por el detalle del diseño.',
     ],
     highlights: [
-      'Portales corporativos de alto tráfico: Naturgy y AENA',
-      'Backend con Spring/Java, frontend con TypeScript/React',
-      'Progresión de desarrollador a analista técnico en 4 años',
+      'Especialista en Oracle WebCenter Sites con portales de alto tráfico (Naturgy, AENA)',
+      'Stack completo: TypeScript, Java, Go, Groovy + React/Angular/Astro y Spring/Node/Bun/Hono',
+      'Progresión de desarrollador a analista técnico en 5 años',
     ],
   },
   experience: [
     {
       role: 'Desarrollador OWCS + Spring Boot',
       company: 'Alvea Soluciones Tecnológicas S.L',
-      project: 'Web Pública Aena',
+      project: 'Web Pública AENA',
       period: 'May. 2025 - Actualidad',
       achievements: [
-        'Desarrollo del portal público de AENA con OWCS y Spring Boot',
-        'Mejora de tiempos de respuesta en aplicaciones de alto tráfico',
-        'Resolución de incidencias técnicas N2/N3',
-        'Comunicación directa con cliente para requisitos y soporte',
+        'Mantenimiento y evolución del portal público de AENA sobre Oracle WebCenter Sites + Spring Boot',
+        'Diagnóstico y resolución de incidencias críticas N2/N3/N4 en producción: bugs intermitentes sin logs útiles, problemas de caché, queries OWCS mal estructuradas, fallos de integración entre sistemas',
+        'Integración del portal con múltiples sistemas internos del cliente (SPA CDC, plataforma de traducciones, otros)',
+        'Desarrollo de proyectos nuevos desde cero en Angular + Spring Boot siguiendo la arquitectura corporativa del cliente',
+        'Soporte funcional y técnico continuo a editores del gestor',
       ],
     },
     {
@@ -106,20 +107,20 @@ export const cvData: CVData = {
       project: 'Portal de Contratación Naturgy',
       period: 'Abr. 2025 - May. 2025',
       achievements: [
-        'Desarrollo de interfaces con React para portal de contratación',
-        'Implementación de mejoras UX/UI según métricas de conversión',
-        'Reducción de re-renders y optimización de componentes',
+        'Desarrollo y mantenimiento de interfaces con React en el portal de contratación: refactorización de componentes, resolución de incidencias visuales y endurecimiento de validaciones de formularios',
+        'Coordinación con diseño y QA para validar mejoras de UX antes de release',
       ],
     },
     {
       role: 'Desarrollador OWCS + Spring Boot',
       company: 'Viewnext S.A',
-      project: 'Portales Públicos y Áreas Clientes Naturgy',
+      project: 'Portales y Áreas Cliente Naturgy',
       period: 'Feb. 2023 - Mar. 2025',
       achievements: [
-        'Evolución de desarrollador a analista técnico en 2 años',
-        'Diseño de arquitectura para portales públicos y áreas de cliente',
-        'Implementación de features con JavaScript/TypeScript y Java/Spring',
+        'Mantenimiento evolutivo y correctivo de los portales y áreas cliente de Naturgy sobre Oracle WebCenter Sites',
+        'Desarrollo backend en Spring para procesos batch, integraciones y nuevas funcionalidades del área privada (sistema de autenticación, recobro, batería virtual, etc.)',
+        'Evolución de desarrollador a analista técnico: análisis de requisitos, diseño técnico y propuesta de soluciones end-to-end',
+        'Comunicación directa con cliente para definición de features y soporte continuo',
       ],
     },
     {
@@ -128,9 +129,10 @@ export const cvData: CVData = {
       project: 'Portales Públicos Naturgy',
       period: 'Ago. 2021 - Dic. 2023',
       achievements: [
-        'Desarrollo de portales corporativos en Oracle WebCenter Sites (OWCS)',
-        'Configuración y personalización del CMS según requisitos de negocio',
-        'Creación de componentes reutilizables y templates',
+        'Desarrollo y mantenimiento del portal público corporativo sobre Oracle WebCenter Sites para varios mercados internacionales (España, Brasil, México)',
+        'Migración íntegra de sites al gestor, reescribiendo HTML, JS y CSS completos cuando la herramienta no daba la contribución suficiente',
+        'Implementación de landings interactivas con componentes vivos: calculadoras, simuladores, visualizaciones de datos',
+        'Creación de componentes y templates reutilizables dentro de la arquitectura de OWCS',
       ],
     },
     {
@@ -138,9 +140,8 @@ export const cvData: CVData = {
       company: 'eCapture3D S.L',
       period: 'Abr. 2021 - Jun. 2021',
       achievements: [
-        'Modelos predictivos con Machine Learning y Deep Learning',
-        'Análisis de variables climáticas con datos de AEMET',
-        'Procesamiento y análisis de grandes volúmenes de datos meteorológicos',
+        'Análisis de datos meteorológicos de AEMET y desarrollo de modelos predictivos de variables climáticas',
+        'Primer contacto profesional con el desarrollo de software',
       ],
     },
   ],
@@ -177,7 +178,7 @@ export const cvData: CVData = {
       title: 'Herramientas de desarrollo',
       skills: [
         'Git & GitHub',
-        'CI/CD (Jenkins, GitHub Actions)',
+        'CI/CD (GitHub Actions)',
         'Metodologías ágiles (Scrum, Kanban)',
         'Testing (Jest, Mocha, Chai)',
       ],
