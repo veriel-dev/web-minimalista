@@ -1,4 +1,5 @@
 import { useLocation } from 'wouter';
+import { Helmet } from 'react-helmet-async';
 import {
   ComicBackground,
   PhantomButton,
@@ -12,6 +13,11 @@ const NotFoundPagePersona = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
+      <Helmet>
+        <title>404 — Página robada · Veriel.dev</title>
+        <meta name="robots" content="noindex" />
+      </Helmet>
+
       <ComicBackground />
 
       <div

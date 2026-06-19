@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ComicBackground, Wipe } from '../components/persona/primitives';
 import {
   FanItem,
@@ -47,6 +48,16 @@ const HomePagePersona = () => {
   useEffect(() => clearTimers, [clearTimers]);
 
   const hoveredSection = personaSections.find(s => s.id === hovered) ?? personaSections[0];
+
+  const documentTitle = useMemo(() => {
+    const base = 'Veriel.dev — Phantom Menu';
+    if (openProject) return `${openProject.project.title} · ${base}`;
+    if (openSection) {
+      const label = personaSections.find(s => s.id === openSection)?.label;
+      if (label) return `${label} · ${base}`;
+    }
+    return base;
+  }, [openProject, openSection]);
 
   const navTo = useCallback(
     (id: PersonaSectionId | null) => {
@@ -127,6 +138,10 @@ const HomePagePersona = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
+      <Helmet>
+        <title>{documentTitle}</title>
+      </Helmet>
+
       <PrintableCV />
 
       <div className="screen-only">
