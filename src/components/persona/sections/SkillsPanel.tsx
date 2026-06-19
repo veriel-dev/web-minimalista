@@ -1,49 +1,48 @@
-import { RansomText } from '../primitives';
 import { accentVar } from '../accent';
-import type { SectionColor } from '../../../data/colors';
-import { cvData } from '../../../data/pages/cv';
-
-const SKILL_ACCENTS: SectionColor[] = ['violet', 'emerald', 'amber', 'rose'];
+import { homeOutlineData } from '../../../data/pages/home';
 
 const SkillsPanel = () => {
+  const { items } = homeOutlineData.techStack;
+
   return (
-    <div className="flex flex-col gap-4">
-      {cvData.skills.map((group, i) => {
-        const color = SKILL_ACCENTS[i % SKILL_ACCENTS.length];
+    <div
+      className="grid gap-2.5 md:gap-3"
+      style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))' }}
+    >
+      {items.map(item => {
+        const accent = accentVar(item.color);
         return (
           <div
-            key={group.title}
-            className="border p-5"
+            key={item.name}
+            className="relative px-3 py-3 md:px-4 md:py-4"
             style={{
               background: '#141416',
-              borderColor: 'rgba(245,245,244,0.14)',
-              clipPath: 'polygon(0 0, 100% 0, 99% 100%, 1% 100%)',
+              border: '1px solid rgba(245,245,244,0.16)',
+              borderLeft: `4px solid ${accent}`,
+              clipPath: 'polygon(0 0, 100% 0, 100% 88%, 92% 100%, 0 100%)',
             }}
           >
-            <div className="mb-3.5">
-              <RansomText
-                text={group.title}
-                variant="red"
-                size="15px"
-                wrap
-                accent={accentVar(color)}
-              />
+            <div
+              className="leading-[0.95]"
+              style={{
+                fontFamily: 'var(--p5-font-tall)',
+                fontSize: 'clamp(20px,4.5vw,28px)',
+                color: accent,
+                letterSpacing: '0.01em',
+                textTransform: 'uppercase',
+              }}
+            >
+              {item.name}
             </div>
-            <div className="flex flex-wrap gap-2">
-              {group.skills.map(skill => (
-                <span
-                  key={skill}
-                  className="text-p5-bone font-medium"
-                  style={{
-                    fontFamily: 'var(--font-inter)',
-                    fontSize: '13px',
-                    padding: '6px 14px',
-                    border: '1px solid rgba(245,245,244,0.22)',
-                  }}
-                >
-                  {skill}
-                </span>
-              ))}
+            <div
+              className="mt-1 uppercase text-p5-bone/55"
+              style={{
+                fontFamily: 'var(--font-inter)',
+                fontSize: '10px',
+                letterSpacing: '0.12em',
+              }}
+            >
+              {item.type}
             </div>
           </div>
         );
