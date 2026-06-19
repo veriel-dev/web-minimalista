@@ -29,22 +29,24 @@ const ProjectDetail = ({ project, color, onClose }: ProjectDetailProps) => {
       role="dialog"
       aria-modal="true"
       aria-label={`Detalle del proyecto ${project.title}`}
-      className="fixed inset-0 z-50 flex"
+      className="fixed inset-0 z-50 flex overflow-y-auto p-3 md:p-0"
       style={{ background: 'rgba(8,2,3,0.9)', backdropFilter: 'blur(5px)' }}
     >
       <div
-        className="relative m-auto grid overflow-hidden"
+        className="relative m-auto grid grid-cols-1 md:grid-cols-2 overflow-hidden"
         style={{
           width: 'min(940px, 93vw)',
-          maxHeight: '88vh',
+          maxHeight: '92vh',
           background: '#101012',
           border: `3px solid ${accent}`,
           boxShadow: '16px 16px 0 var(--p5-ink)',
-          gridTemplateColumns: '1fr 1fr',
           clipPath: 'polygon(0 0, 100% 0, 100% 94%, 97% 100%, 0 100%)',
         }}
       >
-        <div className="relative" style={{ minHeight: '440px', background: '#0c0c0e' }}>
+        <div
+          className="relative h-[200px] md:h-auto"
+          style={{ minHeight: '200px', background: '#0c0c0e' }}
+        >
           {project.img && (
             <img
               src={project.img}
@@ -58,8 +60,12 @@ const ProjectDetail = ({ project, color, onClose }: ProjectDetailProps) => {
             />
           )}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 hidden md:block"
             style={{ background: 'linear-gradient(90deg, transparent 36%, #101012)' }}
+          />
+          <div
+            className="absolute inset-0 md:hidden"
+            style={{ background: 'linear-gradient(180deg, transparent 40%, #101012)' }}
           />
           <span
             className="absolute top-0 left-0"
@@ -85,7 +91,7 @@ const ProjectDetail = ({ project, color, onClose }: ProjectDetailProps) => {
           </span>
         </div>
 
-        <div className="p-9 flex flex-col">
+        <div className="p-5 md:p-9 flex flex-col overflow-y-auto">
           <button
             ref={closeRef}
             type="button"

@@ -14,10 +14,10 @@ const HeroPanel = ({ onNavigate }: HeroPanelProps) => {
     <div>
       <h1 className="m-0 mb-3.5 leading-[0.8]">
         <span
-          className="block text-p5-bone"
+          className="block text-p5-bone break-words"
           style={{
             fontFamily: 'var(--p5-font-tall)',
-            fontSize: 'clamp(58px, 9vw, 120px)',
+            fontSize: 'clamp(44px, 12vw, 120px)',
             letterSpacing: '0.01em',
           }}
         >

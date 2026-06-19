@@ -26,15 +26,15 @@ const Splash = ({ onEnter }: SplashProps) => {
         width={220}
         height={220}
         decoding="async"
-        className="relative w-[220px] h-[220px] mb-4"
+        className="relative w-[clamp(120px,30vw,220px)] h-[clamp(120px,30vw,220px)] mb-4"
         style={{ filter: 'drop-shadow(0 6px 20px rgba(0,0,0,0.6))' }}
       />
 
       <span
-        className="relative leading-[0.82] tracking-[0.01em] text-p5-bone"
+        className="relative leading-[0.82] tracking-[0.01em] text-p5-bone text-center px-4"
         style={{
           fontFamily: 'var(--p5-font-tall)',
-          fontSize: 'clamp(60px, 12vw, 140px)',
+          fontSize: 'clamp(44px, 14vw, 140px)',
           transform: 'skewX(-6deg)',
         }}
       >
@@ -43,15 +43,15 @@ const Splash = ({ onEnter }: SplashProps) => {
       </span>
 
       <div className="relative mt-3.5">
-        <RansomText text={splash.subtitle} variant="sticker" size="22px" />
+        <RansomText text={splash.subtitle} variant="sticker" size="clamp(16px,4vw,22px)" />
       </div>
 
       <span
-        className="relative mt-6 text-p5-bone uppercase font-bold"
+        className="relative mt-6 text-p5-bone uppercase font-bold text-center px-4"
         style={{
           fontFamily: 'var(--font-inter)',
           letterSpacing: '0.4em',
-          fontSize: '13px',
+          fontSize: 'clamp(11px,3vw,13px)',
           animation: 'pulsP5 1.5s ease-in-out infinite',
         }}
       >

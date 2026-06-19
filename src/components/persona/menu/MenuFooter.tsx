@@ -22,13 +22,16 @@ const MenuFooter = ({ muted, onToggleMute }: MenuFooterProps) => {
       className="flex items-center justify-between pt-3 mt-1.5"
       style={{ borderTop: '1px solid rgba(245,245,244,0.16)' }}
     >
-      <div className="flex gap-6">
+      <div className="hidden md:flex gap-6">
         {[controls.nav, controls.open, controls.back].map(hint => (
           <span key={hint} style={hintBase}>
             {hint}
           </span>
         ))}
       </div>
+      <span className="md:hidden" style={hintBase}>
+        Toca para abrir
+      </span>
       <div className="flex items-center gap-4">
         <SfxToggle muted={muted} onToggle={onToggleMute} />
         <span

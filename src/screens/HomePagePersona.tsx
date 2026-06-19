@@ -152,8 +152,8 @@ const HomePagePersona = () => {
 
         {entered && (
           <div
-            className="relative z-10 flex flex-col"
-            style={{ minHeight: '100vh', padding: '18px clamp(24px, 4vw, 60px) 12px' }}
+            className="relative z-10 flex flex-col min-h-screen"
+            style={{ padding: 'clamp(12px,2.5vw,18px) clamp(16px,4vw,60px) 12px' }}
           >
             <a href="#main-menu" className="p5-skip-link">
               Saltar al menú
@@ -161,22 +161,17 @@ const HomePagePersona = () => {
             <MenuHeader />
 
             <div
-              className="flex items-stretch justify-between mx-auto w-full"
-              style={{
-                flex: 1,
-                maxWidth: '1140px',
-                gap: 'clamp(20px, 3vw, 48px)',
-                paddingTop: '6px',
-                minHeight: 0,
-              }}
+              className="flex flex-col md:flex-row md:items-stretch md:justify-between mx-auto w-full flex-1 min-h-0 gap-6 md:gap-[clamp(20px,3vw,48px)] pt-1.5"
+              style={{ maxWidth: '1140px' }}
             >
-              <MenuStage section={hoveredSection} />
+              <div className="hidden md:flex md:flex-none">
+                <MenuStage section={hoveredSection} />
+              </div>
 
               <nav
                 id="main-menu"
                 aria-label="Secciones del portfolio"
-                className="flex flex-col justify-center self-center"
-                style={{ gap: '13px', width: 'min(46vw, 560px)', flex: '1 1 auto' }}
+                className="flex flex-col justify-center self-center w-full md:w-[min(46vw,560px)] md:flex-auto gap-2.5 md:gap-[13px]"
               >
                 {personaSections.map((s, i) => (
                   <FanReveal key={s.id} index={i}>
@@ -191,7 +186,7 @@ const HomePagePersona = () => {
               </nav>
             </div>
 
-            <div className="flex items-end justify-between gap-5" style={{ padding: '0 0 8px' }}>
+            <div className="flex flex-wrap items-end justify-between gap-3 md:gap-5 pb-2">
               <HudMoney />
               <HudParty />
             </div>

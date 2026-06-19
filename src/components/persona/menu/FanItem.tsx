@@ -16,9 +16,9 @@ const FanItem = ({ section, active, onHover, onOpen }: FanItemProps) => {
       onClick={onOpen}
       aria-label={`Abrir sección ${section.number} — ${section.label}: ${section.sublabel}`}
       aria-current={active ? 'true' : undefined}
-      className="block w-full border-0 bg-transparent cursor-pointer text-right p-0 relative"
+      className="p5-fan-item block w-full border-0 bg-transparent cursor-pointer text-right p-0 relative"
+      data-active={active ? 'true' : undefined}
       style={{
-        transform: active ? 'translateX(-44px) scale(1.05)' : 'translateX(0) scale(1)',
         transition: 'transform 0.3s var(--p5-ease-snap)',
         zIndex: active ? 3 : 1,
       }}
@@ -26,12 +26,12 @@ const FanItem = ({ section, active, onHover, onOpen }: FanItemProps) => {
       <span
         className="flex items-center justify-end"
         style={{
-          gap: '18px',
+          gap: '14px',
           transform: 'skewX(-12deg)',
           background: active ? 'var(--p5-bone)' : 'rgba(10,10,10,0.86)',
           border: active ? '3px solid var(--p5-red)' : '1.5px solid rgba(245,245,244,0.22)',
-          boxShadow: active ? '11px 11px 0 var(--p5-red)' : 'none',
-          padding: active ? '18px 32px 18px 42px' : '14px 26px',
+          boxShadow: active ? '8px 8px 0 var(--p5-red)' : 'none',
+          padding: active ? '14px 20px 14px 24px' : '12px 18px',
           clipPath: 'polygon(7% 0, 100% 0, 93% 100%, 0% 100%)',
           transition: 'all 0.3s var(--p5-ease-snap)',
         }}
@@ -56,7 +56,7 @@ const FanItem = ({ section, active, onHover, onOpen }: FanItemProps) => {
               fontFamily: 'var(--p5-font-tall)',
               lineHeight: 0.85,
               whiteSpace: 'nowrap',
-              fontSize: active ? 'clamp(32px, 3.4vw, 50px)' : 'clamp(22px, 2.4vw, 34px)',
+              fontSize: active ? 'clamp(24px, 5.5vw, 50px)' : 'clamp(18px, 4.5vw, 34px)',
               textTransform: 'uppercase',
               color: active ? 'var(--p5-ink)' : 'var(--p5-bone)',
               transition: 'all 0.3s',
@@ -68,9 +68,9 @@ const FanItem = ({ section, active, onHover, onOpen }: FanItemProps) => {
             className="flex-none text-center"
             style={{
               fontFamily: 'var(--p5-font-tall)',
-              fontSize: active ? '24px' : '18px',
+              fontSize: active ? '20px' : '16px',
               color: active ? 'var(--p5-red)' : 'rgba(245,245,244,0.5)',
-              minWidth: '40px',
+              minWidth: '34px',
             }}
           >
             {section.number}
@@ -81,7 +81,7 @@ const FanItem = ({ section, active, onHover, onOpen }: FanItemProps) => {
       {active && (
         <span
           aria-hidden
-          className="absolute text-p5-red"
+          className="hidden md:block absolute text-p5-red"
           style={{
             left: '-40px',
             top: '50%',

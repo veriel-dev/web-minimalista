@@ -28,7 +28,7 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
       aria-modal="true"
       aria-label={`Sección ${section.label}`}
       className="fixed inset-0 z-20 flex flex-col overflow-hidden bg-p5-ink"
-      style={{ padding: '22px clamp(26px, 5vw, 68px) 18px' }}
+      style={{ padding: 'clamp(14px,3vw,22px) clamp(16px,5vw,68px) clamp(14px,3vw,18px)' }}
     >
       <div
         aria-hidden
@@ -58,7 +58,7 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
           bottom: '-12vh',
           left: '-1vw',
           fontFamily: 'var(--p5-font-tall)',
-          fontSize: '46vh',
+          fontSize: 'clamp(30vh, 50vw, 46vh)',
           lineHeight: 0.7,
           color: 'transparent',
           WebkitTextStroke: '2px rgba(245,245,244,0.07)',
@@ -68,16 +68,16 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
         {section.number}
       </div>
 
-      <div className="relative z-[2] flex items-center justify-between">
+      <div className="relative z-[2] flex items-center justify-between gap-3">
         <button
           ref={backRef}
           type="button"
           onClick={onClose}
-          className="bg-transparent border-0 cursor-pointer p-0"
+          className="bg-transparent border-0 cursor-pointer p-0 flex-none"
           aria-label="Volver al menú"
         >
           <span
-            className="inline-block bg-p5-bone py-[9px] px-[22px]"
+            className="inline-block bg-p5-bone py-[7px] px-4 md:py-[9px] md:px-[22px]"
             style={{
               transform: 'skewX(-11deg)',
               boxShadow: '3px 3px 0 var(--p5-red)',
@@ -88,7 +88,7 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
               style={{
                 transform: 'skewX(11deg)',
                 fontFamily: 'var(--p5-font)',
-                fontSize: '13px',
+                fontSize: 'clamp(11px,2.8vw,13px)',
               }}
             >
               {personaUI.takeover.back}
@@ -96,9 +96,9 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
           </span>
         </button>
 
-        <div className="flex items-center gap-3.5">
+        <div className="flex items-center gap-2 md:gap-3.5 min-w-0">
           <span
-            className="uppercase text-p5-bone/85"
+            className="hidden md:inline uppercase text-p5-bone/85"
             style={{
               fontFamily: 'var(--font-inter)',
               fontWeight: 700,
@@ -110,7 +110,10 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
           </span>
           <span
             className="text-p5-bone leading-[0.8]"
-            style={{ fontFamily: 'var(--p5-font-tall)', fontSize: '40px' }}
+            style={{
+              fontFamily: 'var(--p5-font-tall)',
+              fontSize: 'clamp(28px,7vw,40px)',
+            }}
           >
             {section.number}
           </span>
@@ -118,19 +121,19 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
       </div>
 
       <div
-        className="relative z-[2] grid items-center mx-auto w-full"
+        className="relative z-[2] flex flex-col md:grid md:items-center mx-auto w-full"
         style={{
           flex: 1,
           maxWidth: '1180px',
           gridTemplateColumns: 'minmax(200px, 300px) minmax(0, 640px)',
           justifyContent: 'center',
-          gap: 'clamp(26px, 4vw, 64px)',
+          gap: 'clamp(14px, 3vw, 64px)',
           minHeight: 0,
           paddingTop: '4px',
         }}
       >
         <div
-          className="relative"
+          className="relative flex-none"
           style={{
             transform: enter ? 'translateX(0)' : 'translateX(-34px)',
             opacity: enter ? 1 : 0,
@@ -138,7 +141,7 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
           }}
         >
           <div
-            className="leading-[0.74]"
+            className="hidden md:block leading-[0.74]"
             style={{
               fontFamily: 'var(--p5-font-tall)',
               fontSize: 'clamp(120px, 15vw, 210px)',
@@ -149,48 +152,50 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
           >
             {section.number}
           </div>
-          <div
-            className="inline-block mt-3.5 bg-p5-bone px-5 py-2"
-            style={{
-              transform: 'skewX(-9deg)',
-              boxShadow: '5px 5px 0 var(--p5-red)',
-            }}
-          >
-            <span
-              className="inline-block uppercase text-p5-ink whitespace-nowrap"
+          <div className="flex items-center gap-2.5 md:block md:mt-3.5">
+            <div
+              className="inline-block bg-p5-bone px-3 py-1.5 md:px-5 md:py-2"
               style={{
-                transform: 'skewX(9deg)',
-                fontFamily: 'var(--p5-font-tall)',
-                fontSize: 'clamp(24px, 2.6vw, 38px)',
-                letterSpacing: '0.01em',
+                transform: 'skewX(-9deg)',
+                boxShadow: '5px 5px 0 var(--p5-red)',
               }}
             >
-              {section.label}
-            </span>
-          </div>
-          <div className="block mt-3.5">
-            <span
-              className="inline-block bg-p5-red px-3.5 py-1"
-              style={{ transform: 'skewX(-9deg)' }}
-            >
               <span
-                className="inline-block uppercase text-p5-bone"
+                className="inline-block uppercase text-p5-ink whitespace-nowrap"
                 style={{
                   transform: 'skewX(9deg)',
-                  fontFamily: 'var(--font-inter)',
-                  fontWeight: 700,
-                  fontSize: '11px',
-                  letterSpacing: '0.16em',
+                  fontFamily: 'var(--p5-font-tall)',
+                  fontSize: 'clamp(20px, 5vw, 38px)',
+                  letterSpacing: '0.01em',
                 }}
               >
-                {section.sublabel}
+                {section.label}
               </span>
-            </span>
+            </div>
+            <div className="md:block md:mt-3.5">
+              <span
+                className="inline-block bg-p5-red px-2.5 py-0.5 md:px-3.5 md:py-1"
+                style={{ transform: 'skewX(-9deg)' }}
+              >
+                <span
+                  className="inline-block uppercase text-p5-bone"
+                  style={{
+                    transform: 'skewX(9deg)',
+                    fontFamily: 'var(--font-inter)',
+                    fontWeight: 700,
+                    fontSize: 'clamp(9px,2.4vw,11px)',
+                    letterSpacing: '0.16em',
+                  }}
+                >
+                  {section.sublabel}
+                </span>
+              </span>
+            </div>
           </div>
         </div>
 
         <div
-          className="p5-scrollbar-hide pr-2.5"
+          className="p5-scrollbar-hide pr-1 md:pr-2.5 flex-1 min-h-0"
           style={{
             maxHeight: '78vh',
             overflowY: 'auto',
@@ -205,7 +210,7 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
 
       <div
         aria-hidden
-        className="absolute z-[1] uppercase pointer-events-none"
+        className="hidden md:block absolute z-[1] uppercase pointer-events-none"
         style={{
           bottom: '10px',
           left: 'clamp(26px, 5vw, 68px)',

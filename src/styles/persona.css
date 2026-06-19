@@ -168,6 +168,18 @@ body {
   top: 12px;
 }
 
+.p5-fan-item {
+  transform: translateX(0) scale(1);
+}
+.p5-fan-item[data-active] {
+  transform: translateX(-18px) scale(1.03);
+}
+@media (min-width: 768px) {
+  .p5-fan-item[data-active] {
+    transform: translateX(-44px) scale(1.05);
+  }
+}
+
 .p5-scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;

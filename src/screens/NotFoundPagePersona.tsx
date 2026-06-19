@@ -28,7 +28,7 @@ const NotFoundPagePersona = () => {
           left: '50%',
           transform: 'translate(-50%, -50%) skewX(-8deg)',
           fontFamily: 'var(--p5-font-tall)',
-          fontSize: 'min(58vh, 46vw)',
+          fontSize: 'min(46vh, 70vw)',
           lineHeight: 0.8,
           color: 'transparent',
           WebkitTextStroke: '2px rgba(245,245,244,0.06)',
@@ -44,7 +44,7 @@ const NotFoundPagePersona = () => {
       >
         <div
           className="relative flex items-center justify-center mb-2"
-          style={{ width: 'min(46vh, 380px)', height: 'min(46vh, 380px)' }}
+          style={{ width: 'min(40vh, 80vw, 380px)', height: 'min(40vh, 80vw, 380px)' }}
         >
           <div
             className="absolute"
@@ -62,7 +62,7 @@ const NotFoundPagePersona = () => {
             className="relative text-p5-bone"
             style={{
               fontFamily: 'var(--p5-font-tall)',
-              fontSize: 'min(20vh, 170px)',
+              fontSize: 'min(18vh, 34vw, 170px)',
               lineHeight: 0.78,
               textShadow: '5px 5px 0 var(--p5-ink)',
               animation: 'glitch404 4s steps(1) infinite',

@@ -81,13 +81,13 @@ const CVPanel = () => {
         </p>
       ))}
 
-      <div className="flex gap-3 my-5 flex-wrap">
+      <div className="flex gap-2 md:gap-3 my-5 flex-wrap">
         {about.stats.map(st => (
           <div
             key={st.label}
-            className="flex-1 border p-4"
+            className="flex-1 border p-3 md:p-4"
             style={{
-              flexBasis: '110px',
+              flexBasis: '90px',
               background: '#141416',
               borderColor: 'rgba(245,245,244,0.16)',
               transform: 'skewX(-7deg)',
@@ -126,7 +126,7 @@ const CVPanel = () => {
           return (
             <div
               key={`${job.company}-${job.period}`}
-              className="px-5 py-4"
+              className="px-4 py-3 md:px-5 md:py-4"
               style={{ background: '#141416', borderLeft: `4px solid ${accent}` }}
             >
               <div className="flex justify-between items-baseline gap-3 flex-wrap">
@@ -183,7 +183,7 @@ const CVPanel = () => {
         {cv.education.map(edu => (
           <div
             key={edu.degree}
-            className="px-5 py-4"
+            className="px-4 py-3 md:px-5 md:py-4"
             style={{ background: '#141416', borderLeft: '4px solid var(--p5-bone)' }}
           >
             <div className="flex justify-between items-baseline gap-3 flex-wrap">
