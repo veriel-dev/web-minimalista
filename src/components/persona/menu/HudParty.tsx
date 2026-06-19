@@ -16,6 +16,7 @@ const PartyChip = ({ member }: PartyChipProps) => {
       target="_blank"
       rel="noopener noreferrer"
       title={member.name}
+      aria-label={`${member.name} (abre en pestaña nueva)`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onFocus={() => setHover(true)}
@@ -64,7 +65,7 @@ const HudParty = () => {
   const { party, partyLabel } = personaUI;
 
   return (
-    <div className="flex items-end gap-[9px]">
+    <div className="flex items-end gap-[9px]" aria-label="Enlaces sociales">
       <span
         className="uppercase mr-1 pb-[18px]"
         style={{

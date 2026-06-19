@@ -154,6 +154,9 @@ const HomePagePersona = () => {
             className="relative z-10 flex flex-col"
             style={{ minHeight: '100vh', padding: '18px clamp(24px, 4vw, 60px) 12px' }}
           >
+            <a href="#main-menu" className="p5-skip-link">
+              Saltar al menú
+            </a>
             <MenuHeader />
 
             <div
@@ -169,6 +172,8 @@ const HomePagePersona = () => {
               <MenuStage section={hoveredSection} />
 
               <nav
+                id="main-menu"
+                aria-label="Secciones del portfolio"
                 className="flex flex-col justify-center self-center"
                 style={{ gap: '13px', width: 'min(46vw, 560px)', flex: '1 1 auto' }}
               >

@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { Badge, PhantomButton } from '../primitives';
 import { accentVar } from '../accent';
 import type { SectionColor } from '../../../data/colors';
@@ -17,9 +18,17 @@ const TYPE_LABEL: Record<Project['projectType'], string> = {
 
 const ProjectDetail = ({ project, color, onClose }: ProjectDetailProps) => {
   const accent = accentVar(color);
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    closeRef.current?.focus();
+  }, [project.slug]);
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Detalle del proyecto ${project.title}`}
       className="fixed inset-0 z-50 flex"
       style={{ background: 'rgba(8,2,3,0.9)', backdropFilter: 'blur(5px)' }}
     >
@@ -74,6 +83,7 @@ const ProjectDetail = ({ project, color, onClose }: ProjectDetailProps) => {
 
         <div className="p-9 flex flex-col">
           <button
+            ref={closeRef}
             type="button"
             onClick={onClose}
             aria-label="Cerrar detalle"

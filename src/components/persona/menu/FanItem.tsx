@@ -14,6 +14,8 @@ const FanItem = ({ section, active, onHover, onOpen }: FanItemProps) => {
       onMouseEnter={onHover}
       onFocus={onHover}
       onClick={onOpen}
+      aria-label={`Abrir sección ${section.number} — ${section.label}: ${section.sublabel}`}
+      aria-current={active ? 'true' : undefined}
       className="block w-full border-0 bg-transparent cursor-pointer text-right p-0 relative"
       style={{
         transform: active ? 'translateX(-44px) scale(1.05)' : 'translateX(0) scale(1)',

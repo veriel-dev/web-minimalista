@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useEffect, useRef, type ReactNode } from 'react';
 import { ComicTexture, StarBurst } from '../primitives';
 import { useEnter } from '../../../hooks/useEnter';
 import {
@@ -16,9 +16,17 @@ interface TakeoverFrameProps {
 const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => {
   const section = personaSections.find(s => s.id === sectionId) ?? personaSections[0];
   const enter = useEnter();
+  const backRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    backRef.current?.focus();
+  }, [sectionId]);
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Sección ${section.label}`}
       className="fixed inset-0 z-20 flex flex-col overflow-hidden bg-p5-ink"
       style={{ padding: '22px clamp(26px, 5vw, 68px) 18px' }}
     >
@@ -62,6 +70,7 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
 
       <div className="relative z-[2] flex items-center justify-between">
         <button
+          ref={backRef}
           type="button"
           onClick={onClose}
           className="bg-transparent border-0 cursor-pointer p-0"
