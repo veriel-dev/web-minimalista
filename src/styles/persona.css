@@ -134,3 +134,35 @@ body {
     animation: none !important;
   }
 }
+
+@media print {
+  @page {
+    margin: 0.5cm;
+    size: A4;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  html,
+  body {
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+  .screen-only {
+    display: none !important;
+  }
+  ul,
+  ol {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}

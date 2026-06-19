@@ -44,7 +44,7 @@ const PhantomButton = ({
     transform: 'skewX(-10deg)',
     background: isSolid ? accent : 'transparent',
     border: isSolid ? '2px solid transparent' : `2px solid ${accent}`,
-    color: isSolid ? 'var(--p5-bone)' : accent,
+    color: isSolid ? (color === 'white' ? 'var(--p5-ink)' : 'var(--p5-bone)') : accent,
     boxShadow: isSolid ? '5px 5px 0 var(--p5-ink)' : 'none',
     padding: '12px 28px',
     fontFamily: 'var(--p5-font-tall)',
