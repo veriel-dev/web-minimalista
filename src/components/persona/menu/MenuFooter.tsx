@@ -1,4 +1,5 @@
 import { personaUI } from '../../../data/pages/home.persona';
+import SfxToggle from './SfxToggle';
 
 const hintBase = {
   fontFamily: 'var(--font-inter)',
@@ -8,7 +9,12 @@ const hintBase = {
   color: 'rgba(245,245,244,0.72)',
 };
 
-const MenuFooter = () => {
+interface MenuFooterProps {
+  muted: boolean;
+  onToggleMute: () => void;
+}
+
+const MenuFooter = ({ muted, onToggleMute }: MenuFooterProps) => {
   const { controls } = personaUI;
 
   return (
@@ -23,17 +29,20 @@ const MenuFooter = () => {
           </span>
         ))}
       </div>
-      <span
-        style={{
-          fontFamily: 'var(--font-inter)',
-          fontSize: '11px',
-          letterSpacing: '0.18em',
-          color: 'rgba(245,245,244,0.5)',
-          textTransform: 'uppercase',
-        }}
-      >
-        {controls.location}
-      </span>
+      <div className="flex items-center gap-4">
+        <SfxToggle muted={muted} onToggle={onToggleMute} />
+        <span
+          style={{
+            fontFamily: 'var(--font-inter)',
+            fontSize: '11px',
+            letterSpacing: '0.18em',
+            color: 'rgba(245,245,244,0.5)',
+            textTransform: 'uppercase',
+          }}
+        >
+          {controls.location}
+        </span>
+      </div>
     </footer>
   );
 };

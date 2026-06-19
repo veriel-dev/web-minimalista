@@ -6,3 +6,4 @@ export { default as HudParty } from './HudParty';
 export { default as HudMoney } from './HudMoney';
 export { default as MenuHeader } from './MenuHeader';
 export { default as MenuFooter } from './MenuFooter';
+export { default as SfxToggle } from './SfxToggle';

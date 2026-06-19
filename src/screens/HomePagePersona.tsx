@@ -24,6 +24,7 @@ import {
 import { personaSections, type PersonaSectionId } from '../data/pages/home.persona';
 import type { SectionColor } from '../data/colors';
 import type { Project } from '../data/projects';
+import { useSfx } from '../hooks/useSfx';
 
 const PROJECT_ACCENTS: SectionColor[] = ['violet', 'cyan', 'emerald', 'rose', 'amber', 'blue'];
 
@@ -34,6 +35,7 @@ const HomePagePersona = () => {
   const [openProject, setOpenProject] = useState<{ project: Project; color: SectionColor } | null>(
     null,
   );
+  const { muted, toggleMute } = useSfx();
 
   const hoveredSection = personaSections.find(s => s.id === hovered) ?? personaSections[0];
 
@@ -99,7 +101,7 @@ const HomePagePersona = () => {
               <HudParty />
             </div>
 
-            <MenuFooter />
+            <MenuFooter muted={muted} onToggleMute={toggleMute} />
           </div>
         )}
 
