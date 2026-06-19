@@ -40,6 +40,13 @@
   --p5-font-tall: 'Anton', 'Archivo Black', sans-serif;
 
   --p5-ease-snap: cubic-bezier(0.7, 0.1, 0.25, 1);
+
+  --color-accent-violet: #a78bfa;
+  --color-accent-cyan: #22d3ee;
+  --color-accent-emerald: #34d399;
+  --color-accent-rose: #fb7185;
+  --color-accent-amber: #fbbf24;
+  --color-accent-blue: #60a5fa;
 }
 
 html,

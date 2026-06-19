@@ -1,81 +1,79 @@
+import { useState } from 'react';
+import { ComicBackground } from '../components/persona/primitives';
 import {
-  Badge,
-  ComicBackground,
-  PhantomButton,
-  RansomText,
-  StarBurst,
-} from '../components/persona/primitives';
+  FanItem,
+  FanReveal,
+  HudMoney,
+  HudParty,
+  MenuFooter,
+  MenuHeader,
+  MenuStage,
+  Splash,
+} from '../components/persona/menu';
+import { personaSections, type PersonaSectionId } from '../data/pages/home.persona';
 
 const HomePagePersona = () => {
+  const [entered, setEntered] = useState(false);
+  const [hovered, setHovered] = useState<PersonaSectionId>('hero');
+
+  const hoveredSection = personaSections.find(s => s.id === hovered) ?? personaSections[0];
+
   return (
-    <div className="relative min-h-screen text-p5-bone">
+    <div className="relative min-h-screen w-full overflow-hidden">
       <ComicBackground />
 
-      <main className="relative z-10 mx-auto max-w-5xl px-8 py-12 flex flex-col gap-12">
-        <section className="flex flex-col gap-4">
-          <h1
-            className="text-6xl md:text-8xl tracking-tight"
-            style={{ fontFamily: 'var(--p5-font-tall)' }}
+      {!entered && <Splash onEnter={() => setEntered(true)} />}
+
+      {entered && (
+        <div
+          className="relative z-10 flex flex-col"
+          style={{ minHeight: '100vh', padding: '18px clamp(24px, 4vw, 60px) 12px' }}
+        >
+          <MenuHeader />
+
+          <div
+            className="flex items-stretch justify-between mx-auto w-full"
+            style={{
+              flex: 1,
+              maxWidth: '1140px',
+              gap: 'clamp(20px, 3vw, 48px)',
+              paddingTop: '6px',
+              minHeight: 0,
+            }}
           >
-            VERIEL<span className="text-p5-red">.DEV</span>
-          </h1>
-          <RansomText text="Phantom Menu" variant="sticker" size="22px" />
-        </section>
+            <MenuStage section={hoveredSection} />
 
-        <section className="flex flex-col gap-3">
-          <h2 className="text-xs uppercase tracking-[0.3em] text-p5-bone/60">RansomText</h2>
-          <div className="flex flex-wrap items-center gap-4">
-            <RansomText text="Sticker" variant="sticker" size="22px" />
-            <RansomText text="Ink" variant="ink" size="22px" />
-            <RansomText text="Red" variant="red" size="22px" />
-            <RansomText text="Outline" variant="outline" size="32px" />
-            <RansomText text="Solid" variant="solid" size="32px" />
-          </div>
-        </section>
-
-        <section className="flex flex-col gap-3">
-          <h2 className="text-xs uppercase tracking-[0.3em] text-p5-bone/60">StarBurst</h2>
-          <div className="flex flex-wrap items-center gap-6">
-            <StarBurst size="120px" color="var(--p5-bone)" />
-            <StarBurst size="120px" color="var(--p5-red)" spin={20} />
-            <StarBurst size="120px" color="var(--color-accent-violet)" fine spin={40} />
-          </div>
-        </section>
-
-        <section className="flex flex-col gap-3">
-          <h2 className="text-xs uppercase tracking-[0.3em] text-p5-bone/60">PhantomButton</h2>
-          <div className="flex flex-wrap items-center gap-4">
-            <PhantomButton variant="solid" color="red">
-              Ver proyectos
-            </PhantomButton>
-            <PhantomButton variant="outline" color="white">
-              Contacto
-            </PhantomButton>
-            <PhantomButton
-              variant="solid"
-              color="emerald"
-              href="https://veriel.dev"
-              target="_blank"
+            <nav
+              className="flex flex-col justify-center self-center"
+              style={{
+                gap: '13px',
+                width: 'min(46vw, 560px)',
+                flex: '1 1 auto',
+              }}
             >
-              Visitar
-            </PhantomButton>
+              {personaSections.map((s, i) => (
+                <FanReveal key={s.id} index={i}>
+                  <FanItem
+                    section={s}
+                    active={hovered === s.id}
+                    onHover={() => setHovered(s.id)}
+                    onOpen={() => {
+                      /* nav stubbed — Fase 7 conecta takeover */
+                    }}
+                  />
+                </FanReveal>
+              ))}
+            </nav>
           </div>
-        </section>
 
-        <section className="flex flex-col gap-3">
-          <h2 className="text-xs uppercase tracking-[0.3em] text-p5-bone/60">Badge</h2>
-          <div className="flex flex-wrap items-center gap-3">
-            <Badge>TypeScript</Badge>
-            <Badge>React 19</Badge>
-            <Badge variant="status" color="emerald">
-              Completado
-            </Badge>
-            <Badge variant="status" color="amber">
-              En curso
-            </Badge>
+          <div className="flex items-end justify-between gap-5" style={{ padding: '0 0 8px' }}>
+            <HudMoney />
+            <HudParty />
           </div>
-        </section>
-      </main>
+
+          <MenuFooter />
+        </div>
+      )}
     </div>
   );
 };
