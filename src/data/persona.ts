@@ -1,7 +1,14 @@
 import type { SectionColor } from './colors';
 import { cvData } from './cv';
 
-export type PersonaSectionId = 'hero' | 'about' | 'experience' | 'skills' | 'projects' | 'contact';
+export type PersonaSectionId =
+  | 'hero'
+  | 'about'
+  | 'experience'
+  | 'skills'
+  | 'projects'
+  | 'process'
+  | 'contact';
 
 export interface PersonaSection {
   id: PersonaSectionId;
@@ -23,7 +30,7 @@ export interface PersonaUI {
   splash: { subtitle: string; hint: string };
   hudHeader: { year: string; badgePrefix: string };
   menuStage: { heading: string; subtitle: string };
-  money: { currency: string; amount: string; caption: string };
+  money: { prefix: string; caption: string };
   party: PersonaPartyMember[];
   partyLabel: string;
   controls: { nav: string; open: string; back: string; location: string };
@@ -33,7 +40,7 @@ export interface PersonaUI {
 
 export const personaSections: PersonaSection[] = [
   { id: 'hero', number: '01', label: 'Inicio', sublabel: 'Quién soy', color: 'violet' },
-  { id: 'about', number: '02', label: 'Sobre mí', sublabel: 'El fondo', color: 'cyan' },
+  { id: 'about', number: '02', label: 'Sobre mí', sublabel: 'Trasfondo', color: 'cyan' },
   {
     id: 'experience',
     number: '03',
@@ -41,15 +48,22 @@ export const personaSections: PersonaSection[] = [
     sublabel: 'Currículum · CV',
     color: 'emerald',
   },
-  { id: 'skills', number: '04', label: 'Skills', sublabel: 'Stack técnico', color: 'rose' },
+  {
+    id: 'skills',
+    number: '04',
+    label: 'Skills',
+    sublabel: 'Mi caja de herramientas',
+    color: 'rose',
+  },
   {
     id: 'projects',
     number: '05',
     label: 'Proyectos',
-    sublabel: 'Todo el catálogo',
+    sublabel: 'Lo que he construido',
     color: 'amber',
   },
-  { id: 'contact', number: '06', label: 'Contacto', sublabel: 'Hablemos', color: 'blue' },
+  { id: 'process', number: '06', label: 'Proceso', sublabel: 'Cómo trabajo', color: 'white' },
+  { id: 'contact', number: '07', label: 'Contacto', sublabel: 'Hablemos', color: 'blue' },
 ];
 
 const { github, linkedin, email } = cvData.header;
@@ -73,9 +87,8 @@ export const personaUI: PersonaUI = {
   },
 
   money: {
-    currency: '¥',
-    amount: '54',
-    caption: 'Repos · GitHub',
+    prefix: 'LV',
+    caption: 'Engineer',
   },
 
   party: [
