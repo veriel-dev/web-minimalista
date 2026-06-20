@@ -50,22 +50,25 @@ const Wipe = ({ label }: WipeProps) => {
                 style={{ width: '220px', height: '220px' }}
               >
                 <div
-                  className="absolute inset-0"
-                  style={{ animation: 'splatPop 0.7s var(--p5-ease-snap)' }}
+                  className="absolute"
+                  style={{
+                    inset: '-6%',
+                    animation: 'splatPop 0.7s var(--p5-ease-snap)',
+                  }}
                 >
-                  <StarBurst size="100%" color="var(--p5-ink)" spin={28} />
+                  <StarBurst size="100%" color="var(--p5-bone)" spin={60} fine />
                 </div>
                 <div
                   className="absolute"
                   style={{
-                    inset: '14%',
+                    inset: '4%',
                     animation: 'splatPop 0.7s var(--p5-ease-snap) 0.08s both',
                   }}
                 >
-                  <StarBurst size="100%" color="var(--p5-bone)" fine />
+                  <StarBurst size="100%" color="var(--p5-red)" spin={45} />
                 </div>
                 <img
-                  src="/logo-red.svg"
+                  src="/logo-white.svg"
                   alt=""
                   aria-hidden
                   width={92}
