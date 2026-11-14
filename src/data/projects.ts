@@ -17,7 +17,7 @@ const projects: Project[] = [
   {
     title: 'Veriel Ops',
     description:
-      'Panel DevOps tipo Vercel para mi infraestructura: despliegues, rollbacks y dominios en un click.',
+      'Panel DevOps para mi propia infraestructura: despliegues, rollbacks y dominios desde un único sitio.',
     technologies: ['Bun', 'Hono', 'React 19', 'TanStack Query', 'Tauri 2', 'SQLite'],
     featured: true,
     github: 'https://github.com/veriel-cloud/veriel-ops',
@@ -31,7 +31,8 @@ const projects: Project[] = [
   /* Pokémon Champions (ChampDex) */
   {
     title: 'Pokémon Champions',
-    description: 'Toolkit competitivo VGC: team builder, damage calc con fórmula Gen 9 y meta.',
+    description:
+      'Herramientas para el competitivo VGC: creador de equipos, calculadora de daño y análisis del meta.',
     technologies: ['Astro', 'TypeScript', 'Vitest', 'Biome'],
     featured: true,
     demo: 'https://pokemon-champions.veriel.dev/',
@@ -40,7 +41,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'pokemon-champions',
     longDescription:
-      'Toolkit competitivo para el formato VGC de Pokémon Champions (Gen 9, dobles 4v4). Sitio estático con Astro: 0 KB de framework JS en el cliente — toda la interactividad es vanilla JS. Incluye Pokédex, Team Builder con persistencia local, Damage Calculator con la fórmula completa de Gen 9 (climas, terrenos, screens, ítems, habilidades) y meta dashboard sobre los datos chaos de Smogon.',
+      'Toolkit competitivo para el formato VGC de Pokémon Champions (Gen 9, dobles 4v4). Sitio estático con Astro sin framework en el cliente: toda la interactividad es JavaScript nativo. Incluye Pokédex, Team Builder con persistencia local, Damage Calculator con la fórmula completa de Gen 9 (climas, terrenos, screens, ítems, habilidades) y meta dashboard sobre los datos chaos de Smogon.',
   },
   /* VulnScan */
   {
@@ -80,12 +81,13 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'clone-spring-mvc',
     longDescription:
-      'Implementación desde cero del patrón MVC de Spring en Node + TypeScript: decoradores de ruta (@Get, @Post, @Put, @Delete), contenedor IoC para inyección de dependencias, middleware composable y validación automática de parámetros. Hecho para entender por dentro la "magia" que hacen Spring o NestJS.',
+      'Implementación desde cero del patrón MVC de Spring en Node + TypeScript: decoradores de ruta (@Get, @Post, @Put, @Delete), contenedor IoC para inyección de dependencias, middleware composable y validación automática de parámetros. El objetivo: entender cómo funcionan por dentro frameworks como Spring o NestJS.',
   },
   /* Kodamon */
   {
     title: 'Kodamon - Digital Battles',
-    description: 'Batallas por turnos estilo RPG japonés clásico con Phaser 3.',
+    description:
+      'Juego de batallas por turnos inspirado en los RPG japoneses clásicos, hecho con Phaser 3.',
     technologies: ['Vite', 'TypeScript', 'Phaser'],
     featured: true,
     github: 'https://github.com/veriel-dev/screen-battle',
@@ -95,7 +97,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'kodamon-digital-battles',
     longDescription:
-      'Batallas por turnos inspiradas en los RPG japoneses de toda la vida. Selección de criaturas con stats únicos, sistema de daño, animaciones sprite y máquina de estados — todo sobre Phaser 3 con TypeScript estricto.',
+      'Juego de batallas por turnos inspirado en los RPG japoneses clásicos. Selección de criaturas con estadísticas propias, sistema de daño, animaciones con sprites y máquina de estados, todo con Phaser 3 y TypeScript estricto.',
   },
   /* Task Scheduler Service */
   {
@@ -114,7 +116,7 @@ const projects: Project[] = [
   /* Game Boy Color */
   {
     title: 'Game Boy Color',
-    description: 'Game Boy Color recreada pixel-perfect 100% en CSS, sin una sola imagen.',
+    description: 'Game Boy Color recreada al detalle solo con CSS, sin una sola imagen.',
     technologies: ['CSS', 'Vite', 'JavaScript'],
     featured: false,
     projectType: 'frontend',
@@ -124,12 +126,13 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'gameboy-color',
     longDescription:
-      'Game Boy Color recreada con CSS puro: cero imágenes, todo a base de gradientes, box-shadows y formas. Botones interactivos con feedback táctil, pantalla LCD con tinte verdoso y animación de encendido.',
+      'Game Boy Color recreada solo con CSS, sin imágenes: todo son gradientes, sombras y formas. Incluye botones interactivos que responden al pulsarlos, pantalla LCD con su tono verdoso y animación de encendido.',
   },
   /* Veriel SO */
   {
     title: 'Veriel SO',
-    description: 'Portfolio retro: SO clásico con ventanas arrastrables y barra de tareas.',
+    description:
+      'Portfolio con forma de sistema operativo retro: escritorio, ventanas y barra de tareas en el navegador.',
     technologies: ['React', 'TypeScript', 'CSS Modules'],
     projectType: 'frontend',
     featured: false,
@@ -138,12 +141,13 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'veriel-so',
     longDescription:
-      'Portfolio con forma de sistema operativo retro. Ventanas arrastrables y redimensionables, sistema de archivos simulado, barra de tareas funcional, iconos de escritorio y menú de inicio. El reto: gestión de z-index dinámico, focus y snap entre ventanas.',
+      'Mi portfolio convertido en un sistema operativo retro con React y TypeScript. Ventanas que se arrastran y redimensionan, sistema de archivos simulado, barra de tareas, iconos de escritorio y menú de inicio. El reto principal fue gestionar el estado de todo el escritorio: el orden de las ventanas, el foco y el ajuste automático entre ellas.',
   },
   /* Cartas SU-Gi-Oh */
   {
     title: 'Cartas SU-Gi-Oh',
-    description: 'Editor de cartas Yu-Gi-Oh!: sube imagen, edita y exporta PNG. Sin backend.',
+    description:
+      'Editor de cartas estilo Yu-Gi-Oh!: sube una imagen, edita los textos y exporta a PNG.',
     technologies: ['React', 'Canvas', 'TypeScript', 'Astro', 'IndexedDB'],
     featured: false,
     projectType: 'frontend',
@@ -151,7 +155,7 @@ const projects: Project[] = [
     status: 'completed',
     slug: 'cartas-sugioh',
     longDescription:
-      'Editor visual WYSIWYG para crear cartas personalizadas estilo Yu-Gi-Oh!. Sube imagen, edita textos sobre varios templates y exporta a PNG de alta calidad. Galería con las cartas creadas guardadas localmente con IndexedDB — todo sin backend.',
+      'Editor visual WYSIWYG para crear cartas personalizadas estilo Yu-Gi-Oh!. Sube imagen, edita textos sobre varios templates y exporta a PNG de alta calidad. Las cartas se guardan en una galería local con IndexedDB, sin necesidad de backend.',
   },
 ];
 

@@ -1,14 +1,7 @@
 import type { SectionColor } from './colors';
 import { cvData } from './cv';
 
-export type PersonaSectionId =
-  | 'hero'
-  | 'about'
-  | 'experience'
-  | 'skills'
-  | 'projects'
-  | 'process'
-  | 'contact';
+export type PersonaSectionId = 'hero' | 'about' | 'experience' | 'skills' | 'projects' | 'contact';
 
 export interface PersonaSection {
   id: PersonaSectionId;
@@ -40,7 +33,7 @@ export interface PersonaUI {
 
 export const personaSections: PersonaSection[] = [
   { id: 'hero', number: '01', label: 'Inicio', sublabel: 'Quién soy', color: 'violet' },
-  { id: 'about', number: '02', label: 'Sobre mí', sublabel: 'Trasfondo', color: 'cyan' },
+  { id: 'about', number: '02', label: 'Sobre mí', sublabel: 'Mi historia', color: 'cyan' },
   {
     id: 'experience',
     number: '03',
@@ -51,8 +44,8 @@ export const personaSections: PersonaSection[] = [
   {
     id: 'skills',
     number: '04',
-    label: 'Skills',
-    sublabel: 'Mi caja de herramientas',
+    label: 'Habilidades',
+    sublabel: 'Stack técnico',
     color: 'rose',
   },
   {
@@ -62,8 +55,7 @@ export const personaSections: PersonaSection[] = [
     sublabel: 'Lo que he construido',
     color: 'amber',
   },
-  { id: 'process', number: '06', label: 'Proceso', sublabel: 'Cómo trabajo', color: 'white' },
-  { id: 'contact', number: '07', label: 'Contacto', sublabel: 'Hablemos', color: 'blue' },
+  { id: 'contact', number: '06', label: 'Contacto', sublabel: 'Hablemos', color: 'blue' },
 ];
 
 const { github, linkedin, email } = cvData.header;
@@ -82,13 +74,13 @@ export const personaUI: PersonaUI = {
   },
 
   menuStage: {
-    heading: 'MENU : MAIN',
-    subtitle: 'Select a command',
+    heading: 'MENÚ : PRINCIPAL',
+    subtitle: 'Elige una opción',
   },
 
   money: {
-    prefix: 'LV',
-    caption: 'Engineer',
+    prefix: 'NV',
+    caption: 'Ingeniero',
   },
 
   party: [
@@ -96,7 +88,7 @@ export const personaUI: PersonaUI = {
     { id: 'in', name: 'LinkedIn', color: 'blue', href: linkedin },
     { id: 'M', name: 'Mail', color: 'red', href: `mailto:${email}` },
   ],
-  partyLabel: 'Party',
+  partyLabel: 'Grupo',
 
   controls: {
     nav: '↑↓ Navegar',
@@ -107,11 +99,11 @@ export const personaUI: PersonaUI = {
 
   takeover: {
     back: '◀ Volver',
-    menuPrefix: 'Menu //',
+    menuPrefix: 'Menú //',
     watermark: 'Veriel.dev — Phantom Menu',
   },
 
   wipe: {
-    backLabel: 'Menu Main',
+    backLabel: 'Menú principal',
   },
 };
