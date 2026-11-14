@@ -39,7 +39,8 @@ const Splash = ({ onEnter }: SplashProps) => {
         }}
       >
         {brand.name.toUpperCase()}
-        <span className="text-p5-red">{brand.suffix.toUpperCase()}</span>
+        <span className="text-p5-red">.</span>
+        <span className="text-p5-bone">{brand.suffix.replace('.', '').toUpperCase()}</span>
       </span>
 
       <div className="relative mt-3.5">
