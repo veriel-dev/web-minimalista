@@ -98,7 +98,7 @@ const Wipe = ({ label }: WipeProps) => {
                 </span>
               </span>
               <div style={{ marginTop: '2px' }}>
-                <RansomText text="Menu Main" variant="ink" size="16px" />
+                <RansomText text="Menú principal" variant="ink" size="16px" />
               </div>
             </>
           ) : (
