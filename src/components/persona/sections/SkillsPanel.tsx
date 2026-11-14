@@ -35,7 +35,7 @@ const SkillsPanel = () => {
               {item.name}
             </div>
             <div
-              className="mt-1 uppercase text-p5-bone/55"
+              className="mt-1 uppercase text-p5-bone/80"
               style={{
                 fontFamily: 'var(--font-inter)',
                 fontSize: '10px',

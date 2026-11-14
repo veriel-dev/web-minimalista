@@ -16,7 +16,6 @@ import {
   CVPanel,
   HeroPanel,
   PrintableCV,
-  ProcessPanel,
   ProjectsPanel,
   SkillsPanel,
   TakeoverFrame,
@@ -200,7 +199,6 @@ const HomePagePersona = () => {
             {openSection === 'experience' && <CVPanel />}
             {openSection === 'skills' && <SkillsPanel />}
             {openSection === 'projects' && <ProjectsPanel onOpenProject={handleOpenProject} />}
-            {openSection === 'process' && <ProcessPanel />}
             {openSection === 'contact' && <ContactPanel />}
           </TakeoverFrame>
         )}

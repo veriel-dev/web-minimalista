@@ -10,7 +10,7 @@ export const copy = {
     title: 'Senior Software',
     titleHighlight: 'Engineer',
     subtitle:
-      'Software Engineer con 5+ años en lo enterprise (Oracle WebCenter Sites) y el resto del tiempo construyendo desde cero con TypeScript, Java y Go.',
+      'Más de 5 años desarrollando portales web de alto tráfico sobre Oracle WebCenter Sites para grandes empresas. En mi tiempo libre construyo herramientas y productos propios desde cero con TypeScript, Java y Go.',
     ctaPrimary: { label: 'Ver Proyectos', href: '/projects' },
     ctaSecondary: { label: 'Contactar', href: '#contact' },
   },
@@ -18,27 +18,22 @@ export const copy = {
   about: {
     title: 'SOBRE MÍ',
     paragraphs: [
-      'Aterricé en el código por hartazgo, no por vocación. Empecé a aprender a programar harto de la carrera de Física y el reto técnico me enganchó. Llevo aquí 5 años.',
-      'Tres obsesiones se repiten en cada proyecto: construir desde cero para entender qué pasa por debajo, arquitectura que se lee sola y sistema de diseño hasta el último pixel.',
-      'Las recreaciones (Game Boy, Yu-Gi-Oh!, OS retro, periódico) son ejercicios de gimnasio. ¿Puedo hacerlo solo con CSS? ¿Sin librerías? ¿Pixel-perfect? Eso.',
+      'Soy Veriel, desarrollador de software. Vengo de la Física y desde 2021 trabajo en portales web de alto tráfico para grandes empresas, donde hoy soy responsable técnico de mis proyectos.',
     ],
-  },
-
-  process: {
-    title: 'PROCESO',
-    paragraphs: [
-      'Antes de tocar el editor, entiendo qué problema estoy resolviendo y qué pasa por debajo del framework.',
-      'Refactor cuando algo me empieza a gritar, no cuando me sobra tiempo. Si vamos a usarlo dos veces, lo abstraigo; tres, lo documento.',
-      'Sistema de diseño hasta el último pixel: si dos componentes se parecen, comparten tokens; si un comportamiento se repite, vive en un sitio.',
-      'Cuando el bug no está en mi código sino en el de otro, me toca a mí arreglarlo. He tirado de proxy, caché y queries cuando «no es cosa mía» dejaba el sistema parado.',
-      'Lo que no se ve también importa: logs útiles, builds reproducibles, dependencias justificadas. Lo que ahorra tiempo mañana lo escribo hoy.',
+    profileTitle: 'Ficha',
+    profile: [
+      { label: 'Alias', value: 'Veriel' },
+      { label: 'Rol', value: 'Responsable técnico' },
+      { label: 'Formación', value: 'Física' },
+      { label: 'Ubicación', value: 'España · remoto' },
+      { label: 'Especialidad', value: 'Oracle WebCenter Sites' },
     ],
   },
 
   contact: {
     title: 'HABLEMOS',
     subtitle:
-      '¿Construimos algo? Para hablar de trabajo, de código o de cualquier idea rara que tengas.',
+      '¿Quieres comentar algún proyecto, hablar de desarrollo o proponerme una oportunidad? Escríbeme.',
     email: 'vmordiales@gmail.com',
     socialLinks: [
       { platform: 'github', href: 'https://github.com/veriel-dev', label: 'GitHub' },

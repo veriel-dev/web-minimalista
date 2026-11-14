@@ -69,7 +69,7 @@ const FanItem = ({ section, active, onHover, onOpen }: FanItemProps) => {
             style={{
               fontFamily: 'var(--p5-font-tall)',
               fontSize: active ? '20px' : '16px',
-              color: active ? 'var(--p5-red)' : 'rgba(245,245,244,0.5)',
+              color: active ? 'var(--p5-red)' : 'rgba(245,245,244,0.85)',
               minWidth: '34px',
             }}
           >

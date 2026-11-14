@@ -94,7 +94,7 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
 
         <div className="flex items-center gap-2 md:gap-3.5 min-w-0">
           <span
-            className="hidden md:inline uppercase text-p5-bone/85"
+            className="hidden md:inline uppercase text-p5-bone"
             style={{
               fontFamily: 'var(--font-inter)',
               fontWeight: 700,
@@ -212,8 +212,8 @@ const TakeoverFrame = ({ sectionId, onClose, children }: TakeoverFrameProps) => 
           left: 'clamp(26px, 5vw, 68px)',
           fontFamily: 'var(--p5-font-tall)',
           fontSize: '30px',
-          color: 'transparent',
-          WebkitTextStroke: '1.5px rgba(245,245,244,0.5)',
+          color: 'var(--p5-bone)',
+          textShadow: '2px 2px 0 var(--p5-ink)',
           letterSpacing: '0.04em',
           transform: 'skewX(-8deg)',
         }}

@@ -14,7 +14,7 @@ const SfxToggle = ({ muted, onToggle }: SfxToggleProps) => (
     title={muted ? 'Activar sonido' : 'Silenciar'}
     className="cursor-pointer border-0 bg-transparent p-1 flex items-center justify-center"
     style={{
-      color: muted ? 'rgba(245,245,244,0.5)' : 'var(--p5-red)',
+      color: muted ? 'var(--p5-bone)' : 'var(--p5-red)',
       transition: 'color 0.18s ease, transform 0.18s var(--p5-ease-snap)',
     }}
   >

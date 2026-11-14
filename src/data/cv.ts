@@ -97,7 +97,7 @@ export const cvData: CVData = {
     title: 'Perfil Profesional',
     paragraphs: [
       'Software Engineer con 5+ años de experiencia en aplicaciones web empresariales. Especialista en Oracle WebCenter Sites, con portales de alto tráfico para Naturgy y AENA usando Spring/Java en backend y JavaScript/TypeScript en frontend.',
-      'Fuera del ámbito corporativo construyo plataformas, herramientas de desarrollador y recreaciones técnicas con React, Astro, Bun, Hono, Go y Tauri 2. Obsesión por construir desde cero y por el detalle del diseño.',
+      'Fuera del trabajo construyo plataformas, herramientas para desarrolladores y recreaciones técnicas con React, Astro, Bun, Hono, Go y Tauri 2. Me gusta construir desde cero y cuidar el detalle del diseño.',
     ],
     highlights: [
       'Especialista en Oracle WebCenter Sites con portales de alto tráfico (Naturgy, AENA)',
