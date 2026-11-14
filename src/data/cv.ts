@@ -38,10 +38,6 @@ export interface CVLanguage {
   level: string;
 }
 
-export interface CVAchievement {
-  text: string;
-}
-
 export interface CVData {
   metadata: {
     title: string;
@@ -53,7 +49,6 @@ export interface CVData {
   experience: CVJob[];
   education: CVEducation[];
   languages: CVLanguage[];
-  achievements: CVAchievement[];
 }
 
 export interface CVStat {
@@ -62,7 +57,7 @@ export interface CVStat {
   color: SectionColor;
 }
 
-const CAREER_START = new Date(2021, 3, 1); // Abril 2021 (eCapture3D, primer empleo)
+const CAREER_START = new Date(2021, 7, 1); // Agosto 2021 (Viewnext, primer empleo como desarrollador)
 
 const computeYearsOfExperience = (): string => {
   const now = new Date();
@@ -71,10 +66,29 @@ const computeYearsOfExperience = (): string => {
   return `${years + monthAdjustment}+`;
 };
 
+export interface CVSkillGroup {
+  category: string;
+  skills: string;
+}
+
+export const cvSkills: CVSkillGroup[] = [
+  { category: 'Especialidad', skills: 'Oracle WebCenter Sites' },
+  { category: 'Lenguajes', skills: 'Java · TypeScript · JavaScript · Groovy · SQL' },
+  { category: 'Frontend', skills: 'Angular · React' },
+  { category: 'Backend', skills: 'Spring Boot · Node.js' },
+  {
+    category: 'Integraciones',
+    skills:
+      'Sistemas corporativos y APIs de terceros (SAP CDC, SuccessFactors, MuleSoft, Entra ID, etc.)',
+  },
+  { category: 'Bases de datos', skills: 'Oracle · PostgreSQL' },
+  { category: 'Herramientas', skills: 'Git · Docker · Claude Code' },
+];
+
 export const cvStats: CVStat[] = [
   { value: computeYearsOfExperience(), label: 'Años de experiencia', color: 'violet' },
-  { value: '20+', label: 'Proyectos profesionales', color: 'cyan' },
-  { value: `${projects.length}`, label: 'Proyectos personales', color: 'emerald' },
+  { value: '100+', label: 'Proyectos y evolutivos', color: 'cyan' },
+  { value: `${projects.length}`, label: 'Proyectos públicos', color: 'emerald' },
 ];
 
 export const cvData: CVData = {
@@ -86,7 +100,7 @@ export const cvData: CVData = {
   header: {
     name: 'Víctor Manuel Ordiales García',
     title: 'Senior Software Engineer',
-    location: 'Casar de Cáceres, Cáceres, España',
+    location: 'Cáceres, España · remoto',
     phone: '685394859',
     email: 'vmordiales@gmail.com',
     linkedin: 'https://www.linkedin.com/in/víctor-manuel-ordiales-garcía/',
@@ -96,8 +110,7 @@ export const cvData: CVData = {
   summary: {
     title: 'Perfil Profesional',
     paragraphs: [
-      'Software Engineer con 5+ años de experiencia en aplicaciones web empresariales. Especialista en Oracle WebCenter Sites, con portales de alto tráfico para Naturgy y AENA usando Spring/Java en backend y JavaScript/TypeScript en frontend.',
-      'Fuera del trabajo construyo plataformas, herramientas para desarrolladores y recreaciones técnicas con React, Astro, Bun, Hono, Go y Tauri 2. Me gusta construir desde cero y cuidar el detalle del diseño.',
+      'Senior Software Engineer especializado en Oracle WebCenter Sites, con más de 5 años en portales web de alto tráfico para Naturgy y AENA. Hoy soy responsable técnico de proyectos completos de principio a fin: frontend, backend, integraciones entre sistemas e infraestructura.',
     ],
     highlights: [
       'Especialista en Oracle WebCenter Sites con portales de alto tráfico (Naturgy, AENA)',
@@ -107,59 +120,38 @@ export const cvData: CVData = {
   },
   experience: [
     {
-      role: 'Desarrollador OWCS + Spring Boot',
+      role: 'Responsable técnico y desarrollador',
       company: 'Alvea Soluciones Tecnológicas S.L',
-      project: 'Web Pública AENA',
+      project: 'Cliente AENA',
       period: 'May. 2025 - Actualidad',
       achievements: [
-        'Mantenimiento y evolución del portal público de AENA sobre Oracle WebCenter Sites + Spring Boot',
-        'Diagnóstico y resolución de incidencias críticas N2/N3/N4 en producción: bugs intermitentes sin logs útiles, problemas de caché, queries OWCS mal estructuradas, fallos de integración entre sistemas',
-        'Integración del portal con múltiples sistemas internos del cliente (SPA CDC, plataforma de traducciones, otros)',
-        'Desarrollo de proyectos nuevos desde cero en Angular + Spring Boot siguiendo la arquitectura corporativa del cliente',
-        'Soporte funcional y técnico continuo a editores del gestor',
+        'Responsable técnico del mantenimiento y los evolutivos del portal público de AENA sobre Oracle WebCenter Sites: estimación, definición funcional y de arquitectura e implementación a partir de las necesidades del equipo funcional',
+        'Diseño y desarrollo desde cero de nuevas aplicaciones con Angular y Spring Boot: documento funcional y de arquitectura, definición de funcionalidades e implementación completa',
+        'Desarrollo de integraciones con sistemas corporativos y servicios de terceros (SAP CDC, SuccessFactors, MuleSoft, etc.) y gestión con los equipos de infraestructura de todo lo necesario para cada proyecto',
+        'Diagnóstico y resolución de incidencias críticas en producción',
       ],
     },
     {
-      role: 'Desarrollador Frontend',
+      role: 'Analista programador',
       company: 'Viewnext S.A',
-      project: 'Portal de Contratación Naturgy',
-      period: 'Abr. 2025 - May. 2025',
-      achievements: [
-        'Desarrollo y mantenimiento de interfaces con React en el portal de contratación: refactorización de componentes, resolución de incidencias visuales y endurecimiento de validaciones de formularios',
-        'Coordinación con diseño y QA para validar mejoras de UX antes de release',
-      ],
-    },
-    {
-      role: 'Desarrollador OWCS + Spring Boot',
-      company: 'Viewnext S.A',
-      project: 'Portales y Áreas Cliente Naturgy',
+      project: 'Portales y áreas cliente Naturgy',
       period: 'Feb. 2023 - Mar. 2025',
       achievements: [
         'Mantenimiento evolutivo y correctivo de los portales y áreas cliente de Naturgy sobre Oracle WebCenter Sites',
-        'Desarrollo backend en Spring para procesos batch, integraciones y nuevas funcionalidades del área privada (sistema de autenticación, recobro, batería virtual, etc.)',
-        'Evolución de desarrollador a analista técnico: análisis de requisitos, diseño técnico y propuesta de soluciones end-to-end',
-        'Comunicación directa con cliente para definición de features y soporte continuo',
+        'Desarrollo backend con Spring de procesos batch, integraciones y nuevas funcionalidades del área privada (autenticación, recobro, batería virtual, etc.)',
+        'Análisis de requisitos, diseño técnico, implementación y validación de las soluciones en contacto directo con el cliente',
       ],
     },
     {
       role: 'Desarrollador OWCS',
       company: 'Viewnext S.A',
-      project: 'Portales Públicos Naturgy',
+      project: 'Portales públicos Naturgy',
       period: 'Ago. 2021 - Dic. 2023',
       achievements: [
-        'Desarrollo y mantenimiento del portal público corporativo sobre Oracle WebCenter Sites para varios mercados internacionales (España, Brasil, México)',
-        'Migración íntegra de sites al gestor, reescribiendo HTML, JS y CSS completos cuando la herramienta no daba la contribución suficiente',
-        'Implementación de landings interactivas con componentes vivos: calculadoras, simuladores, visualizaciones de datos',
-        'Creación de componentes y templates reutilizables dentro de la arquitectura de OWCS',
-      ],
-    },
-    {
-      role: 'Desarrollador en I+D',
-      company: 'eCapture3D S.L',
-      period: 'Abr. 2021 - Jun. 2021',
-      achievements: [
-        'Análisis de datos meteorológicos de AEMET y desarrollo de modelos predictivos de variables climáticas',
-        'Primer contacto profesional con el desarrollo de software',
+        'Desarrollo y mantenimiento de los portales públicos de Naturgy sobre Oracle WebCenter Sites para varios mercados (España, Brasil, México, etc.)',
+        'Migración completa de sites al gestor: creación y adaptación de componentes de WCS y reescritura de su HTML, CSS y JavaScript',
+        'Landings interactivas con componentes dinámicos (calculadoras, simuladores, visualizaciones de datos, etc.)',
+        'Componentes y plantillas reutilizables dentro de la arquitectura de OWCS',
       ],
     },
   ],
@@ -168,27 +160,11 @@ export const cvData: CVData = {
       degree: 'Graduado en Física',
       institution: 'Universidad de Extremadura',
       period: '2014 - 2021',
-      highlights: [
-        'Física teórica y experimental: mecánica cuántica, física estadística',
-        'Formación en programación científica y análisis de datos',
-      ],
+      highlights: ['Formación en programación científica y análisis de datos'],
     },
   ],
   languages: [
     { language: 'Español', level: 'Nativo' },
     { language: 'Inglés', level: 'Básico' },
-  ],
-  achievements: [
-    {
-      text: 'Desarrollo con Oracle WebCenter Sites y Spring en portales estratégicos para Naturgy y AENA',
-    },
-    {
-      text: 'Progresión técnica acelerada desde desarrollador junior hasta analista técnico en 4 años',
-    },
-    { text: 'Soporte técnico N2/N3 en entornos de producción de alto tráfico' },
-    { text: 'Gestión integral de proyectos desde análisis de requisitos hasta implementación' },
-    {
-      text: 'Comunicación directa con cliente en toma de requisitos y soporte técnico',
-    },
   ],
 };

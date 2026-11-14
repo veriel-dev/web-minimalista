@@ -6,62 +6,12 @@ import {
   IconPhone,
   IconWorld,
 } from '@tabler/icons-react';
-import { cvData } from '../../../data/cv';
-import { techStack, type TechItem } from '../../../data/techStack';
+import { cvData, cvSkills } from '../../../data/cv';
 
 const cleanHost = (url: string): string => url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
-const SKILL_CATEGORIES = [
-  'Lenguajes',
-  'Frontend',
-  'Backend',
-  'Bases de datos',
-  'Herramientas',
-] as const;
-
-type SkillCategory = (typeof SKILL_CATEGORIES)[number];
-
-const TYPE_TO_CATEGORY: Record<string, SkillCategory> = {
-  Lenguaje: 'Lenguajes',
-  'Librería frontend': 'Frontend',
-  'Framework frontend': 'Frontend',
-  'Framework CSS': 'Frontend',
-  Empaquetador: 'Frontend',
-  'Entorno de ejecución': 'Backend',
-  'Framework Java': 'Backend',
-  'Framework Node': 'Backend',
-  'CMS empresarial': 'Backend',
-  'Base de datos SQL': 'Bases de datos',
-  'Base de datos NoSQL': 'Bases de datos',
-  'Base de datos empresarial': 'Bases de datos',
-  'SQL embebida': 'Bases de datos',
-  'Almacén en memoria': 'Bases de datos',
-  ORM: 'Bases de datos',
-  'Control de versiones': 'Herramientas',
-  Contenedores: 'Herramientas',
-  'Edge / alojamiento': 'Herramientas',
-  'CI/CD': 'Herramientas',
-  'Apps de escritorio': 'Herramientas',
-  'Motor de juegos': 'Herramientas',
-};
-
-const groupSkillsByCategory = (
-  items: TechItem[],
-): Array<{ category: SkillCategory; skills: string[] }> => {
-  const map = new Map<SkillCategory, string[]>();
-  for (const cat of SKILL_CATEGORIES) map.set(cat, []);
-  for (const item of items) {
-    const category = TYPE_TO_CATEGORY[item.type];
-    if (category) map.get(category)?.push(item.name);
-  }
-  return SKILL_CATEGORIES.map(category => ({ category, skills: map.get(category) ?? [] })).filter(
-    group => group.skills.length > 0,
-  );
-};
-
 const PrintableCV = () => {
-  const { header, summary, experience, education, languages, achievements } = cvData;
-  const skillGroups = groupSkillsByCategory(techStack);
+  const { header, summary, experience, education, languages } = cvData;
 
   return (
     <div className="hidden print:block bg-white min-h-screen text-gray-900">
@@ -115,7 +65,10 @@ const PrintableCV = () => {
           <div className="relative pl-6">
             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200" />
             {experience.map(job => (
-              <div key={`${job.company}-${job.period}`} className="relative mb-6 last:mb-0">
+              <div
+                key={`${job.company}-${job.period}`}
+                className="relative mb-6 last:mb-0 break-inside-avoid"
+              >
                 <div
                   className="absolute -left-6 top-1.5 w-2.5 h-2.5 bg-gray-900 rounded-full"
                   style={{ transform: 'translateX(-4px)' }}
@@ -147,7 +100,7 @@ const PrintableCV = () => {
           <div className="relative pl-6">
             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gray-200" />
             {education.map(edu => (
-              <div key={edu.degree} className="relative mb-6 last:mb-0">
+              <div key={edu.degree} className="relative mb-6 last:mb-0 break-inside-avoid">
                 <div
                   className="absolute -left-6 top-1.5 w-2.5 h-2.5 bg-gray-900 rounded-full"
                   style={{ transform: 'translateX(-4px)' }}
@@ -174,14 +127,12 @@ const PrintableCV = () => {
             Competencias Técnicas
           </h2>
           <div className="grid grid-cols-2 gap-6">
-            {skillGroups.map(group => (
+            {cvSkills.map(group => (
               <div key={group.category} className="border-l-2 border-gray-200 pl-4">
                 <h3 className="text-sm font-semibold text-gray-900 mb-2 uppercase tracking-wider">
                   {group.category}
                 </h3>
-                <div className="text-xs text-gray-600 leading-relaxed">
-                  {group.skills.join(' · ')}
-                </div>
+                <div className="text-xs text-gray-600 leading-relaxed">{group.skills}</div>
               </div>
             ))}
           </div>
@@ -197,17 +148,6 @@ const PrintableCV = () => {
                 <li key={lng.language}>
                   <span className="font-medium">{lng.language}:</span> {lng.level}
                 </li>
-              ))}
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b-2 border-gray-900 inline-block">
-              Logros
-            </h2>
-            <ul className="text-xs text-gray-600 leading-relaxed list-disc ml-4 space-y-1">
-              {achievements.slice(0, 4).map(a => (
-                <li key={a.text}>{a.text}</li>
               ))}
             </ul>
           </section>

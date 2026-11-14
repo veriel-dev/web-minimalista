@@ -41,4 +41,5 @@ export const techStack: TechItem[] = [
   { name: 'Docker', type: 'Contenedores', color: 'blue' },
   { name: 'Cloudflare', type: 'Edge / alojamiento', color: 'amber' },
   { name: 'GitHub Actions', type: 'CI/CD', color: 'violet' },
+  { name: 'Claude Code', type: 'Desarrollo asistido por IA', color: 'amber' },
 ];
