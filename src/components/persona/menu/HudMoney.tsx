@@ -24,9 +24,11 @@ const HudMoney = () => {
         className="uppercase"
         style={{
           fontFamily: 'var(--font-inter)',
-          fontSize: '10px',
-          letterSpacing: '0.16em',
-          color: 'rgba(245,245,244,0.6)',
+          fontSize: '12px',
+          fontWeight: 600,
+          letterSpacing: '0.14em',
+          color: 'var(--p5-bone)',
+          textShadow: '0 1px 3px rgba(10,10,10,0.85)',
         }}
       >
         {money.caption}

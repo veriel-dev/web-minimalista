@@ -21,7 +21,7 @@ const PartyChip = ({ member }: PartyChipProps) => {
       onMouseLeave={() => setHover(false)}
       onFocus={() => setHover(true)}
       onBlur={() => setHover(false)}
-      className="block w-[46px] no-underline"
+      className="block w-[56px] no-underline"
       style={{
         transform: hover ? 'translateY(-6px) skewX(-9deg)' : 'skewX(-9deg)',
         transition: 'transform 0.22s var(--p5-ease-snap)',
@@ -50,9 +50,11 @@ const PartyChip = ({ member }: PartyChipProps) => {
         style={{
           transform: 'skewX(9deg)',
           fontFamily: 'var(--font-inter)',
-          fontSize: '8px',
-          letterSpacing: '0.1em',
-          color: hover ? accent : 'rgba(245,245,244,0.55)',
+          fontSize: '10px',
+          fontWeight: 600,
+          letterSpacing: '0.06em',
+          color: hover ? accent : 'var(--p5-bone)',
+          textShadow: '0 1px 3px rgba(10,10,10,0.85)',
         }}
       >
         {member.name}
@@ -70,9 +72,11 @@ const HudParty = () => {
         className="uppercase mr-1 pb-[18px]"
         style={{
           fontFamily: 'var(--font-inter)',
-          fontSize: '10px',
-          letterSpacing: '0.18em',
-          color: 'rgba(245,245,244,0.5)',
+          fontSize: '12px',
+          fontWeight: 600,
+          letterSpacing: '0.14em',
+          color: 'var(--p5-bone)',
+          textShadow: '0 1px 3px rgba(10,10,10,0.85)',
           transform: 'skewX(-8deg)',
         }}
       >

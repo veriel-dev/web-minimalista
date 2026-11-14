@@ -126,14 +126,14 @@ const ProjectTile = ({ project, index, color, onOpen }: ProjectTileProps) => {
         >
           {project.title}
         </h3>
-        <p className="m-0 mb-3 text-p5-bone/65" style={{ fontSize: '13px', lineHeight: 1.5 }}>
+        <p className="m-0 mb-3 text-p5-bone/80" style={{ fontSize: '13px', lineHeight: 1.5 }}>
           {project.description}
         </p>
         <div className="flex flex-wrap gap-1.5">
           {project.technologies.slice(0, 3).map(t => (
             <span
               key={t}
-              className="text-p5-bone/55"
+              className="text-p5-bone/80"
               style={{
                 fontFamily: 'var(--font-inter)',
                 fontSize: '10px',

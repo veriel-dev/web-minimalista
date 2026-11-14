@@ -128,7 +128,7 @@ const ProjectDetail = ({ project, color, onClose }: ProjectDetailProps) => {
           </div>
 
           <p
-            className="text-p5-bone/85 font-light"
+            className="text-p5-bone font-light"
             style={{ fontSize: '15px', lineHeight: 1.65, margin: '0 0 24px' }}
           >
             {project.longDescription ?? project.description}

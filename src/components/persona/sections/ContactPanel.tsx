@@ -18,7 +18,7 @@ const ContactPanel = () => {
   return (
     <div>
       <p
-        className="text-p5-bone/90 font-light"
+        className="text-p5-bone font-light"
         style={{
           fontSize: '20px',
           maxWidth: '44ch',
@@ -50,7 +50,7 @@ const ContactPanel = () => {
               {s.label}
             </span>
             <span
-              className="text-p5-bone/85 truncate"
+              className="text-p5-bone truncate"
               style={{
                 fontFamily: 'var(--font-inter)',
                 fontSize: '13px',

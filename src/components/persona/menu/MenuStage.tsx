@@ -24,7 +24,7 @@ const MenuStage = ({ section }: MenuStageProps) => {
             {menuStage.heading}
           </div>
           <div
-            className="text-p5-bone/65 uppercase mt-[3px]"
+            className="text-p5-bone/85 uppercase mt-[3px]"
             style={{
               fontFamily: 'var(--font-inter)',
               fontSize: '10px',

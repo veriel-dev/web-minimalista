@@ -48,7 +48,7 @@ const CVPanel = () => {
       </div>
 
       <div
-        className="flex flex-wrap items-center mb-5 text-p5-bone/65"
+        className="flex flex-wrap items-center mb-5 text-p5-bone/80"
         style={{
           gap: '4px 14px',
           lineHeight: 1.6,
@@ -67,7 +67,7 @@ const CVPanel = () => {
       {cv.summary.paragraphs.map(p => (
         <p
           key={p}
-          className="text-p5-bone/85 font-light"
+          className="text-p5-bone font-light"
           style={{
             fontSize: '15px',
             maxWidth: '58ch',
@@ -103,7 +103,7 @@ const CVPanel = () => {
                 {st.value}
               </div>
               <div
-                className="uppercase text-p5-bone/60 mt-1.5"
+                className="uppercase text-p5-bone/80 mt-1.5"
                 style={{
                   fontFamily: 'var(--font-inter)',
                   fontSize: '10px',
@@ -149,7 +149,7 @@ const CVPanel = () => {
                 </span>
               </div>
               <div
-                className="text-p5-bone/60"
+                className="text-p5-bone/80"
                 style={{
                   fontFamily: 'var(--font-inter)',
                   fontSize: '12px',
@@ -158,13 +158,13 @@ const CVPanel = () => {
                 }}
               >
                 {job.company}
-                {job.project && <span className="text-p5-bone/40"> · {job.project}</span>}
+                {job.project && <span className="text-p5-bone/80"> · {job.project}</span>}
               </div>
               <ul className="m-0 flex flex-col gap-1" style={{ paddingLeft: '18px' }}>
                 {job.achievements.map(a => (
                   <li
                     key={a}
-                    className="text-p5-bone/80 font-light"
+                    className="text-p5-bone font-light"
                     style={{ fontSize: '13px', lineHeight: 1.45 }}
                   >
                     {a}
@@ -192,7 +192,7 @@ const CVPanel = () => {
                 {edu.degree}
               </span>
               <span
-                className="text-p5-bone/50"
+                className="text-p5-bone/80"
                 style={{
                   fontFamily: 'var(--font-inter)',
                   fontSize: '11px',
@@ -203,7 +203,7 @@ const CVPanel = () => {
               </span>
             </div>
             <div
-              className="text-p5-bone/60"
+              className="text-p5-bone/80"
               style={{
                 fontFamily: 'var(--font-inter)',
                 fontSize: '12px',
@@ -216,7 +216,7 @@ const CVPanel = () => {
               {edu.highlights.map(h => (
                 <li
                   key={h}
-                  className="text-p5-bone/80 font-light"
+                  className="text-p5-bone font-light"
                   style={{ fontSize: '13px', lineHeight: 1.45 }}
                 >
                   {h}
@@ -267,7 +267,7 @@ const CVPanel = () => {
             {cv.achievements.map(a => (
               <li
                 key={a.text}
-                className="text-p5-bone/80 font-light"
+                className="text-p5-bone font-light"
                 style={{ fontSize: '13px', lineHeight: 1.45 }}
               >
                 {a.text}

@@ -3,10 +3,12 @@ import SfxToggle from './SfxToggle';
 
 const hintBase = {
   fontFamily: 'var(--font-inter)',
-  fontSize: '11px',
-  letterSpacing: '0.14em',
+  fontSize: '12px',
+  fontWeight: 600,
+  letterSpacing: '0.12em',
   textTransform: 'uppercase' as const,
-  color: 'rgba(245,245,244,0.72)',
+  color: 'var(--p5-bone)',
+  textShadow: '0 1px 3px rgba(10,10,10,0.85)',
 };
 
 interface MenuFooterProps {
@@ -37,9 +39,11 @@ const MenuFooter = ({ muted, onToggleMute }: MenuFooterProps) => {
         <span
           style={{
             fontFamily: 'var(--font-inter)',
-            fontSize: '11px',
-            letterSpacing: '0.18em',
-            color: 'rgba(245,245,244,0.5)',
+            fontSize: '12px',
+            fontWeight: 600,
+            letterSpacing: '0.14em',
+            color: 'var(--p5-bone)',
+            textShadow: '0 1px 3px rgba(10,10,10,0.85)',
             textTransform: 'uppercase',
           }}
         >

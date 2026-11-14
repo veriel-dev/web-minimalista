@@ -31,7 +31,7 @@ const HeroPanel = ({ onNavigate }: HeroPanelProps) => {
       </div>
 
       <p
-        className="text-p5-bone/90 font-light"
+        className="text-p5-bone font-light"
         style={{
           fontSize: '20px',
           maxWidth: '44ch',

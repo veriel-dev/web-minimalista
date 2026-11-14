@@ -74,7 +74,7 @@ const NotFoundPagePersona = () => {
         </div>
 
         <p
-          className="text-p5-bone/80 font-light"
+          className="text-p5-bone font-light"
           style={{
             animation: 'riseIn 0.5s var(--p5-ease-snap) 0.24s both',
             fontSize: '18px',
@@ -83,7 +83,7 @@ const NotFoundPagePersona = () => {
             margin: '0 0 8px',
           }}
         >
-          Esta ruta ha desaparecido sin dejar rastro — como un buen Phantom Thief.
+          Esta ruta ha desaparecido sin dejar rastro — como un buen ladrón fantasma.
         </p>
 
         <p
