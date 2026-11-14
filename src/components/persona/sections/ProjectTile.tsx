@@ -13,6 +13,7 @@ interface ProjectTileProps {
 const TYPE_LABEL: Record<Project['projectType'], string> = {
   frontend: 'Frontend',
   backend: 'Backend',
+  fullstack: 'Fullstack',
   games: 'Games',
 };
 
