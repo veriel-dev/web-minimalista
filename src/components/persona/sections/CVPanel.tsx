@@ -48,12 +48,12 @@ const CVPanel = () => {
       </div>
 
       <div
-        className="flex flex-wrap items-center mb-5 text-p5-bone/80"
+        className="flex flex-wrap items-center mb-5 text-p5-bone"
         style={{
           gap: '4px 14px',
           lineHeight: 1.6,
           fontFamily: 'var(--font-inter)',
-          fontSize: '11px',
+          fontSize: '12px',
           letterSpacing: '0.04em',
         }}
       >
@@ -103,10 +103,10 @@ const CVPanel = () => {
                 {st.value}
               </div>
               <div
-                className="uppercase text-p5-bone/80 mt-1.5"
+                className="uppercase text-p5-bone mt-1.5"
                 style={{
                   fontFamily: 'var(--font-inter)',
-                  fontSize: '10px',
+                  fontSize: '11px',
                   letterSpacing: '0.16em',
                 }}
               >
@@ -138,7 +138,7 @@ const CVPanel = () => {
                   className="uppercase text-p5-ink whitespace-nowrap"
                   style={{
                     fontFamily: 'var(--font-inter)',
-                    fontSize: '10px',
+                    fontSize: '11px',
                     letterSpacing: '0.08em',
                     background: accent,
                     padding: '3px 10px',
@@ -149,7 +149,7 @@ const CVPanel = () => {
                 </span>
               </div>
               <div
-                className="text-p5-bone/80"
+                className="text-p5-bone"
                 style={{
                   fontFamily: 'var(--font-inter)',
                   fontSize: '12px',
@@ -158,7 +158,7 @@ const CVPanel = () => {
                 }}
               >
                 {job.company}
-                {job.project && <span className="text-p5-bone/80"> · {job.project}</span>}
+                {job.project && <span className="text-p5-bone"> · {job.project}</span>}
               </div>
               <ul className="m-0 flex flex-col gap-1" style={{ paddingLeft: '18px' }}>
                 {job.achievements.map(a => (
@@ -192,10 +192,10 @@ const CVPanel = () => {
                 {edu.degree}
               </span>
               <span
-                className="text-p5-bone/80"
+                className="text-p5-bone"
                 style={{
                   fontFamily: 'var(--font-inter)',
-                  fontSize: '11px',
+                  fontSize: '12px',
                   letterSpacing: '0.08em',
                 }}
               >
@@ -203,7 +203,7 @@ const CVPanel = () => {
               </span>
             </div>
             <div
-              className="text-p5-bone/80"
+              className="text-p5-bone"
               style={{
                 fontFamily: 'var(--font-inter)',
                 fontSize: '12px',
@@ -247,10 +247,11 @@ const CVPanel = () => {
                   {lng.language}
                 </span>
                 <span
-                  className="uppercase text-p5-red"
+                  className="uppercase text-p5-bone"
                   style={{
                     fontFamily: 'var(--font-inter)',
-                    fontSize: '11px',
+                    fontSize: '12px',
+                    fontWeight: 600,
                     letterSpacing: '0.1em',
                   }}
                 >
@@ -259,21 +260,6 @@ const CVPanel = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        <div>
-          <CVHeading>Logros</CVHeading>
-          <ul className="m-0 flex flex-col gap-1.5" style={{ paddingLeft: '18px' }}>
-            {cv.achievements.map(a => (
-              <li
-                key={a.text}
-                className="text-p5-bone font-light"
-                style={{ fontSize: '13px', lineHeight: 1.45 }}
-              >
-                {a.text}
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
 
